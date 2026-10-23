@@ -23,6 +23,26 @@ body {
   line-height: 1.5;
 }
 
+/* Los previews se muestran como componentes dentro del index principal. */
+body.embebido {
+  overflow: hidden;
+  background: transparent;
+}
+
+body.embebido .pagina {
+  width: 100%;
+  margin: 0;
+}
+
+body.embebido .navegacion,
+body.embebido .encabezado {
+  display: none;
+}
+
+body.embebido .tarjeta {
+  box-shadow: none;
+}
+
 .pagina {
   width: min(1040px, calc(100% - 32px));
   margin: 32px auto;

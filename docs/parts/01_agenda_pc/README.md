@@ -35,6 +35,10 @@ una carpeta equivalente dentro de `stages/`.
 6. Revisar el resultado desde la página principal de GitHub Pages.
 7. Integrar la funcionalidad aprobada progresivamente en `main.py`.
 
+El `index.html` de la raíz es el único visor. Cada `preview.html` se incrusta
+como un componente visual dentro de su tarjeta; no se presenta como una página
+independiente para navegar entre etapas.
+
 ## Regla de integración
 
 Los archivos de `stages/` son ejercicios aislados y no se importan

@@ -66,6 +66,14 @@ El `index.html` de la raíz solo organiza las tarjetas de las clases terminadas;
 no contiene la interfaz de cada etapa. La interfaz visual vive en el
 `preview.html` de su propia carpeta.
 
+Los `preview.html` se construyen como componentes embebibles. Cuando se abren
+desde el `index.html` principal deben mostrar directamente el resultado de la
+etapa: una ventana, un formulario, una tabla, un calendario u otro componente.
+No deben convertir cada tarjeta en otra página completa con navegación propia,
+encabezado repetido o barra de desplazamiento interna. Para conservar un HTML
+válido, el `body` del preview usa la clase `embebido`, que oculta la carcasa de
+página cuando se carga dentro del visor principal.
+
 ## Regla de aprendizaje
 
 No pedir a ChatGPT que genere todo el proyecto de una sola vez. Cada archivo se

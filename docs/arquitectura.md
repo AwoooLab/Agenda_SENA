@@ -34,3 +34,21 @@ está trabajando y cuál es el siguiente resultado que debe integrar.
 GitHub Pages no ejecuta `main.py`; solo sirve los archivos HTML estáticos. Cada
 etapa terminada se publica como una tarjeta de clase en `index.html`, usando el
 `preview.html` de su propia carpeta.
+
+## Regla del visor principal
+
+La única página que el estudiante debe abrir para revisar el avance es el
+`index.html` de la raíz, publicado en GitHub Pages. Esa página muestra los
+resultados visuales de todos los stages en una colección.
+
+Cada `preview.html` es un componente visual embebible, no una página de
+navegación independiente. No debe mostrar encabezados repetidos, enlaces de
+retorno ni barras de desplazamiento internas cuando se visualiza desde
+`index.html`. El título de la etapa, su explicación y la referencia a la
+especificación pertenecen a la tarjeta del visor principal. El archivo puede
+conservar una estructura HTML completa para ser válido, pero su `body` debe
+usar la clase `embebido` para ocultar la carcasa de página al integrarse.
+
+La colección no funciona como un medidor ni como una lista de porcentajes. Su
+propósito es mostrar qué resultado visual corresponde a cada etapa y permitir
+comprobar cómo se va construyendo la aplicación.
