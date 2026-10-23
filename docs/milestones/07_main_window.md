@@ -112,17 +112,12 @@ Si se dispone de Python, ejecutar la aplicación local para comprobar los
 cambios de sección y el cierre de sesión. Pages solo muestra la composición
 visual de la ventana principal.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Integrar en:
-
-```text
-src/ui/main_window.py
-src/ui/navigation.py
-app.py
-```
-
-La aplicación integrada recibirá el usuario real desde `login_window.py`.
+Después de terminar la etapa, incorporar progresivamente en `main.py` la
+ventana principal y la navegación. Los archivos de
+`stages/07_main_window/` permanecen aislados; `main.py` será el orquestador del
+flujo integrado.
 
 ## Instrucción para ChatGPT
 

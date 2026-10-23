@@ -64,7 +64,7 @@ GitHub Pages. No se debe construir la aplicación de PC dentro del HTML.
 - No crear menús.
 - No crear formularios de citas.
 - No guardar información.
-- No importar archivos desde `src/`.
+- No importar archivos de otras etapas ni del `main.py` de la raíz.
 - No usar SQLite, JSON ni internet.
 - No crear todavía inicio de sesión ni calendario.
 
@@ -113,16 +113,17 @@ Si se dispone de Python instalado, se puede ejecutar `app.py` localmente para
 comprobar el comportamiento del botón. Esta prueba no se realiza en GitHub
 Pages ni reemplaza la revisión visual del preview.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Cuando la etapa esté terminada, adaptar la idea en:
+Cuando la etapa esté terminada, incorporar la ventana inicial en:
 
 ```text
-src/interface.py
+main.py
 ```
 
-El archivo `stages/01_python_window/app.py` continúa siendo el ejercicio del
-alumno. El archivo `app.py` de la raíz será el punto de entrada integrado.
+El archivo `stages/01_python_window/app.py` permanece aislado como ejercicio de
+la etapa. `main.py` es el orquestador que irá creciendo con cada hito y no debe
+importar automáticamente los archivos de `stages/`.
 
 ## Instrucción para ChatGPT
 

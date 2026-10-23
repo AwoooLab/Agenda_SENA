@@ -132,18 +132,12 @@ base de datos.
 Si se dispone de Python, ejecutar las pruebas de SQLite. GitHub Pages no crea
 ni consulta la base de datos; solo muestra su estructura.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Integrar la lógica en:
-
-```text
-src/database.py
-src/schema.sql
-data/agenda.db
-```
-
-El archivo `data/agenda.db` será generado por la aplicación y no se creará a
-mano dentro de `stages/`.
+Después de terminar la etapa, incorporar en `main.py` la conexión, el esquema y
+las operaciones que la aplicación integrada necesite. Los archivos de
+`stages/04_sqlite_database/` permanecen aislados y no se importan
+automáticamente.
 
 ## Instrucción para ChatGPT
 

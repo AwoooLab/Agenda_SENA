@@ -129,17 +129,12 @@ preview.
 Si se dispone de Python, ejecutar las pruebas del servicio y comprobar usuario
 único y errores de validación. GitHub Pages no registra usuarios reales.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Integrar los archivos en:
-
-```text
-src/models/user.py
-src/repositories/user_repository.py
-src/services/user_service.py
-```
-
-La interfaz de registro se agregará después del inicio de sesión básico.
+Después de terminar la etapa, incorporar progresivamente en `main.py` las reglas
+de usuario, el registro y las validaciones. Los archivos de
+`stages/05_user_registration/` permanecen aislados. La interfaz de registro se
+conectará al orquestador cuando corresponda.
 
 ## Instrucción para ChatGPT
 

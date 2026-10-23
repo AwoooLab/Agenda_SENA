@@ -181,11 +181,10 @@ Ejecutar:
 
     python -m unittest stages/05_user_registration/test_user_service.py -v
 
-INTEGRACIÓN POSTERIOR
----------------------
-Integrar user.py en src/models/user.py, user_repository.py en
-src/repositories/user_repository.py, y user_service.py en
-src/services/user_service.py.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Incorporar progresivamente el modelo, el repositorio y el servicio terminados
+en el `main.py` de la raíz. Los archivos de esta etapa permanecen aislados.
 
 ======================================================================
 ARCHIVO: preview.html

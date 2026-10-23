@@ -202,10 +202,10 @@ Ejecutar:
 
     python -m unittest stages/06_login_session/test_auth_service.py -v
 
-INTEGRACIÓN POSTERIOR
----------------------
-Integrar password.py en src/security/password.py, auth_service.py en
-src/services/auth_service.py y login_window.py en src/ui/login_window.py.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Incorporar progresivamente la seguridad, la autenticación y la ventana de login
+en el `main.py` de la raíz. Los archivos de esta etapa permanecen aislados.
 
 ======================================================================
 ARCHIVO: preview.html

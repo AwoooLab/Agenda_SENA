@@ -48,7 +48,7 @@ Crear un script de PowerShell que:
 6. Cree el ejecutable con PyInstaller usando:
 
 ```text
-python -m PyInstaller --onefile --windowed --name AgendaSENA app.py
+python -m PyInstaller --onefile --windowed --name AgendaSENA main.py
 ```
 
 7. Deje el resultado dentro de `dist/`.
@@ -123,10 +123,11 @@ Si se dispone de Windows y Python, ejecutar las pruebas, generar el `.exe` y
 probar la aplicación. GitHub Pages no compila, ejecuta ni descarga el
 ejecutable; solo muestra la información visual de la entrega.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Integrar las pruebas en `tests/`, el script en `scripts/build_windows.ps1` y la
-documentación en `docs/release.md`.
+La entrega final usa el `main.py` de la raíz como punto de entrada. Los
+archivos de `stages/10_tests_security_executable/` permanecen como material de
+la etapa y sirven para preparar las pruebas, la seguridad y la compilación.
 
 ## Instrucción para ChatGPT
 

@@ -26,7 +26,7 @@ REGLAS GENERALES
 - Usar Python 3.
 - Usar únicamente la biblioteca incorporada tkinter.
 - No instalar paquetes externos.
-- No copiar todavía código desde src/.
+- No importar archivos de otras etapas ni del orquestador principal.
 - No crear archivos adicionales.
 
 ======================================================================
@@ -159,10 +159,10 @@ Si se dispone de Python instalado, ejecutar desde la raíz:
 El resultado esperado es que aparezca la ventana y que Cerrar y la X terminen
 el programa. Esta prueba es opcional y no se realiza en GitHub Pages.
 
-INTEGRACIÓN POSTERIOR
----------------------
-Después de terminar esta lección, trasladar la idea a src/interface.py. El
-archivo app.py de la raíz será el punto de entrada de la aplicación integrada.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Después de terminar esta lección, incorporar la ventana en el `main.py` de la
+raíz. El archivo `app.py` de esta carpeta permanece aislado como ejercicio.
 
 ======================================================================
 ARCHIVO: preview.html

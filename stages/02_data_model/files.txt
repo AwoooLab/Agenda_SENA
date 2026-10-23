@@ -123,7 +123,7 @@ RESTRICCIONES
 - No leer ni escribir archivos.
 - No usar bases de datos.
 - No agregar todavía usuarios, categorías o colores.
-- No importar archivos de src/.
+- No importar archivos de otras etapas ni del `main.py` de la raíz.
 
 PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
@@ -135,10 +135,10 @@ Debe mostrarse un diccionario con titulo, fecha, hora y descripcion. Crear
 también una cita, convertirla y reconstruirla para comprobar que conserva los
 mismos valores.
 
-INTEGRACIÓN POSTERIOR
----------------------
-La clase terminada se trasladará a src/model.py. Las pruebas integradas se
-guardarán después en tests/test_model.py.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+La clase terminada se incorporará progresivamente al `main.py` de la raíz sin
+modificar el ejercicio original de esta carpeta.
 
 ======================================================================
 ARCHIVO: preview.html

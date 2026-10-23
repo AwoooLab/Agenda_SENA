@@ -146,15 +146,12 @@ Si se dispone de Python, ejecutar las pruebas del servicio y abrir la ventana
 local. GitHub Pages no autentica usuarios, no ejecuta Tkinter y no guarda
 contraseñas.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Integrar los archivos en:
-
-```text
-src/security/password.py
-src/services/auth_service.py
-src/ui/login_window.py
-```
+Después de terminar la etapa, incorporar progresivamente en `main.py` la
+protección de contraseñas, el servicio de autenticación y la pantalla de login.
+Los archivos de `stages/06_login_session/` permanecen aislados y no se
+importan automáticamente.
 
 ## Instrucción para ChatGPT
 

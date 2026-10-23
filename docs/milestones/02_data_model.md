@@ -73,7 +73,7 @@ Descripción: Practicar dataclasses
 - Importar `dataclass` y `asdict` desde `dataclasses`.
 - No abrir ventanas.
 - No leer ni escribir archivos.
-- No importar Tkinter, SQLite ni módulos de `src/`.
+- No importar Tkinter, SQLite ni archivos de otras etapas o de `main.py`.
 - No agregar campos de usuario, categoría o color todavía.
 
 ## Flujo de la clase y validación en GitHub Pages
@@ -125,16 +125,16 @@ otra_cita = Cita.desde_diccionario(datos)
 `cita` y `otra_cita` deben tener los mismos datos. Esta prueba valida Python;
 la evidencia visual de la clase se revisa en GitHub Pages.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Después de terminar la etapa, trasladar la clase a:
+Después de terminar la etapa, incorporar la clase `Cita` en:
 
 ```text
-src/model.py
+main.py
 ```
 
-En la integración se podrá agregar una prueba en `tests/test_model.py` sin
-modificar el ejercicio original de `stages/`.
+El archivo `stages/02_data_model/model.py` permanece aislado. La versión que
+usa la aplicación integrada se agrega progresivamente al orquestador `main.py`.
 
 ## Instrucción para ChatGPT
 

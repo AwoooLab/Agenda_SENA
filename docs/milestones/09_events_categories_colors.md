@@ -162,19 +162,12 @@ actividad del día, los botones y los iconos definidos para esta clase.
 Si se dispone de Python, ejecutar las operaciones de crear, editar, completar,
 filtrar y eliminar. Pages solo muestra el resultado visual; no modifica datos.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Integrar en:
-
-```text
-src/models/event.py
-src/models/category.py
-src/services/event_service.py
-src/ui/event_form.py
-src/ui/color_legend.py
-```
-
-Después conectar el servicio con `monthly_calendar.py`.
+Después de terminar la etapa, incorporar progresivamente en `main.py` los
+modelos, las operaciones, el formulario y la leyenda de colores. Los archivos
+de `stages/09_events_categories_colors/` permanecen aislados y la conexión con
+el calendario se coordina desde `main.py`.
 
 ## Instrucción para ChatGPT
 

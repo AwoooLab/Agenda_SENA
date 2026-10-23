@@ -109,10 +109,10 @@ Ejecutar:
 Comprobar que el usuario aparece, los botones responden y Cerrar sesión ejecuta
 la salida.
 
-INTEGRACIÓN POSTERIOR
----------------------
-Integrar navigation.py y main_window.py en src/ui/. El app.py de esta carpeta
-es solo una demostración; el app.py de la raíz iniciará el flujo real.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Incorporar navigation.py y main_window.py progresivamente en el `main.py` de la
+raíz. El app.py de esta carpeta es solo el ejercicio aislado de la etapa.
 
 ======================================================================
 ARCHIVO: preview.html

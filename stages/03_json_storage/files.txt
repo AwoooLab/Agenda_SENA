@@ -144,10 +144,10 @@ Ejecutar:
 Debe imprimirse la misma información guardada. Si se borra el archivo temporal,
 el programa debe poder volver a ejecutarse sin preparación adicional.
 
-INTEGRACIÓN POSTERIOR
----------------------
-Trasladar storage.py a src/storage.py y usar data/agenda.json como archivo real.
-El almacenamiento JSON será temporal; más adelante se aprenderá SQLite.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Incorporar las funciones terminadas de storage.py progresivamente en el
+`main.py` de la raíz. Los archivos de esta etapa permanecen aislados.
 
 ======================================================================
 ARCHIVO: preview.html

@@ -2,10 +2,10 @@
 
 Proyecto educativo de una agenda de escritorio local desarrollada primero en Python.
 
-## Ejecutar la aplicación
+## Punto de entrada
 
 ```text
-python app.py
+python main.py
 ```
 
 ## Ejecutar las pruebas
@@ -16,14 +16,17 @@ python -m unittest discover -s tests -v
 
 ## Estructura principal
 
-- `app.py`: punto de entrada de la aplicación Python.
-- `src/`: código principal dividido por responsabilidades.
-- `data/`: información local de la agenda.
-- `tests/`: pruebas automáticas.
+- `main.py`: orquestador de la aplicación Python; crece con cada etapa.
 - `stages/`: archivos que el alumno irá creando o modificando por etapa.
-- `docs/milestones/`: hitos completos con requisitos, prompts e integración.
+- `docs/milestones/`: hitos completos con requisitos, prompts e integración en
+  `main.py`.
 - `config/`: configuración compartida.
-- `index.html`: vista informativa mínima para GitHub Pages.
+- `index.html`: orquestador de la colección visual para GitHub Pages.
 - `plan.md`: plan de desarrollo.
 
-GitHub Pages solo muestra la página informativa; no ejecuta la aplicación Python.
+Cada carpeta de `stages/` es independiente. Cuando una etapa se termina, su
+funcionalidad se incorpora al `main.py` de la raíz y su resultado visual se
+agrega como tarjeta en `index.html`.
+
+GitHub Pages solo muestra `index.html` y los `preview.html`; no ejecuta la
+aplicación Python.

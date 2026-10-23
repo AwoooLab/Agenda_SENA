@@ -3,14 +3,15 @@
 ## Etapa 00 — Repositorio y vista informativa
 
 - Mantener el proyecto en GitHub.
-- Usar `index.html` únicamente como presentación en GitHub Pages.
+- Usar `index.html` como orquestador de la colección visual en GitHub Pages.
+- Usar `main.py` como orquestador de la aplicación de PC.
 - Confirmar que la página muestra el nombre del proyecto.
 
 ## Etapa 01 — Ventana de Python
 
-- Crear la ventana inicial con Tkinter.
-- Ejecutar la aplicación localmente en el computador.
-- Revisar que la ventana abra y cierre correctamente.
+- Crear en `stages/01_python_window/` la primera ventana con Tkinter.
+- Incorporar la funcionalidad terminada en `main.py`.
+- Publicar su tarjeta visual en `index.html`.
 
 ## Etapa 02 — Modelo de datos
 
@@ -68,4 +69,5 @@
 
 La explicación completa de cada hito está en `docs/milestones/`. Las carpetas
 de `stages/` contienen `files.txt`, donde se enumeran los archivos que el
-alumno debe crear o modificar en esa etapa.
+alumno debe crear o modificar en esa etapa. El resultado funcional crece en
+`main.py` y el resultado visual crece en `index.html`.

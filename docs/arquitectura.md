@@ -15,15 +15,17 @@ su etapa. GitHub Pages no ejecuta el código Python; el HTML tampoco reemplaza
 la aplicación de escritorio, sino que permite revisar desde el navegador lo que
 se está construyendo.
 
-- `app.py`: inicia la aplicación.
-- `src/`: contiene el modelo, las reglas, el almacenamiento y la interfaz.
-- `data/`: contiene los datos locales en JSON.
-- `tests/`: contiene las pruebas automáticas.
+- `main.py`: orquesta la aplicación principal y crece a medida que se
+  completan las etapas.
 - `stages/`: contiene los archivos de trabajo separados por etapa.
 - `docs/milestones/`: contiene la especificación completa de cada hito.
 - `config/`: contiene rutas y formatos compartidos.
 - `index.html`: es la colección visual de clases publicada en GitHub Pages.
 
-GitHub Pages no ejecuta `app.py`; solo sirve los archivos HTML estáticos. Cada
-etapa terminada se publica como una tarjeta de clase con su `preview.html`, su
-guía y sus materiales relacionados.
+Cada carpeta de `stages/` trabaja de forma aislada. Al terminar una etapa, la
+funcionalidad se incorpora progresivamente en el `main.py` de la raíz. No se
+importan automáticamente archivos de una etapa ni se conectan entre sí.
+
+GitHub Pages no ejecuta `main.py`; solo sirve los archivos HTML estáticos. Cada
+etapa terminada se publica como una tarjeta de clase en `index.html`, usando el
+`preview.html` de su propia carpeta.

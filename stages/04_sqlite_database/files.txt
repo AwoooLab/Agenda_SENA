@@ -177,10 +177,11 @@ Ejecutar:
 
 No debe quedar una base temporal dentro del proyecto.
 
-INTEGRACIÓN POSTERIOR
----------------------
-Integrar database.py y schema.sql en src/. La base real se generará dentro de
-data/agenda.db. Integrar la prueba en tests/test_database.py.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Incorporar progresivamente la conexión, el esquema y las operaciones terminadas
+en el `main.py` de la raíz. Los archivos de esta etapa permanecen aislados y la
+base de datos real se gestionará desde el orquestador principal.
 
 ======================================================================
 ARCHIVO: preview.html

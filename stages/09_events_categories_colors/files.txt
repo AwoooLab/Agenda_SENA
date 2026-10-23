@@ -170,10 +170,11 @@ PRUEBA FUNCIONAL OPCIONAL EN EL PC
 Crear una actividad por categoría, editar una, completar otra, filtrar por fecha
 y eliminar una. Comprobar que el calendario pueda recibir los resultados.
 
-INTEGRACIÓN POSTERIOR
----------------------
-Integrar los modelos en src/models/, el servicio en src/services/ y los
-controles en src/ui/. Conectar el servicio con monthly_calendar.py.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Incorporar los modelos, el servicio y los controles progresivamente en el
+`main.py` de la raíz. Conectar las actividades con el calendario desde ese
+orquestador.
 
 ======================================================================
 ARCHIVO: preview.html

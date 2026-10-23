@@ -119,16 +119,12 @@ resaltado y la actividad visible.
 Si se dispone de Python, ejecutar las pruebas y comprobar navegación y
 selección. GitHub Pages no calcula fechas ni ejecuta Tkinter.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-Integrar en:
-
-```text
-src/ui/monthly_calendar.py
-src/ui/calendar_cell.py
-```
-
-Después conectar la vista con `main_window.py`.
+Después de terminar la etapa, incorporar progresivamente en `main.py` el
+calendario mensual y sus celdas. Los archivos de
+`stages/08_monthly_calendar/` permanecen aislados y la conexión se realiza en
+el orquestador principal.
 
 ## Instrucción para ChatGPT
 

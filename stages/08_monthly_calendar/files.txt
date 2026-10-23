@@ -125,9 +125,10 @@ un día. Ejecutar también:
 
     python -m unittest stages/08_monthly_calendar/test_calendar.py -v
 
-INTEGRACIÓN POSTERIOR
----------------------
-Integrar ambos módulos visuales en src/ui/ y conectarlos con main_window.py.
+INTEGRACIÓN EN MAIN.PY
+----------------------
+Incorporar ambos módulos visuales progresivamente en el `main.py` de la raíz y
+conectarlos desde ese orquestador.
 
 ======================================================================
 ARCHIVO: preview.html

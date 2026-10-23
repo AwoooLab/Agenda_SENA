@@ -110,21 +110,16 @@ Confirmar que se identifican `agenda.json`, los datos de ejemplo y los estados
 Si se dispone de Python, ejecutar `demo.py` y comprobar que los datos cargados
 son iguales a los guardados. GitHub Pages no ejecuta el almacenamiento real.
 
-## Integración posterior
+## Integración progresiva en `main.py`
 
-La función se trasladará a:
-
-```text
-src/storage.py
-```
-
-El archivo real de datos será:
+Después de terminar la etapa, incorporar las funciones de guardado y carga en:
 
 ```text
-data/agenda.json
+main.py
 ```
 
-Más adelante, SQLite reemplazará este almacenamiento como mecanismo principal.
+Los archivos de `stages/03_json_storage/` permanecen aislados. `main.py` irá
+reuniendo la lógica que la aplicación necesita en cada hito posterior.
 
 ## Instrucción para ChatGPT
 

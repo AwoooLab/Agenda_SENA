@@ -43,23 +43,24 @@ Explícame cómo funciona tkinter.Tk() y revisa únicamente el fragmento que
 escribí. No generes el proyecto completo ni modifiques otros archivos.
 ```
 
-## Regla de integración
+## Regla de integración en `main.py`
 
 Los archivos dentro de `stages/` son ejercicios didácticos aislados. Cuando el
-alumno termina una etapa, su solución se integra manualmente en `app.py`,
-`src/`, `data/` o `tests/`, según indique el hito correspondiente en
+alumno termina una etapa, su solución se incorpora progresivamente en el
+`main.py` de la raíz, según indique el hito correspondiente en
 `docs/milestones/`.
 
-El archivo de la etapa no se convierte automáticamente en parte de la
-aplicación. Primero se entiende, se escribe, se ejecuta y luego se integra.
+El archivo de la etapa no se conecta automáticamente con otros archivos. Cada
+carpeta conserva su trabajo y `main.py` funciona como el orquestador de la
+aplicación final.
 
 ## Flujo visible en GitHub Pages
 
-El estudiante agrega en GitHub los archivos de la etapa y actualiza su
-`preview.html` con la representación visual del resultado. Después agrega la
-tarjeta de esa clase en `index.html`, sube los cambios y abre únicamente la
-página principal de GitHub Pages. Esa colección es la comprobación visual del
-proceso.
+El estudiante agrega en GitHub los archivos de la etapa, actualiza su
+`preview.html` y, cuando la etapa está lista, incorpora su funcionalidad en el
+`main.py` de la raíz. Después agrega la tarjeta de esa clase en `index.html`,
+sube los cambios y abre únicamente la página principal de GitHub Pages. Esa
+colección es la comprobación visual del proceso.
 
 El `index.html` de la raíz solo organiza las tarjetas de las clases terminadas;
 no contiene la interfaz de cada etapa. La interfaz visual vive en el
