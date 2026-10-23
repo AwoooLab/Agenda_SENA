@@ -3,8 +3,9 @@ ETAPA 05 — REGISTRO DE USUARIOS
 
 PROPÓSITO
 ---------
-Aprender a separar el modelo de usuario, las consultas de la base de datos y
-las reglas de registro. Cada archivo tiene una responsabilidad diferente.
+Implementar el registro de usuarios separando el modelo, las consultas de la
+base de datos y las reglas del registro. Cada archivo tendrá una responsabilidad
+específica.
 
 ARCHIVOS DE LA ETAPA
 --------------------

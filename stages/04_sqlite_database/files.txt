@@ -3,9 +3,8 @@ ETAPA 04 — BASE DE DATOS LOCAL SQLITE
 
 PROPÓSITO
 ---------
-Aprender a definir tablas, abrir una base de datos local y ejecutar consultas
-parametrizadas. Los tres archivos de código están vacíos para construirlos a
-mano.
+Definir la estructura de datos de la agenda y establecer la conexión con una
+base de datos SQLite local mediante consultas parametrizadas.
 
 ARCHIVOS DE LA ETAPA
 --------------------

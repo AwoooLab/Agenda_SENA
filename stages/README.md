@@ -5,7 +5,7 @@ etapa antes de pasar a la siguiente.
 
 ## Qué contiene cada etapa
 
-- Los archivos de código están vacíos intencionalmente.
+- Cada etapa contiene los archivos que corresponden a su alcance.
 - `files.txt` contiene la guía teórica y práctica de todos los archivos de la
   etapa.
 - Los nombres de carpetas y archivos se mantienen en inglés para que coincidan
@@ -18,8 +18,8 @@ etapa antes de pasar a la siguiente.
 2. Buscar la sección del archivo que se va a construir.
 3. Leer las lecciones en orden.
 4. Revisar las librerías permitidas y las restricciones.
-5. Escribir el código manualmente en el archivo vacío.
-6. Usar los fragmentos cortos como referencia, sin copiar un proyecto completo.
+5. Implementar la solución en el archivo indicado.
+6. Usar los fragmentos cortos como referencia para completar la lógica.
 7. Ejecutar la comprobación manual indicada.
 8. Corregir los errores antes de continuar con el siguiente archivo.
 

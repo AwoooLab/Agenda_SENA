@@ -3,8 +3,8 @@ ETAPA 06 — INICIO DE SESIÓN Y SESIÓN ACTIVA
 
 PROPÓSITO
 ---------
-Aprender cómo se protegen las contraseñas, cómo se comprueba un usuario y cómo
-se mantiene la sesión actual en memoria. Los cuatro archivos están vacíos.
+Implementar la protección de contraseñas, el inicio de sesión y el manejo de la
+sesión activa del usuario en memoria.
 
 ARCHIVOS DE LA ETAPA
 --------------------

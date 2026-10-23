@@ -3,9 +3,8 @@ ETAPA 10 — PRUEBAS, SEGURIDAD Y EJECUTABLE
 
 PROPÓSITO
 ---------
-Revisar la aplicación terminada y preparar una versión ejecutable para Windows.
-Los archivos de código están vacíos para que el estudiante los construya usando
-las lecciones.
+Revisar el funcionamiento de la aplicación y preparar una versión ejecutable
+para Windows con sus instrucciones de entrega.
 
 ARCHIVOS DE LA ETAPA
 --------------------

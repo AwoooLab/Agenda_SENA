@@ -3,8 +3,8 @@ ETAPA 03 — ALMACENAMIENTO TEMPORAL EN JSON
 
 PROPÓSITO
 ---------
-Aprender a guardar una lista de datos en un archivo local y cargarla después.
-Los dos archivos de código de esta etapa están vacíos intencionalmente.
+Definir el mecanismo inicial para guardar y cargar una lista de actividades en
+un archivo local con formato JSON.
 
 ARCHIVOS DE LA ETAPA
 --------------------

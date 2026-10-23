@@ -3,9 +3,8 @@ ETAPA 02 — MODELO DE DATOS DE UNA CITA
 
 PROPÓSITO
 ---------
-Representar una cita de la agenda como un objeto de Python. El archivo queda
-vacío para que el estudiante construya la clase después de estudiar las
-lecciones.
+Representar una cita de la agenda como un objeto de Python que pueda ser usado
+por el almacenamiento, la base de datos y la interfaz.
 
 ARCHIVO DE LA ETAPA
 -------------------

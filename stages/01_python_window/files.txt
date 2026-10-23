@@ -3,9 +3,10 @@ ETAPA 01 — VENTANA INICIAL DE LA AGENDA
 
 PROPÓSITO
 ---------
-Construir la primera ventana de escritorio de Agenda SENA. Los archivos de
-código de esta carpeta están vacíos intencionalmente. El estudiante debe leer
-esta guía, aprender cada lección y escribir el código a mano.
+Construir la ventana inicial de Agenda SENA, que será el punto de entrada visual
+de la aplicación de escritorio local. Esta etapa define la identidad de la
+aplicación, las dimensiones de la ventana y el primer control interactivo para
+cerrarla.
 
 ARCHIVO DE LA ETAPA
 -------------------
