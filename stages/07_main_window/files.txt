@@ -1,6 +1,6 @@
-FILES FOR STAGE 07
+ARCHIVOS DE LA ETAPA 07
 
-Create or complete:
+Crear o completar:
 - app.py
 - main_window.py
 - navigation.py

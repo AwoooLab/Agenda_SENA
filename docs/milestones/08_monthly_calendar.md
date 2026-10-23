@@ -1,31 +1,34 @@
-# Milestone 08 — Monthly calendar
+# Hito 08 — Calendario mensual
 
-## Goal
+## Objetivo
 
-Display a navigable monthly calendar with a clear day grid.
+Mostrar un calendario mensual navegable con una cuadrícula clara de días.
 
-## Files
+## Archivos
 
 - `src/ui/monthly_calendar.py`.
 - `src/ui/calendar_cell.py`.
 - `tests/test_calendar.py`.
 
-## Requirements
+## Requisitos
 
-- Previous month and next month controls.
-- Button to return to the current month.
-- Correct number of days for each month.
-- Highlight the current day.
-- Use a readable layout at the target window size.
+- Controles para ir al mes anterior y al mes siguiente.
+- Botón para regresar al mes actual.
+- Cantidad correcta de días para cada mes.
+- Resaltar el día actual.
+- Usar una distribución legible para el tamaño de ventana definido.
 
-## Integration
+## Integración
 
-The calendar receives the current user and activities from the service layer. It must not query SQLite directly.
+El calendario recibe el usuario actual y las actividades desde la capa de
+servicios. No debe consultar SQLite directamente.
 
-## Validation
+## Comprobación manual
 
-Test February in leap and non-leap years, month transitions and selecting a day.
+Probar febrero en años bisiestos y no bisiestos, cambios de mes y selección de
+un día.
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Ask ChatGPT for the date calculation functions first, then the calendar cell, then the complete calendar view.
+Solicitar primero las funciones de cálculo de fechas, después la celda del
+calendario y finalmente la vista completa del calendario.

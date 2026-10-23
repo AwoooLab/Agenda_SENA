@@ -1,10 +1,11 @@
-# Milestone 03 — Temporary JSON storage
+# Hito 03 — Almacenamiento temporal en JSON
 
-## Goal
+## Objetivo
 
-Learn how to persist a list of activities locally before introducing a database.
+Aprender a guardar una lista de actividades localmente antes de introducir una
+base de datos.
 
-## Files
+## Archivos
 
 - `stages/03_json_storage/storage.py`.
 - `stages/03_json_storage/demo.py`.
@@ -12,18 +13,22 @@ Learn how to persist a list of activities locally before introducing a database.
 - `data/agenda.json`.
 - `tests/test_storage.py`.
 
-## Requirements
+## Requisitos
 
-Use `json` and `pathlib`, UTF-8 encoding, readable indentation and a clear behavior when the file does not exist.
+Usar `json` y `pathlib`, codificación UTF-8, sangría legible y un comportamiento
+claro cuando el archivo no exista.
 
-## Integration
+## Integración
 
-The storage module receives data and a path; it must not create Tkinter widgets. The interface will call it later.
+El módulo de almacenamiento recibe los datos y una ruta; no debe crear controles
+de Tkinter. La interfaz lo utilizará más adelante.
 
-## Validation
+## Comprobación manual
 
-Save an activity, load it again and compare the result. Run the storage tests.
+Guardar una actividad, cargarla nuevamente y comparar el resultado. Ejecutar las
+pruebas del almacenamiento.
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Ask ChatGPT for `storage.py`, then `demo.py`, then the test. Never request the complete application in one prompt.
+Solicitar a ChatGPT `storage.py`, después `demo.py` y finalmente la prueba. Nunca
+pedir la aplicación completa en una sola solicitud.

@@ -1,31 +1,35 @@
-# Milestone 02 — Data model
+# Hito 02 — Modelo de datos
 
-## Goal
+## Objetivo
 
-Represent an agenda activity as a Python object.
+Representar una actividad de la agenda como un objeto de Python.
 
-## Files
+## Archivos
 
 - `stages/02_data_model/model.py`.
 - `src/model.py`.
 - `tests/test_model.py`.
 
-## Requirements
+## Requisitos
 
-The first model is `Event` or `Cita` and must contain title, date, start time, end time and description. Use `dataclass`, conversion to dictionary and reconstruction from a dictionary.
+El primer modelo puede llamarse `Event` o `Cita` y debe contener título, fecha,
+hora de inicio, hora de finalización y descripción. Usar `dataclass`, conversión
+a diccionario y reconstrucción desde un diccionario.
 
-## Integration
+## Integración
 
-The model must not open windows or read files. Later, database and interface modules will import it.
+El modelo no debe abrir ventanas ni leer archivos. Más adelante, los módulos de
+base de datos e interfaz lo importarán.
 
-## Validation
+## Comprobación manual
 
-Create an object, convert it to a dictionary and run:
+Crear un objeto, convertirlo a diccionario y ejecutar:
 
 ```text
 python -m unittest discover -s tests -v
 ```
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Ask for `model.py` only. Require standard Python, typed fields and one small example under `if __name__ == "__main__"`.
+Solicitar únicamente `model.py`. Pedir Python estándar, campos con tipos y un
+ejemplo pequeño dentro de `if __name__ == "__main__"`.

@@ -1,6 +1,6 @@
-FILES FOR STAGE 04
+ARCHIVOS DE LA ETAPA 04
 
-Create or complete:
+Crear o completar:
 - database.py
 - schema.sql
 - test_database.py

@@ -1,5 +1,5 @@
-FILES FOR STAGE 03
+ARCHIVOS DE LA ETAPA 03
 
-Create or complete:
+Crear o completar:
 - storage.py
 - demo.py

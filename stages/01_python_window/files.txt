@@ -1,4 +1,4 @@
-FILES FOR STAGE 01
+ARCHIVOS DE LA ETAPA 01
 
-Create or complete:
+Crear o completar:
 - app.py

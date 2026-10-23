@@ -1,33 +1,37 @@
-# Milestone 01 — Python window
+# Hito 01 — Ventana de Python
 
-## Goal
+## Objetivo
 
-Open the first desktop window for Agenda SENA using Python and Tkinter.
+Abrir la primera ventana de escritorio de Agenda SENA usando Python y Tkinter.
 
-## Files
+## Archivos
 
-- `stages/01_python_window/app.py`: isolated exercise for the student.
-- `src/interface.py`: integrated interface module.
-- `app.py`: application entry point.
+- `stages/01_python_window/app.py`: ejercicio aislado para el alumno.
+- `src/interface.py`: módulo de interfaz integrado.
+- `app.py`: punto de entrada de la aplicación.
 
-## Requirements
+## Requisitos
 
 - Python 3.
-- Tkinter only; no external packages.
-- Window title: `Agenda SENA`.
-- Visible close button.
+- Solo Tkinter; no usar paquetes externos.
+- Título de la ventana: `Agenda SENA`.
+- Botón visible para cerrar la ventana.
 
-## Integration
+## Integración
 
-The root `app.py` imports `ejecutar()` from `src/interface.py`. The stage file is only the exercise and should be validated before copying the working idea into `src/`.
+El archivo principal `app.py` importa `ejecutar()` desde `src/interface.py`.
+El archivo de la etapa es solo el ejercicio y se debe revisar antes de copiar
+la idea que funciona a `src/`.
 
-## Validation
+## Comprobación manual
 
 ```text
 python stages/01_python_window/app.py
 python app.py
 ```
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Ask ChatGPT for only one file at a time. First request `stages/01_python_window/app.py`; after validating it, request or adapt `src/interface.py`.
+Pedir un solo archivo a ChatGPT cada vez. Primero solicitar
+`stages/01_python_window/app.py`; después de revisarlo, solicitar o adaptar
+`src/interface.py`.

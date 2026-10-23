@@ -1,6 +1,6 @@
-FILES FOR STAGE 09
+ARCHIVOS DE LA ETAPA 09
 
-Create or complete:
+Crear o completar:
 - event.py
 - category.py
 - event_service.py

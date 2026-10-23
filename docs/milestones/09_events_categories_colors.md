@@ -1,10 +1,10 @@
-# Milestone 09 — Events, categories and colors
+# Hito 09 — Actividades, categorías y colores
 
-## Goal
+## Objetivo
 
-Manage activities in the calendar and distinguish categories visually.
+Gestionar actividades en el calendario y distinguir visualmente sus categorías.
 
-## Files
+## Archivos
 
 - `src/models/event.py`.
 - `src/models/category.py`.
@@ -13,21 +13,25 @@ Manage activities in the calendar and distinguish categories visually.
 - `src/ui/color_legend.py`.
 - `tests/test_event_service.py`.
 
-## Requirements
+## Requisitos
 
-- Create, edit, delete and complete an activity.
-- Assign a category and color.
-- Use text and icons in addition to color for accessibility.
-- Filter activities by date, category and status.
+- Crear, editar, eliminar y completar una actividad.
+- Asignar una categoría y un color.
+- Usar texto e iconos además del color para facilitar la accesibilidad.
+- Filtrar actividades por fecha, categoría y estado.
 
-## Integration
+## Integración
 
-`event_service.py` connects models, database and validation. The form calls the service. The calendar refreshes after a successful change.
+`event_service.py` conecta los modelos, la base de datos y las reglas. El
+formulario llama al servicio. El calendario se actualiza después de un cambio
+exitoso.
 
-## Validation
+## Comprobación manual
 
-Create an event, edit it, display it on the selected day, complete it and delete it.
+Crear una actividad, editarla, mostrarla en el día seleccionado, completarla y
+eliminarla.
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Request one model or service at a time. Do not ask ChatGPT to redesign the whole interface while implementing a single feature.
+Solicitar un modelo o servicio a la vez. No pedirle a ChatGPT que rediseñe toda
+la interfaz mientras se implementa una sola función.

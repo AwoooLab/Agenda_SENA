@@ -1,31 +1,35 @@
-# Milestone 05 — User registration
+# Hito 05 — Registro de usuarios
 
-## Goal
+## Objetivo
 
-Allow the application to create local users before adding login.
+Permitir que la aplicación cree usuarios locales antes de agregar el inicio de
+sesión.
 
-## Files
+## Archivos
 
 - `src/models/user.py`.
 - `src/repositories/user_repository.py`.
 - `src/services/user_service.py`.
 - `tests/test_user_service.py`.
 
-## Requirements
+## Requisitos
 
-- Unique username or email.
-- Active/inactive status.
-- No plain-text passwords.
-- Clear validation errors.
+- Nombre de usuario o correo electrónico único.
+- Estado activo o inactivo.
+- No guardar contraseñas en texto plano.
+- Errores de validación claros.
 
-## Integration
+## Integración
 
-The repository handles database queries. The service handles rules. The UI will call the service and will not access SQL directly.
+El repositorio gestiona las consultas a la base de datos. El servicio gestiona
+las reglas. La interfaz llamará al servicio y no accederá directamente a SQL.
 
-## Validation
+## Comprobación manual
 
-Test successful registration, duplicate user and missing required fields.
+Probar un registro exitoso, un usuario duplicado y campos obligatorios vacíos.
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Request the model first, then the repository, then the service, and finally one test file. Tell ChatGPT not to modify previous files.
+Solicitar primero el modelo, después el repositorio, luego el servicio y
+finalmente un archivo de prueba. Indicarle a ChatGPT que no modifique los
+archivos anteriores.

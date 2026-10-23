@@ -1,31 +1,35 @@
-# Milestone 04 — SQLite database
+# Hito 04 — Base de datos SQLite
 
-## Goal
+## Objetivo
 
-Replace the temporary JSON persistence with SQLite, which is appropriate for users, login and related calendar records.
+Reemplazar el almacenamiento temporal en JSON por SQLite, que es apropiado para
+usuarios, inicio de sesión y registros relacionados con el calendario.
 
-## Files
+## Archivos
 
-- `src/database.py`: connection and database operations.
-- `src/schema.sql`: table definitions.
-- `data/agenda.db`: generated local database.
-- `tests/test_database.py`: database tests using a temporary file.
+- `src/database.py`: conexión y operaciones de la base de datos.
+- `src/schema.sql`: definición de tablas.
+- `data/agenda.db`: base de datos local generada.
+- `tests/test_database.py`: pruebas de base de datos usando un archivo temporal.
 
-## Requirements
+## Requisitos
 
-- Use Python's built-in `sqlite3`.
-- Create tables automatically on first run.
-- Use parameterized queries.
-- Never store passwords in this stage.
+- Usar el módulo incorporado `sqlite3` de Python.
+- Crear las tablas automáticamente en el primer inicio.
+- Usar consultas con parámetros.
+- No guardar contraseñas en esta etapa.
 
-## Integration
+## Integración
 
-Services will use `database.py`; the UI must not contain SQL queries directly. Keep JSON only as an optional export format.
+Los servicios usarán `database.py`; la interfaz no debe contener consultas SQL
+directamente. Mantener JSON únicamente como formato opcional de exportación.
 
-## Validation
+## Comprobación manual
 
-Create a temporary database, create a table, insert one record, read it and remove the temporary file after the test.
+Crear una base de datos temporal, crear una tabla, insertar un registro, leerlo y
+eliminar el archivo temporal después de la prueba.
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Request `schema.sql`, validate the table design, then request `database.py`, and finally request `test_database.py`.
+Solicitar `schema.sql`, revisar el diseño de las tablas, después solicitar
+`database.py` y finalmente `test_database.py`.

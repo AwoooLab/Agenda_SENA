@@ -1,6 +1,6 @@
-FILES FOR STAGE 06
+ARCHIVOS DE LA ETAPA 06
 
-Create or complete:
+Crear o completar:
 - password.py
 - auth_service.py
 - login_window.py

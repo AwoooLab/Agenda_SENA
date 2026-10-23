@@ -1,10 +1,10 @@
-# Milestone 10 — Tests, security and executable
+# Hito 10 — Pruebas, seguridad y ejecutable
 
-## Goal
+## Objetivo
 
-Stabilize the application and prepare a Windows executable.
+Estabilizar la aplicación y preparar un ejecutable para Windows.
 
-## Files
+## Archivos
 
 - `tests/test_database.py`.
 - `tests/test_auth_service.py`.
@@ -12,26 +12,29 @@ Stabilize the application and prepare a Windows executable.
 - `scripts/build_windows.ps1`.
 - `docs/release.md`.
 
-## Requirements
+## Requisitos
 
-- Tests must run without internet.
-- Database tests must use temporary data.
-- Credentials must never be committed.
-- The build script must create output in `dist/`.
-- The executable must be tested on a clean Windows user account.
+- Las pruebas deben funcionar sin internet.
+- Las pruebas de base de datos deben usar datos temporales.
+- Las credenciales nunca deben subirse al repositorio.
+- El script de compilación debe crear la salida en `dist/`.
+- El ejecutable debe probarse en una cuenta limpia de Windows.
 
-## Integration
+## Integración
 
-Only package the application after all tests pass. Keep build artifacts out of the source folders and document the release steps.
+Empaquetar la aplicación únicamente después de terminar las pruebas. Mantener
+los archivos generados fuera de las carpetas de código y documentar los pasos de
+la entrega.
 
-## Validation
+## Comprobación manual
 
 ```text
 python -m unittest discover -s tests -v
 ```
 
-Then build and open the executable on Windows.
+Después, crear y abrir el ejecutable en Windows.
 
-## Prompt sequence
+## Secuencia de solicitudes
 
-Ask for one test or one build script at a time. Review every generated command before executing it.
+Solicitar una prueba o un script de compilación a la vez. Revisar cada comando
+generado antes de ejecutarlo.

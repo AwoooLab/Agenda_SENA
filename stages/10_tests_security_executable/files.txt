@@ -1,6 +1,6 @@
-FILES FOR STAGE 10
+ARCHIVOS DE LA ETAPA 10
 
-Create or complete:
+Crear o completar:
 - test_database.py
 - test_auth_service.py
 - test_event_service.py

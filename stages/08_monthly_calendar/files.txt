@@ -1,6 +1,6 @@
-FILES FOR STAGE 08
+ARCHIVOS DE LA ETAPA 08
 
-Create or complete:
+Crear o completar:
 - monthly_calendar.py
 - calendar_cell.py
 - test_calendar.py

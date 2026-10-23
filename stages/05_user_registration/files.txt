@@ -1,6 +1,6 @@
-FILES FOR STAGE 05
+ARCHIVOS DE LA ETAPA 05
 
-Create or complete:
+Crear o completar:
 - user.py
 - user_repository.py
 - user_service.py

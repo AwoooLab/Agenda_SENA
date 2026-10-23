@@ -1,11 +1,12 @@
 # Arquitectura de Agenda SENA
 
-La aplicación principal es Python y se ejecuta localmente en el computador.
+La aplicación principal está desarrollada en Python y se ejecuta localmente en
+el computador.
 
 - `app.py`: inicia la aplicación.
-- `src/`: contiene el modelo, validaciones, almacenamiento e interfaz.
+- `src/`: contiene el modelo, las reglas, el almacenamiento y la interfaz.
 - `data/`: contiene los datos locales en JSON.
-- `tests/`: contiene pruebas automáticas.
+- `tests/`: contiene las pruebas automáticas.
 - `stages/`: contiene los archivos de trabajo separados por etapa.
 - `docs/milestones/`: contiene la especificación completa de cada hito.
 - `config/`: contiene rutas y formatos compartidos.
