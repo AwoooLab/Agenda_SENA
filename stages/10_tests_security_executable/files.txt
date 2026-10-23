@@ -13,6 +13,7 @@ ARCHIVOS DE LA ETAPA
 - test_event_service.py
 - build_windows.ps1
 - release.md
+- preview.html
 
 ======================================================================
 ARCHIVO: test_database.py
@@ -139,3 +140,30 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 Integrar las tres pruebas en tests/, el script en scripts/build_windows.ps1 y la
 guía en docs/release.md.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar el estado de la entrega final: pruebas aprobadas, seguridad revisada y
+ejecutable preparado para Windows.
+
+CONCEPTOS NECESARIOS
+--------------------
+- Un resumen visual puede usar tarjetas de estado.
+- El color verde indica una condición aprobada, siempre acompañado de texto.
+- Un botón puede representar la descarga del ejecutable, aunque esta vista no
+  descarga archivos reales.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <div class="estado-exito">
+      <strong>Pruebas</strong><br />Todas aprobadas
+    </div>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y comprobar que la entrega muestra claramente el nombre del
+ejecutable, el estado de las pruebas y las condiciones de seguridad.

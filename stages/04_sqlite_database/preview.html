@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/stage-preview.css" />
+    <title>Vista previa | Etapa 04</title>
+  </head>
+  <body>
+    <main class="pagina">
+      <header class="encabezado">
+        <h1>Etapa 04 · Base de datos</h1>
+        <p>Vista de las tablas locales que almacenarán la agenda.</p>
+      </header>
+      <section class="rejilla rejilla-2">
+        <article class="tarjeta relleno">
+          <div class="fila-separada"><h2>users</h2><span class="etiqueta">Tabla</span></div>
+          <table class="tabla" style="margin-top:16px"><thead><tr><th>Campo</th><th>Tipo</th></tr></thead><tbody><tr><td>id</td><td>INTEGER</td></tr><tr><td>username</td><td>TEXT</td></tr><tr><td>email</td><td>TEXT</td></tr></tbody></table>
+        </article>
+        <article class="tarjeta relleno">
+          <div class="fila-separada"><h2>events</h2><span class="etiqueta verde">Tabla</span></div>
+          <table class="tabla" style="margin-top:16px"><thead><tr><th>Campo</th><th>Tipo</th></tr></thead><tbody><tr><td>id</td><td>INTEGER</td></tr><tr><td>user_id</td><td>INTEGER</td></tr><tr><td>event_date</td><td>TEXT</td></tr></tbody></table>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

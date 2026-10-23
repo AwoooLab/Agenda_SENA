@@ -9,6 +9,7 @@ por el almacenamiento, la base de datos y la interfaz.
 ARCHIVO DE LA ETAPA
 -------------------
 - model.py
+- preview.html
 
 ======================================================================
 ARCHIVO: model.py
@@ -138,3 +139,31 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 La clase terminada se trasladará a src/model.py. Las pruebas integradas se
 guardarán después en tests/test_model.py.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Representar visualmente una cita para que el alumno pueda observar cómo los
+datos del modelo se convertirán más adelante en una tarjeta de la agenda.
+
+CONCEPTOS NECESARIOS
+--------------------
+- Un contenedor HTML puede representar una cita.
+- Cada campo del modelo debe tener una etiqueta visible.
+- CSS puede diferenciar estado, fecha y hora mediante tarjetas y etiquetas.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <article class="tarjeta">
+      <h2>Clase de Python</h2>
+      <p>23 de octubre de 2026 · 18:00</p>
+      <span class="etiqueta">Pendiente</span>
+    </article>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y comprobar que aparecen título, fecha, hora y descripción
+sin depender del archivo Python.

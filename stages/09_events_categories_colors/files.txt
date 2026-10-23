@@ -14,6 +14,7 @@ ARCHIVOS DE LA ETAPA
 - event_form.py
 - color_legend.py
 - test_event_service.py
+- preview.html
 
 ======================================================================
 ARCHIVO: event.py
@@ -173,3 +174,33 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 Integrar los modelos en src/models/, el servicio en src/services/ y los
 controles en src/ui/. Conectar el servicio con monthly_calendar.py.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar el formulario de actividades, una actividad guardada y la leyenda de
+categorías que se implementarán en la aplicación de escritorio.
+
+CONCEPTOS NECESARIOS
+--------------------
+- input recibe título, fecha y hora.
+- select permite elegir una categoría.
+- Una tarjeta puede representar una actividad guardada.
+- Las categorías deben tener color y nombre escrito.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <select id="categoria">
+      <option>Trabajo</option>
+      <option>Personal</option>
+    </select>
+
+    <span class="etiqueta verde">Personal</span>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y comprobar que se observan el formulario, las actividades
+del día, las categorías y la leyenda de colores.

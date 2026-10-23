@@ -12,6 +12,7 @@ Crear únicamente estos dos archivos:
 ```text
 stages/03_json_storage/storage.py
 stages/03_json_storage/demo.py
+stages/03_json_storage/preview.html
 ```
 
 ## Archivo `storage.py`

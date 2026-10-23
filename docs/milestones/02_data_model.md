@@ -11,6 +11,7 @@ Crear únicamente:
 
 ```text
 stages/02_data_model/model.py
+stages/02_data_model/preview.html
 ```
 
 ## Resultado esperado

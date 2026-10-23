@@ -13,6 +13,7 @@ ARCHIVOS DE LA ETAPA
 - user_repository.py
 - user_service.py
 - test_user_service.py
+- preview.html
 
 ======================================================================
 ARCHIVO: user.py
@@ -185,3 +186,32 @@ INTEGRACIÓN POSTERIOR
 Integrar user.py en src/models/user.py, user_repository.py en
 src/repositories/user_repository.py, y user_service.py en
 src/services/user_service.py.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar el formulario de registro que posteriormente será implementado en la
+interfaz de escritorio.
+
+CONCEPTOS NECESARIOS
+--------------------
+- label identifica cada campo.
+- input permite escribir usuario y correo.
+- type="email" indica que el campo contiene un correo.
+- button representa la acción de registrar.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <label for="correo">Correo electrónico</label>
+    <input id="correo" type="email" />
+    <button>Registrar usuario</button>
+
+Esta vista no guarda información. Solo comunica cómo debe verse el resultado.
+
+COMPROBACIÓN
+------------
+Abrir preview.html y revisar que los campos tengan etiquetas claras, espacio
+suficiente y un botón visible.

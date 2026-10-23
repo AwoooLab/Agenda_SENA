@@ -14,6 +14,7 @@ stages/05_user_registration/user.py
 stages/05_user_registration/user_repository.py
 stages/05_user_registration/user_service.py
 stages/05_user_registration/test_user_service.py
+stages/05_user_registration/preview.html
 ```
 
 ## Archivo `user.py`

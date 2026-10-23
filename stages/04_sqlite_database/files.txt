@@ -11,6 +11,7 @@ ARCHIVOS DE LA ETAPA
 - database.py
 - schema.sql
 - test_database.py
+- preview.html
 
 ======================================================================
 ARCHIVO: schema.sql
@@ -180,3 +181,31 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 Integrar database.py y schema.sql en src/. La base real se generará dentro de
 data/agenda.db. Integrar la prueba en tests/test_database.py.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar en GitHub Pages las tablas users y events que se definieron en
+schema.sql. Es una representación visual; no consulta la base de datos local.
+
+CONCEPTOS NECESARIOS
+--------------------
+- table contiene la tabla.
+- thead contiene los encabezados.
+- tbody contiene los registros o campos.
+- CSS permite mostrar cada tabla como una tarjeta.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <table>
+      <thead><tr><th>Campo</th><th>Tipo</th></tr></thead>
+      <tbody><tr><td>id</td><td>INTEGER</td></tr></tbody>
+    </table>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y confirmar que las columnas visuales coinciden con el
+esquema explicado en schema.sql.

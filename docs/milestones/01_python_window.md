@@ -14,6 +14,7 @@ Crear únicamente:
 
 ```text
 stages/01_python_window/app.py
+stages/01_python_window/preview.html
 ```
 
 No crear otros archivos dentro de esta etapa.

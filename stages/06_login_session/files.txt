@@ -12,6 +12,7 @@ ARCHIVOS DE LA ETAPA
 - auth_service.py
 - login_window.py
 - test_auth_service.py
+- preview.html
 
 ======================================================================
 ARCHIVO: password.py
@@ -205,3 +206,34 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 Integrar password.py en src/security/password.py, auth_service.py en
 src/services/auth_service.py y login_window.py en src/ui/login_window.py.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar en GitHub Pages la pantalla de inicio de sesión que corresponde a
+login_window.py.
+
+CONCEPTOS NECESARIOS
+--------------------
+- HTML organiza los campos Usuario y Contraseña.
+- type="password" oculta el texto escrito en el navegador.
+- CSS organiza el formulario y muestra estados de error.
+- Esta vista no autentica usuarios ni guarda contraseñas.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <label for="password">Contraseña</label>
+    <input id="password" type="password" />
+    <button>Iniciar sesión</button>
+
+Para mostrar un error visual se puede usar:
+
+    <p class="estado-error">El usuario o la contraseña no son correctos.</p>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y confirmar que el formulario muestra usuario, contraseña,
+botón y mensaje de error sin exponer la contraseña.

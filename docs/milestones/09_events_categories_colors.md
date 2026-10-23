@@ -16,6 +16,7 @@ stages/09_events_categories_colors/event_service.py
 stages/09_events_categories_colors/event_form.py
 stages/09_events_categories_colors/color_legend.py
 stages/09_events_categories_colors/test_event_service.py
+stages/09_events_categories_colors/preview.html
 ```
 
 ## Archivo `event.py`

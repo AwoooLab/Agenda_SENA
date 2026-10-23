@@ -11,6 +11,7 @@ ARCHIVOS DE LA ETAPA
 - monthly_calendar.py
 - calendar_cell.py
 - test_calendar.py
+- preview.html
 
 ======================================================================
 ARCHIVO: calendar_cell.py
@@ -127,3 +128,31 @@ un día. Ejecutar también:
 INTEGRACIÓN POSTERIOR
 ---------------------
 Integrar ambos módulos visuales en src/ui/ y conectarlos con main_window.py.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar en el navegador la cuadrícula mensual que después se construirá con
+Tkinter.
+
+CONCEPTOS NECESARIOS
+--------------------
+- Una cuadrícula de siete columnas representa los días de la semana.
+- Las celdas vacías conservan la posición del primer día.
+- Una clase CSS puede destacar el día actual.
+- Una etiqueta interna puede mostrar una actividad.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <div class="dias">
+      <div class="dia vacio"></div>
+      <div class="dia hoy"><strong>23</strong></div>
+    </div>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y comprobar que el mes tiene encabezados, controles, siete
+columnas y una fecha resaltada.

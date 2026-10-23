@@ -14,6 +14,7 @@ Crear únicamente:
 stages/07_main_window/app.py
 stages/07_main_window/main_window.py
 stages/07_main_window/navigation.py
+stages/07_main_window/preview.html
 ```
 
 ## Archivo `navigation.py`

@@ -10,6 +10,7 @@ ARCHIVOS DE LA ETAPA
 --------------------
 - storage.py
 - demo.py
+- preview.html
 
 ======================================================================
 ARCHIVO: storage.py
@@ -147,3 +148,30 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 Trasladar storage.py a src/storage.py y usar data/agenda.json como archivo real.
 El almacenamiento JSON será temporal; más adelante se aprenderá SQLite.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar en el navegador cómo se ve la información que se guarda en JSON. La
+vista es estática y no reemplaza las funciones de storage.py.
+
+CONCEPTOS NECESARIOS
+--------------------
+- Usar pre y code para mostrar texto JSON con formato legible.
+- Usar botones HTML para representar Guardar y Cargar.
+- La apariencia se controla mediante CSS, no mediante Python.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <pre><code>{
+      "titulo": "Clase",
+      "fecha": "2026-10-23"
+    }</code></pre>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y comprobar que el contenido representa la misma estructura
+que demo.py guarda y carga.

@@ -11,6 +11,7 @@ ARCHIVOS DE LA ETAPA
 - app.py
 - main_window.py
 - navigation.py
+- preview.html
 
 ======================================================================
 ARCHIVO: navigation.py
@@ -112,3 +113,31 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 Integrar navigation.py y main_window.py en src/ui/. El app.py de esta carpeta
 es solo una demostración; el app.py de la raíz iniciará el flujo real.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar el espacio de trabajo que verá el usuario después de iniciar sesión.
+
+CONCEPTOS NECESARIOS
+--------------------
+- Una barra superior identifica la aplicación y el usuario.
+- Un panel lateral contiene la navegación.
+- El área central muestra la sección seleccionada.
+- CSS Grid permite dividir el panel lateral y el contenido.
+
+FRAGMENTO DE REFERENCIA
+-----------------------
+    <nav class="barra-lateral">
+      <a href="#calendario">Calendario</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#salir">Cerrar sesión</a>
+    </nav>
+
+COMPROBACIÓN
+------------
+Abrir preview.html y comprobar que se distinguen claramente la barra superior,
+la navegación y el área de trabajo.

@@ -14,6 +14,7 @@ stages/06_login_session/password.py
 stages/06_login_session/auth_service.py
 stages/06_login_session/login_window.py
 stages/06_login_session/test_auth_service.py
+stages/06_login_session/preview.html
 ```
 
 ## Archivo `password.py`

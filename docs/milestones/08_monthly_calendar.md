@@ -14,6 +14,7 @@ Crear únicamente:
 stages/08_monthly_calendar/monthly_calendar.py
 stages/08_monthly_calendar/calendar_cell.py
 stages/08_monthly_calendar/test_calendar.py
+stages/08_monthly_calendar/preview.html
 ```
 
 ## Archivo `calendar_cell.py`

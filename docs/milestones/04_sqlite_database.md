@@ -13,6 +13,7 @@ Crear únicamente:
 stages/04_sqlite_database/database.py
 stages/04_sqlite_database/schema.sql
 stages/04_sqlite_database/test_database.py
+stages/04_sqlite_database/preview.html
 ```
 
 ## Archivo `schema.sql`

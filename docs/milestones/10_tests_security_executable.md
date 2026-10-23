@@ -15,6 +15,7 @@ stages/10_tests_security_executable/test_auth_service.py
 stages/10_tests_security_executable/test_event_service.py
 stages/10_tests_security_executable/build_windows.ps1
 stages/10_tests_security_executable/release.md
+stages/10_tests_security_executable/preview.html
 ```
 
 ## Archivos de prueba

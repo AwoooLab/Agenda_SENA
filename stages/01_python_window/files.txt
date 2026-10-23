@@ -11,6 +11,7 @@ cerrarla.
 ARCHIVO DE LA ETAPA
 -------------------
 - app.py
+- preview.html
 
 REGLAS GENERALES
 ----------------
@@ -155,3 +156,34 @@ INTEGRACIÓN POSTERIOR
 ---------------------
 Después de terminar esta lección, trasladar la idea a src/interface.py. El
 archivo app.py de la raíz será el punto de entrada de la aplicación integrada.
+
+======================================================================
+ARCHIVO: preview.html
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar en GitHub Pages una representación visual de la ventana que se construye
+en app.py. Este archivo no ejecuta Python ni Tkinter; solo permite revisar el
+resultado visual desde el navegador.
+
+CONCEPTOS NECESARIOS
+--------------------
+- HTML define la estructura.
+- CSS define colores, tamaños y distribución.
+- La ruta ../../assets/stage-preview.css reutiliza los estilos del proyecto.
+
+FRAGMENTOS DE REFERENCIA
+-------------------------
+    <main class="ventana">
+      <h1>Agenda SENA</h1>
+      <p>Mi agenda local para PC</p>
+      <button>Cerrar</button>
+    </main>
+
+La vista debe conservar el título, subtítulo y botón del resultado de Python.
+
+COMPROBACIÓN
+------------
+Abrir stages/01_python_window/preview.html en un navegador y comprobar que la
+ventana visual coincide con el diseño definido para app.py.
