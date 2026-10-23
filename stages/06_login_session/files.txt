@@ -1,7 +1,207 @@
-ARCHIVOS DE LA ETAPA 06
+ETAPA 06 — INICIO DE SESIÓN Y SESIÓN ACTIVA
+============================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Aprender cómo se protegen las contraseñas, cómo se comprueba un usuario y cómo
+se mantiene la sesión actual en memoria. Los cuatro archivos están vacíos.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - password.py
 - auth_service.py
 - login_window.py
 - test_auth_service.py
+
+======================================================================
+ARCHIVO: password.py
+======================================================================
+
+PROPÓSITO
+---------
+Convertir una contraseña en un resumen seguro y comprobarla después sin guardar
+la contraseña original.
+
+LIBRERÍAS PERMITIDAS
+--------------------
+- secrets para crear una sal aleatoria.
+- hashlib para PBKDF2.
+- hmac para comparar de forma segura.
+- No usar librerías externas.
+
+LECCIÓN 1 — POR QUÉ NO SE GUARDA LA CONTRASEÑA
+----------------------------------------------
+La contraseña original es un secreto. La base solo debe guardar un resumen
+irreversible y una sal diferente para cada usuario.
+
+LECCIÓN 2 — CREAR UNA SAL
+-------------------------
+Una sal es un valor aleatorio que evita que dos contraseñas iguales produzcan
+el mismo resumen.
+
+Fragmento:
+    import secrets
+    salt = secrets.token_hex(16)
+
+LECCIÓN 3 — DERIVAR EL RESUMEN
+------------------------------
+PBKDF2 aplica muchas iteraciones para dificultar ataques de fuerza bruta.
+
+Fragmento orientativo:
+    import hashlib
+    resumen = hashlib.pbkdf2_hmac(
+        "sha256",
+        password.encode("utf-8"),
+        salt.encode("utf-8"),
+        100000,
+    )
+
+Convertir el resultado a hexadecimal con .hex().
+
+LECCIÓN 4 — VERIFICAR
+---------------------
+Crear nuevamente el resumen usando la sal guardada y comparar con
+hmac.compare_digest.
+
+Fragmento:
+    import hmac
+    hmac.compare_digest(resumen_nuevo, resumen_guardado)
+
+FUNCIONES OBLIGATORIAS
+----------------------
+    crear_credenciales(password) -> tuple[str, str]
+    verificar_password(password, salt, password_hash) -> bool
+
+REGLAS
+------
+- Rechazar contraseñas de menos de ocho caracteres en el servicio.
+- No imprimir contraseñas.
+- No incluir contraseñas de ejemplo en el código.
+- No devolver la contraseña original.
+
+======================================================================
+ARCHIVO: auth_service.py
+======================================================================
+
+PROPÓSITO
+---------
+Conectar el repositorio de usuarios con las funciones de contraseñas y guardar
+en memoria quién inició sesión.
+
+LIBRERÍAS
+---------
+- password.py de esta etapa.
+- user.py y user_repository.py de la etapa anterior.
+- No usar Tkinter dentro del servicio.
+
+LECCIÓN 1 — DEPENDENCIAS
+------------------------
+El servicio recibe el repositorio en el constructor para no crear conexiones
+por dentro.
+
+Fragmento:
+    class ServicioAutenticacion:
+        def __init__(self, repositorio):
+            self.repositorio = repositorio
+            self._usuario_actual = None
+
+LECCIÓN 2 — ESTABLECER CONTRASEÑA
+---------------------------------
+crear_credenciales devuelve hash y salt. Luego actualizar_credenciales los
+guarda en el usuario indicado.
+
+LECCIÓN 3 — INICIAR SESIÓN
+--------------------------
+1. Buscar por username.
+2. Si no existe, devolver None.
+3. Si está inactivo, devolver None.
+4. Verificar la contraseña.
+5. Si es correcta, guardar el usuario en _usuario_actual.
+6. Devolver el usuario.
+
+LECCIÓN 4 — CERRAR SESIÓN
+-------------------------
+Cerrar sesión significa asignar None al usuario actual.
+
+MÉTODOS OBLIGATORIOS
+--------------------
+    establecer_password(user_id, password)
+    iniciar_sesion(username, password)
+    cerrar_sesion()
+    usuario_actual()
+
+======================================================================
+ARCHIVO: login_window.py
+======================================================================
+
+PROPÓSITO
+---------
+Crear la pantalla visual que solicita usuario y contraseña.
+
+LIBRERÍAS
+---------
+- tkinter.
+- messagebox solo si se desea mostrar un aviso sencillo.
+- auth_service.py.
+
+LECCIÓN 1 — CAMPOS DE TEXTO
+---------------------------
+Entry permite escribir datos. Para ocultar una contraseña usar show="*".
+
+Fragmento:
+    entrada_password = tk.Entry(ventana, show="*")
+
+LECCIÓN 2 — FUNCIÓN DEL BOTÓN
+-----------------------------
+El botón debe leer los campos, llamar a iniciar_sesion y revisar el resultado.
+
+Fragmento:
+    usuario = entrada_usuario.get().strip()
+    password = entrada_password.get()
+
+LECCIÓN 3 — FUNCIÓN DE RESPUESTA
+--------------------------------
+La ventana recibe on_login(usuario). Si el servicio devuelve un usuario, llama
+a esa función. La ventana no debe construir la ventana principal.
+
+DISEÑO OBLIGATORIO
+------------------
+- Título: Agenda SENA — Inicio de sesión.
+- Tamaño: 420x300.
+- Etiqueta Usuario.
+- Campo Usuario.
+- Etiqueta Contraseña.
+- Campo Contraseña oculto.
+- Botón Iniciar sesión.
+- Botón Cerrar.
+- Mensaje de error en español.
+
+======================================================================
+ARCHIVO: test_auth_service.py
+======================================================================
+
+PROPÓSITO
+---------
+Probar la seguridad y el flujo de la sesión sin abrir la interfaz.
+
+CASOS OBLIGATORIOS
+------------------
+- Contraseña correcta.
+- Contraseña incorrecta.
+- Usuario inexistente.
+- Usuario inactivo.
+- Contraseña de menos de ocho caracteres.
+- Usuario actual después de iniciar sesión.
+- Usuario actual vacío después de cerrar sesión.
+- La contraseña original no aparece en la base.
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar:
+
+    python -m unittest stages/06_login_session/test_auth_service.py -v
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Integrar password.py en src/security/password.py, auth_service.py en
+src/services/auth_service.py y login_window.py en src/ui/login_window.py.

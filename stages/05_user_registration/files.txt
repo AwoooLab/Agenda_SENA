@@ -1,7 +1,186 @@
-ARCHIVOS DE LA ETAPA 05
+ETAPA 05 — REGISTRO DE USUARIOS
+===============================
 
-Crear o completar:
+PROPÓSITO
+---------
+Aprender a separar el modelo de usuario, las consultas de la base de datos y
+las reglas de registro. Cada archivo tiene una responsabilidad diferente.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - user.py
 - user_repository.py
 - user_service.py
 - test_user_service.py
+
+======================================================================
+ARCHIVO: user.py
+======================================================================
+
+PROPÓSITO
+---------
+Representar un usuario sin abrir ventanas ni consultar la base de datos.
+
+LIBRERÍAS
+---------
+- dataclasses.dataclass.
+- typing solo si se necesita compatibilidad adicional.
+
+LECCIÓN 1 — ORDEN DE LOS CAMPOS
+-------------------------------
+Los campos obligatorios deben ir antes de los campos con valor inicial.
+
+Campos:
+    username: str
+    email: str
+    id: int | None = None
+    password_hash: str = ""
+    password_salt: str = ""
+    is_active: bool = True
+    created_at: str = ""
+
+LECCIÓN 2 — MODELO SIN LÓGICA EXTERNA
+-------------------------------------
+El modelo solo guarda información. No debe importar sqlite3 ni tkinter.
+
+======================================================================
+ARCHIVO: user_repository.py
+======================================================================
+
+PROPÓSITO
+---------
+Encapsular las consultas SQL de usuarios. La interfaz y el servicio no deben
+escribir consultas directamente.
+
+LIBRERÍAS
+---------
+- sqlite3.
+- dataclasses o el modelo Usuario de user.py.
+- datetime para crear created_at.
+
+LECCIÓN 1 — RECIBIR UNA CONEXIÓN
+--------------------------------
+La clase RepositorioUsuarios recibe una conexión lista para usar.
+
+Fragmento:
+    class RepositorioUsuarios:
+        def __init__(self, conexion):
+            self.conexion = conexion
+
+LECCIÓN 2 — CONSULTAS PARAMETRIZADAS
+------------------------------------
+Nunca unir textos para construir una consulta. Usar ? y una tupla de valores.
+
+Fragmento:
+    fila = self.conexion.execute(
+        "SELECT * FROM users WHERE username = ?",
+        (username,),
+    ).fetchone()
+
+LECCIÓN 3 — INSERTAR Y CONFIRMAR
+--------------------------------
+Después de INSERT usar commit. Obtener lastrowid para devolver el usuario con
+su id.
+
+Fragmento:
+    cursor = self.conexion.execute("INSERT INTO users (...) VALUES (...)", valores)
+    self.conexion.commit()
+    nuevo_id = cursor.lastrowid
+
+LECCIÓN 4 — CONVERTIR FILAS EN OBJETOS
+--------------------------------------
+Una fila de sqlite3.Row puede convertirse en Usuario usando sus columnas por
+nombre. Mantener esta conversión en el repositorio.
+
+MÉTODOS OBLIGATORIOS
+--------------------
+    crear(usuario)
+    buscar_por_username(username)
+    buscar_por_email(email)
+    actualizar_credenciales(user_id, password_hash, password_salt)
+
+======================================================================
+ARCHIVO: user_service.py
+======================================================================
+
+PROPÓSITO
+---------
+Aplicar las reglas del negocio antes de llamar al repositorio.
+
+LIBRERÍAS
+---------
+- re, solo para una comprobación sencilla de correo si se necesita.
+- datetime para la fecha de creación.
+- El modelo y el repositorio de esta misma etapa.
+
+LECCIÓN 1 — NORMALIZAR DATOS
+----------------------------
+Quitar espacios del usuario y correo. Convertir el correo a minúsculas.
+
+Fragmento:
+    username = username.strip()
+    email = email.strip().lower()
+
+LECCIÓN 2 — VALIDAR ANTES DE GUARDAR
+------------------------------------
+Rechazar datos vacíos y duplicados antes de llamar a crear. Lanzar ValueError
+con mensajes en español.
+
+Fragmento:
+    if not username:
+        raise ValueError("El nombre de usuario es obligatorio.")
+
+LECCIÓN 3 — SEPARAR RESPONSABILIDADES
+-------------------------------------
+El servicio decide si los datos son válidos. El repositorio decide cómo se
+guardan. No mezclar ambas funciones.
+
+ORDEN DE registrar
+------------------
+1. Recibir username y email.
+2. Normalizar ambos valores.
+3. Revisar campos vacíos.
+4. Buscar duplicados.
+5. Crear Usuario activo.
+6. Enviar Usuario al repositorio.
+7. Devolver el usuario creado.
+
+======================================================================
+ARCHIVO: test_user_service.py
+======================================================================
+
+PROPÓSITO
+---------
+Comprobar las reglas del servicio sin usar datos reales.
+
+LIBRERÍAS
+---------
+- unittest.
+- sqlite3.
+- tempfile.
+- Los módulos de esta etapa y database.py integrado o una conexión temporal.
+
+CASOS QUE DEBE PROBAR
+---------------------
+- Registro correcto.
+- Nombre vacío.
+- Correo vacío.
+- Nombre duplicado.
+- Correo duplicado con mayúsculas diferentes.
+- Usuario creado como activo.
+
+Fragmento de comprobación de error:
+    with self.assertRaises(ValueError):
+        servicio.registrar("", "correo@ejemplo.com")
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar:
+
+    python -m unittest stages/05_user_registration/test_user_service.py -v
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Integrar user.py en src/models/user.py, user_repository.py en
+src/repositories/user_repository.py, y user_service.py en
+src/services/user_service.py.

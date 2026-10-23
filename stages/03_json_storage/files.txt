@@ -1,5 +1,149 @@
-ARCHIVOS DE LA ETAPA 03
+ETAPA 03 — ALMACENAMIENTO TEMPORAL EN JSON
+==========================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Aprender a guardar una lista de datos en un archivo local y cargarla después.
+Los dos archivos de código de esta etapa están vacíos intencionalmente.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - storage.py
 - demo.py
+
+======================================================================
+ARCHIVO: storage.py
+======================================================================
+
+RESULTADO ESPERADO
+------------------
+Crear dos funciones pequeñas: guardar datos en JSON y cargar datos desde JSON.
+Este archivo no debe saber nada de ventanas ni de la agenda visual.
+
+LIBRERÍAS QUE SE PUEDEN USAR
+-----------------------------
+- json para convertir entre texto y datos de Python.
+- pathlib.Path para trabajar con rutas.
+- No usar Tkinter ni SQLite.
+
+LECCIÓN 1 — RUTAS CON PATH
+--------------------------
+Path representa una ruta sin depender de concatenar textos manualmente.
+
+Fragmento:
+    from pathlib import Path
+    ruta = Path("data") / "agenda.json"
+
+LECCIÓN 2 — CONVERTIR DATOS A JSON
+----------------------------------
+json.dumps convierte una lista o diccionario en texto JSON.
+
+Fragmento:
+    import json
+    texto = json.dumps(datos, indent=2, ensure_ascii=False)
+
+indent=2 hace el archivo legible y ensure_ascii=False conserva tildes.
+
+LECCIÓN 3 — GUARDAR TEXTO EN UTF-8
+----------------------------------
+Path.write_text escribe texto y permite indicar la codificación.
+
+Fragmento:
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    ruta.write_text(texto, encoding="utf-8")
+
+Crear la carpeta superior evita errores cuando data todavía no existe.
+
+LECCIÓN 4 — DISEÑAR guardar
+---------------------------
+La función recibe list[dict] y Path, convierte los datos en texto y los guarda.
+
+Firma esperada:
+    def guardar(datos: list[dict], ruta: Path) -> None:
+        ...
+
+LECCIÓN 5 — LEER Y CONVERTIR JSON
+---------------------------------
+Path.read_text lee el texto. json.loads convierte el texto en objetos Python.
+
+Fragmento:
+    texto = ruta.read_text(encoding="utf-8")
+    datos = json.loads(texto)
+
+LECCIÓN 6 — ARCHIVO INEXISTENTE
+-------------------------------
+Si la ruta todavía no existe, cargar debe devolver una lista vacía. Así la
+aplicación puede empezar sin datos.
+
+Fragmento:
+    if not ruta.exists():
+        return []
+
+Si el contenido no es una lista, se puede lanzar ValueError con un mensaje
+claro.
+
+======================================================================
+ARCHIVO: demo.py
+======================================================================
+
+PROPÓSITO
+---------
+Demostrar storage.py sin tocar data/agenda.json. El demo es un programa corto
+que guarda, carga e imprime una lista.
+
+LIBRERÍAS QUE SE PUEDEN USAR
+-----------------------------
+- tempfile.TemporaryDirectory para crear una carpeta de prueba.
+- pathlib.Path para construir la ruta.
+- Las funciones guardar y cargar de storage.py.
+
+LECCIÓN 1 — CARPETA TEMPORAL
+----------------------------
+TemporaryDirectory elimina la carpeta al salir del bloque with.
+
+Fragmento:
+    from tempfile import TemporaryDirectory
+
+    with TemporaryDirectory() as carpeta:
+        ruta = Path(carpeta) / "agenda.json"
+
+LECCIÓN 2 — DATOS DE EJEMPLO
+----------------------------
+Crear una lista con un diccionario que tenga titulo, fecha, hora y descripcion.
+
+Fragmento:
+    datos = [{
+        "titulo": "Clase",
+        "fecha": "2026-10-23",
+        "hora": "18:00",
+        "descripcion": "Practicar JSON",
+    }]
+
+LECCIÓN 3 — FLUJO DEL DEMO
+--------------------------
+1. Crear la ruta temporal.
+2. Preparar la lista.
+3. Llamar guardar.
+4. Llamar cargar.
+5. Imprimir la lista cargada.
+
+RESTRICCIONES
+-------------
+- No modificar data/agenda.json.
+- No abrir ventanas.
+- No usar SQLite.
+- No dejar carpetas temporales.
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar:
+
+    python stages/03_json_storage/demo.py
+
+Debe imprimirse la misma información guardada. Si se borra el archivo temporal,
+el programa debe poder volver a ejecutarse sin preparación adicional.
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Trasladar storage.py a src/storage.py y usar data/agenda.json como archivo real.
+El almacenamiento JSON será temporal; más adelante se aprenderá SQLite.

@@ -1,6 +1,183 @@
-ARCHIVOS DE LA ETAPA 04
+ETAPA 04 — BASE DE DATOS LOCAL SQLITE
+=====================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Aprender a definir tablas, abrir una base de datos local y ejecutar consultas
+parametrizadas. Los tres archivos de código están vacíos para construirlos a
+mano.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - database.py
 - schema.sql
 - test_database.py
+
+======================================================================
+ARCHIVO: schema.sql
+======================================================================
+
+RESULTADO ESPERADO
+------------------
+Definir las tablas users y events. La tabla users representa a las personas y
+events representa las actividades de la agenda.
+
+CONCEPTOS QUE DEBE APRENDER
+---------------------------
+- Tabla: conjunto de registros del mismo tipo.
+- Columna: dato almacenado en cada registro.
+- Clave primaria: identifica un registro sin repetir.
+- Clave foránea: relaciona una tabla con otra.
+- NOT NULL: obliga a proporcionar un dato.
+- UNIQUE: evita duplicados.
+- DEFAULT: proporciona un valor inicial.
+
+LECCIÓN 1 — CREAR UNA TABLA
+---------------------------
+Fragmento:
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT NOT NULL UNIQUE
+    );
+
+LECCIÓN 2 — TABLA users
+-----------------------
+Crear estas columnas:
+
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+    username TEXT NOT NULL UNIQUE
+    email TEXT NOT NULL UNIQUE
+    password_hash TEXT NOT NULL DEFAULT ''
+    password_salt TEXT NOT NULL DEFAULT ''
+    is_active INTEGER NOT NULL DEFAULT 1
+    created_at TEXT NOT NULL
+
+En esta etapa las credenciales pueden estar vacías. La contraseña real nunca se
+guarda; el resumen y la sal se completarán en la etapa de inicio de sesión.
+
+LECCIÓN 3 — TABLA events
+------------------------
+Crear estas columnas:
+
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+    user_id INTEGER NOT NULL
+    title TEXT NOT NULL
+    event_date TEXT NOT NULL
+    start_time TEXT NOT NULL
+    end_time TEXT NOT NULL
+    description TEXT
+    category TEXT NOT NULL
+    color TEXT NOT NULL
+    is_completed INTEGER NOT NULL DEFAULT 0
+
+La columna user_id debe referenciar users(id):
+
+    FOREIGN KEY (user_id) REFERENCES users(id)
+
+LECCIÓN 4 — ORDEN Y SINTAXIS SQL
+--------------------------------
+Cada columna se separa con coma, excepto la última antes del paréntesis. Las
+instrucciones terminan en punto y coma. Mantener una tabla por bloque CREATE.
+
+======================================================================
+ARCHIVO: database.py
+======================================================================
+
+RESULTADO ESPERADO
+------------------
+Abrir una conexión SQLite y ejecutar el contenido de schema.sql.
+
+LIBRERÍAS QUE SE PUEDEN USAR
+-----------------------------
+- sqlite3, incluido en Python.
+- pathlib.Path para rutas.
+- No usar Tkinter ni librerías externas.
+
+LECCIÓN 1 — ABRIR LA CONEXIÓN
+-----------------------------
+Fragmento:
+    conexion = sqlite3.connect(ruta)
+
+La función conectar debe recibir Path y devolver sqlite3.Connection.
+
+LECCIÓN 2 — PREPARAR LA CARPETA
+-------------------------------
+Antes de abrir la base, crear la carpeta superior:
+
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+
+LECCIÓN 3 — ACTIVAR CLAVES FORÁNEAS
+------------------------------------
+SQLite requiere activar esta regla por conexión:
+
+    conexion.execute("PRAGMA foreign_keys = ON")
+
+LECCIÓN 4 — LEER EL ESQUEMA
+---------------------------
+Leer schema.sql con UTF-8 y ejecutar todas sus instrucciones:
+
+    texto = ruta_schema.read_text(encoding="utf-8")
+    conexion.executescript(texto)
+
+LECCIÓN 5 — FÁBRICA DE FILAS
+----------------------------
+Para poder leer las columnas por nombre:
+
+    conexion.row_factory = sqlite3.Row
+
+======================================================================
+ARCHIVO: test_database.py
+======================================================================
+
+RESULTADO ESPERADO
+------------------
+Crear una prueba automática que use una base temporal y no toque data/agenda.db.
+
+LIBRERÍAS QUE SE PUEDEN USAR
+-----------------------------
+- unittest.
+- tempfile.TemporaryDirectory.
+- pathlib.Path.
+- sqlite3.
+
+LECCIÓN 1 — ESTRUCTURA DE unittest
+----------------------------------
+Fragmento:
+    import unittest
+
+    class PruebaBaseDatos(unittest.TestCase):
+        def test_crear_tablas(self):
+            ...
+
+LECCIÓN 2 — DATOS TEMPORALES
+----------------------------
+Crear la ruta dentro de TemporaryDirectory y cerrarla al terminar la prueba.
+
+LECCIÓN 3 — COMPROBACIONES
+--------------------------
+Usar self.assertIsNotNone, self.assertEqual y self.assertTrue para comprobar
+que se crearon las tablas y que los datos se pueden leer.
+
+ORDEN DE LA PRUEBA
+------------------
+1. Crear una base temporal.
+2. Abrir conexión.
+3. Ejecutar schema.sql.
+4. Insertar un usuario de prueba.
+5. Insertar una actividad relacionada.
+6. Consultar los registros.
+7. Comprobar sus valores.
+8. Cerrar conexión.
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar:
+
+    python -m unittest stages/04_sqlite_database/test_database.py -v
+
+No debe quedar una base temporal dentro del proyecto.
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Integrar database.py y schema.sql en src/. La base real se generará dentro de
+data/agenda.db. Integrar la prueba en tests/test_database.py.

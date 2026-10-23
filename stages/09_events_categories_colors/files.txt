@@ -1,9 +1,175 @@
-ARCHIVOS DE LA ETAPA 09
+ETAPA 09 — ACTIVIDADES, CATEGORÍAS Y COLORES
+=============================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Construir la lógica completa de las actividades y conectarla con el formulario
+visual. Cada archivo tiene una responsabilidad específica.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - event.py
 - category.py
 - event_service.py
 - event_form.py
 - color_legend.py
 - test_event_service.py
+
+======================================================================
+ARCHIVO: event.py
+======================================================================
+
+PROPÓSITO
+---------
+Representar una actividad con sus datos y estado.
+
+LIBRERÍAS
+---------
+- dataclasses.dataclass.
+- No usar Tkinter ni consultas SQL en el modelo.
+
+CAMPOS
+------
+    id: int | None
+    user_id: int
+    titulo: str
+    fecha: str
+    hora_inicio: str
+    hora_fin: str
+    descripcion: str
+    categoria_id: int
+    completado: bool
+
+El título, fecha, hora inicial y hora final son obligatorios.
+
+======================================================================
+ARCHIVO: category.py
+======================================================================
+
+PROPÓSITO
+---------
+Representar una categoría y su color.
+
+CAMPOS
+------
+    id: int
+    nombre: str
+    color: str
+
+CATEGORÍAS INICIALES
+--------------------
+- Trabajo — #2563EB.
+- Personal — #16A34A.
+- Estudio — #F59E0B.
+- Salud — #DC2626.
+
+No usar colores sin mostrar también el nombre de la categoría.
+
+======================================================================
+ARCHIVO: event_service.py
+======================================================================
+
+PROPÓSITO
+---------
+Aplicar las reglas de actividades y separar la lógica de la interfaz.
+
+LIBRERÍAS
+---------
+- datetime para validar fechas y horas.
+- event.py y category.py.
+- sqlite3 o un repositorio recibido por el constructor.
+
+MÉTODOS NECESARIOS
+------------------
+    crear(evento)
+    editar(evento)
+    eliminar(evento_id)
+    completar(evento_id)
+    listar_por_fecha(fecha)
+    filtrar(fecha, categoria_id, completado)
+
+LECCIÓN 1 — VALIDAR UNA FECHA
+-----------------------------
+Usar datetime.strptime(fecha, "%Y-%m-%d") y capturar ValueError.
+
+LECCIÓN 2 — VALIDAR HORAS
+-------------------------
+Usar datetime.strptime(hora, "%H:%M") y comparar la hora final con la inicial.
+La hora final debe ser posterior.
+
+LECCIÓN 3 — SEPARAR CONSULTAS Y REGLAS
+--------------------------------------
+El servicio valida y decide. El repositorio o la conexión ejecuta SQL. No
+colocar consultas en event_form.py.
+
+======================================================================
+ARCHIVO: event_form.py
+======================================================================
+
+PROPÓSITO
+---------
+Crear el formulario para guardar una actividad.
+
+LIBRERÍAS
+---------
+- tkinter.
+- ttk para Combobox y controles con mejor apariencia.
+- event_service.py.
+
+CONTROLES EN ESTE ORDEN
+-----------------------
+1. Título.
+2. Fecha (AAAA-MM-DD).
+3. Hora inicial (HH:MM).
+4. Hora final (HH:MM).
+5. Descripción.
+6. Categoría.
+7. Guardar.
+8. Cancelar.
+
+FLUJO DEL BOTÓN GUARDAR
+-----------------------
+1. Leer los valores.
+2. Crear un Evento.
+3. Enviar el evento al servicio.
+4. Si hay ValueError, mostrarlo en español.
+5. Si funciona, llamar on_saved(evento).
+
+======================================================================
+ARCHIVO: color_legend.py
+======================================================================
+
+PROPÓSITO
+---------
+Mostrar el significado de cada categoría.
+
+Cada fila debe mostrar un indicador de color y el nombre escrito de la categoría.
+Usar Frame y Label. El color ayuda a reconocer, pero el texto debe comunicar la
+información aunque la persona no distinga los colores.
+
+======================================================================
+ARCHIVO: test_event_service.py
+======================================================================
+
+CASOS NECESARIOS
+----------------
+- Crear actividad válida.
+- Rechazar título vacío.
+- Rechazar fecha inválida.
+- Rechazar hora inválida.
+- Rechazar hora final anterior o igual.
+- Editar actividad.
+- Filtrar por fecha.
+- Filtrar por categoría.
+- Completar actividad.
+- Eliminar actividad.
+
+COMPROBACIÓN MANUAL
+-------------------
+Crear una actividad por categoría, editar una, completar otra, filtrar por fecha
+y eliminar una. Comprobar que el calendario pueda recibir los resultados.
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Integrar los modelos en src/models/, el servicio en src/services/ y los
+controles en src/ui/. Conectar el servicio con monthly_calendar.py.

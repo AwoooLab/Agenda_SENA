@@ -1,6 +1,114 @@
-ARCHIVOS DE LA ETAPA 07
+ETAPA 07 — VENTANA PRINCIPAL DE LA AGENDA
+==========================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Construir la estructura visual que aparece después del inicio de sesión. La
+etapa enseña ventanas, paneles, botones y funciones de respuesta.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - app.py
 - main_window.py
 - navigation.py
+
+======================================================================
+ARCHIVO: navigation.py
+======================================================================
+
+PROPÓSITO
+---------
+Crear el panel lateral y sus botones de navegación.
+
+LIBRERÍAS
+---------
+- tkinter.
+- No usar todavía SQLite ni servicios de datos.
+
+LECCIÓN 1 — FRAME COMO CONTENEDOR
+---------------------------------
+Frame agrupa controles y permite separar panel lateral y contenido.
+
+Fragmento:
+    panel = tk.Frame(parent, bg="#E5E7EB")
+    panel.pack(side="left", fill="y")
+
+LECCIÓN 2 — BOTONES CON CALLBACK
+--------------------------------
+Cada botón recibe una función que se ejecutará al hacer clic.
+
+Fragmento:
+    tk.Button(panel, text="Calendario", command=al_abrir_calendario).pack()
+
+LECCIÓN 3 — TRES ACCIONES
+-------------------------
+Crear las opciones Calendario, Actividades y Cerrar sesión. Las dos primeras
+pueden mostrar el texto Sección en construcción.
+
+======================================================================
+ARCHIVO: main_window.py
+======================================================================
+
+PROPÓSITO
+---------
+Crear la ventana autenticada con barra superior, usuario, navegación y área de
+contenido.
+
+LIBRERÍAS
+---------
+- tkinter.
+- typing.Callable para documentar funciones de respuesta.
+- El modelo Usuario de la etapa anterior.
+
+DISEÑO OBLIGATORIO
+------------------
+- Tamaño inicial: 900x600.
+- Título: Agenda SENA.
+- Barra superior con Agenda SENA y el usuario activo.
+- Panel lateral izquierdo.
+- Área central con fondo #F8FAFC.
+- Color principal sugerido: #2563EB.
+
+LECCIÓN 1 — RECIBIR UN USUARIO
+------------------------------
+La función o clase debe recibir el usuario autenticado, no pedirlo otra vez.
+
+LECCIÓN 2 — CAMBIAR EL CONTENIDO
+--------------------------------
+El área central puede limpiarse con destroy y luego recibir un nuevo Label o
+Frame. Mantener la navegación fuera del área central.
+
+LECCIÓN 3 — CERRAR SESIÓN
+-------------------------
+El botón debe cerrar la ventana y llamar on_logout. No duplicar la lógica de
+contraseñas.
+
+======================================================================
+ARCHIVO: app.py
+======================================================================
+
+PROPÓSITO
+---------
+Servir como demostración independiente. Todavía no debe depender de login real.
+
+LÓGICA
+------
+1. Crear un usuario de prueba llamado Estudiante.
+2. Crear la ventana principal.
+3. Mostrar la navegación.
+4. Mostrar secciones temporales.
+5. Permitir cerrar sesión.
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar:
+
+    python stages/07_main_window/app.py
+
+Comprobar que el usuario aparece, los botones responden y Cerrar sesión ejecuta
+la salida.
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Integrar navigation.py y main_window.py en src/ui/. El app.py de esta carpeta
+es solo una demostración; el app.py de la raíz iniciará el flujo real.

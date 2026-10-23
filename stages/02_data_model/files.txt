@@ -1,4 +1,141 @@
-ARCHIVOS DE LA ETAPA 02
+ETAPA 02 — MODELO DE DATOS DE UNA CITA
+======================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Representar una cita de la agenda como un objeto de Python. El archivo queda
+vacío para que el estudiante construya la clase después de estudiar las
+lecciones.
+
+ARCHIVO DE LA ETAPA
+-------------------
 - model.py
+
+======================================================================
+ARCHIVO: model.py
+======================================================================
+
+RESULTADO ESPERADO
+------------------
+Crear una clase Cita con título, fecha, hora y descripción. La clase debe poder
+convertirse en diccionario y reconstruirse desde un diccionario.
+
+LIBRERÍAS QUE SE PUEDEN USAR
+-----------------------------
+- dataclasses.dataclass
+- dataclasses.asdict
+- typing, solo si se necesitan tipos adicionales.
+- No usar Tkinter, JSON, SQLite ni pathlib todavía.
+
+LECCIÓN 1 — CLASES Y DATOS
+--------------------------
+Una clase agrupa datos y comportamientos relacionados. Una cita necesita datos
+que siempre deben viajar juntos.
+
+Fragmento:
+    class Cita:
+        pass
+
+LECCIÓN 2 — DATACLASS
+---------------------
+@dataclass genera automáticamente el constructor y otras operaciones básicas.
+
+Fragmento:
+    from dataclasses import dataclass
+
+    @dataclass
+    class Cita:
+        titulo: str
+        fecha: str
+
+Los campos sin valor inicial deben escribirse antes de los campos con valor
+inicial.
+
+LECCIÓN 3 — TIPOS Y VALORES INICIALES
+-------------------------------------
+La clase completa debe tener:
+
+    titulo: str
+    fecha: str
+    hora: str
+    descripcion: str = ""
+
+La fecha se manejará como texto AAAA-MM-DD y la hora como texto HH:MM. En esta
+etapa no se deben usar objetos de fecha para no complicar el primer modelo.
+
+LECCIÓN 4 — CREAR UN OBJETO
+---------------------------
+Los datos se entregan al constructor en el mismo orden de los campos.
+
+Fragmento:
+    cita = Cita("Clase", "2026-10-23", "18:00")
+
+Como descripcion tiene un valor inicial, puede omitirse.
+
+LECCIÓN 5 — CONVERTIR A DICCIONARIO
+-----------------------------------
+asdict convierte una dataclass en un diccionario con sus nombres de campo.
+
+Fragmento:
+    from dataclasses import asdict
+
+    datos = asdict(cita)
+
+El método a_diccionario debe devolver ese resultado.
+
+LECCIÓN 6 — RECONSTRUIR DESDE UN DICCIONARIO
+--------------------------------------------
+Un classmethod recibe la clase como cls. La descripción debe leerse con get
+para permitir diccionarios antiguos que no la tengan.
+
+Fragmento:
+    @classmethod
+    def desde_diccionario(cls, datos: dict) -> "Cita":
+        return cls(
+            titulo=datos["titulo"],
+            fecha=datos["fecha"],
+            hora=datos["hora"],
+            descripcion=datos.get("descripcion", ""),
+        )
+
+LECCIÓN 7 — EJEMPLO DIRECTO
+---------------------------
+El archivo debe tener un pequeño ejemplo bajo if __name__ == "__main__".
+Debe crear una cita y mostrar su diccionario.
+
+Fragmento:
+    if __name__ == "__main__":
+        ejemplo = Cita("Clase de Python", "2026-10-23", "18:00")
+        print(ejemplo.a_diccionario())
+
+LÓGICA QUE DEBE ESCRIBIR EL ESTUDIANTE
+--------------------------------------
+1. Importar dataclass y asdict.
+2. Crear la dataclass Cita.
+3. Agregar los cuatro campos en el orden correcto.
+4. Crear a_diccionario.
+5. Crear desde_diccionario.
+6. Agregar un ejemplo ejecutable.
+
+RESTRICCIONES
+-------------
+- No abrir ventanas.
+- No leer ni escribir archivos.
+- No usar bases de datos.
+- No agregar todavía usuarios, categorías o colores.
+- No importar archivos de src/.
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar:
+
+    python stages/02_data_model/model.py
+
+Debe mostrarse un diccionario con titulo, fecha, hora y descripcion. Crear
+también una cita, convertirla y reconstruirla para comprobar que conserva los
+mismos valores.
+
+INTEGRACIÓN POSTERIOR
+---------------------
+La clase terminada se trasladará a src/model.py. Las pruebas integradas se
+guardarán después en tests/test_model.py.

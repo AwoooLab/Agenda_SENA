@@ -1,4 +1,156 @@
-ARCHIVOS DE LA ETAPA 01
+ETAPA 01 — VENTANA INICIAL DE LA AGENDA
+========================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Construir la primera ventana de escritorio de Agenda SENA. Los archivos de
+código de esta carpeta están vacíos intencionalmente. El estudiante debe leer
+esta guía, aprender cada lección y escribir el código a mano.
+
+ARCHIVO DE LA ETAPA
+-------------------
 - app.py
+
+REGLAS GENERALES
+----------------
+- Trabajar desde la carpeta raíz del proyecto.
+- Usar Python 3.
+- Usar únicamente la biblioteca incorporada tkinter.
+- No instalar paquetes externos.
+- No copiar todavía código desde src/.
+- No crear archivos adicionales.
+
+======================================================================
+ARCHIVO: app.py
+======================================================================
+
+PROPÓSITO DEL ARCHIVO
+---------------------
+Este archivo será un programa independiente. Su trabajo es crear una ventana
+pequeña, mostrar información básica de la agenda y permitir cerrarla.
+
+LIBRERÍAS QUE SE PUEDEN USAR
+-----------------------------
+- tkinter, incluida en Python.
+- No usar SQLite, JSON, pathlib, internet ni librerías externas.
+
+LECCIÓN 1 — IMPORTAR TKINTER
+----------------------------
+Tkinter contiene las herramientas para crear ventanas y controles de escritorio.
+La forma corta permite escribir tk.Label y tk.Button:
+
+Fragmento:
+    import tkinter as tk
+
+LECCIÓN 2 — CREAR LA VENTANA PRINCIPAL
+--------------------------------------
+tk.Tk() crea la ventana principal. Todo control de esta etapa debe pertenecer a
+esa ventana.
+
+Fragmento:
+    ventana = tk.Tk()
+
+LECCIÓN 3 — CONFIGURAR LA VENTANA
+---------------------------------
+Configurar el título, el tamaño y si se permite cambiar el tamaño.
+
+Fragmentos:
+    ventana.title("Agenda SENA — Etapa 01")
+    ventana.geometry("520x320")
+    ventana.resizable(False, False)
+
+El texto del título debe ser exactamente el indicado. geometry recibe ancho por
+alto en píxeles.
+
+LECCIÓN 4 — MOSTRAR TEXTO CON LABEL
+-----------------------------------
+Un Label muestra un texto. font recibe el nombre de letra, tamaño y estilo.
+pack organiza el control en la ventana.
+
+Fragmentos:
+    titulo = tk.Label(ventana, text="Agenda SENA")
+    titulo.pack(pady=40)
+
+    subtitulo = tk.Label(ventana, text="Mi agenda local para PC")
+    subtitulo.pack(pady=10)
+
+Se puede usar font=("Arial", 22, "bold") para el título.
+
+LECCIÓN 5 — CREAR UN BOTÓN
+--------------------------
+Un Button muestra una acción. command recibe una función, no el resultado de
+ejecutarla.
+
+Fragmento:
+    boton = tk.Button(ventana, text="Cerrar", command=ventana.destroy)
+    boton.pack(pady=20)
+
+Correcto: command=ventana.destroy
+Incorrecto: command=ventana.destroy()
+
+LECCIÓN 6 — INICIAR EL BUCLE DE LA INTERFAZ
+-------------------------------------------
+mainloop mantiene abierta la ventana y espera clics del usuario.
+
+Fragmento:
+    ventana.mainloop()
+
+Sin mainloop la ventana aparece y se cierra inmediatamente.
+
+LECCIÓN 7 — ORGANIZAR EL PUNTO DE ENTRADA
+-----------------------------------------
+Es recomendable colocar la construcción de la ventana dentro de main y ejecutar
+main solo cuando el archivo se abra directamente.
+
+Fragmento:
+    def main():
+        ...
+
+    if __name__ == "__main__":
+        main()
+
+LÓGICA COMPLETA QUE DEBE ESCRIBIR EL ESTUDIANTE
+------------------------------------------------
+1. Importar tkinter como tk.
+2. Definir main.
+3. Crear la ventana.
+4. Configurar título, tamaño y redimensionamiento.
+5. Crear el título.
+6. Crear el subtítulo.
+7. Crear el botón Cerrar.
+8. Iniciar mainloop.
+9. Agregar el bloque de ejecución directa.
+
+DISEÑO OBLIGATORIO
+------------------
+- Título de ventana: Agenda SENA — Etapa 01.
+- Tamaño: 520x320.
+- Fondo blanco o gris muy claro.
+- Texto grande: Agenda SENA.
+- Subtítulo: Mi agenda local para PC.
+- Botón: Cerrar.
+- El título y el subtítulo deben quedar centrados.
+
+LO QUE TODAVÍA NO SE DEBE CONSTRUIR
+-----------------------------------
+- Formularios de citas.
+- Menús.
+- Usuarios.
+- Inicio de sesión.
+- Calendario.
+- JSON o SQLite.
+- Conexión a internet.
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar desde la raíz:
+
+    python stages/01_python_window/app.py
+
+Debe aparecer la ventana. Al presionar Cerrar debe terminar el programa. Al
+presionar la X de la ventana también debe terminar sin mostrar errores.
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Después de terminar esta lección, trasladar la idea a src/interface.py. El
+archivo app.py de la raíz será el punto de entrada de la aplicación integrada.

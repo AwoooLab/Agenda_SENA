@@ -1,8 +1,142 @@
-ARCHIVOS DE LA ETAPA 10
+ETAPA 10 — PRUEBAS, SEGURIDAD Y EJECUTABLE
+==========================================
 
-Crear o completar:
+PROPÓSITO
+---------
+Revisar la aplicación terminada y preparar una versión ejecutable para Windows.
+Los archivos de código están vacíos para que el estudiante los construya usando
+las lecciones.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - test_database.py
 - test_auth_service.py
 - test_event_service.py
 - build_windows.ps1
 - release.md
+
+======================================================================
+ARCHIVO: test_database.py
+======================================================================
+
+TEORÍA
+------
+Una prueba automática prepara datos controlados, ejecuta una operación y
+comprueba el resultado. Debe usar una base temporal, nunca datos reales.
+
+LIBRERÍAS
+---------
+- unittest.
+- tempfile.
+- sqlite3.
+
+CASOS
+-----
+- Crear esquema.
+- Insertar y leer usuario.
+- Insertar actividad relacionada.
+- Comprobar la relación entre ambas tablas.
+- Cerrar y eliminar los datos temporales.
+
+======================================================================
+ARCHIVO: test_auth_service.py
+======================================================================
+
+TEORÍA
+------
+Las pruebas de seguridad no deben imprimir contraseñas. Deben comprobar el
+resultado del inicio de sesión y que los datos guardados no contienen el secreto
+original.
+
+CASOS
+-----
+- Contraseña correcta.
+- Contraseña incorrecta.
+- Usuario inactivo.
+- Usuario inexistente.
+- Sesión actual.
+- Cierre de sesión.
+
+======================================================================
+ARCHIVO: test_event_service.py
+======================================================================
+
+TEORÍA
+------
+Probar cada operación de actividad por separado facilita encontrar errores.
+
+CASOS
+-----
+- Crear.
+- Editar.
+- Filtrar.
+- Completar.
+- Eliminar.
+- Rechazar datos inválidos.
+
+======================================================================
+ARCHIVO: build_windows.ps1
+======================================================================
+
+PROPÓSITO
+---------
+Automatizar la creación del ejecutable en Windows.
+
+CONCEPTOS DE POWERSHELL
+-----------------------
+- Una línea inicia con un comando.
+- $ErrorActionPreference = "Stop" detiene el script si ocurre un error.
+- python -m ... ejecuta una herramienta instalada en Python.
+- dist/ es la carpeta de salida.
+
+FRAGMENTOS ORIENTATIVOS
+-----------------------
+    $ErrorActionPreference = "Stop"
+    python -m unittest discover -s tests -v
+    python -m PyInstaller --onefile --windowed --name AgendaSENA app.py
+
+ORDEN DE LA LÓGICA
+------------------
+1. Confirmar que Python existe.
+2. Ejecutar las pruebas.
+3. Detenerse si una prueba falla.
+4. Construir con PyInstaller.
+5. Informar que el resultado quedó en dist/.
+
+No copiar credenciales, datos personales ni bases reales al ejecutable.
+
+======================================================================
+ARCHIVO: release.md
+======================================================================
+
+PROPÓSITO
+---------
+Explicar a otra persona cómo usar la versión terminada.
+
+SECCIONES NECESARIAS
+--------------------
+- Requisitos de Windows.
+- Cómo abrir el proyecto.
+- Cómo ejecutar las pruebas.
+- Cómo construir el ejecutable.
+- Dónde encontrar el archivo .exe.
+- Qué archivos locales crea la agenda.
+- Qué información nunca se debe compartir.
+- Cómo informar un error.
+
+El texto debe estar completamente en español. Los nombres de archivos, comandos
+y herramientas se escriben exactamente como existen.
+
+COMPROBACIÓN MANUAL
+-------------------
+Ejecutar:
+
+    python -m unittest discover -s tests -v
+
+Después ejecutar build_windows.ps1 y probar el archivo .exe en una cuenta limpia
+de Windows.
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Integrar las tres pruebas en tests/, el script en scripts/build_windows.ps1 y la
+guía en docs/release.md.

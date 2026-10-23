@@ -1,6 +1,129 @@
-ARCHIVOS DE LA ETAPA 08
+ETAPA 08 — CALENDARIO MENSUAL
+=============================
 
-Crear o completar:
+PROPÓSITO
+---------
+Construir el calendario mensual antes de conectarlo con las actividades. El
+alumno aprenderá fechas, cuadrículas, botones y navegación entre meses.
+
+ARCHIVOS DE LA ETAPA
+--------------------
 - monthly_calendar.py
 - calendar_cell.py
 - test_calendar.py
+
+======================================================================
+ARCHIVO: calendar_cell.py
+======================================================================
+
+PROPÓSITO
+---------
+Crear una celda reutilizable para mostrar el número de un día.
+
+LIBRERÍAS
+---------
+- tkinter.
+- No consultar SQLite.
+
+LECCIÓN 1 — UNA CELDA ES UN FRAME
+---------------------------------
+La celda puede ser un Frame con un Button o Label dentro. Debe recibir el día y
+una función on_select.
+
+Fragmento:
+    boton = tk.Button(parent, text=str(dia), command=lambda: on_select(dia))
+
+LECCIÓN 2 — DÍA ACTUAL Y SELECCIONADO
+-------------------------------------
+Usar color y texto para que el estado no dependa solo del color. Por ejemplo,
+un borde o una etiqueta puede indicar Seleccionado.
+
+LECCIÓN 3 — UBICACIÓN EN LA CUADRÍCULA
+--------------------------------------
+La celda debe poder ubicarse con grid(row=fila, column=columna).
+
+======================================================================
+ARCHIVO: monthly_calendar.py
+======================================================================
+
+PROPÓSITO
+---------
+Crear la vista completa de un mes.
+
+LIBRERÍAS
+---------
+- tkinter.
+- calendar para calcular semanas y días.
+- datetime.date y datetime para conocer el mes actual.
+
+LECCIÓN 1 — OBTENER EL MES
+--------------------------
+Guardar año y mes actuales como números enteros. Si no llegan al constructor,
+usar la fecha de hoy.
+
+Fragmento:
+    hoy = date.today()
+    self.anio = hoy.year
+    self.mes = hoy.month
+
+LECCIÓN 2 — NOMBRES EN ESPAÑOL
+------------------------------
+Crear listas fijas para meses y días:
+
+    meses = ["Enero", "Febrero", "Marzo", ...]
+    dias_semana = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
+
+LECCIÓN 3 — CONSTRUIR LA CUADRÍCULA
+-----------------------------------
+calendar.Calendar(firstweekday=0).monthdayscalendar(anio, mes) devuelve semanas
+con números de día y ceros para las celdas vacías.
+
+LECCIÓN 4 — CAMBIAR DE MES
+--------------------------
+Si el mes es 1 y se retrocede, pasar a diciembre del año anterior. Si el mes es
+12 y se avanza, pasar a enero del año siguiente.
+
+Fragmento:
+    if mes == 12:
+        mes = 1
+        anio += 1
+
+LECCIÓN 5 — BOTONES DE CONTROL
+-----------------------------
+Crear botones ‹, Hoy y ›. Cada cambio debe actualizar el texto del encabezado y
+reconstruir las celdas.
+
+======================================================================
+ARCHIVO: test_calendar.py
+======================================================================
+
+PROPÓSITO
+---------
+Comprobar los cálculos sin abrir una ventana.
+
+LIBRERÍAS
+---------
+- unittest.
+- calendar.
+- datetime.
+
+CASOS NECESARIOS
+----------------
+- Febrero de 2028 tiene 29 días.
+- Febrero de 2027 tiene 28 días.
+- Abril tiene 30 días.
+- Enero tiene 31 días.
+- Diciembre seguido de enero aumenta el año.
+- Enero seguido de diciembre disminuye el año.
+- La semana comienza en lunes.
+
+COMPROBACIÓN MANUAL
+-------------------
+Abrir la demostración del calendario, cambiar de mes, volver a Hoy y seleccionar
+un día. Ejecutar también:
+
+    python -m unittest stages/08_monthly_calendar/test_calendar.py -v
+
+INTEGRACIÓN POSTERIOR
+---------------------
+Integrar ambos módulos visuales en src/ui/ y conectarlos con main_window.py.
