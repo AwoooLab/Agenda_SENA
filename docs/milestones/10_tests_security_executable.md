@@ -1,40 +1,122 @@
 # Hito 10 — Pruebas, seguridad y ejecutable
 
-## Objetivo
+## Propósito
 
-Estabilizar la aplicación y preparar un ejecutable para Windows.
+Revisar la aplicación completa, confirmar que sus partes principales funcionan
+y preparar una versión ejecutable para Windows.
 
-## Archivos
+## Archivos que debe crear el alumno
 
-- `tests/test_database.py`.
-- `tests/test_auth_service.py`.
-- `tests/test_event_service.py`.
-- `scripts/build_windows.ps1`.
-- `docs/release.md`.
+Crear únicamente:
 
-## Requisitos
+```text
+stages/10_tests_security_executable/test_database.py
+stages/10_tests_security_executable/test_auth_service.py
+stages/10_tests_security_executable/test_event_service.py
+stages/10_tests_security_executable/build_windows.ps1
+stages/10_tests_security_executable/release.md
+```
 
-- Las pruebas deben funcionar sin internet.
-- Las pruebas de base de datos deben usar datos temporales.
-- Las credenciales nunca deben subirse al repositorio.
-- El script de compilación debe crear la salida en `dist/`.
-- El ejecutable debe probarse en una cuenta limpia de Windows.
+## Archivos de prueba
 
-## Integración
+Los tres archivos de prueba deben usar `unittest` y datos temporales.
 
-Empaquetar la aplicación únicamente después de terminar las pruebas. Mantener
-los archivos generados fuera de las carpetas de código y documentar los pasos de
-la entrega.
+### `test_database.py`
+
+Comprobar creación del esquema, inserción de usuario, inserción de actividad,
+lectura de datos y relación entre usuario y actividad.
+
+### `test_auth_service.py`
+
+Comprobar contraseña correcta, contraseña incorrecta, usuario inactivo, sesión
+activa y cierre de sesión. No incluir credenciales reales.
+
+### `test_event_service.py`
+
+Comprobar creación, edición, filtrado, completado y eliminación de actividades.
+
+## Archivo `build_windows.ps1`
+
+Crear un script de PowerShell que:
+
+1. Se detenga si ocurre un error.
+2. Verifique que Python esté disponible.
+3. Cree o use un entorno virtual local.
+4. Instale las dependencias indicadas en `requirements.txt`, si existen.
+5. Ejecute las pruebas antes de compilar.
+6. Cree el ejecutable con PyInstaller usando:
+
+```text
+python -m PyInstaller --onefile --windowed --name AgendaSENA app.py
+```
+
+7. Deje el resultado dentro de `dist/`.
+8. No copie contraseñas, bases de datos personales ni archivos temporales al
+   ejecutable.
+
+El script debe mostrar mensajes claros en español y detenerse si las pruebas
+fallan.
+
+## Archivo `release.md`
+
+Documentar en español:
+
+- Requisitos de Windows.
+- Cómo descargar el proyecto.
+- Cómo ejecutar las pruebas.
+- Cómo construir el ejecutable.
+- Dónde queda el archivo `.exe`.
+- Cómo abrir la agenda por primera vez.
+- Qué archivos locales se crean.
+- Qué información nunca se debe compartir.
+- Cómo reportar un error.
+
+## Reglas de seguridad
+
+- No subir contraseñas al repositorio.
+- No subir datos reales de usuarios.
+- No subir una base de datos con información personal.
+- No guardar contraseñas en texto plano.
+- Mantener los archivos temporales fuera del código fuente.
 
 ## Comprobación manual
+
+Desde la raíz del proyecto, ejecutar:
 
 ```text
 python -m unittest discover -s tests -v
 ```
 
-Después, crear y abrir el ejecutable en Windows.
+Después ejecutar el script de PowerShell. Copiar el `.exe` a un computador o
+cuenta de usuario limpia de Windows y comprobar que:
 
-## Secuencia de solicitudes
+1. La aplicación abre.
+2. Se puede registrar o utilizar un usuario de prueba.
+3. Se puede iniciar sesión.
+4. Se puede abrir el calendario.
+5. Se puede crear una actividad.
+6. Se puede cerrar la aplicación sin errores.
 
-Solicitar una prueba o un script de compilación a la vez. Revisar cada comando
-generado antes de ejecutarlo.
+## Integración posterior
+
+Integrar las pruebas en `tests/`, el script en `scripts/build_windows.ps1` y la
+documentación en `docs/release.md`.
+
+## Instrucción para ChatGPT
+
+```text
+Genera únicamente stages/10_tests_security_executable/release.md. Escribe una
+guía en español para construir y usar el ejecutable de Agenda SENA en Windows.
+Incluye requisitos, pruebas, compilación con PyInstaller, ubicación del .exe,
+archivos locales y reglas para no compartir credenciales ni datos personales.
+No inventes servicios en internet ni agregues pasos de GitHub Actions.
+Devuelve solo el contenido del archivo Markdown.
+```
+
+Solicitar las pruebas y el script de compilación por separado.
+
+## Criterio de terminado
+
+Las pruebas funcionan, el ejecutable se crea en `dist/`, la aplicación abre en
+Windows y la guía de entrega permite que otra persona la ejecute sin ayuda
+técnica adicional.

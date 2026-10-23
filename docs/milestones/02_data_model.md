@@ -1,35 +1,124 @@
-# Hito 02 — Modelo de datos
+# Hito 02 — Modelo de datos de una cita
 
-## Objetivo
+## Propósito
 
-Representar una actividad de la agenda como un objeto de Python.
+Crear el objeto que representa una cita o actividad de la agenda. Este objeto se
+usará después para guardar información y mostrarla en el calendario.
 
-## Archivos
+## Archivo que debe crear el alumno
 
-- `stages/02_data_model/model.py`.
-- `src/model.py`.
-- `tests/test_model.py`.
+Crear únicamente:
 
-## Requisitos
+```text
+stages/02_data_model/model.py
+```
 
-El primer modelo puede llamarse `Event` o `Cita` y debe contener título, fecha,
-hora de inicio, hora de finalización y descripción. Usar `dataclass`, conversión
-a diccionario y reconstrucción desde un diccionario.
+## Resultado esperado
 
-## Integración
+El archivo debe definir una clase `Cita` usando `dataclass`. Una cita representa
+una actividad sencilla de la agenda.
 
-El modelo no debe abrir ventanas ni leer archivos. Más adelante, los módulos de
-base de datos e interfaz lo importarán.
+## Estructura obligatoria de `Cita`
+
+La clase debe tener estos campos, en este orden:
+
+| Campo | Tipo | Obligatorio | Valor inicial |
+|---|---|---|---|
+| `titulo` | `str` | Sí | No tiene valor inicial |
+| `fecha` | `str` | Sí | No tiene valor inicial |
+| `hora` | `str` | Sí | No tiene valor inicial |
+| `descripcion` | `str` | No | `""` |
+
+La fecha debe manejarse inicialmente como texto con formato `AAAA-MM-DD` y la
+hora como texto con formato `HH:MM`.
+
+## Métodos obligatorios
+
+La clase debe incluir:
+
+```python
+def a_diccionario(self) -> dict:
+    ...
+```
+
+Este método debe devolver las claves `titulo`, `fecha`, `hora` y `descripcion`.
+
+También debe incluir:
+
+```python
+@classmethod
+def desde_diccionario(cls, datos: dict) -> "Cita":
+    ...
+```
+
+Este método debe reconstruir una `Cita` desde un diccionario. Si no existe la
+clave `descripcion`, debe usar una cadena vacía.
+
+## Ejemplo obligatorio
+
+Dentro de `if __name__ == "__main__"`, crear una cita de ejemplo y mostrar su
+diccionario. Usar estos datos:
+
+```text
+Título: Clase de Python
+Fecha: 2026-10-23
+Hora: 18:00
+Descripción: Practicar dataclasses
+```
+
+## Restricciones
+
+- Usar únicamente la biblioteca estándar de Python.
+- Importar `dataclass` y `asdict` desde `dataclasses`.
+- No abrir ventanas.
+- No leer ni escribir archivos.
+- No importar Tkinter, SQLite ni módulos de `src/`.
+- No agregar campos de usuario, categoría o color todavía.
 
 ## Comprobación manual
 
-Crear un objeto, convertirlo a diccionario y ejecutar:
+Ejecutar:
 
 ```text
-python -m unittest discover -s tests -v
+python stages/02_data_model/model.py
 ```
 
-## Secuencia de solicitudes
+Debe imprimirse un diccionario con las cuatro claves de la cita.
 
-Solicitar únicamente `model.py`. Pedir Python estándar, campos con tipos y un
-ejemplo pequeño dentro de `if __name__ == "__main__"`.
+También se debe comprobar mentalmente que esto funciona:
+
+```python
+cita = Cita("Clase", "2026-10-23", "18:00")
+datos = cita.a_diccionario()
+otra_cita = Cita.desde_diccionario(datos)
+```
+
+`cita` y `otra_cita` deben tener los mismos datos.
+
+## Integración posterior
+
+Después de terminar la etapa, trasladar la clase a:
+
+```text
+src/model.py
+```
+
+En la integración se podrá agregar una prueba en `tests/test_model.py` sin
+modificar el ejercicio original de `stages/`.
+
+## Instrucción para ChatGPT
+
+```text
+Genera únicamente stages/02_data_model/model.py. Define una dataclass llamada
+Cita con los campos titulo: str, fecha: str, hora: str y descripcion: str = "".
+Agrega a_diccionario() usando asdict y la clase desde_diccionario() que
+reconstruya una Cita y use una cadena vacía si falta descripcion. Incluye un
+ejemplo dentro de if __name__ == "__main__" usando Clase de Python,
+2026-10-23, 18:00 y Practicar dataclasses. No uses interfaz, archivos, SQLite
+ni otros módulos. Devuelve únicamente el código.
+```
+
+## Criterio de terminado
+
+El hito está terminado cuando `Cita` puede convertirse a diccionario y volver a
+crearse desde ese diccionario sin perder información.
