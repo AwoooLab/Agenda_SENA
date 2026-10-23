@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from config.config import DATA_FILE
-from src.modelo import Cita
+from src.model import Cita
 
 
 def cargar_agenda(ruta: Path = DATA_FILE) -> list[Cita]:

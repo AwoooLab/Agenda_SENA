@@ -11,16 +11,16 @@ python app.py
 ## Ejecutar las pruebas
 
 ```text
-python -m unittest discover -s pruebas -v
+python -m unittest discover -s tests -v
 ```
 
 ## Estructura principal
 
 - `app.py`: punto de entrada de la aplicación Python.
 - `src/`: código principal dividido por responsabilidades.
-- `datos/`: información local de la agenda.
-- `pruebas/`: pruebas automáticas.
-- `etapas/`: avances didácticos del proyecto.
+- `data/`: información local de la agenda.
+- `tests/`: pruebas automáticas.
+- `stages/`: avances didácticos del proyecto.
 - `config/`: configuración compartida.
 - `index.html`: vista informativa mínima para GitHub Pages.
 - `plan.md`: plan de desarrollo.

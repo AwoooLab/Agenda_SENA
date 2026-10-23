@@ -6,12 +6,12 @@ Internet ni de una base de datos externa.
 
 ARCHIVOS DE LA ETAPA
 Crear o completar:
-- etapas/03_guardado_json/almacenamiento.py
-- etapas/03_guardado_json/demo.py
-- datos/agenda.json
+- stages/03_json_storage/storage.py
+- stages/03_json_storage/demo.py
+- data/agenda.json
 
-PROMPT PARA CHATGPT GRATUITO — almacenamiento.py
-Actúa como profesor de Python. Genera únicamente el archivo `almacenamiento.py`
+PROMPT PARA CHATGPT GRATUITO — storage.py
+Actúa como profesor de Python. Genera únicamente el archivo `storage.py`
 para Agenda SENA. Crea una función `guardar(datos, ruta)` que escriba una lista
 de diccionarios en JSON con indentación y codificación UTF-8, y una función
 `cargar(ruta)` que lea esa lista. Usa únicamente `json` y `pathlib`.
@@ -25,13 +25,13 @@ REQUISITOS
 - Controlar de forma clara si el archivo todavía no existe.
 
 INTEGRACIÓN
-La versión final debe quedar en `src/almacenamiento.py` y trabajar con
-`src.modelo.Cita`. El archivo `datos/agenda.json` será el almacenamiento inicial.
+La versión final debe quedar en `src/storage.py` y trabajar con
+`src.model.Cita`. El archivo `data/agenda.json` será el almacenamiento inicial.
 La interfaz usará `cargar_agenda()` al iniciar y `guardar_agenda()` al registrar cambios.
 
 VALIDACIÓN
 Ejecutar:
-python etapas/03_guardado_json/demo.py
-python -m unittest discover -s pruebas -v
+python stages/03_json_storage/demo.py
+python -m unittest discover -s tests -v
 
 Resultado esperado: se guarda una cita, se lee nuevamente y los datos coinciden.

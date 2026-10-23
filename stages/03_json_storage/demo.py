@@ -3,7 +3,7 @@
 import tempfile
 from pathlib import Path
 
-from almacenamiento import cargar, guardar
+from storage import cargar, guardar
 
 
 with tempfile.TemporaryDirectory() as carpeta:

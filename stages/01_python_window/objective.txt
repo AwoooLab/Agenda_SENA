@@ -5,7 +5,7 @@ Crear la primera ventana de escritorio de Agenda SENA usando Python y Tkinter.
 
 ARCHIVO DE LA ETAPA
 Crear o completar:
-- etapas/01_ventana_python/app.py
+- stages/01_python_window/app.py
 
 PROMPT PARA CHATGPT GRATUITO
 Actúa como profesor de Python. Estamos construyendo Agenda SENA por etapas.
@@ -25,12 +25,12 @@ REQUISITOS
 INTEGRACIÓN
 Después de validar el archivo, llevar el comportamiento de la ventana a:
 - app.py, como punto de entrada.
-- src/interfaz.py, como módulo de la interfaz.
-El archivo raíz `app.py` debe iniciar la función `ejecutar()` de `src/interfaz.py`.
+- src/interface.py, como módulo de la interfaz.
+El archivo raíz `app.py` debe iniciar la función `ejecutar()` de `src/interface.py`.
 
 VALIDACIÓN
 Ejecutar desde la raíz del proyecto:
-python etapas/01_ventana_python/app.py
+python stages/01_python_window/app.py
 python app.py
 
 Resultado esperado: aparece una ventana con el nombre Agenda SENA y se puede cerrar.

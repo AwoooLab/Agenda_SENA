@@ -6,14 +6,14 @@ las pruebas, un ejecutable para Windows.
 
 ARCHIVOS DE LA ETAPA
 Crear o completar:
-- etapas/05_ejecutable_y_pruebas/test_basico.py
-- pruebas/test_modelo.py
-- pruebas/test_almacenamiento.py
+- stages/05_executable_and_tests/test_basic.py
+- tests/test_model.py
+- tests/test_storage.py
 
 PROMPT PARA CHATGPT GRATUITO
-Actúa como profesor de Python. Genera únicamente el archivo `test_basico.py`
+Actúa como profesor de Python. Genera únicamente el archivo `test_basic.py`
 para Agenda SENA usando `unittest` o comprobaciones simples. Debe comprobar
-que existe `app.py`, que existe `datos/agenda.json` y que una cita válida puede
+que existe `app.py`, que existe `data/agenda.json` y que una cita válida puede
 convertirse a diccionario. No modifiques otros archivos y explica cómo ejecutar
 la prueba.
 
@@ -24,14 +24,14 @@ REQUISITOS
 - No usar datos reales ni contraseñas.
 
 INTEGRACIÓN
-Las pruebas finales deben vivir en `pruebas/` y probar los módulos de `src/`.
+Las pruebas finales deben vivir en `tests/` y probar los módulos de `src/`.
 Solo estudiar PyInstaller cuando todas las pruebas pasen.
 El ejecutable se generará fuera del código fuente, en `dist/`, y no se debe
 subir al repositorio si ocupa demasiado espacio.
 
 VALIDACIÓN
 Ejecutar desde la raíz:
-python -m unittest discover -s pruebas -v
-python etapas/05_ejecutable_y_pruebas/test_basico.py
+python -m unittest discover -s tests -v
+python stages/05_executable_and_tests/test_basic.py
 
 Resultado esperado: todas las pruebas pasan sin errores.

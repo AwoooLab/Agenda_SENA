@@ -1,6 +1,6 @@
 """Punto de entrada de Agenda SENA."""
 
-from src.interfaz import ejecutar
+from src.interface import ejecutar
 
 
 if __name__ == "__main__":

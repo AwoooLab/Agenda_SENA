@@ -6,7 +6,7 @@ que el alumno pueda registrar y consultar citas desde la aplicación.
 
 ARCHIVO DE LA ETAPA
 Crear o completar:
-- etapas/04_interfaz_agenda/app.py
+- stages/04_agenda_interface/app.py
 
 PROMPT PARA CHATGPT GRATUITO
 Actúa como profesor de Python. Genera únicamente el contenido del archivo
@@ -24,14 +24,14 @@ REQUISITOS
 - No colocar toda la lógica en una sola función.
 
 INTEGRACIÓN
-La interfaz final debe quedar principalmente en `src/interfaz.py`.
+La interfaz final debe quedar principalmente en `src/interface.py`.
 El archivo raíz `app.py` solo debe iniciar `ejecutar()`.
-La interfaz debe comunicarse con `src/modelo.py`, `src/validaciones.py` y
-`src/almacenamiento.py`, sin duplicar sus reglas.
+La interfaz debe comunicarse con `src/model.py`, `src/validation.py` y
+`src/storage.py`, sin duplicar sus reglas.
 
 VALIDACIÓN
 Ejecutar:
-python etapas/04_interfaz_agenda/app.py
+python stages/04_agenda_interface/app.py
 python app.py
 
 Resultado esperado: se puede registrar una cita válida, verla en la lista y

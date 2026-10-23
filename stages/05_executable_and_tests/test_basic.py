@@ -5,5 +5,5 @@ from pathlib import Path
 
 raiz = Path(__file__).resolve().parents[2]
 assert (raiz / "app.py").exists()
-assert (raiz / "datos" / "agenda.json").exists()
+assert (raiz / "data" / "agenda.json").exists()
 print("Estructura básica aprobada.")

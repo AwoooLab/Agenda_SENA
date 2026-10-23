@@ -2,7 +2,7 @@
 
 import unittest
 
-from src.modelo import Cita
+from src.model import Cita
 
 
 class ModeloTest(unittest.TestCase):

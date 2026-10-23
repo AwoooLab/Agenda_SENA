@@ -20,7 +20,7 @@
 
 ## Etapa 03 — Guardado local
 
-- Leer y guardar la agenda en `datos/agenda.json`.
+- Leer y guardar la agenda en `data/agenda.json`.
 - Controlar archivos inexistentes o dañados.
 - Probar la lectura y escritura de datos.
 
@@ -36,5 +36,5 @@
 - Probar el programa manualmente.
 - Preparar un `.exe` para Windows con PyInstaller.
 
-Cada carpeta dentro de `etapas/` contiene los archivos de trabajo del alumno y
-un `objetivo.txt` con el prompt, los requisitos, la integración y la validación.
+Cada carpeta dentro de `stages/` contiene los archivos de trabajo del alumno y
+un `objective.txt` con el prompt, los requisitos, la integración y la validación.

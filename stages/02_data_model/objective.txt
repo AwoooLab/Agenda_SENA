@@ -6,10 +6,10 @@ diccionario y guardarse posteriormente en JSON.
 
 ARCHIVO DE LA ETAPA
 Crear o completar:
-- etapas/02_modelo_datos/modelo.py
+- stages/02_data_model/model.py
 
 PROMPT PARA CHATGPT GRATUITO
-Actúa como profesor de Python. Genera únicamente el archivo `modelo.py` para
+Actúa como profesor de Python. Genera únicamente el archivo `model.py` para
 Agenda SENA. Crea una clase `Cita` usando `dataclass` con los campos `titulo`,
 `fecha`, `hora` y `descripcion`. Incluye un método para convertir la cita a
 diccionario y otro método de clase para reconstruirla desde un diccionario.
@@ -24,13 +24,13 @@ REQUISITOS
 
 INTEGRACIÓN
 Copiar la clase validada a:
-- src/modelo.py
-Después, `src/validaciones.py`, `src/almacenamiento.py` y la interfaz podrán
-importar `Cita` desde `src.modelo`.
+- src/model.py
+Después, `src/validation.py`, `src/storage.py` y la interfaz podrán
+importar `Cita` desde `src.model`.
 
 VALIDACIÓN
 Ejecutar:
-python etapas/02_modelo_datos/modelo.py
-python -m unittest discover -s pruebas -v
+python stages/02_data_model/model.py
+python -m unittest discover -s tests -v
 
 Resultado esperado: se muestra un diccionario con título, fecha, hora y descripción.

@@ -3,7 +3,7 @@
 from datetime import datetime
 
 from config.config import DATE_FORMAT, TIME_FORMAT
-from src.modelo import Cita
+from src.model import Cita
 
 
 def validar_cita(cita: Cita) -> list[str]:
