@@ -3,6 +3,17 @@
 La aplicación principal está desarrollada en Python y se ejecuta localmente en
 el computador.
 
+## Plataforma objetivo
+
+El producto final es una aplicación de escritorio para PC con Windows. La
+aplicación se ejecuta con Python y Tkinter en el computador del usuario; no es
+una página web ni depende de internet.
+
+Los archivos HTML cumplen una función complementaria: muestran en el navegador
+una representación visual de cada pantalla para revisar el diseño y documentar
+el avance en GitHub Pages. El HTML no ejecuta el código Python ni reemplaza la
+aplicación de escritorio.
+
 - `app.py`: inicia la aplicación.
 - `src/`: contiene el modelo, las reglas, el almacenamiento y la interfaz.
 - `data/`: contiene los datos locales en JSON.

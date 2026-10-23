@@ -8,6 +8,13 @@ funcionan correctamente en el computador del alumno.
 Esta etapa no crea todavía citas, usuarios, archivos, bases de datos ni
 calendarios. Solo crea la primera ventana.
 
+## Plataforma de esta etapa
+
+El resultado principal se ejecuta en un PC con Python y Tkinter. Las medidas y
+controles descritos abajo corresponden a una ventana de escritorio, no a una
+página web. `preview.html` solo sirve para representar esa ventana en el
+navegador y revisar visualmente que el diseño coincida.
+
 ## Archivo que debe crear el alumno
 
 Crear únicamente:
@@ -28,18 +35,21 @@ No crear otros archivos dentro de esta etapa.
 - El código debe tener un bloque `if __name__ == "__main__"`.
 - Crear una función `main()` que construya y muestre la ventana.
 
-## Diseño exacto
+## Diseño exacto de la ventana de escritorio
 
-La ventana debe cumplir lo siguiente:
+La ventana de Tkinter debe cumplir lo siguiente:
 
 - Título: `Agenda SENA — Etapa 01`.
 - Tamaño: `520x320`.
-- No permitir cambiar el tamaño de la ventana.
+- No permitir cambiar el tamaño durante esta primera etapa de prueba.
 - Fondo principal: blanco o gris muy claro.
 - Mostrar el título `Agenda SENA` centrado, con letra grande y negrita.
 - Mostrar debajo el texto `Mi agenda local para PC`.
 - Mostrar un botón con el texto `Cerrar`.
 - El botón `Cerrar` debe cerrar la ventana sin mostrar errores.
+
+El archivo HTML debe imitar estos mismos elementos para poder compararlos en
+GitHub Pages. No se debe construir la aplicación de PC dentro del HTML.
 
 ## Comportamiento esperado
 

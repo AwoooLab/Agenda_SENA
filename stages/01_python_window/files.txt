@@ -8,6 +8,13 @@ de la aplicación de escritorio local. Esta etapa define la identidad de la
 aplicación, las dimensiones de la ventana y el primer control interactivo para
 cerrarla.
 
+PLATAFORMA OBJETIVO
+-------------------
+La aplicación que se está construyendo es para un PC con Windows y se ejecuta
+con Python y Tkinter. El tamaño 520x320 corresponde a la ventana de escritorio.
+`preview.html` es únicamente una representación visual para revisar el diseño
+en el navegador; no reemplaza ni ejecuta `app.py`.
+
 ARCHIVO DE LA ETAPA
 -------------------
 - app.py
