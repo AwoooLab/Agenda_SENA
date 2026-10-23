@@ -175,3 +175,13 @@ COMPROBACIÓN
 ------------
 Abrir preview.html y comprobar que el contenido representa la misma estructura
 que demo.py guarda y carga.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Completar storage.py y demo.py.
+2. Verificar que los datos guardados y cargados son iguales.
+3. Actualizar preview.html para mostrar la estructura JSON y los estados
+   Guardar y Cargar.
+4. Revisar la vista local y publicar la tarjeta de la Clase 03 en index.html.
+
+El preview muestra el flujo de forma visual, pero no guarda información real.

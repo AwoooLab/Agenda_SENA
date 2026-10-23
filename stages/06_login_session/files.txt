@@ -237,3 +237,16 @@ COMPROBACIÓN
 ------------
 Abrir preview.html y confirmar que el formulario muestra usuario, contraseña,
 botón y mensaje de error sin exponer la contraseña.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Completar password.py, auth_service.py, login_window.py y sus pruebas.
+2. Probar credenciales válidas, inválidas, usuarios inactivos y cierre de
+   sesión.
+3. Actualizar preview.html con los mismos campos, mensajes, botones e iconos
+   del login local.
+4. Revisar el resultado en el navegador y publicar la tarjeta de la Clase 06
+   en index.html.
+
+Cada cambio visual del login debe reflejarse en preview.html. La vista HTML no
+autentica ni conserva contraseñas.

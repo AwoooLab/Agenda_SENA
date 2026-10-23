@@ -141,3 +141,14 @@ COMPROBACIÓN
 ------------
 Abrir preview.html y comprobar que se distinguen claramente la barra superior,
 la navegación y el área de trabajo.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Completar navigation.py, main_window.py y app.py.
+2. Ejecutar la ventana y probar sus secciones.
+3. Actualizar preview.html con la misma navegación, textos, áreas e iconos.
+4. Comparar la aplicación local con el preview y publicar la tarjeta de la
+   Clase 07 en index.html.
+
+El preview comunica la distribución de la ventana; no ejecuta la navegación de
+Tkinter.

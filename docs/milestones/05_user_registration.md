@@ -90,6 +90,27 @@ Usar una base SQLite temporal y comprobar:
 - No colocar consultas SQL dentro de `user_service.py`.
 - No modificar archivos de otras etapas.
 
+## Flujo de la clase y validación visual
+
+Los modelos, repositorio y servicio resuelven el registro; `preview.html`
+representa la pantalla que utilizará el usuario. El orden de trabajo es:
+
+1. Implementar y probar el registro con las reglas de validación.
+2. Comprobar usuario único, correo válido y mensajes de error.
+3. Actualizar `preview.html` con los campos y estados definidos en la clase.
+4. Abrir el preview y revisar etiquetas, campos, botón y mensajes.
+5. Agregar en `index.html` la tarjeta de la Clase 05 y su enlace visual.
+6. Publicar y verificar el resultado en GitHub Pages.
+
+El preview no registra usuarios reales; permite validar la composición de la
+interfaz antes de integrarla con el servicio Python.
+
+### Validación visual específica
+
+- Se identifican nombre de usuario y correo electrónico.
+- El botón de registro es visible y tiene una acción comprensible.
+- Los mensajes de validación tienen un espacio definido sin romper el diseño.
+
 ## Comprobación manual
 
 Ejecutar:
@@ -128,5 +149,5 @@ archivos anteriores.
 
 ## Criterio de terminado
 
-El alumno puede registrar usuarios únicos mediante un servicio, consultar el
-repositorio y obtener errores claros cuando los datos no son válidos.
+El alumno puede registrar usuarios únicos mediante un servicio y `preview.html`
+representa correctamente la Clase 05 en la colección principal.

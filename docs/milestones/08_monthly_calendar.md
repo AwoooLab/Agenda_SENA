@@ -79,6 +79,29 @@ Comprobar sin abrir ventanas:
 - No usar colores como única forma de comunicar información.
 - No cambiar todavía la estructura de la base de datos.
 
+## Flujo de la clase y validación visual
+
+`calendar_cell.py` y `monthly_calendar.py` resuelven el calendario local;
+`preview.html` muestra su resultado visual. El flujo es:
+
+1. Implementar el cálculo de días y la navegación del mes.
+2. Ejecutar las pruebas y comprobar selección, mes actual y cambio de mes.
+3. Actualizar `preview.html` si cambian encabezados, controles, colores o
+   actividades visibles.
+4. Abrir el preview y verificar la cuadrícula completa del mes.
+5. Agregar en `index.html` la tarjeta de la Clase 08 con su preview.
+6. Publicar y revisar la clase en GitHub Pages.
+
+El preview no calcula fechas reales; permite comprobar la composición visual del
+calendario antes de integrarlo con la aplicación.
+
+### Validación visual específica
+
+- Se muestran siete columnas con los días de la semana.
+- El mes y los controles anterior, Hoy y siguiente son visibles.
+- El día seleccionado se distingue con color y texto.
+- Las actividades no desbordan la celda.
+
 ## Comprobación manual
 
 Abrir una ventana de demostración desde `monthly_calendar.py` o desde el archivo
@@ -117,5 +140,5 @@ Solicitar después las funciones de fechas, `monthly_calendar.py` y
 
 ## Criterio de terminado
 
-El calendario muestra cualquier mes correctamente, permite cambiar de mes,
-volver al día actual y seleccionar una fecha.
+El calendario muestra cualquier mes correctamente, permite cambiar de mes y
+seleccionar una fecha; `preview.html` representa la Clase 08 publicada.

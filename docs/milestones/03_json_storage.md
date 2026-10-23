@@ -72,6 +72,28 @@ La cita de ejemplo debe tener título, fecha, hora y descripción.
 - No conectarse a internet.
 - No crear todavía usuarios ni inicio de sesión.
 
+## Flujo de la clase y validación visual
+
+`storage.py` y `demo.py` comprueban el guardado local, mientras que
+`preview.html` muestra ese flujo de manera visual. Trabajar en este orden:
+
+1. Implementar `storage.py` y comprobar guardar/cargar con `demo.py`.
+2. Confirmar que el resultado conserva los mismos datos.
+3. Actualizar `preview.html` para representar el archivo JSON y sus acciones.
+4. Abrir el preview y comprobar que se distinguen archivo, estado, Guardar y
+   Cargar.
+5. Agregar en `index.html` la tarjeta de la Clase 03 con su preview.
+6. Publicar y revisar el resultado desde GitHub Pages.
+
+El preview es una representación visual; no guarda datos reales ni sustituye
+la comprobación del archivo JSON temporal.
+
+### Validación visual específica
+
+- Se identifica claramente `agenda.json` como archivo local.
+- Se distinguen los estados de guardado y carga.
+- La estructura mostrada corresponde a los campos de la agenda.
+
 ## Comprobación manual
 
 Ejecutar desde la carpeta de la etapa:
@@ -120,5 +142,5 @@ resultado y no modifica data/agenda.json. Devuelve solo el código.
 
 ## Criterio de terminado
 
-El alumno puede guardar una lista, cargarla nuevamente y obtener exactamente los
-mismos datos sin usar la interfaz ni una base de datos.
+El alumno puede guardar y cargar los mismos datos, y `preview.html` explica
+visualmente ese resultado dentro de la Clase 03 publicada.

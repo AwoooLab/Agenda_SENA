@@ -156,3 +156,14 @@ COMPROBACIÓN
 ------------
 Abrir preview.html y comprobar que el mes tiene encabezados, controles, siete
 columnas y una fecha resaltada.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Completar calendar_cell.py, monthly_calendar.py y sus pruebas.
+2. Probar cambio de mes, botón Hoy y selección de fecha.
+3. Actualizar preview.html con la misma cuadrícula, controles, colores e
+   iconos del calendario local.
+4. Comparar ambas vistas y publicar la tarjeta de la Clase 08 en index.html.
+
+La vista HTML valida la composición del calendario; Python valida su lógica de
+fechas.

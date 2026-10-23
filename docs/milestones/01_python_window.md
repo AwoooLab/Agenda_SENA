@@ -58,6 +58,31 @@ La ventana debe cumplir lo siguiente:
 - No usar SQLite, JSON ni internet.
 - No crear todavía inicio de sesión ni calendario.
 
+## Flujo de la clase y validación visual
+
+Esta etapa produce dos resultados coordinados: `app.py` contiene la ventana
+funcional en Python y `preview.html` representa esa misma ventana para
+GitHub Pages. El trabajo se realiza en este orden:
+
+1. Revisar los requisitos de esta especificación.
+2. Construir y ejecutar `app.py` hasta que la ventana funcione.
+3. Actualizar `preview.html` para reflejar cualquier cambio visual realizado.
+4. Abrir `preview.html` localmente y comparar título, subtítulo, tamaño y
+   botón con la ventana de Python.
+5. Agregar en `index.html` la tarjeta de la Clase 01, apuntando al
+   `preview.html`; el HTML principal solo organiza la colección.
+6. Subir los cambios y verificar la misma tarjeta en GitHub Pages.
+
+El preview no ejecuta Python ni reemplaza la prueba local. La etapa no está
+terminada hasta que el comportamiento de `app.py` y la representación visual
+coinciden.
+
+### Validación visual específica
+
+- La ventana visual conserva el título `Agenda SENA` y el subtítulo.
+- El botón `Cerrar` es visible y está ubicado dentro de la ventana.
+- El tamaño y la distribución general corresponden a `520x320`.
+
 ## Comprobación manual
 
 Desde la raíz del proyecto, ejecutar:
@@ -95,5 +120,6 @@ Devuelve únicamente el código de ese archivo.
 
 ## Criterio de terminado
 
-El hito está terminado cuando el único archivo creado en la etapa es
-`app.py`, la ventana abre correctamente y el botón `Cerrar` funciona.
+El hito está terminado cuando `app.py` abre correctamente, el botón `Cerrar`
+funciona, `preview.html` coincide visualmente y la Clase 01 está publicada en
+la colección principal.

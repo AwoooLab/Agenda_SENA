@@ -104,6 +104,29 @@ Usar una base de datos temporal y comprobar:
 - No crear todavía la ventana principal.
 - No mezclar consultas SQL en la ventana gráfica.
 
+## Flujo de la clase y validación visual
+
+La autenticación se implementa en `password.py`, `auth_service.py` y
+`login_window.py`; `preview.html` muestra la pantalla de inicio de sesión. El
+flujo de la clase es:
+
+1. Implementar el hash, el servicio de autenticación y la ventana.
+2. Ejecutar las pruebas con credenciales válidas, inválidas e inactivas.
+3. Actualizar `preview.html` cuando cambien campos, botones, mensajes o iconos.
+4. Abrir el preview y comprobar usuario, contraseña, botón y estado de error.
+5. Agregar en `index.html` la tarjeta de la Clase 06 con el enlace al preview.
+6. Publicar y revisar en GitHub Pages la misma composición visual.
+
+El preview no autentica usuarios ni guarda contraseñas. Es la vista visual de
+la pantalla que sí funciona en la aplicación local.
+
+### Validación visual específica
+
+- Los campos `Usuario` y `Contraseña` están claramente identificados.
+- La contraseña aparece oculta en la representación visual.
+- El mensaje de error es visible sin revelar si el usuario existe.
+- Los iconos y botones agregados al login también aparecen en `preview.html`.
+
 ## Comprobación manual
 
 Ejecutar:
@@ -141,6 +164,6 @@ mensajes definidos en esta especificación.
 
 ## Criterio de terminado
 
-Un usuario activo puede iniciar sesión con una contraseña correcta, un usuario
-inactivo no puede entrar y la sesión se puede cerrar sin guardar la contraseña
-original.
+Un usuario activo puede iniciar sesión con una contraseña correcta, se cumplen
+las reglas de seguridad y `preview.html` representa correctamente la pantalla
+de login publicada como Clase 06.

@@ -204,3 +204,14 @@ COMPROBACIÓN
 ------------
 Abrir preview.html y comprobar que se observan el formulario, las actividades
 del día, las categorías y la leyenda de colores.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Completar modelos, servicio, formulario, leyenda y pruebas.
+2. Probar creación, edición, finalización, filtro y eliminación.
+3. Actualizar preview.html con los mismos campos, categorías, colores, botones
+   e iconos de la interfaz local.
+4. Comparar la vista y publicar la tarjeta de la Clase 09 en index.html.
+
+El preview no modifica actividades reales; permite revisar visualmente las
+reglas que implementa el servicio.

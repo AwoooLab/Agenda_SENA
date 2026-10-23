@@ -187,3 +187,14 @@ COMPROBACIÓN
 ------------
 Abrir stages/01_python_window/preview.html en un navegador y comprobar que la
 ventana visual coincide con el diseño definido para app.py.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Completar y ejecutar app.py.
+2. Actualizar preview.html con los mismos textos, tamaños, botón e iconos.
+3. Abrir el preview localmente y comparar la ventana visual con Tkinter.
+4. Cuando ambas versiones coincidan, agregar la tarjeta de la Clase 01 en
+   index.html y comprobarla en GitHub Pages.
+
+La validación visual hace parte de la lección. Un cambio de diseño en app.py
+debe reflejarse también en preview.html.

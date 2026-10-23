@@ -76,6 +76,29 @@ Descripción: Practicar dataclasses
 - No importar Tkinter, SQLite ni módulos de `src/`.
 - No agregar campos de usuario, categoría o color todavía.
 
+## Flujo de la clase y validación visual
+
+La clase se desarrolla en dos partes coordinadas: `model.py` define la cita y
+`preview.html` muestra cómo se presenta una cita en la agenda. Sigue este
+flujo:
+
+1. Revisar la estructura y los métodos obligatorios de `Cita`.
+2. Ejecutar el ejemplo de `model.py` y comprobar la conversión a diccionario.
+3. Actualizar `preview.html` si cambian los campos o su presentación.
+4. Abrir el preview y verificar título, fecha, hora, descripción y estado.
+5. Agregar en `index.html` la tarjeta de la Clase 02 con el enlace al
+   `preview.html`.
+6. Publicar y verificar la tarjeta en GitHub Pages.
+
+El preview no ejecuta la clase Python: funciona como comprobación visual de la
+estructura que luego usará la interfaz.
+
+### Validación visual específica
+
+- La tarjeta muestra título, fecha, hora y descripción.
+- Los nombres visibles corresponden a los atributos de `Cita`.
+- El estado de la cita se distingue sin alterar el contenido del modelo.
+
 ## Comprobación manual
 
 Ejecutar:
@@ -122,4 +145,5 @@ ni otros módulos. Devuelve únicamente el código.
 ## Criterio de terminado
 
 El hito está terminado cuando `Cita` puede convertirse a diccionario y volver a
-crearse desde ese diccionario sin perder información.
+crearse sin perder información, y `preview.html` muestra los mismos datos de
+forma clara dentro de la Clase 02 publicada.

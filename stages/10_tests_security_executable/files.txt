@@ -167,3 +167,15 @@ COMPROBACIÓN
 ------------
 Abrir preview.html y comprobar que la entrega muestra claramente el nombre del
 ejecutable, el estado de las pruebas y las condiciones de seguridad.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Ejecutar pruebas, revisar seguridad y generar el ejecutable.
+2. Actualizar preview.html con el nombre, estados, mensajes e iconos de la
+   entrega final.
+3. Comparar el preview con los resultados reales de la compilación.
+4. Publicar la tarjeta de la Clase 10 en index.html y verificarla en GitHub
+   Pages.
+
+La vista HTML comunica el resultado de la entrega; no compila ni descarga el
+ejecutable.

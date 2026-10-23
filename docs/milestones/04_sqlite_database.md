@@ -89,6 +89,29 @@ Debe usar `unittest` y una base de datos temporal. La prueba debe:
 - No implementar todavía inicio de sesión.
 - No incluir contraseñas reales en el archivo de prueba.
 
+## Flujo de la clase y validación visual
+
+Esta clase tiene una parte técnica (`schema.sql`, `database.py` y sus pruebas)
+y una parte visual (`preview.html`). El flujo es:
+
+1. Crear el esquema y ejecutar las pruebas con una base temporal.
+2. Confirmar las tablas, campos, relaciones e inserciones definidas.
+3. Actualizar `preview.html` para mostrar la estructura real de la base.
+4. Abrir el preview y comparar las tablas visuales con `schema.sql`.
+5. Agregar en `index.html` la tarjeta de la Clase 04 con el preview de la
+   base de datos.
+6. Publicar y verificar la clase en GitHub Pages.
+
+El preview no consulta SQLite. Su función es hacer visible el diseño de la
+base de datos para revisar si la estructura se entiende.
+
+### Validación visual específica
+
+- Se muestran las tablas `users` y `events`.
+- Los campos y tipos visibles coinciden con `schema.sql`.
+- La relación entre usuario y actividad se puede explicar a partir de los
+  campos mostrados.
+
 ## Comprobación manual
 
 Ejecutar:
@@ -128,5 +151,5 @@ que deben usar una base de datos temporal y no modificar la base real.
 
 ## Criterio de terminado
 
-El alumno puede crear la base, crear las tablas, insertar un usuario y una
-actividad relacionada, leerlos y cerrar la conexión correctamente.
+El alumno puede crear y probar las tablas, y `preview.html` muestra la misma
+estructura de forma clara dentro de la Clase 04 publicada.

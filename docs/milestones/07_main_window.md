@@ -71,6 +71,27 @@ No debe depender todavía de SQLite ni de la pantalla de inicio de sesión.
 - No guardar datos de actividades.
 - No crear conexiones directas a SQLite desde la interfaz.
 
+## Flujo de la clase y validación visual
+
+`navigation.py`, `main_window.py` y `app.py` construyen la ventana principal;
+`preview.html` permite revisar su composición desde GitHub Pages. Trabajar así:
+
+1. Implementar la ventana, la barra superior y la navegación.
+2. Ejecutar la aplicación y probar cada sección temporal.
+3. Actualizar `preview.html` con la misma distribución, textos e iconos.
+4. Abrir el preview y comprobar barra superior, menú y área de trabajo.
+5. Agregar en `index.html` la tarjeta de la Clase 07 con su preview.
+6. Publicar y verificar la clase en GitHub Pages.
+
+El preview no reemplaza la navegación de Tkinter; muestra el resultado visual
+que debe conservarse durante la integración.
+
+### Validación visual específica
+
+- Se identifica el nombre de la aplicación y el usuario activo.
+- El menú muestra Calendario, Actividades y Cerrar sesión.
+- El área de trabajo está separada visualmente de la navegación.
+
 ## Comprobación manual
 
 Ejecutar:
@@ -113,5 +134,5 @@ Solicitar después `main_window.py` y `app.py` por separado.
 
 ## Criterio de terminado
 
-El usuario puede abrir la ventana principal, identificar su sesión, cambiar
-entre las secciones temporales y cerrar sesión.
+El usuario puede abrir la ventana principal, cambiar de sección y cerrar sesión;
+además, `preview.html` representa la Clase 07 publicada.

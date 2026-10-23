@@ -215,3 +215,14 @@ COMPROBACIÓN
 ------------
 Abrir preview.html y revisar que los campos tengan etiquetas claras, espacio
 suficiente y un botón visible.
+
+FLUJO DE LA LECCIÓN
+-------------------
+1. Completar el modelo, repositorio, servicio y pruebas de usuarios.
+2. Ejecutar la validación del registro y sus mensajes de error.
+3. Actualizar preview.html con los campos, botones, iconos y estados de la
+   pantalla de registro.
+4. Comparar la vista local y publicar la tarjeta de la Clase 05 en index.html.
+
+El preview no registra usuarios; valida la distribución y claridad de la
+interfaz.

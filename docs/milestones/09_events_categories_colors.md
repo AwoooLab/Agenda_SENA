@@ -122,6 +122,28 @@ Comprobar:
 - No agregar pagos, internet, notificaciones externas ni sincronización.
 - No crear todavía un ejecutable.
 
+## Flujo de la clase y validación visual
+
+Los modelos, el servicio y los controles de actividades se implementan en
+Python; `preview.html` muestra el formulario y sus estados. Sigue este orden:
+
+1. Implementar modelos, servicio, formulario y leyenda de colores.
+2. Ejecutar las pruebas de creación, edición, finalización, filtro y borrado.
+3. Actualizar `preview.html` con nuevos campos, categorías, iconos o colores.
+4. Abrir el preview y revisar formulario, actividad del día y leyenda.
+5. Agregar en `index.html` la tarjeta de la Clase 09 con su preview.
+6. Publicar y verificar la clase en GitHub Pages.
+
+El preview no crea actividades reales; permite validar que la interfaz comunica
+las mismas reglas que el servicio Python.
+
+### Validación visual específica
+
+- Se distinguen título, fecha, hora y categoría.
+- La actividad guardada se muestra en la sección del día.
+- La leyenda permite relacionar cada categoría con su color.
+- Los nuevos iconos o controles se reflejan también en el preview.
+
 ## Comprobación manual
 
 Abrir el formulario, crear una actividad de cada categoría, editar una,
@@ -156,4 +178,4 @@ Solicitar cada modelo, servicio, formulario, leyenda y prueba por separado.
 ## Criterio de terminado
 
 El alumno puede crear, editar, completar, filtrar y eliminar actividades, y
-puede distinguir sus categorías mediante texto y color.
+`preview.html` representa visualmente la Clase 09 publicada.
