@@ -28,6 +28,18 @@ body {
   margin: 32px auto;
 }
 
+.navegacion {
+  margin-bottom: 14px;
+}
+
+.navegacion a {
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navegacion a:hover { text-decoration: underline; }
+
 .encabezado {
   margin-bottom: 20px;
   padding: 26px 30px;
