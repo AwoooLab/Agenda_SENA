@@ -87,9 +87,9 @@ Comprobar sin abrir ventanas:
 1. Agregar en GitHub los archivos del calendario definidos en esta etapa.
 2. Actualizar `preview.html` si cambian encabezados, controles, colores o
    actividades visibles.
-3. Subir los cambios y abrir el preview publicado en GitHub Pages.
-4. Verificar la cuadrícula completa del mes.
-5. Agregar en `index.html` la tarjeta de la Clase 08 con su preview.
+3. Agregar en `index.html` la tarjeta de la Clase 08 con su preview.
+4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+5. Verificar allí la cuadrícula completa del mes.
 6. Revisar la clase desde la colección principal.
 
 El preview no calcula fechas reales; permite comprobar la composición visual del
@@ -105,10 +105,10 @@ calendario antes de integrarlo con la aplicación.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar los archivos del calendario y `preview.html` en GitHub.
-Abrir:
+Después agregar la tarjeta de la Clase 08 en `index.html` y abrir únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/08_monthly_calendar/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
 Confirmar que se observan el mes, los controles, las siete columnas, el día

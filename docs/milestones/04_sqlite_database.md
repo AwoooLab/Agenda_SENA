@@ -97,10 +97,10 @@ y una parte visual (`preview.html`). El flujo es:
 1. Agregar en GitHub `schema.sql`, `database.py`, sus pruebas y los archivos
    previstos para la etapa.
 2. Actualizar `preview.html` para mostrar la estructura de la base.
-3. Subir los cambios y abrir el preview publicado en GitHub Pages.
-4. Comparar las tablas visuales con `schema.sql`.
-5. Agregar en `index.html` la tarjeta de la Clase 04 con el preview de la base
+3. Agregar en `index.html` la tarjeta de la Clase 04 con el preview de la base
    de datos.
+4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+5. Comparar allí las tablas visuales con `schema.sql`.
 6. Verificar la clase desde la colección principal.
 
 El preview no consulta SQLite. Su función es hacer visible el diseño de la
@@ -116,10 +116,11 @@ base de datos para revisar si la estructura se entiende.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar `schema.sql`, `database.py`, `test_database.py` y
-`preview.html` en GitHub. Abrir:
+`preview.html` en GitHub. Después agregar la tarjeta de la Clase 04 en
+`index.html` y abrir únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/04_sqlite_database/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
 Comparar las tablas, campos y tipos mostrados con el esquema que se está

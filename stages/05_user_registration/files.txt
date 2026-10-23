@@ -213,16 +213,17 @@ Esta vista no guarda información. Solo comunica cómo debe verse el resultado.
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y revisar que los campos tengan etiquetas claras, espacio
-suficiente y un botón visible.
+Agregar la tarjeta de la Clase 05 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Revisar allí que los campos
+tengan etiquetas claras, espacio suficiente y un botón visible.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar el modelo, repositorio, servicio y pruebas en GitHub.
 2. Actualizar preview.html con los campos, botones, iconos y estados de la
    pantalla de registro.
-3. Subir los cambios y comparar la vista publicada en GitHub Pages.
-4. Publicar la tarjeta de la Clase 05 en index.html.
+3. Agregar la tarjeta de la Clase 05 en index.html.
+4. Subir los cambios y comparar la vista desde la página principal.
 
 El preview no registra usuarios; valida la distribución y claridad de la
 interfaz.

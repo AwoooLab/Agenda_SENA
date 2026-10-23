@@ -130,9 +130,9 @@ Python; `preview.html` muestra el formulario y sus estados. Sigue este orden:
 1. Agregar en GitHub los modelos, servicio, formulario y leyenda definidos en
    esta etapa.
 2. Actualizar `preview.html` con nuevos campos, categorías, iconos o colores.
-3. Subir los cambios y abrir el preview publicado en GitHub Pages.
-4. Revisar formulario, actividad del día y leyenda.
-5. Agregar en `index.html` la tarjeta de la Clase 09 con su preview.
+3. Agregar en `index.html` la tarjeta de la Clase 09 con su preview.
+4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+5. Revisar allí formulario, actividad del día y leyenda.
 6. Verificar la clase desde la colección principal.
 
 El preview no crea actividades reales; permite validar que la interfaz comunica
@@ -148,10 +148,10 @@ las mismas reglas que el servicio Python.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar los archivos de actividades y `preview.html` en GitHub.
-Abrir:
+Después agregar la tarjeta de la Clase 09 en `index.html` y abrir únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/09_events_categories_colors/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
 Confirmar que se observan el formulario, las categorías, los colores, la

@@ -207,16 +207,17 @@ FRAGMENTO DE REFERENCIA
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y confirmar que las columnas visuales coinciden con el
-esquema explicado en schema.sql.
+Agregar la tarjeta de la Clase 04 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Confirmar allí que las
+columnas visuales coinciden con el esquema explicado en schema.sql.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar schema.sql, database.py y test_database.py en GitHub.
 2. Actualizar preview.html para que las tablas y campos visibles coincidan con
    el esquema real.
-3. Subir los cambios y revisar la estructura publicada en GitHub Pages.
-4. Publicar la tarjeta de la Clase 04 en index.html.
+3. Agregar la tarjeta de la Clase 04 en index.html.
+4. Subir los cambios y revisar la estructura desde la página principal.
 
 La vista HTML no consulta SQLite; sirve para validar en GitHub Pages que la
 estructura de la base de datos se entiende visualmente.

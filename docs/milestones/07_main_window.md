@@ -79,9 +79,9 @@ No debe depender todavía de SQLite ni de la pantalla de inicio de sesión.
 1. Agregar en GitHub los archivos de la ventana principal definidos en esta
    etapa.
 2. Actualizar `preview.html` con la distribución, textos e iconos.
-3. Subir los cambios y abrir el preview publicado en GitHub Pages.
-4. Comprobar barra superior, menú y área de trabajo.
-5. Agregar en `index.html` la tarjeta de la Clase 07 con su preview.
+3. Agregar en `index.html` la tarjeta de la Clase 07 con su preview.
+4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+5. Comprobar allí barra superior, menú y área de trabajo.
 6. Verificar la clase desde la colección principal.
 
 El preview no ejecuta la navegación de Tkinter; muestra el resultado visual que
@@ -96,10 +96,11 @@ debe conservarse durante la integración.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar `navigation.py`, `main_window.py`, `app.py` y
-`preview.html` en GitHub. Abrir:
+`preview.html` en GitHub. Después agregar la tarjeta de la Clase 07 en
+`index.html` y abrir únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/07_main_window/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
 Confirmar que se observan la barra superior, `Agenda SENA`, el usuario, el

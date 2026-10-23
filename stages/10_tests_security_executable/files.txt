@@ -165,17 +165,18 @@ FRAGMENTO DE REFERENCIA
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y comprobar que la entrega muestra claramente el nombre del
-ejecutable, el estado de las pruebas y las condiciones de seguridad.
+Agregar la tarjeta de la Clase 10 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que la
+entrega muestra claramente el nombre del ejecutable, el estado de las pruebas y
+las condiciones de seguridad.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar pruebas, seguridad, script y release.md en GitHub.
 2. Actualizar preview.html con el nombre, estados, mensajes e iconos de la
    entrega final.
-3. Subir los cambios y comparar la vista publicada en GitHub Pages.
-4. Publicar la tarjeta de la Clase 10 en index.html y verificarla desde la
-   colección.
+3. Agregar la tarjeta de la Clase 10 en index.html.
+4. Subir los cambios y comparar la vista desde la página principal.
 
 La vista HTML comunica el resultado de la entrega; no compila ni descarga el
 ejecutable.

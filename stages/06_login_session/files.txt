@@ -235,8 +235,10 @@ Para mostrar un error visual se puede usar:
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y confirmar que el formulario muestra usuario, contraseña,
-botón y mensaje de error sin exponer la contraseña.
+Agregar la tarjeta de la Clase 06 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Confirmar allí que el
+formulario muestra usuario, contraseña, botón y mensaje de error sin exponer
+la contraseña.
 
 FLUJO DE LA LECCIÓN
 -------------------
@@ -244,8 +246,8 @@ FLUJO DE LA LECCIÓN
    pruebas en GitHub.
 2. Actualizar preview.html con los mismos campos, mensajes, botones e iconos
    del login de PC.
-3. Subir los cambios y revisar el resultado publicado en GitHub Pages.
-4. Publicar la tarjeta de la Clase 06 en index.html.
+3. Agregar la tarjeta de la Clase 06 en index.html.
+4. Subir los cambios y revisar el resultado desde la página principal.
 
 Cada cambio visual del login debe reflejarse en preview.html. La vista HTML no
 autentica ni conserva contraseñas; solo muestra la pantalla para revisión.

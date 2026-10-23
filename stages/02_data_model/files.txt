@@ -165,18 +165,18 @@ FRAGMENTO DE REFERENCIA
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y comprobar que aparecen título, fecha, hora y descripción
-sin depender del archivo Python.
+Agregar la tarjeta de la Clase 02 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que aparecen
+título, fecha, hora y descripción sin depender del archivo Python.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar model.py en GitHub.
 2. Actualizar preview.html si cambian los campos o la forma de presentar la
    cita.
-3. Subir los cambios y comparar en GitHub Pages los datos del modelo con la
-   tarjeta visual.
-4. Publicar la tarjeta de la Clase 02 en index.html cuando el resultado sea
-   coherente.
+3. Agregar la tarjeta de la Clase 02 en index.html.
+4. Subir los cambios y comparar en la página principal los datos del modelo
+   con la tarjeta visual.
 
 La vista HTML valida la comunicación visual del modelo; no reemplaza la
 comprobación de Python.

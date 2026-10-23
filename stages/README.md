@@ -56,9 +56,10 @@ aplicación. Primero se entiende, se escribe, se ejecuta y luego se integra.
 ## Flujo visible en GitHub Pages
 
 El estudiante agrega en GitHub los archivos de la etapa y actualiza su
-`preview.html` con la representación visual del resultado. Después sube los
-cambios y abre la dirección de GitHub Pages correspondiente a la etapa. Esa
-vista es la comprobación visual del proceso.
+`preview.html` con la representación visual del resultado. Después agrega la
+tarjeta de esa clase en `index.html`, sube los cambios y abre únicamente la
+página principal de GitHub Pages. Esa colección es la comprobación visual del
+proceso.
 
 El `index.html` de la raíz solo organiza las tarjetas de las clases terminadas;
 no contiene la interfaz de cada etapa. La interfaz visual vive en el

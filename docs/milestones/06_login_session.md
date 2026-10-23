@@ -112,9 +112,9 @@ flujo de la clase es:
 
 1. Agregar en GitHub los archivos de autenticación definidos en esta etapa.
 2. Actualizar `preview.html` cuando cambien campos, botones, mensajes o iconos.
-3. Subir los cambios y abrir el preview publicado en GitHub Pages.
-4. Comprobar usuario, contraseña, botón y estado de error.
-5. Agregar en `index.html` la tarjeta de la Clase 06 con el enlace al preview.
+3. Agregar en `index.html` la tarjeta de la Clase 06 con el enlace al preview.
+4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+5. Comprobar allí usuario, contraseña, botón y estado de error.
 6. Verificar desde la colección la misma composición visual.
 
 El preview no autentica usuarios ni guarda contraseñas. Es la vista visual de
@@ -129,10 +129,11 @@ la pantalla de PC que se está construyendo.
 
 ## Comprobación visual en GitHub Pages
 
-Agregar o actualizar los archivos del login y `preview.html` en GitHub. Abrir:
+Agregar o actualizar los archivos del login y `preview.html` en GitHub. Después
+agregar la tarjeta de la Clase 06 en `index.html` y abrir únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/06_login_session/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
 Confirmar que se observan usuario, contraseña, botón, mensaje de error e

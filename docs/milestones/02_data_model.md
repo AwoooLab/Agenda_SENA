@@ -85,9 +85,9 @@ flujo:
 1. Revisar la estructura y los métodos obligatorios de `Cita`.
 2. Agregar en GitHub `model.py` y los archivos previstos para la etapa.
 3. Actualizar `preview.html` si cambian los campos o su presentación.
-4. Subir los cambios y abrir el preview publicado en GitHub Pages.
-5. Verificar título, fecha, hora, descripción y estado.
-6. Agregar en `index.html` la tarjeta de la Clase 02 con el enlace al preview.
+4. Agregar en `index.html` la tarjeta de la Clase 02 con el enlace al preview.
+5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+6. Verificar allí título, fecha, hora, descripción y estado.
 
 El preview no ejecuta la clase Python: funciona como comprobación visual de la
 estructura que luego usará la interfaz.
@@ -100,15 +100,16 @@ estructura que luego usará la interfaz.
 
 ## Comprobación visual en GitHub Pages
 
-Agregar o actualizar `model.py` y `preview.html` en GitHub. Abrir:
+Agregar o actualizar `model.py` y `preview.html` en GitHub. Después agregar la
+tarjeta de la Clase 02 en `index.html` y abrir únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/02_data_model/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
-La tarjeta debe mostrar título, fecha, hora, descripción y estado. Si se
-agrega o cambia un campo en el modelo, la representación del `preview.html`
-debe actualizarse para que la colección siga explicando la misma estructura.
+La tarjeta de la Clase 02 debe mostrar título, fecha, hora, descripción y
+estado. Si se agrega o cambia un campo en el modelo, la representación del
+`preview.html` debe actualizarse y luego revisarse desde la colección principal.
 
 ### Prueba funcional opcional en el PC
 

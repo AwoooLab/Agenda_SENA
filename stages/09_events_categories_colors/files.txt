@@ -202,8 +202,10 @@ FRAGMENTO DE REFERENCIA
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y comprobar que se observan el formulario, las actividades
-del día, las categorías y la leyenda de colores.
+Agregar la tarjeta de la Clase 09 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que se
+observan el formulario, las actividades del día, las categorías y la leyenda de
+colores.
 
 FLUJO DE LA LECCIÓN
 -------------------
@@ -211,8 +213,8 @@ FLUJO DE LA LECCIÓN
    GitHub.
 2. Actualizar preview.html con los mismos campos, categorías, colores, botones
    e iconos de la interfaz de PC.
-3. Subir los cambios y comparar la vista publicada en GitHub Pages.
-4. Publicar la tarjeta de la Clase 09 en index.html.
+3. Agregar la tarjeta de la Clase 09 en index.html.
+4. Subir los cambios y comparar la vista desde la página principal.
 
 El preview no modifica actividades reales; permite revisar visualmente las
 reglas que implementa el servicio.

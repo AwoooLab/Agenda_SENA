@@ -139,15 +139,16 @@ FRAGMENTO DE REFERENCIA
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y comprobar que se distinguen claramente la barra superior,
-la navegación y el área de trabajo.
+Agregar la tarjeta de la Clase 07 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que se
+distinguen claramente la barra superior, la navegación y el área de trabajo.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar navigation.py, main_window.py y app.py en GitHub.
 2. Actualizar preview.html con la misma navegación, textos, áreas e iconos.
-3. Subir los cambios y comparar la vista publicada en GitHub Pages.
-4. Publicar la tarjeta de la Clase 07 en index.html.
+3. Agregar la tarjeta de la Clase 07 en index.html.
+4. Subir los cambios y comparar la vista desde la página principal.
 
 El preview comunica la distribución de la ventana; no ejecuta la navegación de
 Tkinter.

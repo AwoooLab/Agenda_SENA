@@ -192,16 +192,16 @@ La vista debe conservar el título, subtítulo y botón del resultado de Python.
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir stages/01_python_window/preview.html en un navegador y comprobar que la
-ventana visual coincide con el diseño definido para app.py.
+Agregar la tarjeta de la Clase 01 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que la ventana
+visual coincide con el diseño definido para app.py.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar app.py en GitHub.
 2. Actualizar preview.html con los mismos textos, tamaños, botón e iconos.
-3. Subir los cambios y abrir preview.html en GitHub Pages.
-4. Cuando la vista cumpla la especificación, agregar la tarjeta de la Clase 01
-   en index.html y comprobarla desde la colección.
+3. Agregar la tarjeta de la Clase 01 en index.html.
+4. Subir los cambios y comprobar la tarjeta desde la página principal.
 
 La validación visual hace parte de la lección. Un cambio de diseño previsto en
 app.py debe reflejarse también en preview.html. Pages no ejecuta app.py.

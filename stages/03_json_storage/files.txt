@@ -173,15 +173,16 @@ FRAGMENTO DE REFERENCIA
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Abrir preview.html y comprobar que el contenido representa la misma estructura
-que demo.py guarda y carga.
+Agregar la tarjeta de la Clase 03 en index.html y abrir únicamente la página
+principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que el
+contenido representa la misma estructura que demo.py guarda y carga.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar storage.py y demo.py en GitHub.
 2. Actualizar preview.html para mostrar la estructura JSON y los estados
    Guardar y Cargar.
-3. Subir los cambios y revisar la vista publicada en GitHub Pages.
-4. Publicar la tarjeta de la Clase 03 en index.html.
+3. Agregar la tarjeta de la Clase 03 en index.html.
+4. Subir los cambios y revisar la vista desde la página principal.
 
 El preview muestra el flujo de forma visual, pero no guarda información real.

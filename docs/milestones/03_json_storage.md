@@ -79,9 +79,9 @@ La cita de ejemplo debe tener título, fecha, hora y descripción.
 
 1. Agregar en GitHub `storage.py`, `demo.py` y los archivos previstos.
 2. Actualizar `preview.html` para representar el archivo JSON y sus acciones.
-3. Subir los cambios y abrir el preview publicado en GitHub Pages.
-4. Comprobar que se distinguen archivo, estado, Guardar y Cargar.
-5. Agregar en `index.html` la tarjeta de la Clase 03 con su preview.
+3. Agregar en `index.html` la tarjeta de la Clase 03 con su preview.
+4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+5. Comprobar allí que se distinguen archivo, estado, Guardar y Cargar.
 6. Verificar la clase desde la colección principal.
 
 El preview es una representación visual; no guarda datos reales ni sustituye
@@ -95,10 +95,11 @@ la comprobación del archivo JSON temporal.
 
 ## Comprobación visual en GitHub Pages
 
-Agregar o actualizar `storage.py`, `demo.py` y `preview.html` en GitHub. Abrir:
+Agregar o actualizar `storage.py`, `demo.py` y `preview.html` en GitHub. Después
+agregar la tarjeta de la Clase 03 en `index.html` y abrir únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/03_json_storage/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
 Confirmar que se identifican `agenda.json`, los datos de ejemplo y los estados

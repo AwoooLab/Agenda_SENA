@@ -78,10 +78,10 @@ GitHub Pages. El trabajo se realiza en este orden:
 2. Agregar en GitHub los archivos de la etapa, incluido `app.py`.
 3. Actualizar `preview.html` para representar la pantalla de PC y cualquier
    cambio visual realizado.
-4. Subir los cambios y abrir el `preview.html` publicado en GitHub Pages.
-5. Agregar en `index.html` la tarjeta de la Clase 01, apuntando al preview; el
+4. Agregar en `index.html` la tarjeta de la Clase 01, apuntando al preview; el
    HTML principal solo organiza la colección.
-6. Verificar desde la colección que la tarjeta y su resultado se abren bien.
+5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+6. Verificar allí que la tarjeta y su resultado se abren bien.
 
 El preview no ejecuta Python. La etapa no está terminada hasta que la
 representación visual publicada cumple los requisitos de la especificación.
@@ -98,11 +98,11 @@ La comprobación que el estudiante puede observar durante la clase se hace en
 GitHub Pages:
 
 1. Agregar o actualizar `app.py` y `preview.html` en GitHub.
-2. Abrir:
-   `https://awooolab.github.io/Agenda_SENA/stages/01_python_window/preview.html`
-3. Confirmar que se ven `Agenda SENA`, el subtítulo y el botón `Cerrar`.
-4. Si se agregó un icono o se cambió un texto en el diseño, comprobar que el
-   mismo cambio aparece en `preview.html`.
+2. Agregar la tarjeta de la Clase 01 en `index.html`.
+3. Abrir únicamente `https://awooolab.github.io/Agenda_SENA/`.
+4. Confirmar allí que se ven `Agenda SENA`, el subtítulo y el botón `Cerrar`.
+5. Si se agregó un icono o se cambió un texto en el diseño, comprobar el cambio
+   dentro de la tarjeta de la Clase 01.
 
 GitHub Pages no ejecuta `app.py`. La página solo permite revisar la
 representación visual de la ventana de PC.

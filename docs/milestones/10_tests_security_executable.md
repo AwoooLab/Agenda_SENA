@@ -89,9 +89,9 @@ estado final que se mostrará en la colección de clases. El flujo es:
    entrega.
 2. Actualizar `preview.html` con el nombre del ejecutable, resultados, iconos y
    estados finales.
-3. Subir los cambios y abrir el preview publicado en GitHub Pages.
-4. Comprobar que la información de entrega es legible.
-5. Agregar en `index.html` la tarjeta de la Clase 10 con su preview.
+3. Agregar en `index.html` la tarjeta de la Clase 10 con su preview.
+4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+5. Comprobar allí que la información de entrega es legible.
 6. Verificar la entrega final desde la colección principal.
 
 El preview no compila ni descarga el ejecutable. Solo comunica visualmente el
@@ -107,10 +107,11 @@ resultado de la validación local y la entrega preparada.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar las pruebas, el script, `release.md` y `preview.html` en
-GitHub. Abrir:
+GitHub. Después agregar la tarjeta de la Clase 10 en `index.html` y abrir
+únicamente:
 
 ```text
-https://awooolab.github.io/Agenda_SENA/stages/10_tests_security_executable/preview.html
+https://awooolab.github.io/Agenda_SENA/
 ```
 
 Confirmar que se observan el nombre del ejecutable, el estado de las pruebas,
