@@ -1,6 +1,6 @@
 FILES FOR STAGE 08
 
 Create or complete:
-- src/ui/monthly_calendar.py
-- src/ui/calendar_cell.py
-- tests/test_calendar.py
+- monthly_calendar.py
+- calendar_cell.py
+- test_calendar.py

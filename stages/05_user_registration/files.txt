@@ -1,7 +1,7 @@
 FILES FOR STAGE 05
 
 Create or complete:
-- src/models/user.py
-- src/repositories/user_repository.py
-- src/services/user_service.py
-- tests/test_user_service.py
+- user.py
+- user_repository.py
+- user_service.py
+- test_user_service.py

@@ -9,7 +9,7 @@ OUTPUT = ROOT / "docs" / "file_status.md"
 
 
 def read_stage_files(manifest: Path):
-    """Yield repository-relative paths listed with a '- ' marker."""
+    """Yield paths relative to the stage folder listed with a '- ' marker."""
     for line in manifest.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if line.startswith("- "):
@@ -46,9 +46,10 @@ def main() -> None:
         )
 
         for relative_path in read_stage_files(manifest):
-            exists = (ROOT / relative_path).is_file()
+            exists = (stage / relative_path).is_file()
             status = "✅" if exists else "⬜"
-            rows.append(f"| {status} | `{relative_path}` |")
+            display_path = f"{stage.name}/{relative_path}"
+            rows.append(f"| {status} | `stages/{display_path}` |")
 
         rows.append("")
 

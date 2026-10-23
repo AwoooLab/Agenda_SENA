@@ -1,8 +1,5 @@
 FILES FOR STAGE 03
 
 Create or complete:
-- stages/03_json_storage/storage.py
-- stages/03_json_storage/demo.py
-- src/storage.py
-- data/agenda.json
-- tests/test_storage.py
+- storage.py
+- demo.py

@@ -9,16 +9,12 @@ Legend: ✅ file exists · ⬜ file pending
 | Status | File |
 |---|---|
 | ✅ | `stages/01_python_window/app.py` |
-| ✅ | `app.py` |
-| ✅ | `src/interface.py` |
 
 ## 02_data_model
 
 | Status | File |
 |---|---|
 | ✅ | `stages/02_data_model/model.py` |
-| ✅ | `src/model.py` |
-| ✅ | `tests/test_model.py` |
 
 ## 03_json_storage
 
@@ -26,71 +22,66 @@ Legend: ✅ file exists · ⬜ file pending
 |---|---|
 | ✅ | `stages/03_json_storage/storage.py` |
 | ✅ | `stages/03_json_storage/demo.py` |
-| ✅ | `src/storage.py` |
-| ✅ | `data/agenda.json` |
-| ⬜ | `tests/test_storage.py` |
 
 ## 04_sqlite_database
 
 | Status | File |
 |---|---|
-| ⬜ | `src/database.py` |
-| ⬜ | `src/schema.sql` |
-| ⬜ | `data/agenda.db` |
-| ⬜ | `tests/test_database.py` |
+| ⬜ | `stages/04_sqlite_database/database.py` |
+| ⬜ | `stages/04_sqlite_database/schema.sql` |
+| ⬜ | `stages/04_sqlite_database/test_database.py` |
 
 ## 05_user_registration
 
 | Status | File |
 |---|---|
-| ⬜ | `src/models/user.py` |
-| ⬜ | `src/repositories/user_repository.py` |
-| ⬜ | `src/services/user_service.py` |
-| ⬜ | `tests/test_user_service.py` |
+| ⬜ | `stages/05_user_registration/user.py` |
+| ⬜ | `stages/05_user_registration/user_repository.py` |
+| ⬜ | `stages/05_user_registration/user_service.py` |
+| ⬜ | `stages/05_user_registration/test_user_service.py` |
 
 ## 06_login_session
 
 | Status | File |
 |---|---|
-| ⬜ | `src/security/password.py` |
-| ⬜ | `src/services/auth_service.py` |
-| ⬜ | `src/ui/login_window.py` |
-| ⬜ | `tests/test_auth_service.py` |
+| ⬜ | `stages/06_login_session/password.py` |
+| ⬜ | `stages/06_login_session/auth_service.py` |
+| ⬜ | `stages/06_login_session/login_window.py` |
+| ⬜ | `stages/06_login_session/test_auth_service.py` |
 
 ## 07_main_window
 
 | Status | File |
 |---|---|
 | ✅ | `stages/07_main_window/app.py` |
-| ⬜ | `src/ui/main_window.py` |
-| ⬜ | `src/ui/navigation.py` |
-| ✅ | `app.py` |
+| ⬜ | `stages/07_main_window/main_window.py` |
+| ⬜ | `stages/07_main_window/navigation.py` |
 
 ## 08_monthly_calendar
 
 | Status | File |
 |---|---|
-| ⬜ | `src/ui/monthly_calendar.py` |
-| ⬜ | `src/ui/calendar_cell.py` |
-| ⬜ | `tests/test_calendar.py` |
+| ⬜ | `stages/08_monthly_calendar/monthly_calendar.py` |
+| ⬜ | `stages/08_monthly_calendar/calendar_cell.py` |
+| ⬜ | `stages/08_monthly_calendar/test_calendar.py` |
 
 ## 09_events_categories_colors
 
 | Status | File |
 |---|---|
-| ⬜ | `src/models/event.py` |
-| ⬜ | `src/models/category.py` |
-| ⬜ | `src/services/event_service.py` |
-| ⬜ | `src/ui/event_form.py` |
-| ⬜ | `src/ui/color_legend.py` |
-| ⬜ | `tests/test_event_service.py` |
+| ⬜ | `stages/09_events_categories_colors/event.py` |
+| ⬜ | `stages/09_events_categories_colors/category.py` |
+| ⬜ | `stages/09_events_categories_colors/event_service.py` |
+| ⬜ | `stages/09_events_categories_colors/event_form.py` |
+| ⬜ | `stages/09_events_categories_colors/color_legend.py` |
+| ⬜ | `stages/09_events_categories_colors/test_event_service.py` |
 
 ## 10_tests_security_executable
 
 | Status | File |
 |---|---|
-| ⬜ | `tests/test_database.py` |
-| ⬜ | `tests/test_auth_service.py` |
-| ⬜ | `tests/test_event_service.py` |
-| ⬜ | `scripts/build_windows.ps1` |
-| ⬜ | `docs/release.md` |
+| ⬜ | `stages/10_tests_security_executable/test_database.py` |
+| ⬜ | `stages/10_tests_security_executable/test_auth_service.py` |
+| ⬜ | `stages/10_tests_security_executable/test_event_service.py` |
+| ⬜ | `stages/10_tests_security_executable/build_windows.ps1` |
+| ⬜ | `stages/10_tests_security_executable/release.md` |

@@ -1,7 +1,6 @@
 FILES FOR STAGE 07
 
 Create or complete:
-- stages/07_main_window/app.py
-- src/ui/main_window.py
-- src/ui/navigation.py
 - app.py
+- main_window.py
+- navigation.py

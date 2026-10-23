@@ -1,6 +1,4 @@
 FILES FOR STAGE 01
 
 Create or complete:
-- stages/01_python_window/app.py
 - app.py
-- src/interface.py

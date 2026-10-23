@@ -1,8 +1,8 @@
 FILES FOR STAGE 10
 
 Create or complete:
-- tests/test_database.py
-- tests/test_auth_service.py
-- tests/test_event_service.py
-- scripts/build_windows.ps1
-- docs/release.md
+- test_database.py
+- test_auth_service.py
+- test_event_service.py
+- build_windows.ps1
+- release.md

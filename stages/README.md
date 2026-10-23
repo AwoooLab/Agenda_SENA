@@ -23,3 +23,8 @@ No pedir a ChatGPT que genere todo el proyecto de una sola vez. Cada prompt est√
 After creating or completing a file, run `python scripts/generate_file_status.py`
 to refresh `docs/file_status.md`. GitHub Actions performs the same update
 automatically after each push to `main`.
+
+Each `files.txt` uses paths relative to its own stage. For example,
+`stages/01_python_window/files.txt` only lists `app.py`, which must exist as
+`stages/01_python_window/app.py`. Later, the student can integrate that result
+into `src/` or the project root when the milestone requires it.

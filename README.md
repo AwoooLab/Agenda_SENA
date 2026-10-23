@@ -34,6 +34,7 @@ GitHub Pages solo muestra la página informativa; no ejecuta la aplicación Pyth
 
 The [file status checklist](docs/file_status.md) is generated from each
 `stages/*/files.txt` file. A green check means the planned file already exists.
+The paths in each manifest are relative to that stage folder.
 
 Run this locally after creating or completing a file:
 
