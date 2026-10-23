@@ -1,5 +1,38 @@
 ETAPA 04 — INTERFAZ DE AGENDA
 
-Objetivo: unir formulario, validación, lista y guardado local.
-Archivo principal: app.py
-Validación: registrar una cita y verla en la lista.
+OBJETIVO
+Unir la ventana, el modelo de datos, las validaciones y el guardado JSON para
+que el alumno pueda registrar y consultar citas desde la aplicación.
+
+ARCHIVO DE LA ETAPA
+Crear o completar:
+- etapas/04_interfaz_agenda/app.py
+
+PROMPT PARA CHATGPT GRATUITO
+Actúa como profesor de Python. Genera únicamente el contenido del archivo
+`app.py` para la etapa 04 de Agenda SENA. Crea una interfaz Tkinter con campos
+para título, fecha, hora y descripción, un botón para guardar y una lista que
+muestre las citas. Usa funciones separadas para leer los campos, validar y
+mostrar mensajes. No inventes librerías externas y no modifiques otros archivos.
+Explica al final qué funciones necesita integrar el proyecto principal.
+
+REQUISITOS
+- Reutilizar el modelo `Cita`.
+- Reutilizar las funciones de validación.
+- Reutilizar las funciones de almacenamiento.
+- Mostrar errores comprensibles al usuario.
+- No colocar toda la lógica en una sola función.
+
+INTEGRACIÓN
+La interfaz final debe quedar principalmente en `src/interfaz.py`.
+El archivo raíz `app.py` solo debe iniciar `ejecutar()`.
+La interfaz debe comunicarse con `src/modelo.py`, `src/validaciones.py` y
+`src/almacenamiento.py`, sin duplicar sus reglas.
+
+VALIDACIÓN
+Ejecutar:
+python etapas/04_interfaz_agenda/app.py
+python app.py
+
+Resultado esperado: se puede registrar una cita válida, verla en la lista y
+recibir un mensaje cuando falte un dato obligatorio.

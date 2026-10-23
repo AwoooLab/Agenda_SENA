@@ -1,5 +1,36 @@
 ETAPA 02 — MODELO DE DATOS
 
-Objetivo: representar una cita con título, fecha, hora y descripción.
-Archivo principal: modelo.py
-Validación: crear una cita y convertirla a diccionario.
+OBJETIVO
+Representar una cita o tarea como un objeto de Python que pueda convertirse a
+diccionario y guardarse posteriormente en JSON.
+
+ARCHIVO DE LA ETAPA
+Crear o completar:
+- etapas/02_modelo_datos/modelo.py
+
+PROMPT PARA CHATGPT GRATUITO
+Actúa como profesor de Python. Genera únicamente el archivo `modelo.py` para
+Agenda SENA. Crea una clase `Cita` usando `dataclass` con los campos `titulo`,
+`fecha`, `hora` y `descripcion`. Incluye un método para convertir la cita a
+diccionario y otro método de clase para reconstruirla desde un diccionario.
+No uses librerías externas, no crees otros archivos y agrega un ejemplo pequeño
+que se ejecute solo cuando el archivo se ejecute directamente.
+
+REQUISITOS
+- Usar `dataclass`.
+- Mantener los campos claramente definidos.
+- No incluir código de interfaz gráfica.
+- Poder convertir la cita a un diccionario JSON.
+
+INTEGRACIÓN
+Copiar la clase validada a:
+- src/modelo.py
+Después, `src/validaciones.py`, `src/almacenamiento.py` y la interfaz podrán
+importar `Cita` desde `src.modelo`.
+
+VALIDACIÓN
+Ejecutar:
+python etapas/02_modelo_datos/modelo.py
+python -m unittest discover -s pruebas -v
+
+Resultado esperado: se muestra un diccionario con título, fecha, hora y descripción.

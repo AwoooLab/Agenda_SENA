@@ -35,3 +35,6 @@
 - Ejecutar pruebas automáticas.
 - Probar el programa manualmente.
 - Preparar un `.exe` para Windows con PyInstaller.
+
+Cada carpeta dentro de `etapas/` contiene los archivos de trabajo del alumno y
+un `objetivo.txt` con el prompt, los requisitos, la integración y la validación.
