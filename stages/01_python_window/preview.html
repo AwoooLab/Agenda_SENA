@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../assets/stage-preview.css" />
     <title>Vista previa | Etapa 01</title>
+    <style>
+      .ventana.etapa-01 {
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ventana-contenido {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+      }
+
+      .ventana-contenido h2 {
+        margin: 0 0 14px;
+        font-size: 22px;
+      }
+
+      .ventana-contenido p {
+        margin: 0 0 24px;
+        color: #64748b;
+        font-size: 12px;
+      }
+    </style>
   </head>
   <body>
     <main class="pagina">
@@ -16,12 +43,12 @@
         <p>Vista previa del primer resultado de Agenda SENA.</p>
       </header>
       <section class="tarjeta relleno">
-        <div class="ventana">
+        <div class="ventana etapa-01" aria-label="Ventana inicial de Agenda SENA">
           <div class="barra-ventana"><span></span><span></span><span></span> Agenda SENA</div>
-          <div class="relleno centrado">
+          <div class="ventana-contenido">
             <h2>Agenda SENA</h2>
-            <p class="muted">Mi agenda local para PC</p>
-            <button class="secundario">Cerrar</button>
+            <p>Mi agenda local para PC</p>
+            <button type="button" class="secundario">Cerrar</button>
           </div>
         </div>
       </section>
