@@ -3,12 +3,389 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agenda SENA</title>
+    <meta
+      name="description"
+      content="Avance del proyecto educativo Agenda SENA."
+    />
+    <title>Agenda SENA | Avance del proyecto</title>
     <style>
-      body { display: grid; min-height: 100vh; margin: 0; place-items: center; font-family: Arial, sans-serif; }
+      :root {
+        --azul: #2563eb;
+        --azul-oscuro: #172554;
+        --azul-claro: #dbeafe;
+        --verde: #15803d;
+        --verde-claro: #dcfce7;
+        --gris-900: #172033;
+        --gris-600: #64748b;
+        --gris-200: #e2e8f0;
+        --gris-100: #f1f5f9;
+        --blanco: #ffffff;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        color: var(--gris-900);
+        background: #f8fafc;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      .hero {
+        color: var(--blanco);
+        background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+        padding: 56px 24px 48px;
+      }
+
+      .contenedor {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+      }
+
+      .hero p {
+        max-width: 720px;
+        margin: 0;
+        color: #dbeafe;
+        font-size: 1.1rem;
+      }
+
+      .resumen {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: -28px;
+      }
+
+      .resumen-card,
+      .etapa {
+        border: 1px solid var(--gris-200);
+        border-radius: 16px;
+        background: var(--blanco);
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      }
+
+      .resumen-card {
+        padding: 20px;
+      }
+
+      .resumen-card strong {
+        display: block;
+        color: var(--azul-oscuro);
+        font-size: 2rem;
+      }
+
+      .resumen-card span {
+        color: var(--gris-600);
+      }
+
+      main { padding: 44px 0 64px; }
+
+      .encabezado-seccion {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      h2 { margin: 0; color: var(--azul-oscuro); }
+
+      .barra {
+        width: min(340px, 100%);
+        height: 12px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: var(--gris-200);
+      }
+
+      .barra span {
+        display: block;
+        width: 0%;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--verde);
+        transition: width 0.2s ease;
+      }
+
+      .etapas {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .etapa { padding: 22px; }
+
+      .etapa-cabecera {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .numero {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        margin-right: 10px;
+        border-radius: 50%;
+        color: var(--azul-oscuro);
+        background: var(--azul-claro);
+        font-weight: 700;
+      }
+
+      .etapa h3 {
+        display: inline;
+        margin: 0;
+        color: var(--gris-900);
+        font-size: 1.15rem;
+      }
+
+      .estado {
+        flex-shrink: 0;
+        border-radius: 999px;
+        padding: 5px 10px;
+        color: var(--gris-600);
+        background: var(--gris-100);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .etapa[data-status="active"] { border-color: var(--azul); }
+      .etapa[data-status="active"] .estado { color: #1d4ed8; background: var(--azul-claro); }
+      .etapa[data-status="completed"] { border-color: var(--verde); }
+      .etapa[data-status="completed"] .estado { color: var(--verde); background: var(--verde-claro); }
+
+      .etapa p {
+        min-height: 48px;
+        margin: 16px 0;
+        color: var(--gris-600);
+      }
+
+      .enlaces { display: flex; flex-wrap: wrap; gap: 10px; }
+
+      .enlaces a {
+        color: var(--azul);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .enlaces a:hover { text-decoration: underline; }
+
+      .nota {
+        margin-top: 28px;
+        padding: 18px 20px;
+        border-left: 4px solid var(--azul);
+        border-radius: 8px;
+        color: var(--gris-600);
+        background: var(--azul-claro);
+      }
+
+      footer {
+        padding: 24px;
+        color: var(--gris-600);
+        background: var(--gris-100);
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        .resumen, .etapas { grid-template-columns: 1fr; }
+        .encabezado-seccion { align-items: stretch; flex-direction: column; }
+        .etapa-cabecera { flex-direction: column; }
+      }
     </style>
   </head>
   <body>
-    <h1>Agenda SENA</h1>
+    <header class="hero">
+      <div class="contenedor">
+        <h1>Agenda SENA</h1>
+        <p>
+          Proyecto educativo de una agenda local para PC, desarrollada paso a
+          paso con Python.
+        </p>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <section class="resumen" aria-label="Resumen del avance">
+        <div class="resumen-card">
+          <strong id="completadas">0</strong>
+          <span>Etapas completadas</span>
+        </div>
+        <div class="resumen-card">
+          <strong id="en-progreso">1</strong>
+          <span>Etapas en progreso</span>
+        </div>
+        <div class="resumen-card">
+          <strong id="total-etapas">10</strong>
+          <span>Total de etapas</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="titulo-etapas" style="margin-top: 44px">
+        <div class="encabezado-seccion">
+          <div>
+            <h2 id="titulo-etapas">Avance por etapa</h2>
+            <p>Actualiza el estado de cada etapa desde este archivo.</p>
+          </div>
+          <div>
+            <div class="barra" aria-label="Progreso general">
+              <span id="barra-progreso"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="etapas">
+          <!-- Para actualizar una etapa, cambia data-status y el texto del estado. -->
+          <article class="etapa" data-status="active">
+            <div class="etapa-cabecera">
+              <div><span class="numero">01</span><h3>Ventana inicial</h3></div>
+              <span class="estado">En progreso</span>
+            </div>
+            <p>Crear la primera ventana de escritorio de Agenda SENA con Tkinter.</p>
+            <div class="enlaces">
+              <a href="stages/01_python_window/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/01_python_window.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">02</span><h3>Modelo de datos</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Representar una cita o actividad como un objeto de Python.</p>
+            <div class="enlaces">
+              <a href="stages/02_data_model/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/02_data_model.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">03</span><h3>Guardado JSON</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Guardar y cargar temporalmente las actividades en un archivo local.</p>
+            <div class="enlaces">
+              <a href="stages/03_json_storage/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/03_json_storage.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">04</span><h3>Base de datos SQLite</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Definir las tablas y conectar la aplicación con SQLite.</p>
+            <div class="enlaces">
+              <a href="stages/04_sqlite_database/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/04_sqlite_database.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">05</span><h3>Registro de usuarios</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Crear usuarios locales y separar modelos, repositorios y servicios.</p>
+            <div class="enlaces">
+              <a href="stages/05_user_registration/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/05_user_registration.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">06</span><h3>Inicio de sesión</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Proteger contraseñas y mantener la sesión del usuario activo.</p>
+            <div class="enlaces">
+              <a href="stages/06_login_session/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/06_login_session.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">07</span><h3>Ventana principal</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Construir la navegación y el espacio principal de la agenda.</p>
+            <div class="enlaces">
+              <a href="stages/07_main_window/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/07_main_window.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">08</span><h3>Calendario mensual</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Mostrar meses, semanas, días y navegación del calendario.</p>
+            <div class="enlaces">
+              <a href="stages/08_monthly_calendar/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/08_monthly_calendar.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">09</span><h3>Actividades y categorías</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Crear, editar, completar y eliminar actividades con colores.</p>
+            <div class="enlaces">
+              <a href="stages/09_events_categories_colors/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/09_events_categories_colors.md">Especificación</a>
+            </div>
+          </article>
+
+          <article class="etapa" data-status="pending">
+            <div class="etapa-cabecera">
+              <div><span class="numero">10</span><h3>Pruebas y ejecutable</h3></div>
+              <span class="estado">Pendiente</span>
+            </div>
+            <p>Revisar la aplicación y preparar la versión para Windows.</p>
+            <div class="enlaces">
+              <a href="stages/10_tests_security_executable/files.txt">Guía de la etapa</a>
+              <a href="https://github.com/AwoooLab/Agenda_SENA/blob/main/docs/milestones/10_tests_security_executable.md">Especificación</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="nota">
+          Para actualizar el avance, cambia el valor <code>data-status</code> de
+          una etapa a <code>active</code> o <code>completed</code>, ajusta el
+          texto visible y sube el cambio al repositorio.
+        </p>
+      </section>
+    </main>
+
+    <footer>Agenda SENA · Proyecto educativo de aplicación local para PC</footer>
+
+    <script>
+      const etapas = [...document.querySelectorAll(".etapa")];
+      const completadas = etapas.filter((etapa) => etapa.dataset.status === "completed").length;
+      const activas = etapas.filter((etapa) => etapa.dataset.status === "active").length;
+
+      document.querySelector("#completadas").textContent = completadas;
+      document.querySelector("#en-progreso").textContent = activas;
+      document.querySelector("#total-etapas").textContent = etapas.length;
+      document.querySelector("#barra-progreso").style.width = `${(completadas / etapas.length) * 100}%`;
+    </script>
   </body>
 </html>
