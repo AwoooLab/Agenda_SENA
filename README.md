@@ -18,8 +18,8 @@ existe una suite global independiente.
 
 - `main.py`: orquestador de la aplicación Python; crece con cada etapa.
 - `stages/`: archivos que el alumno irá creando o modificando por etapa.
-- `docs/milestones/`: hitos completos con requisitos, prompts e integración en
-  `main.py`.
+- `docs/parts/`: partes del proyecto y sus hitos completos con requisitos,
+  prompts e integración en `main.py`.
 - `index.html`: orquestador de la colección visual para GitHub Pages.
 - `plan.md`: plan de desarrollo.
 

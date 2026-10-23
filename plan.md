@@ -67,7 +67,7 @@
 - Revisar datos y credenciales.
 - Preparar un `.exe` para Windows con PyInstaller.
 
-La explicación completa de cada hito está en `docs/milestones/`. Las carpetas
-de `stages/` contienen `files.txt`, donde se enumeran los archivos que el
-alumno debe crear o modificar en esa etapa. El resultado funcional crece en
+La explicación completa de cada parte y sus hitos está en `docs/parts/`. Las
+carpetas de `stages/` contienen `files.txt`, donde se enumeran los archivos que
+el alumno debe crear o modificar en esa etapa. El resultado funcional crece en
 `main.py` y el resultado visual crece en `index.html`.

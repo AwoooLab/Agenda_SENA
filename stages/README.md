@@ -48,7 +48,7 @@ escribí. No generes el proyecto completo ni modifiques otros archivos.
 Los archivos dentro de `stages/` son ejercicios didácticos aislados. Cuando el
 alumno termina una etapa, su solución se incorpora progresivamente en el
 `main.py` de la raíz, según indique el hito correspondiente en
-`docs/milestones/`.
+`docs/parts/01_agenda_pc/milestones/`.
 
 El archivo de la etapa no se conecta automáticamente con otros archivos. Cada
 carpeta conserva su trabajo y `main.py` funciona como el orquestador de la

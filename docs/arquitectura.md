@@ -18,7 +18,8 @@ se está construyendo.
 - `main.py`: orquesta la aplicación principal y crece a medida que se
   completan las etapas.
 - `stages/`: contiene los archivos de trabajo separados por etapa.
-- `docs/milestones/`: contiene la especificación completa de cada hito.
+- `docs/parts/`: contiene las partes del proyecto y la especificación completa
+  de cada hito.
 - `index.html`: es la colección visual de clases publicada en GitHub Pages.
 
 Cada carpeta de `stages/` trabaja de forma aislada. Al terminar una etapa, la
