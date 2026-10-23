@@ -1,0 +1,7 @@
+FILES FOR STAGE 04
+
+Create or complete:
+- src/database.py
+- src/schema.sql
+- data/agenda.db
+- tests/test_database.py

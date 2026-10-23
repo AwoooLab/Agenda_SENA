@@ -1,0 +1,9 @@
+FILES FOR STAGE 09
+
+Create or complete:
+- src/models/event.py
+- src/models/category.py
+- src/services/event_service.py
+- src/ui/event_form.py
+- src/ui/color_legend.py
+- tests/test_event_service.py

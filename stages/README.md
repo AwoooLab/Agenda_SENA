@@ -4,7 +4,7 @@ Cada carpeta representa una etapa de la clase. El alumno debe trabajar una etapa
 
 ## Método con ChatGPT gratuito
 
-1. Abrir el `objective.txt` de la etapa.
+1. Abrir el hito correspondiente en `docs/milestones/`.
 2. Copiar el prompt indicado en ChatGPT.
 3. Pedir un solo archivo por vez.
 4. Crear o reemplazar únicamente el archivo indicado.
@@ -14,6 +14,9 @@ Cada carpeta representa una etapa de la clase. El alumno debe trabajar una etapa
 
 ## Regla de integración
 
-Los archivos dentro de `stages/` son entregas didácticas aisladas. La versión que usa la aplicación principal debe quedar en `app.py`, `src/`, `data/` o `tests/`, según indique el `objective.txt`.
+Los archivos dentro de `stages/` son entregas didácticas aisladas. El archivo
+`files.txt` de cada carpeta enumera los archivos que se crearán o modificarán.
+La versión integrada debe quedar en `app.py`, `src/`, `data/` o `tests/`, según
+indique el hito de `docs/milestones/`.
 
 No pedir a ChatGPT que genere todo el proyecto de una sola vez. Cada prompt está diseñado para producir un archivo pequeño y revisable.

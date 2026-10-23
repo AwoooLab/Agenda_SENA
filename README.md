@@ -20,7 +20,8 @@ python -m unittest discover -s tests -v
 - `src/`: código principal dividido por responsabilidades.
 - `data/`: información local de la agenda.
 - `tests/`: pruebas automáticas.
-- `stages/`: avances didácticos del proyecto.
+- `stages/`: archivos que el alumno irá creando o modificando por etapa.
+- `docs/milestones/`: hitos completos con requisitos, prompts e integración.
 - `config/`: configuración compartida.
 - `index.html`: vista informativa mínima para GitHub Pages.
 - `plan.md`: plan de desarrollo.

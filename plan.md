@@ -18,23 +18,54 @@
 - Definir título, fecha, hora, descripción y estado.
 - Validar campos obligatorios.
 
-## Etapa 03 — Guardado local
+## Etapa 03 — Guardado JSON temporal
 
-- Leer y guardar la agenda en `data/agenda.json`.
+- Aprender a leer y guardar datos localmente.
 - Controlar archivos inexistentes o dañados.
 - Probar la lectura y escritura de datos.
 
-## Etapa 04 — Interfaz de agenda
+## Etapa 04 — Base de datos SQLite
 
-- Crear el formulario para registrar citas.
-- Mostrar la lista de citas.
-- Agregar edición y eliminación.
+- Crear las tablas principales.
+- Usar consultas parametrizadas.
+- Preparar la base para usuarios y actividades.
 
-## Etapa 05 — Pruebas y ejecutable
+## Etapa 05 — Registro de usuarios
+
+- Crear usuarios locales.
+- Validar nombres duplicados y campos obligatorios.
+- Separar modelos, repositorios y servicios.
+
+## Etapa 06 — Login y sesión
+
+- Proteger contraseñas con hash y salt.
+- Crear inicio y cierre de sesión.
+- Mantener el usuario actual en memoria.
+
+## Etapa 07 — Ventana principal
+
+- Crear la estructura de navegación.
+- Mostrar el usuario activo.
+- Preparar las vistas de agenda.
+
+## Etapa 08 — Calendario mensual
+
+- Mostrar días y semanas del mes.
+- Navegar entre meses.
+- Seleccionar un día y mostrar sus actividades.
+
+## Etapa 09 — Eventos, categorías y colores
+
+- Crear, editar, completar y eliminar eventos.
+- Asignar categorías y colores.
+- Filtrar por fecha, categoría y estado.
+
+## Etapa 10 — Pruebas, seguridad y ejecutable
 
 - Ejecutar pruebas automáticas.
-- Probar el programa manualmente.
+- Revisar datos y credenciales.
 - Preparar un `.exe` para Windows con PyInstaller.
 
-Cada carpeta dentro de `stages/` contiene los archivos de trabajo del alumno y
-un `objective.txt` con el prompt, los requisitos, la integración y la validación.
+La explicación completa de cada hito vive en `docs/milestones/`. Las carpetas
+de `stages/` contienen `files.txt`, donde se enumeran los archivos que el
+alumno debe crear o modificar en esa etapa.

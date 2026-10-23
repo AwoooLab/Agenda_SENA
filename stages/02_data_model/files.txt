@@ -1,0 +1,6 @@
+FILES FOR STAGE 02
+
+Create or complete:
+- stages/02_data_model/model.py
+- src/model.py
+- tests/test_model.py

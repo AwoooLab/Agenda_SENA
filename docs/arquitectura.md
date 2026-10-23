@@ -6,7 +6,8 @@ La aplicación principal es Python y se ejecuta localmente en el computador.
 - `src/`: contiene el modelo, validaciones, almacenamiento e interfaz.
 - `data/`: contiene los datos locales en JSON.
 - `tests/`: contiene pruebas automáticas.
-- `stages/`: contiene ejemplos separados para aprender paso a paso.
+- `stages/`: contiene los archivos de trabajo separados por etapa.
+- `docs/milestones/`: contiene la especificación completa de cada hito.
 - `config/`: contiene rutas y formatos compartidos.
 - `index.html`: es únicamente la vista informativa de GitHub Pages.
 

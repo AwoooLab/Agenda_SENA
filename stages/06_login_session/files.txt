@@ -1,0 +1,7 @@
+FILES FOR STAGE 06
+
+Create or complete:
+- src/security/password.py
+- src/services/auth_service.py
+- src/ui/login_window.py
+- tests/test_auth_service.py
