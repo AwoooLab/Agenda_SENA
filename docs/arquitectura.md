@@ -19,12 +19,16 @@ se está construyendo.
   completan las etapas.
 - `stages/`: contiene los archivos de trabajo separados por etapa.
 - `docs/milestones/`: contiene la especificación completa de cada hito.
-- `config/`: contiene rutas y formatos compartidos.
 - `index.html`: es la colección visual de clases publicada en GitHub Pages.
 
 Cada carpeta de `stages/` trabaja de forma aislada. Al terminar una etapa, la
 funcionalidad se incorpora progresivamente en el `main.py` de la raíz. No se
 importan automáticamente archivos de una etapa ni se conectan entre sí.
+
+El repositorio inicial no incluye una implementación paralela en `src/`,
+pruebas globales ni datos de ejemplo. Esos elementos se construirán dentro de
+las etapas cuando correspondan; así, el estudiante siempre sabe qué archivo
+está trabajando y cuál es el siguiente resultado que debe integrar.
 
 GitHub Pages no ejecuta `main.py`; solo sirve los archivos HTML estáticos. Cada
 etapa terminada se publica como una tarjeta de clase en `index.html`, usando el

@@ -92,7 +92,7 @@ CONCEPTOS DE POWERSHELL
 FRAGMENTOS ORIENTATIVOS
 -----------------------
     $ErrorActionPreference = "Stop"
-    python -m unittest discover -s tests -v
+    python -m unittest discover -s stages/10_tests_security_executable -p "test_*.py" -v
     python -m PyInstaller --onefile --windowed --name AgendaSENA main.py
 
 ORDEN DE LA LÓGICA
@@ -131,15 +131,16 @@ PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Ejecutar:
 
-    python -m unittest discover -s tests -v
+    python -m unittest discover -s stages/10_tests_security_executable -p "test_*.py" -v
 
 Después ejecutar build_windows.ps1 y probar el archivo .exe en una cuenta limpia
 de Windows.
 
 INTEGRACIÓN POSTERIOR
 ---------------------
-Integrar las tres pruebas en tests/, el script en scripts/build_windows.ps1 y la
-guía en docs/release.md.
+Mantener las tres pruebas, el script y la guía dentro de esta carpeta de etapa.
+Después, incorporar en el `main.py` de la raíz la entrada final de la aplicación
+y usar el script de esta etapa para preparar el ejecutable.
 
 ======================================================================
 ARCHIVO: preview.html

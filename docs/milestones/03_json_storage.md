@@ -49,8 +49,8 @@ def cargar(ruta: Path) -> list[dict]:
 
 ## Archivo `demo.py`
 
-Debe demostrar el funcionamiento de `storage.py` sin modificar el archivo real
-`data/agenda.json`.
+Debe demostrar el funcionamiento de `storage.py` sin modificar datos
+permanentes del proyecto.
 
 El ejemplo debe:
 
@@ -137,7 +137,8 @@ Después pedir `demo.py` por separado:
 Genera únicamente stages/03_json_storage/demo.py. Importa guardar y cargar del
 archivo storage.py de la misma carpeta, usa TemporaryDirectory, guarda una
 lista de citas en un agenda.json temporal, vuelve a cargarla, imprime el
-resultado y no modifica data/agenda.json. Devuelve solo el código.
+resultado y no modifica archivos permanentes del proyecto. Devuelve solo el
+código.
 ```
 
 ## Criterio de terminado

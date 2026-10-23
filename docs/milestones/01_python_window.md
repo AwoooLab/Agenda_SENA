@@ -15,7 +15,7 @@ controles descritos abajo corresponden a una ventana de escritorio, no a una
 página web. `preview.html` solo sirve para representar esa ventana en el
 navegador y revisar visualmente que el diseño coincida.
 
-## Archivo que debe crear el alumno
+## Archivos que debe crear el alumno
 
 Crear únicamente:
 
@@ -75,11 +75,11 @@ funcional en Python y `preview.html` representa esa misma ventana para
 GitHub Pages. El trabajo se realiza en este orden:
 
 1. Revisar los requisitos de esta especificación.
-2. Agregar en GitHub los archivos de la etapa, incluido `app.py`.
+2. Crear únicamente los archivos dentro de `stages/01_python_window/`.
 3. Actualizar `preview.html` para representar la pantalla de PC y cualquier
    cambio visual realizado.
-4. Agregar en `index.html` la tarjeta de la Clase 01, apuntando al preview; el
-   HTML principal solo organiza la colección.
+4. Agregar en el `index.html` de la raíz la tarjeta de la Clase 01, apuntando al
+   `preview.html` de esta carpeta. El HTML principal solo organiza la colección.
 5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 6. Verificar allí que la tarjeta y su resultado se abren bien.
 
@@ -97,8 +97,9 @@ representación visual publicada cumple los requisitos de la especificación.
 La comprobación que el estudiante puede observar durante la clase se hace en
 GitHub Pages:
 
-1. Agregar o actualizar `app.py` y `preview.html` en GitHub.
-2. Agregar la tarjeta de la Clase 01 en `index.html`.
+1. Agregar o actualizar `stages/01_python_window/app.py` y
+   `stages/01_python_window/preview.html`.
+2. Agregar la tarjeta de la Clase 01 en el `index.html` de la raíz.
 3. Abrir únicamente `https://awooolab.github.io/Agenda_SENA/`.
 4. Confirmar allí que se ven `Agenda SENA`, el subtítulo y el botón `Cerrar`.
 5. Si se agregó un icono o se cambió un texto en el diseño, comprobar el cambio
@@ -128,7 +129,7 @@ importar automáticamente los archivos de `stages/`.
 ## Instrucción para ChatGPT
 
 ```text
-Genera únicamente el archivo stages/01_python_window/app.py para un proyecto
+Genera únicamente el archivo `stages/01_python_window/app.py` para un proyecto
 educativo llamado Agenda SENA. Usa Python 3 y tkinter, sin paquetes externos.
 Crea una función main() y el bloque if __name__ == "__main__". La ventana debe
 medir 520x320, no debe poder redimensionarse, debe tener el título
@@ -140,7 +141,8 @@ Devuelve únicamente el código de ese archivo.
 
 ## Criterio de terminado
 
-La etapa se puede publicar cuando `app.py` y `preview.html` están en GitHub,
-`preview.html` cumple la validación visual y la Clase 01 aparece en la
-colección principal. El comportamiento del botón pertenece al código Python y
-se comprobará cuando la aplicación se ejecute en un PC.
+La etapa se puede publicar cuando `stages/01_python_window/app.py` y
+`stages/01_python_window/preview.html` están en GitHub, la tarjeta de la Clase
+01 aparece en el `index.html` de la raíz y la representación visual cumple la
+especificación. El comportamiento del botón pertenece al código Python y se
+comprobará cuando la aplicación se ejecute en un PC.

@@ -58,9 +58,9 @@ aplicación final.
 
 El estudiante agrega en GitHub los archivos de la etapa, actualiza su
 `preview.html` y, cuando la etapa está lista, incorpora su funcionalidad en el
-`main.py` de la raíz. Después agrega la tarjeta de esa clase en `index.html`,
-sube los cambios y abre únicamente la página principal de GitHub Pages. Esa
-colección es la comprobación visual del proceso.
+`main.py` de la raíz. Después agrega la tarjeta de esa clase en el `index.html`
+de la raíz, sube los cambios y abre únicamente la página principal de GitHub
+Pages. Esa colección es la comprobación visual del proceso.
 
 El `index.html` de la raíz solo organiza las tarjetas de las clases terminadas;
 no contiene la interfaz de cada etapa. La interfaz visual vive en el

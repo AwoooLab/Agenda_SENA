@@ -89,7 +89,7 @@ ARCHIVO: demo.py
 
 PROPÓSITO
 ---------
-Demostrar storage.py sin tocar data/agenda.json. El demo es un programa corto
+Demostrar storage.py sin tocar archivos permanentes del proyecto. El demo es un programa corto
 que guarda, carga e imprime una lista.
 
 LIBRERÍAS QUE SE PUEDEN USAR
@@ -130,7 +130,7 @@ LECCIÓN 3 — FLUJO DEL DEMO
 
 RESTRICCIONES
 -------------
-- No modificar data/agenda.json.
+- No modificar archivos permanentes del proyecto.
 - No abrir ventanas.
 - No usar SQLite.
 - No dejar carpetas temporales.

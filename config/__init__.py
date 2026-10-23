@@ -1,1 +1,0 @@
-"""Configuración de Agenda SENA."""

@@ -8,11 +8,11 @@ Proyecto educativo de una agenda de escritorio local desarrollada primero en Pyt
 python main.py
 ```
 
-## Ejecutar las pruebas
+## Pruebas
 
-```text
-python -m unittest discover -s tests -v
-```
+Las pruebas se incorporan en la carpeta de la etapa que las necesita. Cada
+`files.txt` explica cuándo ejecutarlas y qué resultado esperar; al inicio no
+existe una suite global independiente.
 
 ## Estructura principal
 
@@ -20,7 +20,6 @@ python -m unittest discover -s tests -v
 - `stages/`: archivos que el alumno irá creando o modificando por etapa.
 - `docs/milestones/`: hitos completos con requisitos, prompts e integración en
   `main.py`.
-- `config/`: configuración compartida.
 - `index.html`: orquestador de la colección visual para GitHub Pages.
 - `plan.md`: plan de desarrollo.
 
