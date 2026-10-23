@@ -70,4 +70,5 @@
 La explicación completa de cada parte y sus hitos está en `docs/parts/`. Las
 carpetas de `stages/` contienen `files.txt`, donde se enumeran los archivos que
 el alumno debe crear o modificar en esa etapa. El resultado funcional crece en
-`main.py` y el resultado visual crece en `index.html`.
+`main.py` y cada resultado visual se comprueba en su tarjeta dentro de
+`index.html`.

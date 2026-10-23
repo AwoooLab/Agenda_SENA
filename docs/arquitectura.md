@@ -32,8 +32,9 @@ las etapas cuando correspondan; así, el estudiante siempre sabe qué archivo
 está trabajando y cuál es el siguiente resultado que debe integrar.
 
 GitHub Pages no ejecuta `main.py`; solo sirve los archivos HTML estáticos. Cada
-etapa terminada se publica como una tarjeta de clase en `index.html`, usando el
-`preview.html` de su propia carpeta.
+etapa tiene una tarjeta en `index.html`, usando el `preview.html` de su propia
+carpeta. La tarjeta se actualiza conforme se completan los requisitos de la
+etapa.
 
 ## Regla del visor principal
 

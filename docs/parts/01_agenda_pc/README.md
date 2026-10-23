@@ -31,7 +31,7 @@ una carpeta equivalente dentro de `stages/`.
 2. Trabajar únicamente en los archivos de su carpeta dentro de `stages/`.
 3. Consultar el `files.txt` correspondiente para estudiar cada archivo.
 4. Actualizar el `preview.html` del stage para comprobar visualmente el avance.
-5. Agregar la tarjeta del hito terminado en el `index.html` de la raíz.
+5. Mantener y actualizar la tarjeta del hito en el `index.html` de la raíz.
 6. Revisar el resultado desde la página principal de GitHub Pages.
 7. Integrar la funcionalidad aprobada progresivamente en `main.py`.
 

@@ -56,13 +56,13 @@ aplicación final.
 
 ## Flujo visible en GitHub Pages
 
-El estudiante agrega en GitHub los archivos de la etapa, actualiza su
-`preview.html` y, cuando la etapa está lista, incorpora su funcionalidad en el
-`main.py` de la raíz. Después agrega la tarjeta de esa clase en el `index.html`
-de la raíz, sube los cambios y abre únicamente la página principal de GitHub
-Pages. Esa colección es la comprobación visual del proceso.
+El estudiante agrega en GitHub los archivos de la etapa y actualiza su
+`preview.html`. La tarjeta de la etapa ya existe en el `index.html` de la raíz;
+se revisa allí cómo va tomando forma el resultado. Cuando la etapa está lista,
+se incorpora su funcionalidad en el `main.py` de la raíz, se suben los cambios
+y se abre únicamente la página principal de GitHub Pages.
 
-El `index.html` de la raíz solo organiza las tarjetas de las clases terminadas;
+El `index.html` de la raíz organiza las tarjetas de todas las etapas;
 no contiene la interfaz de cada etapa. La interfaz visual vive en el
 `preview.html` de su propia carpeta.
 

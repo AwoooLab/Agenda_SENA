@@ -23,9 +23,10 @@ existe una suite global independiente.
 - `index.html`: orquestador de la colección visual para GitHub Pages.
 - `plan.md`: plan de desarrollo.
 
-Cada carpeta de `stages/` es independiente. Cuando una etapa se termina, su
-funcionalidad se incorpora al `main.py` de la raíz y su resultado visual se
-agrega como tarjeta en `index.html`.
+Cada carpeta de `stages/` es independiente. Todas las etapas tienen una tarjeta
+visual desde el inicio; conforme se desarrolla cada una, su resultado se
+actualiza en esa tarjeta y su funcionalidad aprobada se incorpora al `main.py`
+de la raíz.
 
 GitHub Pages solo muestra `index.html` y los `preview.html`; no ejecuta la
 aplicación Python.
