@@ -1,0 +1,5 @@
+ETAPA 03 — GUARDADO JSON
+
+Objetivo: guardar y leer citas desde datos/agenda.json.
+Archivos principales: almacenamiento.py y demo.py.
+Validación: guardar una cita, leerla y mostrarla en pantalla.

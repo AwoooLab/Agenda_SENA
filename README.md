@@ -1,21 +1,28 @@
 # Agenda SENA
 
-Base inicial de una agenda web para aprender programación por etapas.
+Proyecto educativo de una agenda de escritorio local desarrollada primero en Python.
 
-## Estado actual
+## Ejecutar la aplicación
 
-La página muestra únicamente el nombre **Agenda SENA**. El proyecto está preparado para crecer con HTML, CSS y JavaScript.
+```text
+python app.py
+```
 
-## Estructura
+## Ejecutar las pruebas
 
-- `index.html`: punto de entrada de GitHub Pages.
-- `css/`: estilos visuales.
-- `js/`: comportamiento de la aplicación.
-- `data/`: estructura inicial de datos.
-- `assets/`: imágenes, iconos y otros recursos.
-- `docs/`: decisiones y documentación técnica.
-- `plan.md`: etapas de desarrollo.
+```text
+python -m unittest discover -s pruebas -v
+```
 
-## Publicación
+## Estructura principal
 
-En GitHub, abrir **Settings → Pages**, seleccionar la rama `main` y la carpeta `/ (root)`. GitHub Pages usará `index.html` como página principal.
+- `app.py`: punto de entrada de la aplicación Python.
+- `src/`: código principal dividido por responsabilidades.
+- `datos/`: información local de la agenda.
+- `pruebas/`: pruebas automáticas.
+- `etapas/`: avances didácticos del proyecto.
+- `config/`: configuración compartida.
+- `index.html`: vista informativa mínima para GitHub Pages.
+- `plan.md`: plan de desarrollo.
+
+GitHub Pages solo muestra la página informativa; no ejecuta la aplicación Python.

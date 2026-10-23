@@ -1,0 +1,5 @@
+ETAPA 02 — MODELO DE DATOS
+
+Objetivo: representar una cita con título, fecha, hora y descripción.
+Archivo principal: modelo.py
+Validación: crear una cita y convertirla a diccionario.

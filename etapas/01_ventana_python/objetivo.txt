@@ -1,0 +1,5 @@
+ETAPA 01 — VENTANA PYTHON
+
+Objetivo: abrir una ventana de escritorio con Tkinter.
+Ejecutar: python app.py
+Resultado: aparece una ventana con el nombre Agenda SENA.

@@ -1,34 +1,37 @@
 # Plan del proyecto Agenda SENA
 
-## Etapa 01 — Base web
+## Etapa 00 — Repositorio y vista informativa
 
-- Publicar una página vacía en GitHub Pages.
-- Mostrar únicamente el nombre del proyecto.
-- Confirmar que `index.html` cargue correctamente.
+- Mantener el proyecto en GitHub.
+- Usar `index.html` únicamente como presentación en GitHub Pages.
+- Confirmar que la página muestra el nombre del proyecto.
 
-## Etapa 02 — Estructura visual
+## Etapa 01 — Ventana Python
 
-- Crear el diseño general de la agenda.
-- Definir colores, tipografía y distribución.
-- Separar los componentes visuales en HTML y CSS.
+- Crear la ventana inicial con Tkinter.
+- Ejecutar la aplicación localmente en el computador.
+- Validar que la ventana abra y cierre correctamente.
 
-## Etapa 03 — Modelo de datos
+## Etapa 02 — Modelo de datos
 
-- Definir los campos de una actividad o cita.
-- Usar `data/agenda.json` como referencia inicial.
-- Documentar las reglas de validación.
+- Crear el modelo de una cita o tarea.
+- Definir título, fecha, hora, descripción y estado.
+- Validar campos obligatorios.
 
-## Etapa 04 — Funciones de agenda
+## Etapa 03 — Guardado local
 
-- Crear actividades.
-- Consultar actividades.
-- Editar actividades.
-- Eliminar actividades.
-- Guardar información localmente en el navegador.
+- Leer y guardar la agenda en `datos/agenda.json`.
+- Controlar archivos inexistentes o dañados.
+- Probar la lectura y escritura de datos.
 
-## Etapa 05 — Pruebas y mejoras
+## Etapa 04 — Interfaz de agenda
 
-- Probar la página en computador y celular.
-- Validar formularios y mensajes.
-- Revisar accesibilidad y diseño responsive.
-- Documentar cada cambio antes de avanzar.
+- Crear el formulario para registrar citas.
+- Mostrar la lista de citas.
+- Agregar edición y eliminación.
+
+## Etapa 05 — Pruebas y ejecutable
+
+- Ejecutar pruebas automáticas.
+- Probar el programa manualmente.
+- Preparar un `.exe` para Windows con PyInstaller.

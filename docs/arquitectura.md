@@ -1,9 +1,13 @@
-# Arquitectura inicial
+# Arquitectura de Agenda SENA
 
-- `index.html` contiene la estructura de la página.
-- `css/styles.css` contiene la presentación visual.
-- `js/app.js` contendrá la lógica del navegador.
-- `data/agenda.json` sirve como referencia del formato de datos.
-- `assets/` almacenará los recursos visuales.
+La aplicación principal es Python y se ejecuta localmente en el computador.
 
-La primera versión será estática y compatible con GitHub Pages. Las funciones de agenda se agregarán en etapas posteriores.
+- `app.py`: inicia la aplicación.
+- `src/`: contiene el modelo, validaciones, almacenamiento e interfaz.
+- `datos/`: contiene los datos locales en JSON.
+- `pruebas/`: contiene pruebas automáticas.
+- `etapas/`: contiene ejemplos separados para aprender paso a paso.
+- `config/`: contiene rutas y formatos compartidos.
+- `index.html`: es únicamente la vista informativa de GitHub Pages.
+
+GitHub Pages no ejecuta `app.py`; solo sirve el archivo HTML estático.

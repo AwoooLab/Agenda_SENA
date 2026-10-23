@@ -1,0 +1,4 @@
+ETAPA 05 — PRUEBAS Y EJECUTABLE
+
+Objetivo: comprobar el programa y preparar un ejecutable de Windows.
+Validación: ejecutar las pruebas antes de estudiar PyInstaller.

@@ -1,0 +1,5 @@
+ETAPA 04 — INTERFAZ DE AGENDA
+
+Objetivo: unir formulario, validación, lista y guardado local.
+Archivo principal: app.py
+Validación: registrar una cita y verla en la lista.

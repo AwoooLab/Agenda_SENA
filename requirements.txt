@@ -1,0 +1,2 @@
+# La primera versión usa solamente la biblioteca estándar de Python.
+# Tkinter, json, pathlib, dataclasses y unittest vienen con Python.
