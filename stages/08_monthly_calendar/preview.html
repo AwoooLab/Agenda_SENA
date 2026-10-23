@@ -1,31 +1,25 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/stage-preview.css" />
-    <title>Vista previa | Etapa 08</title>
-  </head>
-  <body class="embebido">
-    <main class="pagina">
-      <nav class="navegacion" aria-label="Navegación del proyecto">
-        <a href="../../index.html">← Volver al proyecto Agenda SENA</a>
-      </nav>
-      <header class="encabezado">
-        <h1>Etapa 08 · Calendario mensual</h1>
-        <p>Vista del mes, navegación y selección de días.</p>
-      </header>
-      <section class="tarjeta calendario">
-        <div class="calendario-cabecera fila-separada"><button class="secundario">‹</button><strong>Octubre de 2026</strong><div class="fila"><button class="secundario">Hoy</button><button class="secundario">›</button></div></div>
-        <div class="dias-semana"><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div><div>Dom</div></div>
-        <div class="dias">
-          <div class="dia vacio"></div><div class="dia vacio"></div><div class="dia vacio"></div><div class="dia"><strong>1</strong></div><div class="dia"><strong>2</strong></div><div class="dia"><strong>3</strong></div><div class="dia"><strong>4</strong></div>
-          <div class="dia"><strong>5</strong></div><div class="dia"><strong>6</strong></div><div class="dia"><strong>7</strong></div><div class="dia"><strong>8</strong></div><div class="dia"><strong>9</strong></div><div class="dia"><strong>10</strong></div><div class="dia"><strong>11</strong></div>
-          <div class="dia"><strong>12</strong></div><div class="dia"><strong>13</strong></div><div class="dia"><strong>14</strong></div><div class="dia"><strong>15</strong></div><div class="dia"><strong>16</strong></div><div class="dia"><strong>17</strong></div><div class="dia"><strong>18</strong></div>
-          <div class="dia"><strong>19</strong></div><div class="dia"><strong>20</strong></div><div class="dia"><strong>21</strong></div><div class="dia"><strong>22</strong></div><div class="dia hoy"><strong>23</strong><span class="actividad">Clase</span></div><div class="dia"><strong>24</strong></div><div class="dia"><strong>25</strong></div>
-          <div class="dia"><strong>26</strong></div><div class="dia"><strong>27</strong></div><div class="dia"><strong>28</strong></div><div class="dia"><strong>29</strong></div><div class="dia"><strong>30</strong></div><div class="dia"><strong>31</strong></div><div class="dia vacio"></div>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+<section id="calendario" class="fragmento">
+  <div class="fragmento-cabecera">
+    <span class="etiqueta">Calendario</span>
+    <h2>Calendario mensual</h2>
+    <p>Las citas aparecen organizadas por día.</p>
+  </div>
+  <div class="calendario">
+    <div class="calendario-cabecera fila-separada">
+      <button type="button" class="secundario" data-action="calendar-prev">‹</button>
+      <strong id="mes-calendario" data-index="1">Octubre de 2026</strong>
+      <div class="fila">
+        <button type="button" class="secundario">Hoy</button>
+        <button type="button" class="secundario" data-action="calendar-next">›</button>
+      </div>
+    </div>
+    <div class="dias-semana"><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div><div>Dom</div></div>
+    <div class="dias">
+      <div class="dia vacio"></div><div class="dia vacio"></div><div class="dia vacio"></div><div class="dia"><strong>1</strong></div><div class="dia"><strong>2</strong></div><div class="dia"><strong>3</strong></div><div class="dia"><strong>4</strong></div>
+      <div class="dia"><strong>5</strong></div><div class="dia"><strong>6</strong></div><div class="dia"><strong>7</strong></div><div class="dia"><strong>8</strong></div><div class="dia"><strong>9</strong></div><div class="dia"><strong>10</strong></div><div class="dia"><strong>11</strong></div>
+      <div class="dia"><strong>12</strong></div><div class="dia"><strong>13</strong></div><div class="dia"><strong>14</strong></div><div class="dia"><strong>15</strong></div><div class="dia"><strong>16</strong></div><div class="dia"><strong>17</strong></div><div class="dia"><strong>18</strong></div>
+      <div class="dia"><strong>19</strong></div><div class="dia"><strong>20</strong></div><div class="dia"><strong>21</strong></div><div class="dia"><strong>22</strong></div><div class="dia hoy"><strong>23</strong><span class="actividad">Clase</span></div><div class="dia"><strong>24</strong></div><div class="dia"><strong>25</strong></div>
+      <div class="dia"><strong>26</strong></div><div class="dia"><strong>27</strong></div><div class="dia"><strong>28</strong></div><div class="dia"><strong>29</strong></div><div class="dia"><strong>30</strong></div><div class="dia"><strong>31</strong></div><div class="dia vacio"></div>
+    </div>
+  </div>
+</section>

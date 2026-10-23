@@ -87,10 +87,11 @@ Comprobar sin abrir ventanas:
 1. Agregar en GitHub los archivos del calendario definidos en esta etapa.
 2. Actualizar `preview.html` si cambian encabezados, controles, colores o
    actividades visibles.
-3. Agregar en `index.html` la tarjeta de la Clase 08 con su preview.
+3. Actualizar el fragmento del calendario en `preview.html`; el visor lo
+   cargará junto con el panel y las funciones anteriores.
 4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 5. Verificar allí la cuadrícula completa del mes.
-6. Revisar la clase desde la colección principal.
+6. Revisar la función desde la ventana principal acumulada.
 
 El preview no calcula fechas reales; permite comprobar la composición visual del
 calendario antes de integrarlo con la aplicación.
@@ -105,7 +106,7 @@ calendario antes de integrarlo con la aplicación.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar los archivos del calendario y `preview.html` en GitHub.
-Después agregar la tarjeta de la Clase 08 en `index.html` y abrir únicamente:
+Después abrir únicamente la página principal:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -142,6 +143,6 @@ Solicitar después las funciones de fechas, `monthly_calendar.py` y
 ## Criterio de terminado
 
 La etapa se puede publicar cuando los archivos del calendario están en GitHub,
-`preview.html` muestra la cuadrícula y la Clase 08 aparece en la colección. El
+`preview.html` muestra la cuadrícula y la Clase 08 se integra en la ventana acumulada. El
 cálculo, la navegación y la selección quedan definidos en Python y se probarán
 al ejecutar el proyecto en un PC.

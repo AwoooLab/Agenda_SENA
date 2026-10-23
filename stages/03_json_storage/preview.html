@@ -1,36 +1,28 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/stage-preview.css" />
-    <title>Vista previa | Etapa 03</title>
-  </head>
-  <body class="embebido">
-    <main class="pagina">
-      <nav class="navegacion" aria-label="Navegación del proyecto">
-        <a href="../../index.html">← Volver al proyecto Agenda SENA</a>
-      </nav>
-      <header class="encabezado">
-        <h1>Etapa 03 · Guardado local</h1>
-        <p>Representación del flujo de guardar y cargar una agenda en JSON.</p>
-      </header>
-      <section class="tarjeta relleno">
-        <div class="fila-separada">
-          <div><h2>agenda.json</h2><p class="muted">Archivo local de actividades</p></div>
-          <span class="etiqueta verde">Guardado</span>
-        </div>
-        <pre style="overflow:auto; margin:20px 0; padding:18px; border-radius:10px; color:#dbeafe; background:#172033"><code>[
-  {
-    "titulo": "Clase de Python",
-    "fecha": "2026-10-23",
-    "hora": "18:00",
-    "descripcion": "Practicar JSON"
-  }
-]</code></pre>
-        <button>Guardar</button>
-        <button class="secundario">Cargar</button>
-      </section>
-    </main>
-  </body>
-</html>
+<section id="citas" class="fragmento">
+  <div class="fragmento-cabecera">
+    <span class="etiqueta">Citas</span>
+    <h2>Mis citas</h2>
+    <p>La información creada se muestra en una tabla y puede guardarse localmente.</p>
+  </div>
+  <div style="overflow-x:auto">
+    <table id="tabla-citas" class="tabla tabla-citas">
+      <thead>
+        <tr><th>Título</th><th>Fecha</th><th>Hora</th><th>Descripción</th><th>Estado</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Clase de Python</td>
+          <td>2026-10-23</td>
+          <td>18:00</td>
+          <td>Practicar la agenda</td>
+          <td><span class="etiqueta verde">Pendiente</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="acciones" style="margin-top:16px">
+    <button type="button" data-action="save-agenda">Guardar agenda</button>
+    <button type="button" class="secundario" data-action="load-agenda">Cargar agenda</button>
+  </div>
+  <p id="estado-guardado" class="estado-exito oculto" aria-live="polite"></p>
+</section>

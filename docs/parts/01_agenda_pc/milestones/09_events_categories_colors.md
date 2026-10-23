@@ -130,10 +130,11 @@ Python; `preview.html` muestra el formulario y sus estados. Sigue este orden:
 1. Agregar en GitHub los modelos, servicio, formulario y leyenda definidos en
    esta etapa.
 2. Actualizar `preview.html` con nuevos campos, categorías, iconos o colores.
-3. Agregar en `index.html` la tarjeta de la Clase 09 con su preview.
+3. Actualizar el fragmento de actividades en `preview.html`; el visor lo
+   cargará junto con el calendario y las funciones anteriores.
 4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 5. Revisar allí formulario, actividad del día y leyenda.
-6. Verificar la clase desde la colección principal.
+6. Verificar la función desde la ventana principal acumulada.
 
 El preview no crea actividades reales; permite validar que la interfaz comunica
 las mismas reglas que el servicio Python.
@@ -148,7 +149,7 @@ las mismas reglas que el servicio Python.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar los archivos de actividades y `preview.html` en GitHub.
-Después agregar la tarjeta de la Clase 09 en `index.html` y abrir únicamente:
+Después abrir únicamente la página principal:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -184,5 +185,5 @@ Solicitar cada modelo, servicio, formulario, leyenda y prueba por separado.
 
 La etapa se puede publicar cuando los archivos de actividades están en GitHub,
 `preview.html` representa formulario, categorías y colores, y la Clase 09
-aparece en la colección. Las operaciones funcionales quedan definidas en
+se integra en la ventana acumulada. Las operaciones funcionales quedan definidas en
 Python y se probarán al ejecutar el proyecto en un PC.

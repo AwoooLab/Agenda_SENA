@@ -8,9 +8,10 @@
     <meta http-equiv="Expires" content="0" />
     <meta
       name="description"
-      content="Colección de clases visuales del proyecto educativo Agenda SENA."
+      content="Aplicación acumulativa del proyecto educativo Agenda SENA."
     />
-    <title>Agenda SENA | Colección de clases</title>
+    <link rel="stylesheet" href="assets/stage-preview.css" />
+    <title>Agenda SENA | Aplicación</title>
     <style>
       :root {
         --azul: #2563eb;
@@ -39,13 +40,13 @@
       }
 
       .hero {
-        padding: 70px 24px 64px;
+        padding: 58px 24px 52px;
         color: var(--blanco);
         background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
       }
 
       .hero h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3.4rem); }
-      .hero p { max-width: 650px; margin: 0; color: var(--azul-claro); font-size: 1.1rem; }
+      .hero p { max-width: 720px; margin: 0; color: var(--azul-claro); font-size: 1.1rem; }
 
       .actualizar-vista {
         margin-top: 24px;
@@ -64,72 +65,84 @@
       main { padding: 42px 0 64px; }
 
       .panel {
+        overflow: hidden;
         border: 1px solid var(--gris-200);
         border-radius: 16px;
-        padding: 30px;
         background: var(--blanco);
         box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
       }
 
-      .panel h2 { margin: 0 0 8px; color: var(--azul-oscuro); }
-      .panel > p { margin: 0 0 24px; color: var(--gris-600); }
+      .ventana-app { overflow: hidden; background: var(--blanco); }
 
-      .coleccion {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
+      .barra-app-principal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 17px 24px;
+        color: var(--blanco);
+        background: var(--azul-oscuro);
       }
 
-      .clase {
-        overflow: hidden;
+      .barra-app-principal strong { font-size: 1.2rem; }
+      .barra-app-principal span { color: var(--azul-claro); font-size: 0.92rem; }
+
+      .app-layout {
+        display: grid;
+        grid-template-columns: 210px minmax(0, 1fr);
+        min-height: 700px;
+      }
+
+      .app-sidebar {
+        padding: 24px 18px;
+        background: #eff6ff;
+        border-right: 1px solid var(--gris-200);
+      }
+
+      .app-sidebar strong { display: block; margin-bottom: 14px; color: var(--azul-oscuro); }
+      .app-sidebar a {
+        display: block;
+        margin: 7px 0;
+        border-radius: 7px;
+        padding: 9px 10px;
+        color: var(--azul-oscuro);
+        text-decoration: none;
+      }
+
+      .app-sidebar a:hover { background: var(--azul-claro); }
+
+      .app-content {
+        min-width: 0;
+        padding: 28px;
+        background: #f8fafc;
+      }
+
+      .cargando { margin: 0; color: var(--gris-600); text-align: center; }
+
+      .fragmento {
         border: 1px solid var(--gris-200);
         border-radius: 14px;
+        padding: 22px;
         background: var(--blanco);
-        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+        box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
       }
 
-      .clase-vista {
-        height: 520px;
-        overflow: hidden;
-        border-bottom: 1px solid var(--gris-200);
-        background: var(--gris-100);
-      }
+      .fragmento + .fragmento { margin-top: 20px; }
+      .fragmento h2 { margin: 0 0 8px; color: var(--azul-oscuro); }
+      .fragmento h3 { color: var(--azul-oscuro); }
+      .fragmento > p { margin-top: 0; color: var(--gris-600); }
 
-      .clase-vista iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        background: var(--blanco);
-      }
-
-      .clase-contenido { padding: 20px; }
-      .clase-contenido h3 { margin: 8px 0 8px; color: var(--azul-oscuro); }
-      .clase-contenido p { margin: 0 0 16px; color: var(--gris-600); }
-
-      .etiqueta {
-        display: inline-block;
-        border-radius: 999px;
-        padding: 4px 10px;
-        color: var(--azul-oscuro);
-        background: var(--azul-claro);
-        font-size: 0.8rem;
-        font-weight: 700;
-      }
-
-      .recursos { display: flex; flex-wrap: wrap; gap: 12px; }
-      .recursos a { color: var(--azul); font-weight: 700; text-decoration: none; }
-      .recursos a:hover { text-decoration: underline; }
-
-      .estado-vacio {
-        padding: 48px 24px;
-        border: 2px dashed var(--gris-200);
-        border-radius: 12px;
-        color: var(--gris-600);
-        background: var(--gris-100);
-        text-align: center;
-      }
-
-      .estado-vacio strong { display: block; margin-bottom: 8px; color: var(--gris-900); font-size: 1.2rem; }
+      .fragmento-cabecera { margin-bottom: 18px; }
+      .fragmento-cabecera p { margin: 0; color: var(--gris-600); }
+      .bloque-centrado { text-align: center; }
+      .bloque-centrado p { color: var(--gris-600); }
+      .acciones { display: flex; flex-wrap: wrap; gap: 10px; }
+      .oculto { display: none; }
+      .tabla-citas td:last-child { white-space: nowrap; }
+      .resumenes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+      .resumen { border-radius: 10px; padding: 16px; background: var(--gris-100); }
+      .resumen strong { display: block; margin-bottom: 4px; color: var(--azul-oscuro); }
+      .resumen span { color: var(--gris-600); font-size: 0.92rem; }
 
       footer {
         padding: 24px;
@@ -140,7 +153,13 @@
       }
 
       @media (max-width: 760px) {
-        .coleccion { grid-template-columns: 1fr; }
+        .contenedor { width: min(100% - 20px, 1120px); }
+        .app-layout { grid-template-columns: 1fr; }
+        .app-sidebar { border-right: 0; border-bottom: 1px solid var(--gris-200); }
+        .app-sidebar a { display: inline-block; margin-right: 5px; }
+        .app-content { padding: 16px; }
+        .resumenes { grid-template-columns: 1fr; }
+        .barra-app-principal { align-items: flex-start; flex-direction: column; }
       }
     </style>
   </head>
@@ -149,8 +168,8 @@
       <div class="contenedor">
         <h1>Agenda SENA</h1>
         <p>
-          Resultados del proyecto educativo de una agenda local para PC,
-          desarrollada paso a paso con Python.
+          Una aplicación local para PC que crece función por función. Cada
+          resultado de los stages se integra en esta misma ventana.
         </p>
         <button id="actualizar-vista" class="actualizar-vista" type="button">
           Actualizar vista
@@ -159,151 +178,50 @@
     </header>
 
     <main class="contenedor">
-      <section class="panel" aria-labelledby="titulo-coleccion">
-        <h2 id="titulo-coleccion">Colección de clases</h2>
-        <p>
-          Cada etapa se presenta con su resultado visual, explicación y
-          materiales de trabajo.
-        </p>
-
-        <div class="coleccion">
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe
-                src="stages/01_python_window/preview.html"
-                title="Resultado visual de la Clase 01: Ventana inicial"
-                loading="lazy"
-                scrolling="no"
-              ></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 01</span>
-              <h3>Ventana inicial</h3>
-              <p>Construcción de la primera ventana de Agenda SENA para PC.</p>
-              <div class="recursos">
-                <a href="docs/parts/01_agenda_pc/milestones/01_python_window.md">
-                  Ver especificación
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/02_data_model/preview.html" title="Resultado visual de la Clase 02: Modelo de datos" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 02</span>
-              <h3>Modelo de datos</h3>
-              <p>Definición de una cita con sus datos básicos.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/02_data_model.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/03_json_storage/preview.html" title="Resultado visual de la Clase 03: Guardado local" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 03</span>
-              <h3>Guardado local</h3>
-              <p>Guardado temporal de la agenda en un archivo JSON.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/03_json_storage.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/04_sqlite_database/preview.html" title="Resultado visual de la Clase 04: Base de datos" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 04</span>
-              <h3>Base de datos</h3>
-              <p>Tablas SQLite para usuarios y actividades.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/04_sqlite_database.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/05_user_registration/preview.html" title="Resultado visual de la Clase 05: Registro de usuarios" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 05</span>
-              <h3>Registro de usuarios</h3>
-              <p>Registro y validación de usuarios locales.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/05_user_registration.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/06_login_session/preview.html" title="Resultado visual de la Clase 06: Inicio de sesión" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 06</span>
-              <h3>Inicio de sesión</h3>
-              <p>Autenticación y sesión activa para la agenda.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/06_login_session.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/07_main_window/preview.html" title="Resultado visual de la Clase 07: Ventana principal" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 07</span>
-              <h3>Ventana principal</h3>
-              <p>Estructura principal y navegación de la aplicación.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/07_main_window.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/08_monthly_calendar/preview.html" title="Resultado visual de la Clase 08: Calendario mensual" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 08</span>
-              <h3>Calendario mensual</h3>
-              <p>Calendario mensual con navegación y selección de días.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/08_monthly_calendar.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/09_events_categories_colors/preview.html" title="Resultado visual de la Clase 09: Actividades y categorías" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 09</span>
-              <h3>Actividades y categorías</h3>
-              <p>Creación de actividades, categorías, colores y filtros.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/09_events_categories_colors.md">Ver especificación</a></div>
-            </div>
-          </article>
-
-          <article class="clase">
-            <div class="clase-vista">
-              <iframe src="stages/10_tests_security_executable/preview.html" title="Resultado visual de la Clase 10: Pruebas y ejecutable" loading="lazy" scrolling="no"></iframe>
-            </div>
-            <div class="clase-contenido">
-              <span class="etiqueta">Etapa 10</span>
-              <h3>Pruebas y ejecutable</h3>
-              <p>Pruebas, seguridad y preparación del ejecutable para Windows.</p>
-              <div class="recursos"><a href="docs/parts/01_agenda_pc/milestones/10_tests_security_executable.md">Ver especificación</a></div>
-            </div>
-          </article>
+      <section class="panel" aria-label="Aplicación Agenda SENA">
+        <div class="ventana-app">
+          <div class="barra-app-principal">
+            <strong>Agenda SENA</strong>
+            <span id="usuario-activo">Mi agenda local para PC</span>
+          </div>
+          <div class="app-layout">
+            <aside class="app-sidebar" aria-label="Navegación de Agenda SENA">
+              <strong>Menú</strong>
+              <a href="#inicio">Inicio</a>
+              <a href="#nueva-cita">Nueva cita</a>
+              <a href="#citas">Citas</a>
+              <a href="#usuarios">Usuarios</a>
+              <a href="#calendario">Calendario</a>
+              <a href="#actividades">Actividades</a>
+            </aside>
+            <section id="app-content" class="app-content" aria-live="polite">
+              <p class="cargando">Cargando la aplicación...</p>
+            </section>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>Agenda SENA · Proyecto educativo de aplicación local para PC</footer>
+
     <script>
       (() => {
-        const version = String(Date.now());
+        const stagePaths = [
+          "stages/01_python_window/preview.html",
+          "stages/02_data_model/preview.html",
+          "stages/03_json_storage/preview.html",
+          "stages/04_sqlite_database/preview.html",
+          "stages/05_user_registration/preview.html",
+          "stages/06_login_session/preview.html",
+          "stages/07_main_window/preview.html",
+          "stages/08_monthly_calendar/preview.html",
+          "stages/09_events_categories_colors/preview.html",
+          "stages/10_tests_security_executable/preview.html"
+        ];
+        const app = document.querySelector(".ventana-app");
+        const content = document.getElementById("app-content");
         const refreshButton = document.getElementById("actualizar-vista");
+        const version = String(Date.now());
 
         refreshButton.addEventListener("click", () => {
           const url = new URL(window.location.href);
@@ -311,11 +229,114 @@
           window.location.replace(url.toString());
         });
 
-        document.querySelectorAll(".clase-vista iframe").forEach((frame) => {
-          const url = new URL(frame.getAttribute("src"), window.location.href);
-          url.searchParams.set("v", version);
-          frame.src = url.toString();
+        function setStatus(id, message, type = "estado-exito") {
+          const element = document.getElementById(id);
+          if (!element) return;
+          element.className = type;
+          element.textContent = message;
+          element.classList.remove("oculto");
+        }
+
+        function addAppointment() {
+          const form = document.getElementById("form-cita");
+          const title = form?.elements.namedItem("titulo")?.value.trim();
+          const date = form?.elements.namedItem("fecha")?.value;
+          const time = form?.elements.namedItem("hora")?.value;
+          const description = form?.elements.namedItem("descripcion")?.value.trim();
+          if (!title || !date || !time) {
+            setStatus("estado-cita", "Completa título, fecha y hora.", "estado-error");
+            return;
+          }
+
+          const body = document.querySelector("#tabla-citas tbody");
+          document.querySelector("[data-fila-vacia]")?.remove();
+          const row = document.createElement("tr");
+          row.innerHTML = `<td>${title}</td><td>${date}</td><td>${time}</td><td>${description || "Sin descripción"}</td><td><span class="etiqueta verde">Pendiente</span></td>`;
+          body?.appendChild(row);
+          setStatus("estado-cita", "La cita se agregó a la tabla.");
+          form.reset();
+        }
+
+        function saveAgenda() {
+          const body = document.querySelector("#tabla-citas tbody");
+          if (!body) return;
+          localStorage.setItem("agenda-sena-citas", body.innerHTML);
+          setStatus("estado-guardado", "Las citas se guardaron en el navegador.");
+        }
+
+        function loadAgenda() {
+          const saved = localStorage.getItem("agenda-sena-citas");
+          const body = document.querySelector("#tabla-citas tbody");
+          if (!saved || !body) {
+            setStatus("estado-guardado", "No hay datos guardados todavía.", "estado-error");
+            return;
+          }
+          body.innerHTML = saved;
+          setStatus("estado-guardado", "Las citas guardadas fueron cargadas.");
+        }
+
+        app.addEventListener("click", (event) => {
+          const button = event.target.closest("button[data-action]");
+          if (!button) return;
+          const action = button.dataset.action;
+
+          if (action === "iniciar-agenda") {
+            setStatus("estado-inicio", "La agenda está lista para trabajar.");
+            button.textContent = "Agenda abierta";
+            button.disabled = true;
+          }
+          if (action === "add-appointment") addAppointment();
+          if (action === "save-agenda") saveAgenda();
+          if (action === "load-agenda") loadAgenda();
+          if (action === "register") {
+            const user = document.getElementById("registro-usuario")?.value.trim();
+            const email = document.getElementById("registro-correo")?.value.trim();
+            const valid = Boolean(user && email);
+            setStatus("registro-estado", valid ? "Usuario registrado correctamente." : "Completa usuario y correo.", valid ? "estado-exito" : "estado-error");
+          }
+          if (action === "login") {
+            const user = document.getElementById("login-usuario")?.value.trim();
+            const password = document.getElementById("login-password")?.value;
+            const valid = Boolean(user && password);
+            setStatus("login-estado", valid ? "Sesión iniciada correctamente." : "Escribe usuario y contraseña.", valid ? "estado-exito" : "estado-error");
+            if (valid) document.getElementById("usuario-activo").textContent = `Usuario: ${user}`;
+          }
+          if (action === "calendar-prev" || action === "calendar-next") {
+            const month = document.getElementById("mes-calendario");
+            const months = ["Septiembre de 2026", "Octubre de 2026", "Noviembre de 2026"];
+            const current = Number(month.dataset.index || 1);
+            const next = action === "calendar-next" ? Math.min(2, current + 1) : Math.max(0, current - 1);
+            month.dataset.index = String(next);
+            month.textContent = months[next];
+          }
+          if (action === "save-event") {
+            const title = document.getElementById("actividad-titulo")?.value.trim() || "Nueva actividad";
+            const time = document.getElementById("actividad-hora")?.value || "18:00";
+            const recent = document.getElementById("actividad-reciente");
+            if (recent) recent.textContent = `${title} · ${time}`;
+            setStatus("actividad-estado", "Actividad guardada en la agenda.");
+          }
         });
+
+        async function loadStages() {
+          content.replaceChildren();
+          for (const path of stagePaths) {
+            try {
+              const response = await fetch(`${path}?v=${version}`, { cache: "no-store" });
+              if (!response.ok) continue;
+              const html = await response.text();
+              const fragment = document.createRange().createContextualFragment(html);
+              content.appendChild(fragment);
+            } catch (error) {
+              console.error(`No se pudo cargar ${path}`, error);
+            }
+          }
+          if (!content.children.length) {
+            content.innerHTML = '<p class="estado-error">No se pudieron cargar las funciones de la agenda.</p>';
+          }
+        }
+
+        loadStages();
       })();
     </script>
   </body>

@@ -97,11 +97,11 @@ y una parte visual (`preview.html`). El flujo es:
 1. Agregar en GitHub `schema.sql`, `database.py`, sus pruebas y los archivos
    previstos para la etapa.
 2. Actualizar `preview.html` para mostrar la estructura de la base.
-3. Agregar en `index.html` la tarjeta de la Clase 04 con el preview de la base
-   de datos.
+3. Actualizar `preview.html` con la estructura de la base. El visor principal
+   la mostrará junto con las funciones anteriores.
 4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 5. Comparar allí las tablas visuales con `schema.sql`.
-6. Verificar la clase desde la colección principal.
+6. Verificar la función desde la ventana principal acumulada.
 
 El preview no consulta SQLite. Su función es hacer visible el diseño de la
 base de datos para revisar si la estructura se entiende.
@@ -116,8 +116,7 @@ base de datos para revisar si la estructura se entiende.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar `schema.sql`, `database.py`, `test_database.py` y
-`preview.html` en GitHub. Después agregar la tarjeta de la Clase 04 en
-`index.html` y abrir únicamente:
+`preview.html` en GitHub. Después abrir únicamente la página principal:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -156,5 +155,5 @@ que deben usar una base de datos temporal y no modificar la base real.
 
 La etapa se puede publicar cuando el esquema, el código, las pruebas y
 `preview.html` están en GitHub, y la Clase 04 muestra claramente las tablas en
-la colección. La creación y consulta de SQLite queda definida en Python y se
+la ventana acumulada. La creación y consulta de SQLite queda definida en Python y se
 probará al ejecutar el proyecto en un PC.

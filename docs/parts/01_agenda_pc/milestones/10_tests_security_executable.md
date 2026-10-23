@@ -83,16 +83,17 @@ Documentar en español:
 ## Flujo de la clase y validación en GitHub Pages
 
 Esta etapa reúne pruebas, seguridad y entrega; `preview.html` presenta el
-estado final que se mostrará en la colección de clases. El flujo es:
+estado final que se integrará en la única ventana de la aplicación. El flujo es:
 
 1. Agregar en GitHub las pruebas, el script, `release.md` y los archivos de la
    entrega.
 2. Actualizar `preview.html` con el nombre del ejecutable, resultados, iconos y
    estados finales.
-3. Agregar en `index.html` la tarjeta de la Clase 10 con su preview.
+3. Actualizar el fragmento final de `preview.html`; el visor principal ya lo
+   cargará después de las funciones anteriores.
 4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 5. Comprobar allí que la información de entrega es legible.
-6. Verificar la entrega final desde la colección principal.
+6. Verificar la entrega final desde la ventana principal acumulada.
 
 El preview no compila ni descarga el ejecutable. Solo comunica visualmente el
 resultado de la validación local y la entrega preparada.
@@ -107,8 +108,7 @@ resultado de la validación local y la entrega preparada.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar las pruebas, el script, `release.md` y `preview.html` en
-GitHub. Después agregar la tarjeta de la Clase 10 en `index.html` y abrir
-únicamente:
+GitHub. Después abrir únicamente la página principal:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -144,7 +144,7 @@ Solicitar las pruebas y el script de compilación por separado.
 
 ## Criterio de terminado
 
-La etapa se puede publicar cuando las pruebas, el script, la guía,
-`preview.html` y la tarjeta de la Clase 10 están en GitHub sin mostrar datos
-privados. La generación y ejecución del `.exe` se comprobarán posteriormente en
+La etapa se puede publicar cuando las pruebas, el script, la guía y
+`preview.html` están en GitHub sin mostrar datos privados. La generación y
+ejecución del `.exe` se comprobarán posteriormente en
 un PC con Windows.

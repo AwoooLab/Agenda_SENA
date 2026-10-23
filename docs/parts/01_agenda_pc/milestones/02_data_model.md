@@ -85,7 +85,8 @@ flujo:
 1. Revisar la estructura y los métodos obligatorios de `Cita`.
 2. Agregar en GitHub `model.py` y los archivos previstos para la etapa.
 3. Actualizar `preview.html` si cambian los campos o su presentación.
-4. Agregar en `index.html` la tarjeta de la Clase 02 con el enlace al preview.
+4. Actualizar el fragmento de la cita en `preview.html`. El visor principal lo
+   cargará junto con la ventana y las funciones anteriores.
 5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 6. Verificar allí título, fecha, hora, descripción y estado.
 
@@ -94,22 +95,22 @@ estructura que luego usará la interfaz.
 
 ### Validación visual específica
 
-- La tarjeta muestra título, fecha, hora y descripción.
+- El fragmento muestra título, fecha, hora y descripción.
 - Los nombres visibles corresponden a los atributos de `Cita`.
 - El estado de la cita se distingue sin alterar el contenido del modelo.
 
 ## Comprobación visual en GitHub Pages
 
-Agregar o actualizar `model.py` y `preview.html` en GitHub. Después agregar la
-tarjeta de la Clase 02 en `index.html` y abrir únicamente:
+Agregar o actualizar `model.py` y `preview.html` en GitHub. Después abrir únicamente
+la página principal, que cargará el fragmento acumulado:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
 ```
 
-La tarjeta de la Clase 02 debe mostrar título, fecha, hora, descripción y
-estado. Si se agrega o cambia un campo en el modelo, la representación del
-`preview.html` debe actualizarse y luego revisarse desde la colección principal.
+El fragmento de la Clase 02 debe mostrar título, fecha, hora, descripción y
+estado. Si se agrega o cambia un campo en el modelo, `preview.html` debe
+actualizarse y luego revisarse desde la ventana acumulada.
 
 ### Prueba funcional opcional en el PC
 
@@ -151,6 +152,6 @@ ni otros módulos. Devuelve únicamente el código.
 ## Criterio de terminado
 
 La etapa se puede publicar cuando los archivos definidos están en GitHub,
-`preview.html` muestra claramente los datos de `Cita` y la Clase 02 aparece en
-la colección. La conversión a diccionario queda definida en el código Python y
+`preview.html` muestra claramente los datos de `Cita` y la Clase 02 se integra
+en la ventana acumulada. La conversión a diccionario queda definida en el código Python y
 se probará cuando pueda ejecutarse el proyecto en un PC.

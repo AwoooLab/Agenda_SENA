@@ -1,74 +1,75 @@
 # Plan del proyecto Agenda SENA
 
-## Etapa 00 — Repositorio y vista informativa
+## Regla general
 
-- Mantener el proyecto en GitHub.
-- Usar `index.html` como orquestador de la colección visual en GitHub Pages.
-- Usar `main.py` como orquestador de la aplicación de PC.
-- Confirmar que la página muestra el nombre del proyecto.
+Agenda SENA se construye como una única aplicación acumulativa. Cada stage
+agrega una función visible y conserva las anteriores. El estudiante revisa
+todo el resultado desde la única página principal de GitHub Pages.
 
-## Etapa 01 — Ventana de Python
+index.html carga los preview.html de stages/ en orden dentro de una sola
+ventana. No hay tarjetas, iframe, indicador de etapa ni selector.
 
-- Crear en `stages/01_python_window/` la primera ventana con Tkinter.
-- Incorporar la funcionalidad terminada en `main.py`.
-- Publicar su tarjeta visual en `index.html`.
+## Stage 01 — Ventana de Python
 
-## Etapa 02 — Modelo de datos
+- Crear la primera ventana con Tkinter.
+- Mostrar el nombre de Agenda SENA.
+- Agregar el primer botón funcional.
+- Representar la ventana en preview.html.
 
-- Crear el modelo de una cita o tarea.
+## Stage 02 — Modelo y formulario de cita
+
 - Definir título, fecha, hora, descripción y estado.
-- Revisar los campos obligatorios.
+- Mostrar el formulario dentro de la misma aplicación.
+- Conservar la ventana y el botón del stage anterior.
 
-## Etapa 03 — Guardado JSON temporal
+## Stage 03 — Tabla y guardado JSON
 
-- Aprender a leer y guardar datos localmente.
-- Controlar archivos inexistentes o dañados.
-- Revisar la lectura y escritura de datos.
+- Mostrar las citas en una tabla.
+- Agregar acciones para guardar y cargar información.
+- Conservar el formulario y la tabla al avanzar.
 
-## Etapa 04 — Base de datos SQLite
+## Stage 04 — Base de datos SQLite
 
 - Crear las tablas principales.
 - Usar consultas parametrizadas.
-- Preparar la base para usuarios y actividades.
+- Hacer visible la relación entre usuarios y actividades.
 
-## Etapa 05 — Registro de usuarios
+## Stage 05 — Registro de usuarios
 
 - Crear usuarios locales.
-- Revisar nombres duplicados y campos obligatorios.
-- Separar modelos, repositorios y servicios.
+- Validar campos obligatorios y nombres duplicados.
+- Agregar el registro sin perder las funciones anteriores.
 
-## Etapa 06 — Inicio de sesión
+## Stage 06 — Inicio de sesión
 
-- Proteger contraseñas con un resumen y una sal criptográfica.
-- Crear el inicio y cierre de sesión.
-- Mantener el usuario actual en memoria.
+- Proteger las contraseñas.
+- Crear inicio y cierre de sesión.
+- Mostrar el usuario activo en la misma aplicación.
 
-## Etapa 07 — Ventana principal
+## Stage 07 — Ventana principal
 
-- Crear la estructura de navegación.
-- Mostrar el usuario activo.
-- Preparar las vistas de la agenda.
+- Organizar el panel principal.
+- Mostrar navegación y resúmenes.
+- Mantener formulario, tabla, usuarios y sesión.
 
-## Etapa 08 — Calendario mensual
+## Stage 08 — Calendario mensual
 
 - Mostrar días y semanas del mes.
 - Navegar entre meses.
-- Seleccionar un día y mostrar sus actividades.
+- Relacionar las actividades con una fecha.
 
-## Etapa 09 — Actividades, categorías y colores
+## Stage 09 — Actividades, categorías y colores
 
 - Crear, editar, completar y eliminar actividades.
 - Asignar categorías y colores.
 - Filtrar por fecha, categoría y estado.
 
-## Etapa 10 — Pruebas, seguridad y ejecutable
+## Stage 10 — Pruebas, seguridad y ejecutable
 
-- Ejecutar las pruebas automáticas cuando se llegue a esta etapa.
+- Ejecutar las pruebas de las etapas.
 - Revisar datos y credenciales.
-- Preparar un `.exe` para Windows con PyInstaller.
+- Preparar el ejecutable para Windows.
+- Mostrar el estado final de la aplicación acumulada.
 
-La explicación completa de cada parte y sus hitos está en `docs/parts/`. Las
-carpetas de `stages/` contienen `files.txt`, donde se enumeran los archivos que
-el alumno debe crear o modificar en esa etapa. El resultado funcional crece en
-`main.py` y cada resultado visual se comprueba en su tarjeta dentro de
-`index.html`.
+La lógica real crece en main.py. La comprobación visual crece con los
+fragmentos preview.html y se revisa siempre en la única página principal.

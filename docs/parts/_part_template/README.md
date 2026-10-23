@@ -37,8 +37,8 @@ permanecer aislado durante la lección y contener su propio `files.txt` y
 
 ## Integración de la parte
 
-Explicar qué se incorpora en `main.py` y qué tarjetas se agregarán en el
-`index.html` de la raíz al terminar la parte.
+Explicar qué se incorpora en `main.py` y qué fragmentos visuales se agregan a la
+ventana acumulada de `index.html` al terminar la parte.
 
 ## Estado
 

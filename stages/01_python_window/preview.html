@@ -1,57 +1,16 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/stage-preview.css" />
-    <title>Vista previa | Etapa 01</title>
-    <style>
-      .ventana.etapa-01 {
-        height: 320px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .ventana-contenido {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: #ffffff;
-      }
-
-      .ventana-contenido h2 {
-        margin: 0 0 14px;
-        font-size: 22px;
-      }
-
-      .ventana-contenido p {
-        margin: 0 0 24px;
-        color: #64748b;
-        font-size: 12px;
-      }
-    </style>
-  </head>
-  <body class="embebido">
-    <main class="pagina">
-      <nav class="navegacion" aria-label="Navegación del proyecto">
-        <a href="../../index.html">← Volver al proyecto Agenda SENA</a>
-      </nav>
-      <header class="encabezado">
-        <h1>Etapa 01 · Ventana inicial</h1>
-        <p>Vista previa del primer resultado de Agenda SENA.</p>
-      </header>
-      <section class="tarjeta relleno">
-        <div class="ventana etapa-01" aria-label="Ventana inicial de Agenda SENA">
-          <div class="barra-ventana"><span></span><span></span><span></span> Agenda SENA</div>
-          <div class="ventana-contenido">
-            <h2>Agenda SENA</h2>
-            <p>Mi agenda local para PC</p>
-            <button type="button" class="secundario">Cerrar</button>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+<section id="inicio" class="fragmento">
+  <div class="fragmento-cabecera">
+    <span class="etiqueta">Inicio</span>
+    <h2>Agenda SENA</h2>
+    <p>Esta es la ventana inicial de la agenda local para PC.</p>
+  </div>
+  <div class="ventana" aria-label="Ventana inicial de Agenda SENA">
+    <div class="barra-ventana"><span></span><span></span><span></span> Agenda SENA</div>
+    <div class="relleno bloque-centrado">
+      <h2>Mi agenda local para PC</h2>
+      <p>La aplicación se construirá sobre esta misma ventana.</p>
+      <button type="button" class="secundario" data-action="iniciar-agenda">Abrir agenda</button>
+      <p id="estado-inicio" class="estado-exito oculto" aria-live="polite"></p>
+    </div>
+  </div>
+</section>

@@ -97,10 +97,11 @@ representa la pantalla que utilizará el usuario. El orden de trabajo es:
 
 1. Agregar en GitHub los archivos del registro definidos en esta etapa.
 2. Actualizar `preview.html` con los campos y estados definidos en la clase.
-3. Agregar en `index.html` la tarjeta de la Clase 05 y su enlace visual.
+3. Actualizar el fragmento de registro en `preview.html`; el visor lo cargará
+   después de las funciones anteriores.
 4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 5. Revisar allí etiquetas, campos, botón y mensajes.
-6. Verificar el resultado desde la colección principal.
+6. Verificar el resultado desde la ventana principal acumulada.
 
 El preview no registra usuarios reales; permite validar la composición de la
 interfaz antes de integrarla con el servicio Python.
@@ -114,7 +115,7 @@ interfaz antes de integrarla con el servicio Python.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar los archivos de usuarios y `preview.html` en GitHub.
-Después agregar la tarjeta de la Clase 05 en `index.html` y abrir únicamente:
+Después abrir únicamente la página principal:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -152,6 +153,6 @@ archivos anteriores.
 ## Criterio de terminado
 
 La etapa se puede publicar cuando los archivos del registro están en GitHub,
-`preview.html` representa correctamente la Clase 05 y su tarjeta aparece en la
-colección. El registro y sus validaciones quedan definidos en Python y se
+`preview.html` representa correctamente la Clase 05 y el registro aparece en la
+ventana acumulada. El registro y sus validaciones quedan definidos en Python y se
 probarán al ejecutar el proyecto en un PC.

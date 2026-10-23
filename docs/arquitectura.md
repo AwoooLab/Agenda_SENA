@@ -1,55 +1,58 @@
 # Arquitectura de Agenda SENA
 
-La aplicación principal está desarrollada en Python y se ejecuta localmente en
-el computador.
+Agenda SENA es una aplicación de escritorio local para Windows. La versión
+funcional se construye con Python y Tkinter; GitHub Pages se utiliza como
+visor visual e interactivo del resultado acumulado.
 
-## Plataforma objetivo
+## Componentes principales
 
-El producto final es una aplicación de escritorio para PC con Windows. La
-aplicación se ejecuta con Python y Tkinter en el computador del usuario; no es
-una página web ni depende de internet.
+- main.py: punto de entrada de la aplicación Python integrada.
+- stages/: archivos de cada etapa, organizados en orden de construcción.
+- stages/*/app.py y demás archivos Python: ejercicios y funciones de cada etapa.
+- stages/*/preview.html: fragmento visual que agrega la función de esa etapa.
+- index.html: único orquestador y único visor que debe abrir el estudiante.
+- assets/stage-preview.css: estilos compartidos de los fragmentos visuales.
 
-Durante la clase, la evidencia que el estudiante puede observar se publica en
-GitHub Pages. Cada `preview.html` muestra la pantalla o el resultado visual de
-su etapa. GitHub Pages no ejecuta el código Python; el HTML tampoco reemplaza
-la aplicación de escritorio, sino que permite revisar desde el navegador lo que
-se está construyendo.
+## Flujo acumulativo
 
-- `main.py`: orquesta la aplicación principal y crece a medida que se
-  completan las etapas.
-- `stages/`: contiene los archivos de trabajo separados por etapa.
-- `docs/parts/`: contiene las partes del proyecto y la especificación completa
-  de cada hito.
-- `index.html`: es la colección visual de clases publicada en GitHub Pages.
+El index.html mantiene una sola ventana de Agenda SENA. Su JavaScript carga
+los preview.html en el orden 01 a 10 y los inserta dentro del mismo
+contenedor. Por eso cada archivo nuevo se alinea con lo que ya existe:
 
-Cada carpeta de `stages/` trabaja de forma aislada. Al terminar una etapa, la
-funcionalidad se incorpora progresivamente en el `main.py` de la raíz. No se
-importan automáticamente archivos de una etapa ni se conectan entre sí.
+01: ventana inicial
+02: agrega el formulario de cita
+03: agrega la tabla de citas
+04: agrega la estructura de datos locales
+05: agrega el registro
+06: agrega el inicio de sesión
+07: agrega el panel principal
+08: agrega el calendario
+09: agrega actividades, categorías y colores
+10: agrega validaciones y entrega
 
-El repositorio inicial no incluye una implementación paralela en `src/`,
-pruebas globales ni datos de ejemplo. Esos elementos se construirán dentro de
-las etapas cuando correspondan; así, el estudiante siempre sabe qué archivo
-está trabajando y cuál es el siguiente resultado que debe integrar.
+No se usan iframe, tarjetas independientes, medidores ni un indicador de etapa
+actual. Los stages son el origen de cada función; index.html es el orquestador
+que las reúne en una única vista.
 
-GitHub Pages no ejecuta `main.py`; solo sirve los archivos HTML estáticos. Cada
-etapa tiene una tarjeta en `index.html`, usando el `preview.html` de su propia
-carpeta. La tarjeta se actualiza conforme se completan los requisitos de la
-etapa.
+## Regla para un preview.html
 
-## Regla del visor principal
+Un preview debe contener solamente el fragmento visual que agrega su etapa:
 
-La única página que el estudiante debe abrir para revisar el avance es el
-`index.html` de la raíz, publicado en GitHub Pages. Esa página muestra los
-resultados visuales de todos los stages en una colección.
+- No debe incluir doctype, html, head ni body.
+- No debe crear otra navegación o una ventana independiente.
+- Debe conservar los identificadores y funciones que necesiten las etapas
+  siguientes.
+- Debe mostrar una función real o una representación clara de su lógica.
+- Debe usar los estilos compartidos de assets/stage-preview.css.
 
-Cada `preview.html` es un componente visual embebible, no una página de
-navegación independiente. No debe mostrar encabezados repetidos, enlaces de
-retorno ni barras de desplazamiento internas cuando se visualiza desde
-`index.html`. El título de la etapa, su explicación y la referencia a la
-especificación pertenecen a la tarjeta del visor principal. El archivo puede
-conservar una estructura HTML completa para ser válido, pero su `body` debe
-usar la clase `embebido` para ocultar la carcasa de página al integrarse.
+## Relación con Python
 
-La colección no funciona como un medidor ni como una lista de porcentajes. Su
-propósito es mostrar qué resultado visual corresponde a cada etapa y permitir
-comprobar cómo se va construyendo la aplicación.
+GitHub Pages no ejecuta Python. Las interacciones del visor son una
+representación web para comprobar la composición y el flujo visual. La lógica
+real se integra progresivamente en main.py y se ejecuta localmente en el PC.
+
+## Actualización
+
+El botón Actualizar vista agrega una versión nueva a la URL y cada preview se
+carga con una versión nueva para evitar que el navegador conserve contenido
+antiguo. GitHub Pages puede tardar unos segundos en publicar un commit nuevo.

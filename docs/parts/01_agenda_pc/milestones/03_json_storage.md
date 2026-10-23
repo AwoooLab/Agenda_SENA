@@ -79,10 +79,11 @@ La cita de ejemplo debe tener título, fecha, hora y descripción.
 
 1. Agregar en GitHub `storage.py`, `demo.py` y los archivos previstos.
 2. Actualizar `preview.html` para representar el archivo JSON y sus acciones.
-3. Agregar en `index.html` la tarjeta de la Clase 03 con su preview.
+3. Actualizar el fragmento de guardado en `preview.html`; el visor lo cargará
+   después del formulario y la tabla.
 4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 5. Comprobar allí que se distinguen archivo, estado, Guardar y Cargar.
-6. Verificar la clase desde la colección principal.
+6. Verificar la función desde la ventana principal acumulada.
 
 El preview es una representación visual; no guarda datos reales ni sustituye
 la comprobación del archivo JSON temporal.
@@ -96,7 +97,7 @@ la comprobación del archivo JSON temporal.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar `storage.py`, `demo.py` y `preview.html` en GitHub. Después
-agregar la tarjeta de la Clase 03 en `index.html` y abrir únicamente:
+abrir únicamente la página principal, que carga todos los fragmentos en orden:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -144,6 +145,6 @@ código.
 ## Criterio de terminado
 
 La etapa se puede publicar cuando los archivos de JSON están en GitHub,
-`preview.html` explica visualmente el flujo y la Clase 03 aparece en la
-colección. Guardar y cargar los datos queda definido en Python y se probará al
+`preview.html` explica visualmente el flujo y la Clase 03 se integra en la
+ventana acumulada. Guardar y cargar los datos queda definido en Python y se probará al
 ejecutar el proyecto en un PC.

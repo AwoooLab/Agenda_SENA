@@ -78,10 +78,10 @@ GitHub Pages. El trabajo se realiza en este orden:
 2. Crear únicamente los archivos dentro de `stages/01_python_window/`.
 3. Actualizar `preview.html` para representar la pantalla de PC y cualquier
    cambio visual realizado.
-4. Agregar en el `index.html` de la raíz la tarjeta de la Clase 01, apuntando al
-   `preview.html` de esta carpeta. El HTML principal solo organiza la colección.
+4. Actualizar el fragmento visual de `preview.html`. El `index.html` de la raíz
+   carga automáticamente los previews en una sola ventana acumulada.
 5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
-6. Verificar allí que la tarjeta y su resultado se abren bien.
+6. Verificar allí que la ventana inicial aparece correctamente.
 
 El preview no ejecuta Python. La etapa no está terminada hasta que la
 representación visual publicada cumple los requisitos de la especificación.
@@ -99,11 +99,11 @@ GitHub Pages:
 
 1. Agregar o actualizar `stages/01_python_window/app.py` y
    `stages/01_python_window/preview.html`.
-2. Agregar la tarjeta de la Clase 01 en el `index.html` de la raíz.
+2. Actualizar únicamente el fragmento visual de `preview.html`.
 3. Abrir únicamente `https://awooolab.github.io/Agenda_SENA/`.
 4. Confirmar allí que se ven `Agenda SENA`, el subtítulo y el botón `Cerrar`.
 5. Si se agregó un icono o se cambió un texto en el diseño, comprobar el cambio
-   dentro de la tarjeta de la Clase 01.
+   dentro de la ventana acumulada.
 
 GitHub Pages no ejecuta `app.py`. La página solo permite revisar la
 representación visual de la ventana de PC.
@@ -142,7 +142,7 @@ Devuelve únicamente el código de ese archivo.
 ## Criterio de terminado
 
 La etapa se puede publicar cuando `stages/01_python_window/app.py` y
-`stages/01_python_window/preview.html` están en GitHub, la tarjeta de la Clase
-01 aparece en el `index.html` de la raíz y la representación visual cumple la
+`stages/01_python_window/preview.html` están en GitHub, la función aparece en
+la ventana acumulada del `index.html` de la raíz y la representación visual cumple la
 especificación. El comportamiento del botón pertenece al código Python y se
 comprobará cuando la aplicación se ejecute en un PC.

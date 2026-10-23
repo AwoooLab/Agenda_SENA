@@ -1,80 +1,60 @@
 # Cómo trabajar las etapas
 
-Cada carpeta representa una etapa de la clase. El alumno debe completar una
-etapa antes de pasar a la siguiente.
+Cada carpeta representa una etapa de la construcción de Agenda SENA. El alumno
+completa una etapa antes de continuar con la siguiente, pero el resultado
+visual siempre pertenece a la misma aplicación.
 
 ## Qué contiene cada etapa
 
-- Cada etapa contiene los archivos que corresponden a su alcance.
-- `files.txt` contiene la guía teórica y práctica de todos los archivos de la
-  etapa.
-- Los nombres de carpetas y archivos se mantienen en inglés para que coincidan
-  con la estructura del proyecto.
-- Las explicaciones, lecciones y ejemplos están en español.
+- Los archivos Python que corresponden a la función.
+- files.txt con la teoría, ejemplos, restricciones y validaciones.
+- preview.html con el fragmento visual que se agrega a la ventana principal.
+- Los nombres de carpetas y archivos están en inglés.
+- Las explicaciones y lecciones están en español.
 
-## Cómo estudiar un archivo
+## Flujo de trabajo
 
-1. Abrir el `files.txt` de la etapa.
-2. Buscar la sección del archivo que se va a construir.
-3. Leer las lecciones en orden.
-4. Revisar las librerías permitidas y las restricciones.
-5. Agregar o actualizar la solución en el archivo indicado dentro de GitHub.
-6. Usar los fragmentos cortos como referencia para completar la lógica.
-7. Actualizar el `preview.html` de la etapa con la representación visual.
-8. Subir los cambios y revisar el resultado publicado en GitHub Pages.
-9. Corregir lo necesario antes de continuar con el siguiente archivo.
+1. Abrir la especificación del stage en docs/parts/.
+2. Leer el files.txt de la carpeta.
+3. Crear o actualizar únicamente los archivos solicitados.
+4. Probar la lógica local de Python cuando corresponda.
+5. Actualizar el preview.html con la función visible de la etapa.
+6. Subir los cambios a GitHub.
+7. Abrir únicamente la página principal de GitHub Pages.
+8. Comprobar que la función nueva aparece junto con las anteriores.
+9. Corregir cualquier regresión antes de continuar.
 
-## Cómo trabajar con ChatGPT gratuito
+## Regla del visor único
 
-ChatGPT se puede usar como tutor de una sola lección o de un solo archivo.
+El index.html de la raíz carga los diez preview.html en orden dentro de una
+sola ventana. No se muestran tarjetas, iframe, selectores ni indicadores de
+etapa.
+
+Cada preview es un fragmento y no una página independiente. Debe contener
+solamente el HTML de la función que aporta su etapa, sin doctype, head, body,
+navegación propia ni encabezados repetidos.
+
+## Integración de Python
+
+Los archivos de stages/ sirven para aprender y construir cada función. Cuando
+una función se aprueba, se incorpora progresivamente en main.py, que es el
+orquestador de la aplicación local para PC.
+
+GitHub Pages no ejecuta Python. Su objetivo es permitir revisar la composición
+visual y las interacciones web equivalentes.
+
+## Trabajo con ChatGPT
+
 La solicitud debe indicar:
 
 - La ruta exacta del archivo.
-- La lección que no se entiende.
-- El código que el alumno ya escribió.
-- El error que apareció.
+- La lección que se está estudiando.
+- El código que ya se escribió.
+- El error o comportamiento observado.
 - Que no se modifiquen otros archivos.
 
-Ejemplo de solicitud:
+Ejemplo:
 
-```text
-Estoy trabajando en stages/01_python_window/app.py.
-Explícame cómo funciona tkinter.Tk() y revisa únicamente el fragmento que
-escribí. No generes el proyecto completo ni modifiques otros archivos.
-```
-
-## Regla de integración en `main.py`
-
-Los archivos dentro de `stages/` son ejercicios didácticos aislados. Cuando el
-alumno termina una etapa, su solución se incorpora progresivamente en el
-`main.py` de la raíz, según indique el hito correspondiente en
-`docs/parts/01_agenda_pc/milestones/`.
-
-El archivo de la etapa no se conecta automáticamente con otros archivos. Cada
-carpeta conserva su trabajo y `main.py` funciona como el orquestador de la
-aplicación final.
-
-## Flujo visible en GitHub Pages
-
-El estudiante agrega en GitHub los archivos de la etapa y actualiza su
-`preview.html`. La tarjeta de la etapa ya existe en el `index.html` de la raíz;
-se revisa allí cómo va tomando forma el resultado. Cuando la etapa está lista,
-se incorpora su funcionalidad en el `main.py` de la raíz, se suben los cambios
-y se abre únicamente la página principal de GitHub Pages.
-
-El `index.html` de la raíz organiza las tarjetas de todas las etapas;
-no contiene la interfaz de cada etapa. La interfaz visual vive en el
-`preview.html` de su propia carpeta.
-
-Los `preview.html` se construyen como componentes embebibles. Cuando se abren
-desde el `index.html` principal deben mostrar directamente el resultado de la
-etapa: una ventana, un formulario, una tabla, un calendario u otro componente.
-No deben convertir cada tarjeta en otra página completa con navegación propia,
-encabezado repetido o barra de desplazamiento interna. Para conservar un HTML
-válido, el `body` del preview usa la clase `embebido`, que oculta la carcasa de
-página cuando se carga dentro del visor principal.
-
-## Regla de aprendizaje
-
-No pedir a ChatGPT que genere todo el proyecto de una sola vez. Cada archivo se
-construye con las lecciones necesarias que aparecen en su propio `files.txt`.
+Estoy trabajando en stages/01_python_window/app.py. Explícame tkinter.Tk()
+y revisa únicamente el fragmento que escribí. No generes el proyecto completo
+ni modifiques otros archivos.

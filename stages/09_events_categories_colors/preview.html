@@ -1,37 +1,33 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/stage-preview.css" />
-    <title>Vista previa | Etapa 09</title>
-  </head>
-  <body class="embebido">
-    <main class="pagina">
-      <nav class="navegacion" aria-label="Navegación del proyecto">
-        <a href="../../index.html">← Volver al proyecto Agenda SENA</a>
-      </nav>
-      <header class="encabezado">
-        <h1>Etapa 09 · Actividades y categorías</h1>
-        <p>Formulario para crear actividades y distinguirlas por categoría.</p>
-      </header>
-      <section class="rejilla rejilla-2">
-        <article class="tarjeta relleno">
-          <h2>Nueva actividad</h2>
-          <div class="campo"><label for="titulo">Título</label><input id="titulo" value="Reunión de proyecto" /></div>
-          <div class="rejilla rejilla-2"><div class="campo"><label for="fecha">Fecha</label><input id="fecha" value="2026-10-23" /></div><div class="campo"><label for="hora">Hora</label><input id="hora" value="18:00" /></div></div>
-          <div class="campo"><label for="categoria">Categoría</label><select id="categoria"><option>Trabajo</option><option>Personal</option><option>Estudio</option><option>Salud</option></select></div>
-          <button class="verde">Guardar actividad</button>
-        </article>
-        <article class="tarjeta relleno">
-          <h2>Actividades del día</h2>
-          <div class="estado-exito" style="margin:16px 0">Reunión de proyecto · 18:00</div>
-          <p><span class="etiqueta">Trabajo</span> Revisar avances de la agenda.</p>
-          <hr style="border:0; border-top:1px solid var(--gris-200); margin:20px 0" />
-          <h3>Leyenda</h3>
-          <p><span class="etiqueta">Trabajo</span> <span class="etiqueta verde">Personal</span> <span class="etiqueta amarilla">Estudio</span> <span class="etiqueta roja">Salud</span></p>
-        </article>
-      </section>
-    </main>
-  </body>
-</html>
+<section id="actividades" class="fragmento">
+  <div class="fragmento-cabecera">
+    <span class="etiqueta">Actividades</span>
+    <h2>Crear actividad</h2>
+    <p>Las actividades pueden organizarse por categoría y color.</p>
+  </div>
+  <div class="rejilla rejilla-2">
+    <form class="tarjeta relleno">
+      <div class="campo">
+        <label for="actividad-titulo">Título</label>
+        <input id="actividad-titulo" value="Reunión de proyecto" />
+      </div>
+      <div class="rejilla rejilla-2">
+        <div class="campo"><label for="actividad-fecha">Fecha</label><input id="actividad-fecha" type="date" value="2026-10-23" /></div>
+        <div class="campo"><label for="actividad-hora">Hora</label><input id="actividad-hora" type="time" value="18:00" /></div>
+      </div>
+      <div class="campo">
+        <label for="actividad-categoria">Categoría</label>
+        <select id="actividad-categoria"><option>Trabajo</option><option>Personal</option><option>Estudio</option><option>Salud</option></select>
+      </div>
+      <button type="button" class="verde" data-action="save-event">Guardar actividad</button>
+      <p id="actividad-estado" class="estado-exito oculto" aria-live="polite"></p>
+    </form>
+    <div class="tarjeta relleno">
+      <h3>Actividades del día</h3>
+      <div class="estado-exito" style="margin:16px 0"><strong id="actividad-reciente">Reunión de proyecto · 18:00</strong></div>
+      <p><span class="etiqueta">Trabajo</span> Revisar avances de la agenda.</p>
+      <hr style="border:0; border-top:1px solid var(--gris-200); margin:20px 0" />
+      <h3>Leyenda</h3>
+      <p><span class="etiqueta">Trabajo</span> <span class="etiqueta verde">Personal</span> <span class="etiqueta amarilla">Estudio</span> <span class="etiqueta roja">Salud</span></p>
+    </div>
+  </div>
+</section>

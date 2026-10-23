@@ -1,27 +1,26 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/stage-preview.css" />
-    <title>Vista previa | Etapa 05</title>
-  </head>
-  <body class="embebido">
-    <main class="pagina">
-      <nav class="navegacion" aria-label="Navegación del proyecto">
-        <a href="../../index.html">← Volver al proyecto Agenda SENA</a>
-      </nav>
-      <header class="encabezado">
-        <h1>Etapa 05 · Registro de usuarios</h1>
-        <p>Formulario para crear un usuario local de la agenda.</p>
-      </header>
-      <section class="tarjeta relleno" style="max-width:560px; margin:auto">
-        <h2>Crear una cuenta</h2>
-        <p class="muted">Registra tus datos para usar Agenda SENA.</p>
-        <div class="campo"><label for="usuario">Nombre de usuario</label><input id="usuario" placeholder="Ejemplo: ana" /></div>
-        <div class="campo"><label for="correo">Correo electrónico</label><input id="correo" type="email" placeholder="ana@ejemplo.com" /></div>
-        <button class="verde">Registrar usuario</button>
-      </section>
-    </main>
-  </body>
-</html>
+<section id="usuarios" class="fragmento">
+  <div class="fragmento-cabecera">
+    <span class="etiqueta">Usuarios</span>
+    <h2>Crear una cuenta</h2>
+    <p>Un usuario local podrá utilizar su propia agenda.</p>
+  </div>
+  <div class="rejilla rejilla-2">
+    <form id="form-registro" class="tarjeta relleno">
+      <div class="campo">
+        <label for="registro-usuario">Nombre de usuario</label>
+        <input id="registro-usuario" placeholder="Ejemplo: ana" />
+      </div>
+      <div class="campo">
+        <label for="registro-correo">Correo electrónico</label>
+        <input id="registro-correo" type="email" placeholder="ana@ejemplo.com" />
+      </div>
+      <button type="button" class="verde" data-action="register">Registrar usuario</button>
+      <p id="registro-estado" class="estado-exito oculto" aria-live="polite"></p>
+    </form>
+    <div class="tarjeta relleno">
+      <h3>Datos del usuario</h3>
+      <p class="muted">El registro prepara la información necesaria para iniciar sesión en la aplicación local.</p>
+      <span class="etiqueta verde">Formulario listo</span>
+    </div>
+  </div>
+</section>

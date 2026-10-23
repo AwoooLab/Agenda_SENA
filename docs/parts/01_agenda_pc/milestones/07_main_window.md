@@ -79,10 +79,11 @@ No debe depender todavía de SQLite ni de la pantalla de inicio de sesión.
 1. Agregar en GitHub los archivos de la ventana principal definidos en esta
    etapa.
 2. Actualizar `preview.html` con la distribución, textos e iconos.
-3. Agregar en `index.html` la tarjeta de la Clase 07 con su preview.
+3. Actualizar el fragmento del panel principal en `preview.html`; el visor lo
+   cargará después del inicio de sesión.
 4. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 5. Comprobar allí barra superior, menú y área de trabajo.
-6. Verificar la clase desde la colección principal.
+6. Verificar la función desde la ventana principal acumulada.
 
 El preview no ejecuta la navegación de Tkinter; muestra el resultado visual que
 debe conservarse durante la integración.
@@ -96,8 +97,7 @@ debe conservarse durante la integración.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar `navigation.py`, `main_window.py`, `app.py` y
-`preview.html` en GitHub. Después agregar la tarjeta de la Clase 07 en
-`index.html` y abrir únicamente:
+`preview.html` en GitHub. Después abrir únicamente la página principal:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -135,5 +135,5 @@ Solicitar después `main_window.py` y `app.py` por separado.
 
 La etapa se puede publicar cuando los archivos de la ventana principal están
 en GitHub, `preview.html` muestra la distribución completa y la Clase 07
-aparece en la colección. La navegación funcional queda definida en Python y se
+se integra en la ventana acumulada. La navegación funcional queda definida en Python y se
 probará al ejecutar el proyecto en un PC.
