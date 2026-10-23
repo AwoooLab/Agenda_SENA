@@ -20,3 +20,6 @@ La versión integrada debe quedar en `app.py`, `src/`, `data/` o `tests/`, segú
 indique el hito de `docs/milestones/`.
 
 No pedir a ChatGPT que genere todo el proyecto de una sola vez. Cada prompt está diseñado para producir un archivo pequeño y revisable.
+After creating or completing a file, run `python scripts/generate_file_status.py`
+to refresh `docs/file_status.md`. GitHub Actions performs the same update
+automatically after each push to `main`.
