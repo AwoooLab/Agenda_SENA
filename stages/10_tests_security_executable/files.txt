@@ -127,7 +127,7 @@ SECCIONES NECESARIAS
 El texto debe estar completamente en español. Los nombres de archivos, comandos
 y herramientas se escriben exactamente como existen.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Ejecutar:
 
@@ -163,19 +163,19 @@ FRAGMENTO DE REFERENCIA
       <strong>Pruebas</strong><br />Todas aprobadas
     </div>
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir preview.html y comprobar que la entrega muestra claramente el nombre del
 ejecutable, el estado de las pruebas y las condiciones de seguridad.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Ejecutar pruebas, revisar seguridad y generar el ejecutable.
+1. Agregar o actualizar pruebas, seguridad, script y release.md en GitHub.
 2. Actualizar preview.html con el nombre, estados, mensajes e iconos de la
    entrega final.
-3. Comparar el preview con los resultados reales de la compilación.
-4. Publicar la tarjeta de la Clase 10 en index.html y verificarla en GitHub
-   Pages.
+3. Subir los cambios y comparar la vista publicada en GitHub Pages.
+4. Publicar la tarjeta de la Clase 10 en index.html y verificarla desde la
+   colección.
 
 La vista HTML comunica el resultado de la entrega; no compila ni descarga el
 ejecutable.

@@ -169,7 +169,7 @@ ORDEN DE LA PRUEBA
 7. Comprobar sus valores.
 8. Cerrar conexión.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Ejecutar:
 
@@ -205,19 +205,18 @@ FRAGMENTO DE REFERENCIA
       <tbody><tr><td>id</td><td>INTEGER</td></tr></tbody>
     </table>
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir preview.html y confirmar que las columnas visuales coinciden con el
 esquema explicado en schema.sql.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Completar schema.sql, database.py y test_database.py.
-2. Ejecutar las pruebas con una base temporal.
-3. Actualizar preview.html para que las tablas y campos visibles coincidan con
+1. Agregar o actualizar schema.sql, database.py y test_database.py en GitHub.
+2. Actualizar preview.html para que las tablas y campos visibles coincidan con
    el esquema real.
-4. Revisar la estructura en el navegador y publicar la tarjeta de la Clase 04
-   en index.html.
+3. Subir los cambios y revisar la estructura publicada en GitHub Pages.
+4. Publicar la tarjeta de la Clase 04 en index.html.
 
-La vista HTML no consulta SQLite; sirve para validar que la estructura de la
-base de datos se entiende visualmente.
+La vista HTML no consulta SQLite; sirve para validar en GitHub Pages que la
+estructura de la base de datos se entiende visualmente.

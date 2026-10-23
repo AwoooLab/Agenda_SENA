@@ -122,17 +122,18 @@ Comprobar:
 - No agregar pagos, internet, notificaciones externas ni sincronización.
 - No crear todavía un ejecutable.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 Los modelos, el servicio y los controles de actividades se implementan en
 Python; `preview.html` muestra el formulario y sus estados. Sigue este orden:
 
-1. Implementar modelos, servicio, formulario y leyenda de colores.
-2. Ejecutar las pruebas de creación, edición, finalización, filtro y borrado.
-3. Actualizar `preview.html` con nuevos campos, categorías, iconos o colores.
-4. Abrir el preview y revisar formulario, actividad del día y leyenda.
+1. Agregar en GitHub los modelos, servicio, formulario y leyenda definidos en
+   esta etapa.
+2. Actualizar `preview.html` con nuevos campos, categorías, iconos o colores.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Revisar formulario, actividad del día y leyenda.
 5. Agregar en `index.html` la tarjeta de la Clase 09 con su preview.
-6. Publicar y verificar la clase en GitHub Pages.
+6. Verificar la clase desde la colección principal.
 
 El preview no crea actividades reales; permite validar que la interfaz comunica
 las mismas reglas que el servicio Python.
@@ -144,11 +145,22 @@ las mismas reglas que el servicio Python.
 - La leyenda permite relacionar cada categoría con su color.
 - Los nuevos iconos o controles se reflejan también en el preview.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Abrir el formulario, crear una actividad de cada categoría, editar una,
-completar otra y eliminar otra. Luego abrir el calendario y comprobar que las
-actividades aparecen en la fecha correspondiente.
+Agregar o actualizar los archivos de actividades y `preview.html` en GitHub.
+Abrir:
+
+```text
+https://awooolab.github.io/Agenda_SENA/stages/09_events_categories_colors/preview.html
+```
+
+Confirmar que se observan el formulario, las categorías, los colores, la
+actividad del día, los botones y los iconos definidos para esta clase.
+
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar las operaciones de crear, editar, completar,
+filtrar y eliminar. Pages solo muestra el resultado visual; no modifica datos.
 
 ## Integración posterior
 
@@ -177,5 +189,7 @@ Solicitar cada modelo, servicio, formulario, leyenda y prueba por separado.
 
 ## Criterio de terminado
 
-El alumno puede crear, editar, completar, filtrar y eliminar actividades, y
-`preview.html` representa visualmente la Clase 09 publicada.
+La etapa se puede publicar cuando los archivos de actividades están en GitHub,
+`preview.html` representa formulario, categorías y colores, y la Clase 09
+aparece en la colección. Las operaciones funcionales quedan definidas en
+Python y se probarán al ejecutar el proyecto en un PC.

@@ -89,18 +89,19 @@ Debe usar `unittest` y una base de datos temporal. La prueba debe:
 - No implementar todavía inicio de sesión.
 - No incluir contraseñas reales en el archivo de prueba.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 Esta clase tiene una parte técnica (`schema.sql`, `database.py` y sus pruebas)
 y una parte visual (`preview.html`). El flujo es:
 
-1. Crear el esquema y ejecutar las pruebas con una base temporal.
-2. Confirmar las tablas, campos, relaciones e inserciones definidas.
-3. Actualizar `preview.html` para mostrar la estructura real de la base.
-4. Abrir el preview y comparar las tablas visuales con `schema.sql`.
-5. Agregar en `index.html` la tarjeta de la Clase 04 con el preview de la
-   base de datos.
-6. Publicar y verificar la clase en GitHub Pages.
+1. Agregar en GitHub `schema.sql`, `database.py`, sus pruebas y los archivos
+   previstos para la etapa.
+2. Actualizar `preview.html` para mostrar la estructura de la base.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Comparar las tablas visuales con `schema.sql`.
+5. Agregar en `index.html` la tarjeta de la Clase 04 con el preview de la base
+   de datos.
+6. Verificar la clase desde la colección principal.
 
 El preview no consulta SQLite. Su función es hacer visible el diseño de la
 base de datos para revisar si la estructura se entiende.
@@ -112,16 +113,23 @@ base de datos para revisar si la estructura se entiende.
 - La relación entre usuario y actividad se puede explicar a partir de los
   campos mostrados.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Ejecutar:
+Agregar o actualizar `schema.sql`, `database.py`, `test_database.py` y
+`preview.html` en GitHub. Abrir:
 
 ```text
-python -m unittest stages/04_sqlite_database/test_database.py -v
+https://awooolab.github.io/Agenda_SENA/stages/04_sqlite_database/preview.html
 ```
 
-La prueba debe terminar sin errores y no debe dejar una base de datos temporal
-en la carpeta del proyecto.
+Comparar las tablas, campos y tipos mostrados con el esquema que se está
+construyendo. El resultado visible de esta clase es la explicación visual de la
+base de datos.
+
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar las pruebas de SQLite. GitHub Pages no crea
+ni consulta la base de datos; solo muestra su estructura.
 
 ## Integración posterior
 
@@ -151,5 +159,7 @@ que deben usar una base de datos temporal y no modificar la base real.
 
 ## Criterio de terminado
 
-El alumno puede crear y probar las tablas, y `preview.html` muestra la misma
-estructura de forma clara dentro de la Clase 04 publicada.
+La etapa se puede publicar cuando el esquema, el código, las pruebas y
+`preview.html` están en GitHub, y la Clase 04 muestra claramente las tablas en
+la colección. La creación y consulta de SQLite queda definida en Python y se
+probará al ejecutar el proyecto en un PC.

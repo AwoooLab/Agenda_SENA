@@ -76,19 +76,18 @@ Descripción: Practicar dataclasses
 - No importar Tkinter, SQLite ni módulos de `src/`.
 - No agregar campos de usuario, categoría o color todavía.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 La clase se desarrolla en dos partes coordinadas: `model.py` define la cita y
 `preview.html` muestra cómo se presenta una cita en la agenda. Sigue este
 flujo:
 
 1. Revisar la estructura y los métodos obligatorios de `Cita`.
-2. Ejecutar el ejemplo de `model.py` y comprobar la conversión a diccionario.
+2. Agregar en GitHub `model.py` y los archivos previstos para la etapa.
 3. Actualizar `preview.html` si cambian los campos o su presentación.
-4. Abrir el preview y verificar título, fecha, hora, descripción y estado.
-5. Agregar en `index.html` la tarjeta de la Clase 02 con el enlace al
-   `preview.html`.
-6. Publicar y verificar la tarjeta en GitHub Pages.
+4. Subir los cambios y abrir el preview publicado en GitHub Pages.
+5. Verificar título, fecha, hora, descripción y estado.
+6. Agregar en `index.html` la tarjeta de la Clase 02 con el enlace al preview.
 
 El preview no ejecuta la clase Python: funciona como comprobación visual de la
 estructura que luego usará la interfaz.
@@ -99,17 +98,22 @@ estructura que luego usará la interfaz.
 - Los nombres visibles corresponden a los atributos de `Cita`.
 - El estado de la cita se distingue sin alterar el contenido del modelo.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Ejecutar:
+Agregar o actualizar `model.py` y `preview.html` en GitHub. Abrir:
 
 ```text
-python stages/02_data_model/model.py
+https://awooolab.github.io/Agenda_SENA/stages/02_data_model/preview.html
 ```
 
-Debe imprimirse un diccionario con las cuatro claves de la cita.
+La tarjeta debe mostrar título, fecha, hora, descripción y estado. Si se
+agrega o cambia un campo en el modelo, la representación del `preview.html`
+debe actualizarse para que la colección siga explicando la misma estructura.
 
-También se debe comprobar mentalmente que esto funciona:
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar `model.py` y comprobar que se imprime un
+diccionario con las cuatro claves de la cita. También se puede comprobar:
 
 ```python
 cita = Cita("Clase", "2026-10-23", "18:00")
@@ -117,7 +121,8 @@ datos = cita.a_diccionario()
 otra_cita = Cita.desde_diccionario(datos)
 ```
 
-`cita` y `otra_cita` deben tener los mismos datos.
+`cita` y `otra_cita` deben tener los mismos datos. Esta prueba valida Python;
+la evidencia visual de la clase se revisa en GitHub Pages.
 
 ## Integración posterior
 
@@ -144,6 +149,7 @@ ni otros módulos. Devuelve únicamente el código.
 
 ## Criterio de terminado
 
-El hito está terminado cuando `Cita` puede convertirse a diccionario y volver a
-crearse sin perder información, y `preview.html` muestra los mismos datos de
-forma clara dentro de la Clase 02 publicada.
+La etapa se puede publicar cuando los archivos definidos están en GitHub,
+`preview.html` muestra claramente los datos de `Cita` y la Clase 02 aparece en
+la colección. La conversión a diccionario queda definida en el código Python y
+se probará cuando pueda ejecutarse el proyecto en un PC.

@@ -150,14 +150,14 @@ LO QUE TODAVÍA NO SE DEBE CONSTRUIR
 - JSON o SQLite.
 - Conexión a internet.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
-Ejecutar desde la raíz:
+Si se dispone de Python instalado, ejecutar desde la raíz:
 
     python stages/01_python_window/app.py
 
-Debe aparecer la ventana. Al presionar Cerrar debe terminar el programa. Al
-presionar la X de la ventana también debe terminar sin mostrar errores.
+El resultado esperado es que aparezca la ventana y que Cerrar y la X terminen
+el programa. Esta prueba es opcional y no se realiza en GitHub Pages.
 
 INTEGRACIÓN POSTERIOR
 ---------------------
@@ -190,18 +190,18 @@ FRAGMENTOS DE REFERENCIA
 
 La vista debe conservar el título, subtítulo y botón del resultado de Python.
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir stages/01_python_window/preview.html en un navegador y comprobar que la
 ventana visual coincide con el diseño definido para app.py.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Completar y ejecutar app.py.
+1. Agregar o actualizar app.py en GitHub.
 2. Actualizar preview.html con los mismos textos, tamaños, botón e iconos.
-3. Abrir el preview localmente y comparar la ventana visual con Tkinter.
-4. Cuando ambas versiones coincidan, agregar la tarjeta de la Clase 01 en
-   index.html y comprobarla en GitHub Pages.
+3. Subir los cambios y abrir preview.html en GitHub Pages.
+4. Cuando la vista cumpla la especificación, agregar la tarjeta de la Clase 01
+   en index.html y comprobarla desde la colección.
 
-La validación visual hace parte de la lección. Un cambio de diseño en app.py
-debe reflejarse también en preview.html.
+La validación visual hace parte de la lección. Un cambio de diseño previsto en
+app.py debe reflejarse también en preview.html. Pages no ejecuta app.py.

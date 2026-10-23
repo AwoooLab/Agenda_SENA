@@ -118,7 +118,7 @@ CASOS NECESARIOS
 - Enero seguido de diciembre disminuye el año.
 - La semana comienza en lunes.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Abrir la demostración del calendario, cambiar de mes, volver a Hoy y seleccionar
 un día. Ejecutar también:
@@ -152,18 +152,19 @@ FRAGMENTO DE REFERENCIA
       <div class="dia hoy"><strong>23</strong></div>
     </div>
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir preview.html y comprobar que el mes tiene encabezados, controles, siete
 columnas y una fecha resaltada.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Completar calendar_cell.py, monthly_calendar.py y sus pruebas.
-2. Probar cambio de mes, botón Hoy y selección de fecha.
-3. Actualizar preview.html con la misma cuadrícula, controles, colores e
-   iconos del calendario local.
-4. Comparar ambas vistas y publicar la tarjeta de la Clase 08 en index.html.
+1. Agregar o actualizar calendar_cell.py, monthly_calendar.py y sus pruebas en
+   GitHub.
+2. Actualizar preview.html con la misma cuadrícula, controles, colores e
+   iconos del calendario de PC.
+3. Subir los cambios y revisar la vista publicada en GitHub Pages.
+4. Publicar la tarjeta de la Clase 08 en index.html.
 
 La vista HTML valida la composición del calendario; Python valida su lógica de
 fechas.

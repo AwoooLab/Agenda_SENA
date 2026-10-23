@@ -72,18 +72,17 @@ La cita de ejemplo debe tener título, fecha, hora y descripción.
 - No conectarse a internet.
 - No crear todavía usuarios ni inicio de sesión.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 `storage.py` y `demo.py` comprueban el guardado local, mientras que
 `preview.html` muestra ese flujo de manera visual. Trabajar en este orden:
 
-1. Implementar `storage.py` y comprobar guardar/cargar con `demo.py`.
-2. Confirmar que el resultado conserva los mismos datos.
-3. Actualizar `preview.html` para representar el archivo JSON y sus acciones.
-4. Abrir el preview y comprobar que se distinguen archivo, estado, Guardar y
-   Cargar.
+1. Agregar en GitHub `storage.py`, `demo.py` y los archivos previstos.
+2. Actualizar `preview.html` para representar el archivo JSON y sus acciones.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Comprobar que se distinguen archivo, estado, Guardar y Cargar.
 5. Agregar en `index.html` la tarjeta de la Clase 03 con su preview.
-6. Publicar y revisar el resultado desde GitHub Pages.
+6. Verificar la clase desde la colección principal.
 
 El preview es una representación visual; no guarda datos reales ni sustituye
 la comprobación del archivo JSON temporal.
@@ -94,16 +93,21 @@ la comprobación del archivo JSON temporal.
 - Se distinguen los estados de guardado y carga.
 - La estructura mostrada corresponde a los campos de la agenda.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Ejecutar desde la carpeta de la etapa:
+Agregar o actualizar `storage.py`, `demo.py` y `preview.html` en GitHub. Abrir:
 
 ```text
-python stages/03_json_storage/demo.py
+https://awooolab.github.io/Agenda_SENA/stages/03_json_storage/preview.html
 ```
 
-Debe mostrarse la misma información que se guardó. Después de la ejecución no
-debe quedar una carpeta temporal creada por el ejercicio.
+Confirmar que se identifican `agenda.json`, los datos de ejemplo y los estados
+`Guardar` y `Cargar`. Si cambia la estructura JSON, actualizar también la vista.
+
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar `demo.py` y comprobar que los datos cargados
+son iguales a los guardados. GitHub Pages no ejecuta el almacenamiento real.
 
 ## Integración posterior
 
@@ -142,5 +146,7 @@ resultado y no modifica data/agenda.json. Devuelve solo el código.
 
 ## Criterio de terminado
 
-El alumno puede guardar y cargar los mismos datos, y `preview.html` explica
-visualmente ese resultado dentro de la Clase 03 publicada.
+La etapa se puede publicar cuando los archivos de JSON están en GitHub,
+`preview.html` explica visualmente el flujo y la Clase 03 aparece en la
+colección. Guardar y cargar los datos queda definido en Python y se probará al
+ejecutar el proyecto en un PC.

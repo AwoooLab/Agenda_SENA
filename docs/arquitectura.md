@@ -9,10 +9,11 @@ El producto final es una aplicación de escritorio para PC con Windows. La
 aplicación se ejecuta con Python y Tkinter en el computador del usuario; no es
 una página web ni depende de internet.
 
-Los archivos HTML cumplen una función complementaria: muestran en el navegador
-una representación visual de cada pantalla para revisar el diseño y documentar
-el avance en GitHub Pages. El HTML no ejecuta el código Python ni reemplaza la
-aplicación de escritorio.
+Durante la clase, la evidencia que el estudiante puede observar se publica en
+GitHub Pages. Cada `preview.html` muestra la pantalla o el resultado visual de
+su etapa. GitHub Pages no ejecuta el código Python; el HTML tampoco reemplaza
+la aplicación de escritorio, sino que permite revisar desde el navegador lo que
+se está construyendo.
 
 - `app.py`: inicia la aplicación.
 - `src/`: contiene el modelo, las reglas, el almacenamiento y la interfaz.

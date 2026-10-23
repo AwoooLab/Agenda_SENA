@@ -18,10 +18,11 @@ etapa antes de pasar a la siguiente.
 2. Buscar la sección del archivo que se va a construir.
 3. Leer las lecciones en orden.
 4. Revisar las librerías permitidas y las restricciones.
-5. Implementar la solución en el archivo indicado.
+5. Agregar o actualizar la solución en el archivo indicado dentro de GitHub.
 6. Usar los fragmentos cortos como referencia para completar la lógica.
-7. Ejecutar la comprobación manual indicada.
-8. Corregir los errores antes de continuar con el siguiente archivo.
+7. Actualizar el `preview.html` de la etapa con la representación visual.
+8. Subir los cambios y revisar el resultado publicado en GitHub Pages.
+9. Corregir lo necesario antes de continuar con el siguiente archivo.
 
 ## Cómo trabajar con ChatGPT gratuito
 
@@ -51,6 +52,17 @@ alumno termina una etapa, su solución se integra manualmente en `app.py`,
 
 El archivo de la etapa no se convierte automáticamente en parte de la
 aplicación. Primero se entiende, se escribe, se ejecuta y luego se integra.
+
+## Flujo visible en GitHub Pages
+
+El estudiante agrega en GitHub los archivos de la etapa y actualiza su
+`preview.html` con la representación visual del resultado. Después sube los
+cambios y abre la dirección de GitHub Pages correspondiente a la etapa. Esa
+vista es la comprobación visual del proceso.
+
+El `index.html` de la raíz solo organiza las tarjetas de las clases terminadas;
+no contiene la interfaz de cada etapa. La interfaz visual vive en el
+`preview.html` de su propia carpeta.
 
 ## Regla de aprendizaje
 

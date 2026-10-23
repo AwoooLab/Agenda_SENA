@@ -90,17 +90,17 @@ Usar una base SQLite temporal y comprobar:
 - No colocar consultas SQL dentro de `user_service.py`.
 - No modificar archivos de otras etapas.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 Los modelos, repositorio y servicio resuelven el registro; `preview.html`
 representa la pantalla que utilizará el usuario. El orden de trabajo es:
 
-1. Implementar y probar el registro con las reglas de validación.
-2. Comprobar usuario único, correo válido y mensajes de error.
-3. Actualizar `preview.html` con los campos y estados definidos en la clase.
-4. Abrir el preview y revisar etiquetas, campos, botón y mensajes.
+1. Agregar en GitHub los archivos del registro definidos en esta etapa.
+2. Actualizar `preview.html` con los campos y estados definidos en la clase.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Revisar etiquetas, campos, botón y mensajes.
 5. Agregar en `index.html` la tarjeta de la Clase 05 y su enlace visual.
-6. Publicar y verificar el resultado en GitHub Pages.
+6. Verificar el resultado desde la colección principal.
 
 El preview no registra usuarios reales; permite validar la composición de la
 interfaz antes de integrarla con el servicio Python.
@@ -111,16 +111,23 @@ interfaz antes de integrarla con el servicio Python.
 - El botón de registro es visible y tiene una acción comprensible.
 - Los mensajes de validación tienen un espacio definido sin romper el diseño.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Ejecutar:
+Agregar o actualizar los archivos de usuarios y `preview.html` en GitHub.
+Abrir:
 
 ```text
-python -m unittest stages/05_user_registration/test_user_service.py -v
+https://awooolab.github.io/Agenda_SENA/stages/05_user_registration/preview.html
 ```
 
-Debe observarse que el primer usuario se crea y que los datos repetidos generan
-errores claros.
+Confirmar que se observan los campos de registro, el botón y el espacio para
+mensajes de validación. Todo campo, icono o texto nuevo debe reflejarse en el
+preview.
+
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar las pruebas del servicio y comprobar usuario
+único y errores de validación. GitHub Pages no registra usuarios reales.
 
 ## Integración posterior
 
@@ -149,5 +156,7 @@ archivos anteriores.
 
 ## Criterio de terminado
 
-El alumno puede registrar usuarios únicos mediante un servicio y `preview.html`
-representa correctamente la Clase 05 en la colección principal.
+La etapa se puede publicar cuando los archivos del registro están en GitHub,
+`preview.html` representa correctamente la Clase 05 y su tarjeta aparece en la
+colección. El registro y sus validaciones quedan definidos en Python y se
+probarán al ejecutar el proyecto en un PC.

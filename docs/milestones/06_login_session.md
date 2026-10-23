@@ -104,21 +104,21 @@ Usar una base de datos temporal y comprobar:
 - No crear todavía la ventana principal.
 - No mezclar consultas SQL en la ventana gráfica.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 La autenticación se implementa en `password.py`, `auth_service.py` y
 `login_window.py`; `preview.html` muestra la pantalla de inicio de sesión. El
 flujo de la clase es:
 
-1. Implementar el hash, el servicio de autenticación y la ventana.
-2. Ejecutar las pruebas con credenciales válidas, inválidas e inactivas.
-3. Actualizar `preview.html` cuando cambien campos, botones, mensajes o iconos.
-4. Abrir el preview y comprobar usuario, contraseña, botón y estado de error.
+1. Agregar en GitHub los archivos de autenticación definidos en esta etapa.
+2. Actualizar `preview.html` cuando cambien campos, botones, mensajes o iconos.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Comprobar usuario, contraseña, botón y estado de error.
 5. Agregar en `index.html` la tarjeta de la Clase 06 con el enlace al preview.
-6. Publicar y revisar en GitHub Pages la misma composición visual.
+6. Verificar desde la colección la misma composición visual.
 
 El preview no autentica usuarios ni guarda contraseñas. Es la vista visual de
-la pantalla que sí funciona en la aplicación local.
+la pantalla de PC que se está construyendo.
 
 ### Validación visual específica
 
@@ -127,17 +127,23 @@ la pantalla que sí funciona en la aplicación local.
 - El mensaje de error es visible sin revelar si el usuario existe.
 - Los iconos y botones agregados al login también aparecen en `preview.html`.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Ejecutar:
+Agregar o actualizar los archivos del login y `preview.html` en GitHub. Abrir:
 
 ```text
-python -m unittest stages/06_login_session/test_auth_service.py -v
+https://awooolab.github.io/Agenda_SENA/stages/06_login_session/preview.html
 ```
 
-Después abrir la ventana, escribir un usuario válido, probar una contraseña
-incorrecta y comprobar que la etiqueta de error se muestra sin cerrar el
-programa.
+Confirmar que se observan usuario, contraseña, botón, mensaje de error e
+iconos. Si se agrega un icono al login en el diseño de la aplicación, también
+debe agregarse al `preview.html` para poder verificarlo en Pages.
+
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar las pruebas del servicio y abrir la ventana
+local. GitHub Pages no autentica usuarios, no ejecuta Tkinter y no guarda
+contraseñas.
 
 ## Integración posterior
 
@@ -164,6 +170,7 @@ mensajes definidos en esta especificación.
 
 ## Criterio de terminado
 
-Un usuario activo puede iniciar sesión con una contraseña correcta, se cumplen
-las reglas de seguridad y `preview.html` representa correctamente la pantalla
-de login publicada como Clase 06.
+La etapa se puede publicar cuando los archivos del login están en GitHub,
+`preview.html` muestra usuario, contraseña, mensajes e iconos, y la Clase 06
+aparece en la colección. La autenticación y la seguridad quedan definidas en
+Python y se probarán al ejecutar el proyecto en un PC.

@@ -165,7 +165,7 @@ CASOS NECESARIOS
 - Completar actividad.
 - Eliminar actividad.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Crear una actividad por categoría, editar una, completar otra, filtrar por fecha
 y eliminar una. Comprobar que el calendario pueda recibir los resultados.
@@ -200,18 +200,19 @@ FRAGMENTO DE REFERENCIA
 
     <span class="etiqueta verde">Personal</span>
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir preview.html y comprobar que se observan el formulario, las actividades
 del día, las categorías y la leyenda de colores.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Completar modelos, servicio, formulario, leyenda y pruebas.
-2. Probar creación, edición, finalización, filtro y eliminación.
-3. Actualizar preview.html con los mismos campos, categorías, colores, botones
-   e iconos de la interfaz local.
-4. Comparar la vista y publicar la tarjeta de la Clase 09 en index.html.
+1. Agregar o actualizar modelos, servicio, formulario, leyenda y pruebas en
+   GitHub.
+2. Actualizar preview.html con los mismos campos, categorías, colores, botones
+   e iconos de la interfaz de PC.
+3. Subir los cambios y comparar la vista publicada en GitHub Pages.
+4. Publicar la tarjeta de la Clase 09 en index.html.
 
 El preview no modifica actividades reales; permite revisar visualmente las
 reglas que implementa el servicio.

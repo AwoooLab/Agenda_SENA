@@ -196,7 +196,7 @@ CASOS OBLIGATORIOS
 - Usuario actual vacío después de cerrar sesión.
 - La contraseña original no aparece en la base.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Ejecutar:
 
@@ -233,20 +233,19 @@ Para mostrar un error visual se puede usar:
 
     <p class="estado-error">El usuario o la contraseña no son correctos.</p>
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir preview.html y confirmar que el formulario muestra usuario, contraseña,
 botón y mensaje de error sin exponer la contraseña.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Completar password.py, auth_service.py, login_window.py y sus pruebas.
-2. Probar credenciales válidas, inválidas, usuarios inactivos y cierre de
-   sesión.
-3. Actualizar preview.html con los mismos campos, mensajes, botones e iconos
-   del login local.
-4. Revisar el resultado en el navegador y publicar la tarjeta de la Clase 06
-   en index.html.
+1. Agregar o actualizar password.py, auth_service.py, login_window.py y sus
+   pruebas en GitHub.
+2. Actualizar preview.html con los mismos campos, mensajes, botones e iconos
+   del login de PC.
+3. Subir los cambios y revisar el resultado publicado en GitHub Pages.
+4. Publicar la tarjeta de la Clase 06 en index.html.
 
 Cada cambio visual del login debe reflejarse en preview.html. La vista HTML no
-autentica ni conserva contraseñas.
+autentica ni conserva contraseñas; solo muestra la pantalla para revisión.

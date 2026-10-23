@@ -79,18 +79,18 @@ Comprobar sin abrir ventanas:
 - No usar colores como única forma de comunicar información.
 - No cambiar todavía la estructura de la base de datos.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 `calendar_cell.py` y `monthly_calendar.py` resuelven el calendario local;
 `preview.html` muestra su resultado visual. El flujo es:
 
-1. Implementar el cálculo de días y la navegación del mes.
-2. Ejecutar las pruebas y comprobar selección, mes actual y cambio de mes.
-3. Actualizar `preview.html` si cambian encabezados, controles, colores o
+1. Agregar en GitHub los archivos del calendario definidos en esta etapa.
+2. Actualizar `preview.html` si cambian encabezados, controles, colores o
    actividades visibles.
-4. Abrir el preview y verificar la cuadrícula completa del mes.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Verificar la cuadrícula completa del mes.
 5. Agregar en `index.html` la tarjeta de la Clase 08 con su preview.
-6. Publicar y revisar la clase en GitHub Pages.
+6. Revisar la clase desde la colección principal.
 
 El preview no calcula fechas reales; permite comprobar la composición visual del
 calendario antes de integrarlo con la aplicación.
@@ -102,17 +102,22 @@ calendario antes de integrarlo con la aplicación.
 - El día seleccionado se distingue con color y texto.
 - Las actividades no desbordan la celda.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Abrir una ventana de demostración desde `monthly_calendar.py` o desde el archivo
-que indique la implementación. Comprobar que los botones cambian de mes, que
-`Hoy` regresa al mes actual y que las celdas responden al clic.
-
-Ejecutar las pruebas:
+Agregar o actualizar los archivos del calendario y `preview.html` en GitHub.
+Abrir:
 
 ```text
-python -m unittest stages/08_monthly_calendar/test_calendar.py -v
+https://awooolab.github.io/Agenda_SENA/stages/08_monthly_calendar/preview.html
 ```
+
+Confirmar que se observan el mes, los controles, las siete columnas, el día
+resaltado y la actividad visible.
+
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar las pruebas y comprobar navegación y
+selección. GitHub Pages no calcula fechas ni ejecuta Tkinter.
 
 ## Integración posterior
 
@@ -140,5 +145,7 @@ Solicitar después las funciones de fechas, `monthly_calendar.py` y
 
 ## Criterio de terminado
 
-El calendario muestra cualquier mes correctamente, permite cambiar de mes y
-seleccionar una fecha; `preview.html` representa la Clase 08 publicada.
+La etapa se puede publicar cuando los archivos del calendario están en GitHub,
+`preview.html` muestra la cuadrícula y la Clase 08 aparece en la colección. El
+cálculo, la navegación y la selección quedan definidos en Python y se probarán
+al ejecutar el proyecto en un PC.

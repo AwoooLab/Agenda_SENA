@@ -80,18 +80,19 @@ Documentar en español:
 - No guardar contraseñas en texto plano.
 - Mantener los archivos temporales fuera del código fuente.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 Esta etapa reúne pruebas, seguridad y entrega; `preview.html` presenta el
 estado final que se mostrará en la colección de clases. El flujo es:
 
-1. Ejecutar las pruebas y corregir cualquier fallo.
-2. Revisar seguridad, archivos generados y compilación del ejecutable.
-3. Actualizar `preview.html` con el nombre del ejecutable, resultados, iconos y
+1. Agregar en GitHub las pruebas, el script, `release.md` y los archivos de la
+   entrega.
+2. Actualizar `preview.html` con el nombre del ejecutable, resultados, iconos y
    estados finales.
-4. Abrir el preview y comprobar que la información de entrega es legible.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Comprobar que la información de entrega es legible.
 5. Agregar en `index.html` la tarjeta de la Clase 10 con su preview.
-6. Publicar y verificar la entrega final en GitHub Pages.
+6. Verificar la entrega final desde la colección principal.
 
 El preview no compila ni descarga el ejecutable. Solo comunica visualmente el
 resultado de la validación local y la entrega preparada.
@@ -103,23 +104,23 @@ resultado de la validación local y la entrega preparada.
 - Los estados de entrega son claros y no muestran credenciales ni datos
   privados.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Desde la raíz del proyecto, ejecutar:
+Agregar o actualizar las pruebas, el script, `release.md` y `preview.html` en
+GitHub. Abrir:
 
 ```text
-python -m unittest discover -s tests -v
+https://awooolab.github.io/Agenda_SENA/stages/10_tests_security_executable/preview.html
 ```
 
-Después ejecutar el script de PowerShell. Copiar el `.exe` a un computador o
-cuenta de usuario limpia de Windows y comprobar que:
+Confirmar que se observan el nombre del ejecutable, el estado de las pruebas,
+la seguridad y la entrega para Windows.
 
-1. La aplicación abre.
-2. Se puede registrar o utilizar un usuario de prueba.
-3. Se puede iniciar sesión.
-4. Se puede abrir el calendario.
-5. Se puede crear una actividad.
-6. Se puede cerrar la aplicación sin errores.
+### Prueba funcional opcional en el PC
+
+Si se dispone de Windows y Python, ejecutar las pruebas, generar el `.exe` y
+probar la aplicación. GitHub Pages no compila, ejecuta ni descarga el
+ejecutable; solo muestra la información visual de la entrega.
 
 ## Integración posterior
 
@@ -141,6 +142,7 @@ Solicitar las pruebas y el script de compilación por separado.
 
 ## Criterio de terminado
 
-Las pruebas funcionan, el ejecutable se crea en `dist/`, la aplicación abre en
-Windows y `preview.html` representa la Clase 10 publicada sin mostrar datos
-privados.
+La etapa se puede publicar cuando las pruebas, el script, la guía,
+`preview.html` y la tarjeta de la Clase 10 están en GitHub sin mostrar datos
+privados. La generación y ejecución del `.exe` se comprobarán posteriormente en
+un PC con Windows.

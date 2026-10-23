@@ -135,7 +135,7 @@ RESTRICCIONES
 - No usar SQLite.
 - No dejar carpetas temporales.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Ejecutar:
 
@@ -171,17 +171,17 @@ FRAGMENTO DE REFERENCIA
       "fecha": "2026-10-23"
     }</code></pre>
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir preview.html y comprobar que el contenido representa la misma estructura
 que demo.py guarda y carga.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Completar storage.py y demo.py.
-2. Verificar que los datos guardados y cargados son iguales.
-3. Actualizar preview.html para mostrar la estructura JSON y los estados
+1. Agregar o actualizar storage.py y demo.py en GitHub.
+2. Actualizar preview.html para mostrar la estructura JSON y los estados
    Guardar y Cargar.
-4. Revisar la vista local y publicar la tarjeta de la Clase 03 en index.html.
+3. Subir los cambios y revisar la vista publicada en GitHub Pages.
+4. Publicar la tarjeta de la Clase 03 en index.html.
 
 El preview muestra el flujo de forma visual, pero no guarda información real.

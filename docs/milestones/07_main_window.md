@@ -71,20 +71,21 @@ No debe depender todavía de SQLite ni de la pantalla de inicio de sesión.
 - No guardar datos de actividades.
 - No crear conexiones directas a SQLite desde la interfaz.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 `navigation.py`, `main_window.py` y `app.py` construyen la ventana principal;
 `preview.html` permite revisar su composición desde GitHub Pages. Trabajar así:
 
-1. Implementar la ventana, la barra superior y la navegación.
-2. Ejecutar la aplicación y probar cada sección temporal.
-3. Actualizar `preview.html` con la misma distribución, textos e iconos.
-4. Abrir el preview y comprobar barra superior, menú y área de trabajo.
+1. Agregar en GitHub los archivos de la ventana principal definidos en esta
+   etapa.
+2. Actualizar `preview.html` con la distribución, textos e iconos.
+3. Subir los cambios y abrir el preview publicado en GitHub Pages.
+4. Comprobar barra superior, menú y área de trabajo.
 5. Agregar en `index.html` la tarjeta de la Clase 07 con su preview.
-6. Publicar y verificar la clase en GitHub Pages.
+6. Verificar la clase desde la colección principal.
 
-El preview no reemplaza la navegación de Tkinter; muestra el resultado visual
-que debe conservarse durante la integración.
+El preview no ejecuta la navegación de Tkinter; muestra el resultado visual que
+debe conservarse durante la integración.
 
 ### Validación visual específica
 
@@ -92,21 +93,23 @@ que debe conservarse durante la integración.
 - El menú muestra Calendario, Actividades y Cerrar sesión.
 - El área de trabajo está separada visualmente de la navegación.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Ejecutar:
+Agregar o actualizar `navigation.py`, `main_window.py`, `app.py` y
+`preview.html` en GitHub. Abrir:
 
 ```text
-python stages/07_main_window/app.py
+https://awooolab.github.io/Agenda_SENA/stages/07_main_window/preview.html
 ```
 
-Comprobar que:
+Confirmar que se observan la barra superior, `Agenda SENA`, el usuario, el
+menú, las opciones de navegación y el área de trabajo.
 
-1. Aparece la ventana de 900x600.
-2. Se muestra `Agenda SENA`.
-3. Se muestra el usuario `Estudiante`.
-4. Los botones de navegación cambian el contenido central.
-5. `Cerrar sesión` ejecuta la función de salida.
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python, ejecutar la aplicación local para comprobar los
+cambios de sección y el cierre de sesión. Pages solo muestra la composición
+visual de la ventana principal.
 
 ## Integración posterior
 
@@ -134,5 +137,7 @@ Solicitar después `main_window.py` y `app.py` por separado.
 
 ## Criterio de terminado
 
-El usuario puede abrir la ventana principal, cambiar de sección y cerrar sesión;
-además, `preview.html` representa la Clase 07 publicada.
+La etapa se puede publicar cuando los archivos de la ventana principal están
+en GitHub, `preview.html` muestra la distribución completa y la Clase 07
+aparece en la colección. La navegación funcional queda definida en Python y se
+probará al ejecutar el proyecto en un PC.

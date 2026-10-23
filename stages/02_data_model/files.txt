@@ -125,7 +125,7 @@ RESTRICCIONES
 - No agregar todavía usuarios, categorías o colores.
 - No importar archivos de src/.
 
-COMPROBACIÓN MANUAL
+PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Ejecutar:
 
@@ -163,17 +163,18 @@ FRAGMENTO DE REFERENCIA
       <span class="etiqueta">Pendiente</span>
     </article>
 
-COMPROBACIÓN
+VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
 Abrir preview.html y comprobar que aparecen título, fecha, hora y descripción
 sin depender del archivo Python.
 
 FLUJO DE LA LECCIÓN
 -------------------
-1. Completar el modelo Cita y ejecutar su ejemplo.
+1. Agregar o actualizar model.py en GitHub.
 2. Actualizar preview.html si cambian los campos o la forma de presentar la
    cita.
-3. Comparar en el navegador los datos del modelo con la tarjeta visual.
+3. Subir los cambios y comparar en GitHub Pages los datos del modelo con la
+   tarjeta visual.
 4. Publicar la tarjeta de la Clase 02 en index.html cuando el resultado sea
    coherente.
 

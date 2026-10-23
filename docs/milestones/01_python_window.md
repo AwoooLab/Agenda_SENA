@@ -68,24 +68,23 @@ GitHub Pages. No se debe construir la aplicación de PC dentro del HTML.
 - No usar SQLite, JSON ni internet.
 - No crear todavía inicio de sesión ni calendario.
 
-## Flujo de la clase y validación visual
+## Flujo de la clase y validación en GitHub Pages
 
 Esta etapa produce dos resultados coordinados: `app.py` contiene la ventana
 funcional en Python y `preview.html` representa esa misma ventana para
 GitHub Pages. El trabajo se realiza en este orden:
 
 1. Revisar los requisitos de esta especificación.
-2. Construir y ejecutar `app.py` hasta que la ventana funcione.
-3. Actualizar `preview.html` para reflejar cualquier cambio visual realizado.
-4. Abrir `preview.html` localmente y comparar título, subtítulo, tamaño y
-   botón con la ventana de Python.
-5. Agregar en `index.html` la tarjeta de la Clase 01, apuntando al
-   `preview.html`; el HTML principal solo organiza la colección.
-6. Subir los cambios y verificar la misma tarjeta en GitHub Pages.
+2. Agregar en GitHub los archivos de la etapa, incluido `app.py`.
+3. Actualizar `preview.html` para representar la pantalla de PC y cualquier
+   cambio visual realizado.
+4. Subir los cambios y abrir el `preview.html` publicado en GitHub Pages.
+5. Agregar en `index.html` la tarjeta de la Clase 01, apuntando al preview; el
+   HTML principal solo organiza la colección.
+6. Verificar desde la colección que la tarjeta y su resultado se abren bien.
 
-El preview no ejecuta Python ni reemplaza la prueba local. La etapa no está
-terminada hasta que el comportamiento de `app.py` y la representación visual
-coinciden.
+El preview no ejecuta Python. La etapa no está terminada hasta que la
+representación visual publicada cumple los requisitos de la especificación.
 
 ### Validación visual específica
 
@@ -93,16 +92,26 @@ coinciden.
 - El botón `Cerrar` es visible y está ubicado dentro de la ventana.
 - El tamaño y la distribución general corresponden a `520x320`.
 
-## Comprobación manual
+## Comprobación visual en GitHub Pages
 
-Desde la raíz del proyecto, ejecutar:
+La comprobación que el estudiante puede observar durante la clase se hace en
+GitHub Pages:
 
-```text
-python stages/01_python_window/app.py
-```
+1. Agregar o actualizar `app.py` y `preview.html` en GitHub.
+2. Abrir:
+   `https://awooolab.github.io/Agenda_SENA/stages/01_python_window/preview.html`
+3. Confirmar que se ven `Agenda SENA`, el subtítulo y el botón `Cerrar`.
+4. Si se agregó un icono o se cambió un texto en el diseño, comprobar que el
+   mismo cambio aparece en `preview.html`.
 
-La comprobación se considera correcta si aparece la ventana, se observa el
-título indicado y el botón `Cerrar` termina el programa.
+GitHub Pages no ejecuta `app.py`. La página solo permite revisar la
+representación visual de la ventana de PC.
+
+### Prueba funcional opcional en el PC
+
+Si se dispone de Python instalado, se puede ejecutar `app.py` localmente para
+comprobar el comportamiento del botón. Esta prueba no se realiza en GitHub
+Pages ni reemplaza la revisión visual del preview.
 
 ## Integración posterior
 
@@ -130,6 +139,7 @@ Devuelve únicamente el código de ese archivo.
 
 ## Criterio de terminado
 
-El hito está terminado cuando `app.py` abre correctamente, el botón `Cerrar`
-funciona, `preview.html` coincide visualmente y la Clase 01 está publicada en
-la colección principal.
+La etapa se puede publicar cuando `app.py` y `preview.html` están en GitHub,
+`preview.html` cumple la validación visual y la Clase 01 aparece en la
+colección principal. El comportamiento del botón pertenece al código Python y
+se comprobará cuando la aplicación se ejecute en un PC.
