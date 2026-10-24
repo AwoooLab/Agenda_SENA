@@ -43,17 +43,28 @@
   </g>
 
   <!-- Conexiones entre los tres momentos y la ventana principal -->
-  <path d="M390 486 C440 486 458 486 500 486" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
-  <path d="M1420 486 C1475 486 1492 486 1530 486" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
-  <path d="M960 850 C960 884 960 895 960 920" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
-  <g fill="#7DD3FC">
+  <path d="M390 486 C440 486 458 486 500 486" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0"/>
+  <path d="M1420 486 C1475 486 1492 486 1530 486" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0"/>
+  <path d="M960 850 C960 884 960 895 960 920" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0"/>
+  <g fill="#7DD3FC" opacity="0">
     <path d="M500 486 l-15 -10 v20 z"/>
     <path d="M1530 486 l-15 -10 v20 z"/>
     <path d="M960 920 l-10 -15 h20 z"/>
   </g>
 
+  <!-- Retícula del recorrido: los tres momentos tienen el mismo peso visual. -->
+  <path d="M1015 850 C1015 865 1015 878 1015 895" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <path d="M600 955 C650 955 670 955 710 955" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <path d="M1210 955 C1250 955 1270 955 1320 955" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <g fill="#7DD3FC">
+    <path d="M1015 895 l-10 -15 h20 z"/>
+    <path d="M710 955 l-15 -10 v20 z"/>
+    <path d="M1320 955 l-15 -10 v20 z"/>
+  </g>
+  <text x="960" y="875" text-anchor="middle" class="sans sky bold" font-size="17" letter-spacing="3">TRES MOMENTOS DE USO</text>
+
   <!-- Momento 01: acceso -->
-  <g transform="translate(90 370)" filter="url(#softShadow)">
+  <g transform="translate(90 370)" filter="url(#softShadow)" display="none">
     <rect width="310" height="235" rx="28" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
     <circle cx="55" cy="54" r="25" fill="#DCEBFF"/>
     <text x="55" y="62" text-anchor="middle" class="sans navy bold" font-size="21">01</text>
@@ -65,7 +76,7 @@
   </g>
 
   <!-- Momento 03: cierre -->
-  <g transform="translate(1530 370)" filter="url(#softShadow)">
+  <g transform="translate(1530 370)" filter="url(#softShadow)" display="none">
     <rect width="310" height="235" rx="28" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
     <circle cx="55" cy="54" r="25" fill="#FDE4E4"/>
     <text x="55" y="62" text-anchor="middle" class="sans navy bold" font-size="21">03</text>
@@ -154,7 +165,7 @@
   </g>
 
   <!-- Momento 02: trabajo diario -->
-  <g transform="translate(515 910)" filter="url(#softShadow)">
+  <g transform="translate(515 910)" filter="url(#softShadow)" display="none">
     <rect width="890" height="92" rx="24" fill="#FFFFFF" fill-opacity="0.95" stroke="#A5D8FF" stroke-width="2"/>
     <circle cx="55" cy="46" r="25" fill="#DCEBFF"/>
     <text x="55" y="54" text-anchor="middle" class="sans navy bold" font-size="21">02</text>
@@ -162,5 +173,33 @@
     <text x="100" y="69" class="sans muted" font-size="18">Ver agenda · navegar por el menú · gestionar citas y actividades</text>
   </g>
 
-  <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">05</text>
+  <!-- Tarjetas alineadas en una sola fila. -->
+  <g transform="translate(100 895)" filter="url(#softShadow)">
+    <rect width="500" height="120" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="48" cy="60" r="25" fill="#DCEBFF"/>
+    <text x="48" y="68" text-anchor="middle" class="sans navy bold" font-size="20">01</text>
+    <image href="../../../assets/icons/lock.svg" x="88" y="44" width="30" height="30"/>
+    <text x="132" y="56" class="sans navy bold" font-size="28">Acceso</text>
+    <text x="132" y="86" class="sans muted" font-size="18">Abrir la aplicaci&#243;n &#183; iniciar sesi&#243;n</text>
+  </g>
+
+  <g transform="translate(710 895)" filter="url(#softShadow)">
+    <rect width="500" height="120" rx="24" fill="#EAF2FF" stroke="#7DD3FC" stroke-width="2"/>
+    <circle cx="48" cy="60" r="25" fill="#C9DDFF"/>
+    <text x="48" y="68" text-anchor="middle" class="sans navy bold" font-size="20">02</text>
+    <image href="../../../assets/icons/dashboard.svg" x="88" y="44" width="30" height="30"/>
+    <text x="132" y="56" class="sans navy bold" font-size="28">Trabajo diario</text>
+    <text x="132" y="86" class="sans muted" font-size="18">Ver agenda &#183; navegar &#183; gestionar citas</text>
+  </g>
+
+  <g transform="translate(1320 895)" filter="url(#softShadow)">
+    <rect width="500" height="120" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="48" cy="60" r="25" fill="#FDE4E4"/>
+    <text x="48" y="68" text-anchor="middle" class="sans navy bold" font-size="20">03</text>
+    <image href="../../../assets/icons/logout.svg" x="88" y="44" width="30" height="30"/>
+    <text x="132" y="56" class="sans navy bold" font-size="28">Cierre</text>
+    <text x="132" y="86" class="sans muted" font-size="18">Cerrar sesi&#243;n &#183; regresar al acceso</text>
+  </g>
+
+  <text x="1810" y="1050" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">05</text>
 </svg>

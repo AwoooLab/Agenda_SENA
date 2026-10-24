@@ -331,10 +331,10 @@ Regresar al acceso.
 
 - Colocar el título y una frase breve en la parte superior.
 - Usar una ventana grande de Agenda SENA como elemento visual central.
-- Ubicar `Acceso` a la izquierda de la ventana.
-- Ubicar `Cierre` a la derecha de la ventana.
-- Ubicar `Trabajo diario` debajo de la ventana.
-- Conectar los tres momentos con flechas amplias y discretas.
+- Mantener la ventana central arriba y como el elemento dominante.
+- Alinear debajo de ella tres tarjetas del mismo tamaño y sobre una sola fila: `Acceso`, `Trabajo diario` y `Cierre`.
+- Usar una separación horizontal constante entre las tarjetas para que el recorrido se lea de izquierda a derecha.
+- Conectar la ventana con la fila mediante una flecha vertical y conectar las tarjetas con flechas horizontales.
 - Mantener la ventana central como el elemento dominante de la composición.
 
 ## Imagen o representación visual
@@ -343,10 +343,11 @@ Crear una composición centrada en una sola ventana de Agenda SENA. La ventana
 debe mostrar el menú lateral, un resumen de citas, el calendario mensual y una
 lista de actividades.
 
-Al lado izquierdo, mostrar el momento `Acceso` con los pasos `Abrir aplicación`
-y `Iniciar sesión`. Al lado derecho, mostrar el momento `Cierre` con `Cerrar
-sesión` y `Regresar al acceso`. Debajo de la ventana, mostrar `Trabajo diario`
-con `Ver agenda`, `navegar por el menú` y `gestionar citas y actividades`.
+Debajo de la ventana, mostrar tres tarjetas iguales. La primera es `Acceso`,
+con `Abrir la aplicación · iniciar sesión`; la segunda es `Trabajo diario`,
+con `Ver agenda · navegar · gestionar citas`; la tercera es `Cierre`, con
+`Cerrar sesión · regresar al acceso`. Las tres tarjetas deben compartir ancho,
+alto, radio de esquina, icono, jerarquía tipográfica y separación interna.
 
 La imagen debe comunicar que el usuario trabaja dentro de una misma ventana y
 que la navegación cambia el contenido de la agenda, no el programa completo.
