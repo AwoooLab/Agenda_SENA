@@ -54,15 +54,16 @@ modificar main.py, src/, web/ ni config/ mientras desarrolla el stage.
 La página principal es el único visor y actualmente muestra solo dos ventanas
 SVG, una a la vez:
 
-1. `assets/login-window.svg`, con el botón `Siguiente`.
-2. `assets/agenda-window.svg`, con los espacios preparados de la aplicación.
+1. `assets/login-window.svg`, con el formulario final de acceso.
+2. `assets/agenda-window.svg`, con la interfaz final de la aplicación.
 
 `web/screen.js` realiza el cambio entre ambas ventanas. No se muestran tarjetas,
 menús de stages, indicadores de avance ni otras secciones externas.
 
 Cuando otro stage esté listo, su componente se incorpora en el espacio
 correspondiente de la ventana de agenda. La carpeta del stage y su preview no
-se muestran automáticamente en Pages.
+se muestran automáticamente en Pages; la interfaz publicada representa el
+resultado final integrado.
 
 ## Navegación de la aplicación integrada
 

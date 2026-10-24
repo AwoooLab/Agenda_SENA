@@ -14,13 +14,13 @@
     const svg = screen.querySelector("svg");
     if (!svg) throw new Error("El asset no contiene una imagen SVG válida.");
 
-    const next = screen.querySelector('[data-action="next"]');
-    if (next) {
+    const openAgenda = screen.querySelector('[data-action="open-agenda"]');
+    if (openAgenda) {
       const goToAgenda = () => {
         window.location.hash = "agenda";
       };
-      next.addEventListener("click", goToAgenda);
-      next.addEventListener("keydown", (event) => {
+      openAgenda.addEventListener("click", goToAgenda);
+      openAgenda.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           goToAgenda();

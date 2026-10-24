@@ -30,9 +30,10 @@ Stage 01 aprobado  -> ventana inicial
 Stage 02 aprobado  -> se agrega una función
 Stage 03 aprobado  -> se agrega otra función
 
-La acumulación ocurre en main.py, src/ y en la salida publicada. No se cargan
-automáticamente todos los previews existentes. La página solo muestra los
-módulos registrados en config/integration.json.
+La acumulación ocurre en main.py, src/ y en la salida publicada. Los previews
+de los stages no se cargan automáticamente en Pages; el visor publica las dos
+ventanas finales de `assets/`. `config/integration.json` se conserva como
+registro interno para la integración futura.
 
 ## Regla para el estudiante
 
@@ -44,10 +45,11 @@ No necesita modificar main.py, src/, web/ ni config/. Esa integración se
 realiza después de revisar que el módulo cumple su especificación.
 
 GitHub Pages no ejecuta Python. El visor muestra únicamente dos ventanas
-visuales: la pantalla inicial con `Siguiente` y la ventana principal de Agenda
-con espacios preparados para los componentes.
+visuales: la pantalla final de inicio de sesión y la ventana principal de
+Agenda con datos de ejemplo.
 
-El archivo `web/screen.js` cambia de una ventana a la otra. No muestra menús,
-tarjetas de stages, indicadores de avance ni elementos adicionales.
+El archivo `web/screen.js` cambia de una ventana a la otra cuando se pulsa
+`Ingresar`. No muestra menús de stages, indicadores de avance ni elementos
+adicionales fuera de la aplicación.
 
 La metodología completa está en docs/stage_contract.md.

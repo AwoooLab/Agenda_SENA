@@ -30,9 +30,8 @@ después de la integración. Esto significa que el login puede probarse solo,
 pero luego puede conectarse como una vista dentro de la ventana principal.
 
 El preview.html del stage sirve para validar ese módulo. La página principal
-muestra solamente las dos ventanas de `assets/`: la entrada con `Siguiente` y
-la agenda con espacios marcados. La carpeta de un stage futuro no se muestra
-automáticamente.
+muestra solamente las dos ventanas finales de `assets/`: inicio de sesión y
+agenda. La carpeta de un stage futuro no se muestra automáticamente.
 
 ## Contrato del módulo
 

@@ -22,11 +22,11 @@ ventana principal de la agenda.
 
 GitHub Pages muestra únicamente dos ventanas, una a la vez:
 
-1. Inicio de sesión o entrada inicial con el botón `Siguiente`.
-2. Ventana principal de Agenda SENA con espacios marcados para sus componentes.
+1. Inicio de sesión con usuario, contraseña y botón `Ingresar`.
+2. Ventana principal terminada de Agenda SENA con datos de ejemplo.
 
-La segunda ventana está vacía de datos intencionalmente. Cada stage posterior
-ocupará uno de esos espacios sin crear otra pantalla externa.
+Los datos mostrados son demostrativos. Cada stage posterior reemplazará o
+ampliará la función correspondiente sin crear otra ventana externa.
 
 ## Secuencia de construcción
 

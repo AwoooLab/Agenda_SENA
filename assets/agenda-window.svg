@@ -1,94 +1,154 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
-  <title id="title">Ventana principal vacía de Agenda SENA</title>
-  <desc id="desc">Ventana principal con espacios marcados para incorporar calendario, citas, usuarios y actividades.</desc>
+  <title id="title">Ventana principal terminada de Agenda SENA</title>
+  <desc id="desc">Diseño final de una agenda de escritorio con menú, resumen, calendario, citas, actividades y categorías.</desc>
   <defs>
+    <linearGradient id="barra" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#101a3a"/>
+      <stop offset="1" stop-color="#1d3f91"/>
+    </linearGradient>
     <filter id="sombra" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#172554" flood-opacity="0.16"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+    <filter id="tarjeta" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="9" flood-color="#172554" flood-opacity="0.07"/>
     </filter>
     <style>
       .sans { font-family: Arial, Helvetica, sans-serif; }
-      .azul { fill: #172554; }
+      .navy { fill: #101a3a; }
+      .blue { fill: #2563eb; }
       .muted { fill: #64748b; }
       .white { fill: #ffffff; }
       .bold { font-weight: 700; }
-      .small { font-size: 14px; }
-      .line { stroke: #e2e8f0; stroke-width: 2; }
-      .espacio { fill: #f8fbff; stroke: #60a5fa; stroke-width: 2; stroke-dasharray: 8 7; }
-      .etiqueta-espacio { fill: #2563eb; font-weight: 700; font-size: 16px; }
+      .line { stroke: #e2e8f0; stroke-width: 1.5; }
+      .grid { stroke: #e8edf5; stroke-width: 1; }
     </style>
   </defs>
 
   <rect width="1600" height="1000" fill="#eef2f7"/>
-  <rect x="48" y="38" width="1504" height="924" rx="18" fill="#ffffff" filter="url(#sombra)"/>
+  <rect x="36" y="26" width="1528" height="948" rx="24" fill="#ffffff" filter="url(#sombra)"/>
 
-  <rect x="48" y="38" width="1504" height="76" rx="18" fill="#172554"/>
-  <rect x="48" y="82" width="1504" height="32" fill="#172554"/>
-  <circle cx="82" cy="76" r="8" fill="#ef4444"/>
-  <circle cx="108" cy="76" r="8" fill="#f59e0b"/>
-  <circle cx="134" cy="76" r="8" fill="#22c55e"/>
-  <text x="170" y="84" class="sans white bold" font-size="25">Agenda SENA</text>
-  <text x="1450" y="84" text-anchor="end" class="sans" fill="#dbeafe" font-size="19">Mi agenda local para PC</text>
+  <rect x="36" y="26" width="1528" height="72" rx="24" fill="url(#barra)"/>
+  <rect x="36" y="74" width="1528" height="24" fill="url(#barra)"/>
+  <circle cx="70" cy="62" r="7" fill="#fb5b5b"/>
+  <circle cx="94" cy="62" r="7" fill="#f8b84e"/>
+  <circle cx="118" cy="62" r="7" fill="#39c875"/>
+  <text x="150" y="70" class="sans white bold" font-size="24">Agenda SENA</text>
+  <rect x="400" y="44" width="455" height="38" rx="9" fill="#ffffff" opacity="0.13"/>
+  <circle cx="425" cy="63" r="8" fill="none" stroke="#c9d7f5" stroke-width="2"/>
+  <path d="M431 69l7 7" stroke="#c9d7f5" stroke-width="2" stroke-linecap="round"/>
+  <text x="449" y="70" class="sans" fill="#c9d7f5" font-size="15">Buscar citas, actividades o usuarios</text>
+  <circle cx="1348" cy="62" r="18" fill="#ffffff" opacity="0.13"/>
+  <path d="M1340 66h16M1343 61h10M1345 56h6" stroke="#dbeafe" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="1398" cy="62" r="18" fill="#ffffff" opacity="0.13"/>
+  <path d="M1398 53c-5 0-8 4-8 9v5l-4 4h24l-4-4v-5c0-5-3-9-8-9z" fill="none" stroke="#dbeafe" stroke-width="2"/>
+  <circle cx="1407" cy="52" r="5" fill="#f97316"/>
+  <circle cx="1460" cy="62" r="20" fill="#7dd3fc"/>
+  <text x="1460" y="68" text-anchor="middle" class="sans navy bold" font-size="15">AS</text>
+  <text x="1490" y="58" class="sans white bold" font-size="14">Alejandro</text>
+  <text x="1490" y="76" class="sans" fill="#b9c9ec" font-size="12">Administrador</text>
 
-  <rect x="48" y="114" width="260" height="848" fill="#eff6ff"/>
-  <line x1="308" y1="114" x2="308" y2="962" class="line"/>
-  <text x="84" y="170" class="sans azul bold" font-size="22">Menú</text>
+  <rect x="36" y="98" width="250" height="876" fill="#111d4a"/>
+  <text x="72" y="153" class="sans" fill="#a9bce3" font-size="13">MENÚ PRINCIPAL</text>
+  <rect x="58" y="177" width="206" height="48" rx="10" fill="#2563eb"/>
+  <circle cx="84" cy="201" r="10" fill="#ffffff" opacity="0.92"/><path d="M78 202l5 5 8-9" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="108" y="207" class="sans white bold" font-size="16">Inicio</text>
+  <circle cx="84" cy="257" r="10" fill="none" stroke="#8fa7d6" stroke-width="2"/><path d="M84 251v12M78 257h12" stroke="#8fa7d6" stroke-width="2"/>
+  <text x="108" y="263" class="sans" fill="#d5e1f7" font-size="16">Nueva cita</text>
+  <rect x="76" y="285" width="16" height="16" rx="3" fill="none" stroke="#8fa7d6" stroke-width="2"/><path d="M80 285v-4c0-6 8-6 8 0v4" fill="none" stroke="#8fa7d6" stroke-width="2"/>
+  <text x="108" y="300" class="sans" fill="#d5e1f7" font-size="16">Citas</text>
+  <circle cx="84" cy="350" r="10" fill="none" stroke="#8fa7d6" stroke-width="2"/><circle cx="84" cy="347" r="3" fill="none" stroke="#8fa7d6" stroke-width="2"/><path d="M77 357c2-5 12-5 14 0" fill="none" stroke="#8fa7d6" stroke-width="2"/>
+  <text x="108" y="356" class="sans" fill="#d5e1f7" font-size="16">Usuarios</text>
+  <rect x="75" y="386" width="19" height="17" rx="3" fill="none" stroke="#8fa7d6" stroke-width="2"/><path d="M75 393h19M81 383v6M88 383v6" stroke="#8fa7d6" stroke-width="2"/>
+  <text x="108" y="401" class="sans" fill="#d5e1f7" font-size="16">Calendario</text>
+  <circle cx="84" cy="451" r="10" fill="none" stroke="#8fa7d6" stroke-width="2"/><path d="M84 445v7l5 3" fill="none" stroke="#8fa7d6" stroke-width="2" stroke-linecap="round"/>
+  <text x="108" y="457" class="sans" fill="#d5e1f7" font-size="16">Actividades</text>
+  <line x1="72" y1="505" x2="250" y2="505" stroke="#34477b" stroke-width="1.5"/>
+  <text x="72" y="544" class="sans" fill="#a9bce3" font-size="13">CUENTA</text>
+  <circle cx="87" cy="585" r="21" fill="#7dd3fc"/><text x="87" y="591" text-anchor="middle" class="sans navy bold" font-size="15">AS</text>
+  <text x="120" y="581" class="sans white bold" font-size="15">Alejandro S.</text>
+  <text x="120" y="601" class="sans" fill="#a9bce3" font-size="12">Sesión activa</text>
+  <rect x="58" y="888" width="206" height="44" rx="9" fill="#ffffff" opacity="0.08"/>
+  <path d="M84 902v15M78 911l6 6 6-6" stroke="#b9c9ec" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="108" y="916" class="sans" fill="#d5e1f7" font-size="15">Cerrar sesión</text>
 
-  <rect x="76" y="198" width="204" height="52" rx="9" fill="#dbeafe"/>
-  <text x="98" y="232" class="sans azul bold" font-size="20">Inicio</text>
-  <text x="98" y="288" class="sans azul" font-size="20">Nueva cita</text>
-  <text x="98" y="344" class="sans azul" font-size="20">Citas</text>
-  <text x="98" y="400" class="sans azul" font-size="20">Usuarios</text>
-  <text x="98" y="456" class="sans azul" font-size="20">Calendario</text>
-  <text x="98" y="512" class="sans azul" font-size="20">Actividades</text>
-  <line x1="76" y1="550" x2="280" y2="550" class="line"/>
-  <text x="98" y="594" class="sans muted" font-size="15">Sesión activa</text>
-  <text x="98" y="622" class="sans azul bold" font-size="18">Usuario SENA</text>
-  <rect x="76" y="864" width="204" height="44" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="178" y="892" text-anchor="middle" class="sans azul bold" font-size="16">Cerrar sesión</text>
+  <rect x="286" y="98" width="1278" height="876" fill="#f7f9fc"/>
+  <g transform="translate(326 132)">
+    <text x="0" y="32" class="sans navy bold" font-size="30">Buenos días, Alejandro</text>
+    <text x="0" y="62" class="sans muted" font-size="16">Aquí tienes el resumen de tu agenda para hoy, viernes 23 de octubre de 2026.</text>
+    <rect x="1010" y="12" width="190" height="48" rx="10" fill="#2563eb"/>
+    <circle cx="1042" cy="36" r="9" fill="none" stroke="#ffffff" stroke-width="2"/><path d="M1042 30v12M1036 36h12" stroke="#ffffff" stroke-width="2"/>
+    <text x="1062" y="42" class="sans white bold" font-size="15">Nueva cita</text>
 
-  <rect x="308" y="114" width="1244" height="848" fill="#f8fafc"/>
-  <g transform="translate(348 150)">
-    <text x="0" y="42" class="sans azul bold" font-size="34">Inicio</text>
-    <text x="0" y="78" class="sans muted" font-size="19">La ventana está preparada para incorporar las funciones de la agenda.</text>
-
-    <g transform="translate(0 112)">
-      <rect class="espacio" width="260" height="112" rx="12"/>
-      <text x="130" y="50" text-anchor="middle" class="sans etiqueta-espacio">Resumen 1</text>
-      <text x="130" y="78" text-anchor="middle" class="sans muted small">Espacio para indicador</text>
+    <g transform="translate(0 98)">
+      <rect width="270" height="116" rx="13" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <circle cx="225" cy="58" r="25" fill="#e8f0ff"/><path d="M215 58l7 7 13-15" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="22" y="34" class="sans muted" font-size="14">Citas de hoy</text><text x="22" y="82" class="sans navy bold" font-size="34">04</text><text x="85" y="82" class="sans" fill="#16a34a" font-size="13">+2 esta semana</text>
     </g>
-    <g transform="translate(280 112)">
-      <rect class="espacio" width="260" height="112" rx="12"/>
-      <text x="130" y="50" text-anchor="middle" class="sans etiqueta-espacio">Resumen 2</text>
-      <text x="130" y="78" text-anchor="middle" class="sans muted small">Espacio para indicador</text>
+    <g transform="translate(290 98)">
+      <rect width="270" height="116" rx="13" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <circle cx="225" cy="58" r="25" fill="#fff4da"/><path d="M225 44v18M225 70v2" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+      <text x="22" y="34" class="sans muted" font-size="14">Pendientes</text><text x="22" y="82" class="sans navy bold" font-size="34">08</text><text x="85" y="82" class="sans" fill="#d97706" font-size="13">3 importantes</text>
     </g>
-    <g transform="translate(560 112)">
-      <rect class="espacio" width="260" height="112" rx="12"/>
-      <text x="130" y="50" text-anchor="middle" class="sans etiqueta-espacio">Resumen 3</text>
-      <text x="130" y="78" text-anchor="middle" class="sans muted small">Espacio para indicador</text>
+    <g transform="translate(580 98)">
+      <rect width="270" height="116" rx="13" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <circle cx="225" cy="58" r="25" fill="#e6fbf1"/><path d="M225 43v16l10 7" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="22" y="34" class="sans muted" font-size="14">Próxima cita</text><text x="22" y="82" class="sans navy bold" font-size="29">10:00</text><text x="142" y="82" class="sans muted" font-size="13">Reunión</text>
     </g>
-
-    <g transform="translate(0 260)">
-      <rect width="520" height="398" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
-      <text x="24" y="42" class="sans azul bold" font-size="22">Calendario mensual</text>
-      <text x="24" y="72" class="sans muted" font-size="16">Aquí se ubicará la vista del calendario.</text>
-      <rect x="24" y="102" width="472" height="264" rx="12" class="espacio"/>
-      <text x="260" y="220" text-anchor="middle" class="sans etiqueta-espacio">Espacio para calendario</text>
-      <text x="260" y="250" text-anchor="middle" class="sans muted small">Días, navegación de meses y eventos</text>
+    <g transform="translate(870 98)">
+      <rect width="270" height="116" rx="13" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <circle cx="225" cy="58" r="25" fill="#f1eafe"/><path d="M214 66c8-14 16-14 24 0M218 52a7 7 0 1114 0" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="22" y="34" class="sans muted" font-size="14">Actividades</text><text x="22" y="82" class="sans navy bold" font-size="34">12</text><text x="85" y="82" class="sans" fill="#7c3aed" font-size="13">en progreso</text>
     </g>
 
-    <g transform="translate(550 260)">
-      <rect width="270" height="398" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
-      <text x="22" y="42" class="sans azul bold" font-size="22">Próximas citas</text>
-      <text x="22" y="72" class="sans muted" font-size="16">Aquí aparecerán las citas.</text>
-      <rect x="22" y="102" width="226" height="264" rx="12" class="espacio"/>
-      <text x="135" y="220" text-anchor="middle" class="sans etiqueta-espacio">Espacio para citas</text>
-      <text x="135" y="250" text-anchor="middle" class="sans muted small">Lista de próximas citas</text>
+    <g transform="translate(0 246)">
+      <rect width="660" height="370" rx="15" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <text x="26" y="38" class="sans navy bold" font-size="21">Calendario mensual</text>
+      <text x="26" y="66" class="sans muted" font-size="15">Octubre 2026</text>
+      <rect x="520" y="21" width="42" height="32" rx="8" fill="#eef4ff"/><text x="541" y="43" text-anchor="middle" class="sans blue bold" font-size="20">‹</text>
+      <rect x="570" y="21" width="42" height="32" rx="8" fill="#eef4ff"/><text x="591" y="43" text-anchor="middle" class="sans blue bold" font-size="20">›</text>
+      <line x1="26" y1="88" x2="634" y2="88" class="line"/>
+      <g class="sans muted" font-size="12"><text x="47" y="115">LUN</text><text x="137" y="115">MAR</text><text x="227" y="115">MIÉ</text><text x="317" y="115">JUE</text><text x="407" y="115">VIE</text><text x="497" y="115">SÁB</text><text x="587" y="115">DOM</text></g>
+      <g class="grid" fill="#ffffff">
+        <rect x="26" y="132" width="86" height="54"/><rect x="116" y="132" width="86" height="54"/><rect x="206" y="132" width="86" height="54"/><rect x="296" y="132" width="86" height="54"/><rect x="386" y="132" width="86" height="54"/><rect x="476" y="132" width="86" height="54"/><rect x="566" y="132" width="68" height="54"/>
+        <rect x="26" y="188" width="86" height="54"/><rect x="116" y="188" width="86" height="54"/><rect x="206" y="188" width="86" height="54"/><rect x="296" y="188" width="86" height="54"/><rect x="386" y="188" width="86" height="54"/><rect x="476" y="188" width="86" height="54"/><rect x="566" y="188" width="68" height="54"/>
+        <rect x="26" y="244" width="86" height="54"/><rect x="116" y="244" width="86" height="54"/><rect x="206" y="244" width="86" height="54"/><rect x="296" y="244" width="86" height="54"/><rect x="386" y="244" width="86" height="54"/><rect x="476" y="244" width="86" height="54"/><rect x="566" y="244" width="68" height="54"/>
+        <rect x="26" y="300" width="86" height="54"/><rect x="116" y="300" width="86" height="54"/><rect x="206" y="300" width="86" height="54"/><rect x="296" y="300" width="86" height="54"/><rect x="386" y="300" width="86" height="54"/><rect x="476" y="300" width="86" height="54"/><rect x="566" y="300" width="68" height="54"/>
+      </g>
+      <g class="sans navy" font-size="13"><text x="39" y="154">1</text><text x="129" y="154">2</text><text x="219" y="154">3</text><text x="309" y="154">4</text><text x="399" y="154">5</text><text x="489" y="154">6</text><text x="579" y="154">7</text><text x="39" y="210">8</text><text x="129" y="210">9</text><text x="219" y="210">10</text><text x="309" y="210">11</text><text x="399" y="210">12</text><text x="489" y="210">13</text><text x="579" y="210">14</text><text x="39" y="266">15</text><text x="129" y="266">16</text><text x="219" y="266">17</text><text x="309" y="266">18</text><text x="399" y="266">19</text><text x="489" y="266">20</text><text x="579" y="266">21</text><text x="39" y="322">22</text><text x="129" y="322">23</text><text x="219" y="322">24</text><text x="309" y="322">25</text><text x="399" y="322">26</text><text x="489" y="322">27</text><text x="579" y="322">28</text></g>
+      <rect x="112" y="188" width="86" height="54" fill="#e8f0ff" stroke="#2563eb" stroke-width="2"/><text x="125" y="210" class="sans blue bold" font-size="13">9</text><rect x="122" y="219" width="60" height="14" rx="4" fill="#2563eb"/><text x="152" y="230" text-anchor="middle" class="sans white" font-size="9">Reunión</text>
+      <rect x="382" y="244" width="86" height="54" fill="#effbf4" stroke="#22c55e" stroke-width="2"/><text x="395" y="266" class="sans navy bold" font-size="13">19</text><rect x="392" y="275" width="64" height="14" rx="4" fill="#16a34a"/><text x="424" y="286" text-anchor="middle" class="sans white" font-size="9">Entrega</text>
     </g>
 
-    <g transform="translate(0 682)">
-      <rect class="espacio" width="820" height="108" rx="12"/>
-      <text x="410" y="48" text-anchor="middle" class="sans etiqueta-espacio">Espacio para tabla de citas</text>
-      <text x="410" y="76" text-anchor="middle" class="sans muted small">Título, fecha, hora, descripción, estado y acciones</text>
+    <g transform="translate(680 246)">
+      <rect width="460" height="370" rx="15" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <text x="26" y="38" class="sans navy bold" font-size="21">Agenda de hoy</text>
+      <text x="26" y="66" class="sans muted" font-size="15">Viernes 23 de octubre</text>
+      <text x="399" y="43" text-anchor="end" class="sans blue bold" font-size="14">Ver todas</text>
+      <line x1="26" y1="88" x2="434" y2="88" class="line"/>
+      <circle cx="44" cy="126" r="6" fill="#2563eb"/><text x="68" y="131" class="sans muted" font-size="14">09:00</text><text x="142" y="131" class="sans navy bold" font-size="15">Plan de trabajo semanal</text><rect x="142" y="143" width="110" height="22" rx="11" fill="#e8f0ff"/><text x="197" y="158" text-anchor="middle" class="sans blue" font-size="11">Trabajo</text>
+      <line x1="44" y1="166" x2="44" y2="194" stroke="#dbeafe" stroke-width="2"/>
+      <circle cx="44" cy="208" r="6" fill="#f97316"/><text x="68" y="213" class="sans muted" font-size="14">10:00</text><text x="142" y="213" class="sans navy bold" font-size="15">Reunión de proyecto</text><rect x="142" y="225" width="94" height="22" rx="11" fill="#fff4da"/><text x="189" y="240" text-anchor="middle" class="sans" fill="#b45309" font-size="11">Importante</text>
+      <line x1="44" y1="248" x2="44" y2="276" stroke="#dbeafe" stroke-width="2"/>
+      <circle cx="44" cy="290" r="6" fill="#16a34a"/><text x="68" y="295" class="sans muted" font-size="14">14:30</text><text x="142" y="295" class="sans navy bold" font-size="15">Entregar actividad SENA</text><rect x="142" y="307" width="95" height="22" rx="11" fill="#e6fbf1"/><text x="189" y="322" text-anchor="middle" class="sans" fill="#15803d" font-size="11">Académica</text>
+    </g>
+
+    <g transform="translate(0 640)">
+      <rect width="760" height="190" rx="15" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <text x="24" y="36" class="sans navy bold" font-size="20">Citas recientes</text><text x="706" y="36" text-anchor="end" class="sans blue bold" font-size="14">Ver todas</text>
+      <line x1="24" y1="58" x2="736" y2="58" class="line"/>
+      <text x="24" y="84" class="sans muted" font-size="12">TÍTULO</text><text x="300" y="84" class="sans muted" font-size="12">FECHA</text><text x="420" y="84" class="sans muted" font-size="12">HORA</text><text x="535" y="84" class="sans muted" font-size="12">ESTADO</text>
+      <line x1="24" y1="98" x2="736" y2="98" class="line"/>
+      <text x="24" y="126" class="sans navy bold" font-size="14">Reunión de proyecto</text><text x="300" y="126" class="sans muted" font-size="13">23 oct 2026</text><text x="420" y="126" class="sans muted" font-size="13">10:00</text><rect x="535" y="111" width="82" height="24" rx="12" fill="#e6fbf1"/><text x="576" y="127" text-anchor="middle" class="sans" fill="#15803d" font-size="11">Pendiente</text>
+      <line x1="24" y1="143" x2="736" y2="143" class="line"/>
+      <text x="24" y="171" class="sans navy bold" font-size="14">Clase de Python</text><text x="300" y="171" class="sans muted" font-size="13">24 oct 2026</text><text x="420" y="171" class="sans muted" font-size="13">18:00</text><rect x="535" y="156" width="82" height="24" rx="12" fill="#e8f0ff"/><text x="576" y="172" text-anchor="middle" class="sans blue" font-size="11">Programada</text>
+    </g>
+
+    <g transform="translate(780 640)">
+      <rect width="360" height="190" rx="15" fill="#ffffff" stroke="#e2e8f0" filter="url(#tarjeta)"/>
+      <text x="24" y="36" class="sans navy bold" font-size="20">Actividades</text><text x="336" y="36" text-anchor="end" class="sans blue bold" font-size="14">Ver más</text>
+      <rect x="24" y="64" width="312" height="10" rx="5" fill="#e8eef8"/><rect x="24" y="64" width="218" height="10" rx="5" fill="#2563eb"/><text x="24" y="96" class="sans muted" font-size="13">Progreso semanal</text><text x="336" y="96" text-anchor="end" class="sans navy bold" font-size="13">70%</text>
+      <circle cx="36" cy="132" r="6" fill="#16a34a"/><text x="54" y="137" class="sans navy" font-size="14">Revisar entregas</text><text x="336" y="137" text-anchor="end" class="sans muted" font-size="12">Completada</text>
+      <circle cx="36" cy="164" r="6" fill="#f97316"/><text x="54" y="169" class="sans navy" font-size="14">Preparar reunión</text><text x="336" y="169" text-anchor="end" class="sans muted" font-size="12">En progreso</text>
     </g>
   </g>
 </svg>

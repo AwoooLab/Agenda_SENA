@@ -1,54 +1,106 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-  <title id="title">Ventana de inicio de sesión de Agenda SENA</title>
-  <desc id="desc">Primera ventana de Agenda SENA. Contiene únicamente el botón Siguiente para continuar hacia la agenda.</desc>
+  <title id="title">Inicio de sesión de Agenda SENA</title>
+  <desc id="desc">Diseño final de la ventana de acceso a Agenda SENA.</desc>
   <defs>
     <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#eff6ff"/>
-      <stop offset="1" stop-color="#dbeafe"/>
+      <stop offset="0" stop-color="#eef4ff"/>
+      <stop offset="1" stop-color="#e8eef8"/>
+    </linearGradient>
+    <linearGradient id="marca" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111d4a"/>
+      <stop offset="0.55" stop-color="#173b8f"/>
+      <stop offset="1" stop-color="#2563eb"/>
     </linearGradient>
     <filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#172554" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#0f172a" flood-opacity="0.20"/>
+    </filter>
+    <filter id="sombra-suave" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#172554" flood-opacity="0.10"/>
     </filter>
     <style>
       .sans { font-family: Arial, Helvetica, sans-serif; }
-      .azul { fill: #172554; }
+      .navy { fill: #111d4a; }
+      .blue { fill: #2563eb; }
       .muted { fill: #64748b; }
       .white { fill: #ffffff; }
       .bold { font-weight: 700; }
-      .siguiente { cursor: pointer; }
+      .soft { fill: #e8eef8; }
+      .login-action { cursor: pointer; }
     </style>
   </defs>
 
   <rect width="1440" height="900" fill="url(#fondo)"/>
-  <rect x="160" y="90" width="1120" height="720" rx="18" fill="#ffffff" filter="url(#sombra)"/>
-  <rect x="160" y="90" width="1120" height="58" rx="18" fill="#172554"/>
-  <rect x="160" y="122" width="1120" height="26" fill="#172554"/>
-  <circle cx="190" cy="119" r="7" fill="#ef4444"/>
-  <circle cx="214" cy="119" r="7" fill="#f59e0b"/>
-  <circle cx="238" cy="119" r="7" fill="#22c55e"/>
-  <text x="270" y="126" class="sans" fill="#dbeafe" font-size="18">Agenda SENA</text>
+  <rect x="80" y="50" width="1280" height="800" rx="26" fill="#ffffff" filter="url(#sombra)"/>
 
-  <rect x="160" y="148" width="440" height="662" fill="#eff6ff"/>
-  <line x1="600" y1="148" x2="600" y2="810" stroke="#e2e8f0" stroke-width="2"/>
-  <text x="250" y="300" class="sans azul bold" font-size="52">Agenda</text>
-  <text x="250" y="360" class="sans bold" fill="#2563eb" font-size="52">SENA</text>
-  <text x="250" y="410" class="sans muted" font-size="22">Organiza tus citas, actividades</text>
-  <text x="250" y="443" class="sans muted" font-size="22">y compromisos desde un solo lugar.</text>
-  <rect x="250" y="505" width="190" height="8" rx="4" fill="#2563eb"/>
-  <rect x="250" y="533" width="265" height="8" rx="4" fill="#bfdbfe"/>
-  <rect x="250" y="561" width="220" height="8" rx="4" fill="#bfdbfe"/>
+  <rect x="80" y="50" width="1280" height="64" rx="26" fill="#111d4a"/>
+  <rect x="80" y="88" width="1280" height="26" fill="#111d4a"/>
+  <circle cx="116" cy="82" r="7" fill="#fb5b5b"/>
+  <circle cx="140" cy="82" r="7" fill="#f8b84e"/>
+  <circle cx="164" cy="82" r="7" fill="#39c875"/>
+  <text x="196" y="89" class="sans" fill="#c9d7f5" font-size="17">Agenda SENA</text>
+  <text x="1320" y="89" text-anchor="end" class="sans" fill="#9fb3df" font-size="15">Aplicación local para PC</text>
 
-  <g transform="translate(690 205)">
-    <rect width="490" height="525" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-    <circle cx="245" cy="76" r="38" fill="#dbeafe"/>
-    <path d="M245 52c-15 0-27 12-27 27s12 27 27 27 27-12 27-27-12-27-27-27zm0 91c-38 0-69 19-69 43h138c0-24-31-43-69-43z" fill="#2563eb"/>
-    <text x="245" y="220" text-anchor="middle" class="sans azul bold" font-size="34">Inicio de sesión</text>
-    <text x="245" y="260" text-anchor="middle" class="sans muted" font-size="19">Continúa para entrar a tu agenda local.</text>
-    <text x="245" y="300" text-anchor="middle" class="sans muted" font-size="17">En esta etapa se prepara la entrada al programa.</text>
+  <rect x="80" y="114" width="460" height="736" fill="url(#marca)"/>
+  <circle cx="120" cy="230" r="210" fill="#ffffff" opacity="0.035"/>
+  <circle cx="470" cy="720" r="250" fill="#7dd3fc" opacity="0.08"/>
+  <path d="M80 670 C210 570 335 700 540 590 L540 850 L80 850 Z" fill="#0b173d" opacity="0.20"/>
+  <g opacity="0.12" stroke="#ffffff" stroke-width="1">
+    <path d="M110 170h350M110 200h350M110 230h350M110 260h350"/>
+    <path d="M140 145v170M180 145v170M220 145v170M260 145v170M300 145v170M340 145v170M380 145v170M420 145v170"/>
+  </g>
 
-    <g class="siguiente" data-action="next" role="button" tabindex="0" aria-label="Siguiente">
-      <rect x="55" y="365" width="380" height="64" rx="10" fill="#2563eb"/>
-      <text x="245" y="406" text-anchor="middle" class="sans white bold" font-size="20">Siguiente</text>
+  <rect x="132" y="196" width="58" height="58" rx="16" fill="#ffffff" opacity="0.16"/>
+  <circle cx="161" cy="225" r="14" fill="#ffffff"/>
+  <path d="M143 244c5-11 31-11 36 0" fill="#ffffff"/>
+  <text x="132" y="330" class="sans white bold" font-size="44">Agenda SENA</text>
+  <text x="132" y="374" class="sans" fill="#dbeafe" font-size="21">Organiza tu tiempo.</text>
+  <text x="132" y="406" class="sans" fill="#dbeafe" font-size="21">Cumple tus objetivos.</text>
+  <text x="132" y="470" class="sans" fill="#bcd1f4" font-size="17">Una agenda local para administrar</text>
+  <text x="132" y="497" class="sans" fill="#bcd1f4" font-size="17">citas, actividades y compromisos.</text>
+
+  <g transform="translate(132 590)">
+    <circle cx="14" cy="14" r="14" fill="#60a5fa"/>
+    <path d="M8 14l4 4 8-9" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="20" class="sans" fill="#e0ebff" font-size="17">Información organizada</text>
+    <circle cx="14" cy="62" r="14" fill="#60a5fa"/>
+    <path d="M8 62l4 4 8-9" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="68" class="sans" fill="#e0ebff" font-size="17">Seguimiento de actividades</text>
+    <circle cx="14" cy="110" r="14" fill="#60a5fa"/>
+    <path d="M8 110l4 4 8-9" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="116" class="sans" fill="#e0ebff" font-size="17">Todo en una sola ventana</text>
+  </g>
+
+  <rect x="540" y="114" width="820" height="736" fill="#f8fafc"/>
+  <g transform="translate(714 164)">
+    <rect width="520" height="620" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#sombra-suave)"/>
+    <rect x="42" y="42" width="54" height="54" rx="16" fill="#e8f0ff"/>
+    <circle cx="69" cy="65" r="11" fill="#2563eb"/>
+    <path d="M52 86c5-12 29-12 34 0" fill="#2563eb"/>
+    <text x="42" y="154" class="sans navy bold" font-size="31">Bienvenido de nuevo</text>
+    <text x="42" y="187" class="sans muted" font-size="17">Ingresa para continuar a tu agenda.</text>
+
+    <text x="42" y="246" class="sans navy bold" font-size="15">Usuario o correo electrónico</text>
+    <rect x="42" y="260" width="436" height="56" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <circle cx="69" cy="288" r="9" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M54 307c4-9 26-9 30 0" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <text x="96" y="294" class="sans muted" font-size="16">usuario@ejemplo.com</text>
+
+    <text x="42" y="367" class="sans navy bold" font-size="15">Contraseña</text>
+    <rect x="42" y="381" width="436" height="56" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="59" y="399" width="19" height="17" rx="3" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <path d="M63 399v-6c0-8 11-8 11 0v6" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <text x="96" y="415" class="sans muted" font-size="16">••••••••••••</text>
+    <text x="440" y="415" text-anchor="end" class="sans muted" font-size="15">Mostrar</text>
+
+    <rect x="42" y="470" width="20" height="20" rx="5" fill="#2563eb"/>
+    <path d="M47 480l4 4 8-9" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="74" y="486" class="sans muted" font-size="15">Recordarme</text>
+    <text x="478" y="486" text-anchor="end" class="sans blue bold" font-size="15">¿Olvidaste tu contraseña?</text>
+
+    <g class="login-action" data-action="open-agenda" role="button" tabindex="0" aria-label="Ingresar">
+      <rect x="42" y="522" width="436" height="58" rx="10" fill="#2563eb"/>
+      <text x="260" y="559" text-anchor="middle" class="sans white bold" font-size="18">Ingresar</text>
     </g>
+    <text x="260" y="608" text-anchor="middle" class="sans muted" font-size="15">¿Aún no tienes una cuenta? <tspan fill="#2563eb" font-weight="700">Crear cuenta</tspan></text>
   </g>
 </svg>

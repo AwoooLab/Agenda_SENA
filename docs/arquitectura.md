@@ -51,16 +51,16 @@ en la configuración de integración.
 El router reemplaza el contenido del área central. No se crean ventanas
 separadas para login, calendario, tablas o actividades.
 
-La misma regla se aplica al visor web: `web/screen.js` muestra primero la
-ventana inicial y, al pulsar `Siguiente`, reemplaza esa pantalla por la agenda.
+La misma regla se aplica al visor web: `web/screen.js` muestra primero el
+inicio de sesión y, al pulsar `Ingresar`, reemplaza esa pantalla por la agenda.
 La existencia de una carpeta en `stages/` no crea una pantalla nueva.
 
 ## GitHub Pages
 
 GitHub Pages no ejecuta `main.py`. Su función actual es mostrar una secuencia
-visual mínima: primero `assets/login-window.svg` y luego
-`assets/agenda-window.svg`. La segunda ventana contiene espacios marcados donde
-se incorporarán los componentes de las etapas posteriores.
+visual final: primero `assets/login-window.svg` y luego
+`assets/agenda-window.svg`. La segunda ventana representa el programa terminado
+con datos de ejemplo.
 
 Los previews de `stages/` y el registro de `config/integration.json` se
 conservan para la metodología educativa y la integración futura, pero no se
