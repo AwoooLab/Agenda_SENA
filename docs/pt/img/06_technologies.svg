@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Tecnologías utilizadas</title>
+  <desc id="desc">Seis tecnologías conectadas con la aplicación Agenda SENA.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1535"/>
+      <stop offset="0.58" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="windowBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#101A3A"/>
+      <stop offset="1" stop-color="#2455C7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity="0.32"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.20"/>
+    </filter>
+    <style>
+      .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .navy { fill: #122554; }
+      .muted { fill: #60789F; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <circle cx="1700" cy="60" r="260" fill="#60A5FA" opacity="0.08"/>
+  <circle cx="1660" cy="1050" r="370" fill="#93C5FD" opacity="0.05"/>
+  <path d="M0 965 C380 860 680 1060 1030 955 S1610 830 1920 920" fill="none" stroke="#7DD3FC" stroke-opacity="0.12" stroke-width="2"/>
+
+  <g transform="translate(140 112)">
+    <text x="0" y="0" class="display white bold" font-size="64">Tecnolog&#237;as utilizadas</text>
+    <rect x="0" y="46" width="560" height="5" rx="2.5" fill="#7DD3FC" opacity="0.75"/>
+    <text x="0" y="125" class="sans white medium" font-size="36">Cada herramienta cumple una funci&#243;n concreta dentro del proyecto.</text>
+    <text x="0" y="190" class="sans sky bold" font-size="22" letter-spacing="3">BASE TECNOL&#211;GICA</text>
+  </g>
+
+  <!-- Conectores: todos llegan a la misma aplicación central. -->
+  <g fill="none" stroke="#7DD3FC" stroke-width="3" stroke-linecap="round" opacity="0.7">
+    <path d="M600 405 C675 425 720 475 790 520"/>
+    <path d="M960 480 L960 505"/>
+    <path d="M1320 405 C1245 425 1200 475 1130 520"/>
+    <path d="M600 875 C675 850 720 790 790 735"/>
+    <path d="M960 800 L960 740"/>
+    <path d="M1320 875 C1245 850 1200 790 1130 735"/>
+  </g>
+  <g fill="#7DD3FC">
+    <circle cx="790" cy="520" r="6"/>
+    <circle cx="960" cy="505" r="6"/>
+    <circle cx="1130" cy="520" r="6"/>
+    <circle cx="790" cy="735" r="6"/>
+    <circle cx="960" cy="740" r="6"/>
+    <circle cx="1130" cy="735" r="6"/>
+  </g>
+
+  <!-- Aplicación central -->
+  <g transform="translate(660 505)" filter="url(#shadow)">
+    <rect width="600" height="235" rx="24" fill="#F8FBFF"/>
+    <rect width="600" height="54" rx="24" fill="url(#windowBar)"/>
+    <rect y="30" width="600" height="24" fill="url(#windowBar)"/>
+    <circle cx="28" cy="27" r="7" fill="#FB5B5B"/>
+    <circle cx="50" cy="27" r="7" fill="#F8B84E"/>
+    <circle cx="72" cy="27" r="7" fill="#39C875"/>
+    <text x="102" y="34" class="sans white bold" font-size="22">Agenda SENA</text>
+    <text x="480" y="33" class="sans soft" font-size="15">Aplicaci&#243;n local</text>
+
+    <rect y="54" width="126" height="181" fill="#EEF5FF"/>
+    <text x="22" y="91" class="sans navy bold" font-size="17">Men&#250;</text>
+    <rect x="16" y="108" width="94" height="28" rx="8" fill="#D7E7FF"/>
+    <rect x="29" y="117" width="14" height="12" rx="3" fill="#2563EB"/>
+    <text x="51" y="127" class="sans navy bold" font-size="13">Inicio</text>
+    <text x="29" y="158" class="sans muted" font-size="13">Calendario</text>
+    <text x="29" y="183" class="sans muted" font-size="13">Citas</text>
+    <text x="29" y="208" class="sans muted" font-size="13">Actividades</text>
+
+    <text x="154" y="91" class="sans navy bold" font-size="24">Una sola ventana</text>
+    <text x="154" y="116" class="sans muted" font-size="15">La tecnolog&#237;a se integra en una aplicaci&#243;n.</text>
+    <rect x="154" y="140" width="120" height="58" rx="12" fill="#EAF2FF"/>
+    <text x="170" y="163" class="sans muted" font-size="13">Citas de hoy</text>
+    <text x="170" y="186" class="sans navy bold" font-size="23">04</text>
+    <rect x="286" y="140" width="120" height="58" rx="12" fill="#EAFBF1"/>
+    <text x="302" y="163" class="sans muted" font-size="13">Pendientes</text>
+    <text x="302" y="186" class="sans navy bold" font-size="23">08</text>
+    <rect x="418" y="140" width="140" height="58" rx="12" fill="#FFF4DE"/>
+    <text x="434" y="163" class="sans muted" font-size="13">Pr&#243;xima cita</text>
+    <text x="434" y="186" class="sans navy bold" font-size="23">10:00</text>
+  </g>
+
+  <!-- Tarjeta Python -->
+  <g transform="translate(100 320)" filter="url(#softShadow)">
+    <rect width="500" height="170" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="170" rx="4" fill="#2563EB"/>
+    <circle cx="58" cy="61" r="28" fill="#E4EEFF"/>
+    <g transform="translate(43 45)">
+      <rect x="2" y="0" width="19" height="16" rx="5" fill="#2563EB"/>
+      <circle cx="17" cy="5" r="2" fill="#FFFFFF"/>
+      <rect x="13" y="16" width="19" height="16" rx="5" fill="#F2B84B"/>
+      <circle cx="17" cy="27" r="2" fill="#FFFFFF"/>
+    </g>
+    <text x="105" y="69" class="sans navy bold" font-size="29">Python</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Lenguaje principal del proyecto.</text>
+  </g>
+
+  <!-- Tarjeta Tkinter -->
+  <g transform="translate(710 320)" filter="url(#softShadow)">
+    <rect width="500" height="170" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="170" rx="4" fill="#0EA5E9"/>
+    <circle cx="58" cy="61" r="28" fill="#E0F2FE"/>
+    <g transform="translate(42 45)" fill="none" stroke="#0EA5E9" stroke-width="3">
+      <rect x="1" y="2" width="32" height="27" rx="5"/>
+      <line x1="1" y1="10" x2="33" y2="10"/>
+      <circle cx="7" cy="6" r="1" fill="#0EA5E9"/>
+      <circle cx="12" cy="6" r="1" fill="#0EA5E9"/>
+    </g>
+    <text x="105" y="69" class="sans navy bold" font-size="29">Tkinter</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Construcci&#243;n de la ventana de escritorio.</text>
+  </g>
+
+  <!-- Tarjeta SQLite -->
+  <g transform="translate(1320 320)" filter="url(#softShadow)">
+    <rect width="500" height="170" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="170" rx="4" fill="#F59E0B"/>
+    <circle cx="58" cy="61" r="28" fill="#FFF3D9"/>
+    <g transform="translate(43 43)" fill="none" stroke="#F59E0B" stroke-width="3">
+      <ellipse cx="16" cy="7" rx="14" ry="5" fill="#FFF3D9"/>
+      <path d="M2 7v22c0 3 6 5 14 5s14-2 14-5V7"/>
+      <path d="M2 18c0 3 6 5 14 5s14-2 14-5"/>
+    </g>
+    <text x="105" y="69" class="sans navy bold" font-size="29">SQLite</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Base local para usuarios y actividades.</text>
+  </g>
+
+  <!-- Tarjeta JSON -->
+  <g transform="translate(100 790)" filter="url(#softShadow)">
+    <rect width="500" height="170" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="170" rx="4" fill="#8B5CF6"/>
+    <circle cx="58" cy="61" r="28" fill="#F0EAFE"/>
+    <text x="58" y="72" text-anchor="middle" class="sans" fill="#7C3AED" font-size="32" font-weight="700">{ }</text>
+    <text x="105" y="69" class="sans navy bold" font-size="29">JSON</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Primer almacenamiento de informaci&#243;n.</text>
+  </g>
+
+  <!-- Tarjeta GitHub Pages -->
+  <g transform="translate(710 790)" filter="url(#softShadow)">
+    <rect width="500" height="170" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="170" rx="4" fill="#16A34A"/>
+    <circle cx="58" cy="61" r="28" fill="#E2F8EA"/>
+    <g transform="translate(42 45)" fill="none" stroke="#16A34A" stroke-width="3">
+      <circle cx="17" cy="17" r="14"/>
+      <path d="M3 17h28M17 3c4 4 6 9 6 14s-2 10-6 14c-4-4-6-9-6-14s2-10 6-14z"/>
+    </g>
+    <text x="105" y="69" class="sans navy bold" font-size="29">GitHub Pages</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Revisi&#243;n visual del avance.</text>
+  </g>
+
+  <!-- Tarjeta PyInstaller -->
+  <g transform="translate(1320 790)" filter="url(#softShadow)">
+    <rect width="500" height="170" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="170" rx="4" fill="#64748B"/>
+    <circle cx="58" cy="61" r="28" fill="#E8EDF4"/>
+    <g transform="translate(42 45)" fill="none" stroke="#64748B" stroke-width="3" stroke-linejoin="round">
+      <path d="M4 11l13-7 13 7v14l-13 7-13-7z"/>
+      <path d="M4 11l13 7 13-7M17 18v14"/>
+    </g>
+    <text x="105" y="69" class="sans navy bold" font-size="29">PyInstaller</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Preparaci&#243;n del ejecutable para Windows.</text>
+  </g>
+
+  <text x="1810" y="1030" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">06</text>
+</svg>
