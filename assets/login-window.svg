@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
   <title id="title">Inicio de sesión de Agenda SENA</title>
   <desc id="desc">Estado inicial de bienvenida y acceso de Agenda SENA para la Etapa 01; los campos reales se agregarán después.</desc>
   <defs>
