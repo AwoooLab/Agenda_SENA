@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Agenda SENA — Una agenda local para PC construida paso a paso con Python</title>
+  <desc id="desc">Diapositiva horizontal de portada para la presentación educativa del proyecto Agenda SENA.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1535"/>
+      <stop offset="0.58" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="46%" r="62%">
+      <stop offset="0" stop-color="#60A5FA" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7DD3FC" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#7DD3FC" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#020617" flood-opacity="0.40"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.22"/>
+    </filter>
+    <clipPath id="illustrationClip">
+      <rect x="1000" y="158" width="790" height="650" rx="34"/>
+    </clipPath>
+    <style>
+      .sans { font-family: Arial, Helvetica, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+
+  <circle cx="1730" cy="108" r="220" fill="#60A5FA" opacity="0.05"/>
+  <circle cx="1580" cy="980" r="330" fill="#93C5FD" opacity="0.04"/>
+  <path d="M0 910 C360 820 620 1010 990 900 S1590 750 1920 850" fill="none" stroke="#7DD3FC" stroke-opacity="0.12" stroke-width="2"/>
+
+  <g transform="translate(140 300)">
+    <text x="0" y="0" class="sans white bold" font-size="92" letter-spacing="-2">Agenda SENA</text>
+    <rect x="0" y="48" width="600" height="4" rx="2" fill="url(#line)"/>
+    <text x="0" y="145" class="sans white medium" font-size="38">Una agenda local para PC</text>
+    <text x="0" y="198" class="sans white medium" font-size="38">construida paso a paso con Python</text>
+    <text x="0" y="310" class="sans sky bold" font-size="24" letter-spacing="1">Proyecto educativo de programación</text>
+  </g>
+
+  <g transform="translate(140 886)">
+    <line x1="0" y1="0" x2="260" y2="0" stroke="#7DD3FC" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
+    <text x="0" y="52" class="sans soft medium" font-size="24" letter-spacing="1">SENA · 2026</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="982" y="140" width="826" height="686" rx="42" fill="#07122F" opacity="0.55" stroke="#A5D8FF" stroke-opacity="0.30" stroke-width="2"/>
+    <rect x="1000" y="158" width="790" height="650" rx="34" fill="#0F1F4D"/>
+    <image x="1000" y="158" width="790" height="650" preserveAspectRatio="xMidYMid slice" clip-path="url(#illustrationClip)" href="01_cover_illustration.png" xlink:href="01_cover_illustration.png"/>
+    <rect x="1000" y="158" width="790" height="650" rx="34" fill="none" stroke="#BFE3FF" stroke-opacity="0.42" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.8">
+    <circle cx="1750" cy="900" r="5" fill="#7DD3FC"/>
+    <circle cx="1780" cy="900" r="5" fill="#7DD3FC" opacity="0.55"/>
+    <circle cx="1810" cy="900" r="5" fill="#7DD3FC" opacity="0.30"/>
+  </g>
+
+  <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">01</text>
+</svg>
