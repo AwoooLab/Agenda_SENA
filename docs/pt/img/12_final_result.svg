@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title id="title">Resultado final de Agenda SENA</title>
+  <desc id="desc">La ventana de acceso conduce a una agenda de escritorio completa, navegable y lista para usar.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091735"/>
+      <stop offset="0.56" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7DD3FC" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7DD3FC" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#020617" flood-opacity="0.34"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#020617" flood-opacity="0.24"/>
+    </filter>
+    <style>
+      .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .navy { fill: #102456; }
+      .muted { fill: #587095; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .blue { fill: #2563EB; }
+      .green { fill: #16A34A; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+      text[font-size="13"], text[font-size="14"], text[font-size="15"], text[font-size="16"], text[font-size="17"], text[font-size="18"], text[font-size="19"], text[font-size="20"], text[font-size="21"] { font-size: 22px !important; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <circle cx="1720" cy="70" r="300" fill="#60A5FA" opacity="0.08"/>
+  <circle cx="1710" cy="1080" r="390" fill="#93C5FD" opacity="0.05"/>
+  <path d="M0 945 C340 850 640 1045 1040 930 S1600 825 1920 900" fill="none" stroke="#7DD3FC" stroke-opacity="0.13" stroke-width="2"/>
+
+  <g transform="translate(120 105)">
+    <text x="0" y="0" class="display white bold" font-size="68">Resultado final</text>
+    <rect x="0" y="52" width="515" height="5" rx="2.5" fill="#7DD3FC" opacity="0.78"/>
+    <text x="0" y="130" class="sans white medium" font-size="35">Agenda SENA: de una idea a una aplicaci&#243;n funcional.</text>
+    <text x="0" y="188" class="sans sky bold" font-size="24" letter-spacing="3">UNA APLICACI&#211;N LOCAL, FUNCI&#211;N POR FUNCI&#211;N</text>
+  </g>
+
+  <!-- Short result list: grouped so it does not compete with the product. -->
+  <g transform="translate(120 375)">
+    <text x="0" y="0" class="sans soft bold" font-size="27">Al finalizar contamos con:</text>
+    <g transform="translate(0 42)">
+      <circle cx="16" cy="17" r="15" fill="#16A34A"/>
+      <path d="M9 17l5 5 9-11" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="48" y="26" class="sans white bold" font-size="29">Acceso y sesi&#243;n activa</text>
+    </g>
+    <g transform="translate(0 102)">
+      <circle cx="16" cy="17" r="15" fill="#16A34A"/>
+      <path d="M9 17l5 5 9-11" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="48" y="26" class="sans white bold" font-size="29">Agenda navegable</text>
+    </g>
+    <g transform="translate(0 162)">
+      <circle cx="16" cy="17" r="15" fill="#16A34A"/>
+      <path d="M9 17l5 5 9-11" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="48" y="26" class="sans white bold" font-size="29">Calendario y actividades</text>
+    </g>
+    <g transform="translate(0 222)">
+      <circle cx="16" cy="17" r="15" fill="#16A34A"/>
+      <path d="M9 17l5 5 9-11" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="48" y="26" class="sans white bold" font-size="29">Datos locales y ejecutable</text>
+    </g>
+  </g>
+
+  <g transform="translate(120 825)">
+    <rect width="360" height="2" fill="url(#glow)"/>
+    <text x="0" y="55" class="sans soft medium" font-size="29">De una idea a una aplicaci&#243;n funcional,</text>
+    <text x="0" y="94" class="sans sky bold" font-size="31">paso a paso.</text>
+  </g>
+
+  <!-- A soft route connects the two product states behind the final agenda. -->
+  <path d="M770 705 C800 680 820 660 850 640" fill="none" stroke="#7DD3FC" stroke-opacity="0.72" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 12"/>
+  <path d="M850 640l-18-12v24z" fill="#7DD3FC"/>
+
+  <!-- Login remains visible behind the finished agenda. -->
+  <g filter="url(#softShadow)">
+    <image href="../../../assets/login-window.svg" x="520" y="625" width="340" height="213" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <!-- The agenda is the dominant final product. -->
+  <g filter="url(#shadow)">
+    <image href="../../../assets/agenda-window.svg" x="825" y="245" width="1010" height="631" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <g transform="translate(120 960)">
+    <text x="0" y="0" class="sans sky bold" font-size="36">Gracias</text>
+  </g>
+
+  <text x="1810" y="1045" text-anchor="end" class="sans soft" font-size="22" opacity="0.75">12</text>
+</svg>
