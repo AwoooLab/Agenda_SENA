@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
   <title id="title">¿Cómo se navega en la aplicación?</title>
-  <desc id="desc">Flujo de navegación de Agenda SENA desde la apertura hasta el cierre de sesión.</desc>
+  <desc id="desc">Recorrido visual del usuario por las seis funciones principales de Agenda SENA.</desc>
 
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
@@ -8,8 +8,13 @@
       <stop offset="0.58" stop-color="#142B68"/>
       <stop offset="1" stop-color="#2563EB"/>
     </linearGradient>
+    <linearGradient id="track" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7DD3FC" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#7DD3FC" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#7DD3FC" stop-opacity="0.28"/>
+    </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#020617" flood-opacity="0.28"/>
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.30"/>
     </filter>
     <style>
       .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
@@ -26,81 +31,88 @@
 
   <rect width="1920" height="1080" fill="url(#background)"/>
   <circle cx="1710" cy="70" r="260" fill="#60A5FA" opacity="0.08"/>
-  <circle cx="1660" cy="1040" r="360" fill="#93C5FD" opacity="0.05"/>
+  <circle cx="1650" cy="1040" r="370" fill="#93C5FD" opacity="0.05"/>
   <path d="M0 970 C360 860 650 1055 1010 954 S1600 830 1920 920" fill="none" stroke="#7DD3FC" stroke-opacity="0.12" stroke-width="2"/>
 
   <g transform="translate(140 118)">
     <text x="0" y="0" class="display white bold" font-size="64">¿Cómo se navega en la aplicación?</text>
     <rect x="0" y="46" width="700" height="5" rx="2.5" fill="#7DD3FC" opacity="0.75"/>
-    <text x="0" y="130" class="sans white medium" font-size="38">El usuario sigue un flujo sencillo y continuo:</text>
-    <text x="0" y="190" class="sans soft" font-size="25">Abrir aplicación  →  Iniciar sesión  →  Ver agenda  →  Navegar por el menú  →  Gestionar citas y actividades  →  Cerrar sesión</text>
+    <text x="0" y="130" class="sans white medium" font-size="38">El usuario recorre la agenda desde el acceso hasta el cierre de sesión.</text>
   </g>
 
-  <text x="960" y="348" text-anchor="middle" class="sans sky bold" font-size="22" letter-spacing="0.8">FLUJO PRINCIPAL</text>
+  <text x="960" y="330" text-anchor="middle" class="sans sky bold" font-size="22" letter-spacing="1.5">RECORRIDO DE LA APLICACIÓN</text>
+  <path d="M185 475 H1735" fill="none" stroke="url(#track)" stroke-width="6" stroke-linecap="round"/>
 
-  <!-- Conectores uniformes entre los seis pasos -->
-  <g fill="none" stroke="#7DD3FC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
-    <path d="M330 530 H400"/><path d="M630 530 H700"/><path d="M930 530 H1000"/>
-    <path d="M1230 530 H1300"/><path d="M1530 530 H1600"/>
+  <!-- Paso 01 -->
+  <g transform="translate(70 360)" filter="url(#shadow)">
+    <rect width="220" height="230" rx="26" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <text x="28" y="40" class="sans sky bold" font-size="18">01</text>
+    <circle cx="110" cy="88" r="38" fill="#E4EEFF"/>
+    <image href="../../../assets/icons/dashboard.svg" x="88" y="66" width="44" height="44"/>
+    <text x="110" y="160" text-anchor="middle" class="sans navy bold" font-size="29">Abrir</text>
+    <text x="110" y="194" text-anchor="middle" class="sans muted" font-size="19">Aplicación</text>
   </g>
+
+  <!-- Paso 02 -->
+  <g transform="translate(380 360)" filter="url(#shadow)">
+    <rect width="220" height="230" rx="26" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <text x="28" y="40" class="sans sky bold" font-size="18">02</text>
+    <circle cx="110" cy="88" r="38" fill="#E4EEFF"/>
+    <image href="../../../assets/icons/lock.svg" x="88" y="66" width="44" height="44"/>
+    <text x="110" y="160" text-anchor="middle" class="sans navy bold" font-size="29">Login</text>
+    <text x="110" y="194" text-anchor="middle" class="sans muted" font-size="19">Iniciar sesión</text>
+  </g>
+
+  <!-- Paso 03 destacado -->
+  <g transform="translate(690 340)" filter="url(#shadow)">
+    <rect width="240" height="270" rx="30" fill="#2563EB" stroke="#A5D8FF" stroke-width="3"/>
+    <text x="30" y="44" class="sans soft bold" font-size="18">03</text>
+    <circle cx="120" cy="102" r="46" fill="#FFFFFF" fill-opacity="0.18"/>
+    <image href="../../../assets/icons/calendar.svg" x="93" y="75" width="54" height="54"/>
+    <text x="120" y="183" text-anchor="middle" class="sans white bold" font-size="34">Agenda</text>
+    <text x="120" y="220" text-anchor="middle" class="sans soft" font-size="19">Consultar información</text>
+  </g>
+
+  <!-- Paso 04 -->
+  <g transform="translate(1020 360)" filter="url(#shadow)">
+    <rect width="220" height="230" rx="26" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <text x="28" y="40" class="sans sky bold" font-size="18">04</text>
+    <circle cx="110" cy="88" r="38" fill="#E4EEFF"/>
+    <image href="../../../assets/icons/dashboard.svg" x="88" y="66" width="44" height="44"/>
+    <text x="110" y="160" text-anchor="middle" class="sans navy bold" font-size="29">Menú</text>
+    <text x="110" y="194" text-anchor="middle" class="sans muted" font-size="19">Cambiar sección</text>
+  </g>
+
+  <!-- Paso 05 -->
+  <g transform="translate(1330 360)" filter="url(#shadow)">
+    <rect width="220" height="230" rx="26" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <text x="28" y="40" class="sans sky bold" font-size="18">05</text>
+    <circle cx="110" cy="88" r="38" fill="#FFF3D9"/>
+    <image href="../../../assets/icons/appointments.svg" x="88" y="66" width="44" height="44"/>
+    <text x="110" y="160" text-anchor="middle" class="sans navy bold" font-size="29">Citas</text>
+    <text x="110" y="194" text-anchor="middle" class="sans muted" font-size="19">Gestionar actividades</text>
+  </g>
+
+  <!-- Paso 06 -->
+  <g transform="translate(1640 360)" filter="url(#shadow)">
+    <rect width="220" height="230" rx="26" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <text x="28" y="40" class="sans sky bold" font-size="18">06</text>
+    <circle cx="110" cy="88" r="38" fill="#FDE8E8"/>
+    <image href="../../../assets/icons/logout.svg" x="88" y="66" width="44" height="44"/>
+    <text x="110" y="160" text-anchor="middle" class="sans navy bold" font-size="29">Cerrar</text>
+    <text x="110" y="194" text-anchor="middle" class="sans muted" font-size="19">Cerrar sesión</text>
+  </g>
+
+  <!-- Flechas sobre la línea de recorrido -->
   <g fill="#7DD3FC">
-    <path d="M400 530 l-14 -10 v20 z"/><path d="M700 530 l-14 -10 v20 z"/><path d="M1000 530 l-14 -10 v20 z"/>
-    <path d="M1300 530 l-14 -10 v20 z"/><path d="M1600 530 l-14 -10 v20 z"/>
+    <path d="M330 475 l-14 -10 v20 z"/><path d="M640 475 l-14 -10 v20 z"/><path d="M970 475 l-14 -10 v20 z"/>
+    <path d="M1280 475 l-14 -10 v20 z"/><path d="M1590 475 l-14 -10 v20 z"/>
   </g>
 
-  <!-- Los seis pasos utilizan exactamente la misma medida. -->
-  <g transform="translate(100 430)" filter="url(#shadow)">
-    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
-    <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
-    <image href="../../../assets/icons/dashboard.svg" x="95" y="52" width="40" height="40"/>
-    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Abrir</text>
-    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Aplicación</text>
-  </g>
-
-  <g transform="translate(400 430)" filter="url(#shadow)">
-    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
-    <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
-    <image href="../../../assets/icons/lock.svg" x="95" y="52" width="40" height="40"/>
-    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Login</text>
-    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Iniciar sesión</text>
-  </g>
-
-  <g transform="translate(700 430)" filter="url(#shadow)">
-    <rect width="230" height="200" rx="24" fill="#2563EB" stroke="#A5D8FF" stroke-width="3"/>
-    <circle cx="115" cy="72" r="34" fill="#FFFFFF" fill-opacity="0.18"/>
-    <image href="../../../assets/icons/calendar.svg" x="95" y="52" width="40" height="40"/>
-    <text x="115" y="139" text-anchor="middle" class="sans white bold" font-size="28">Agenda</text>
-    <text x="115" y="170" text-anchor="middle" class="sans soft" font-size="18">Consultar información</text>
-  </g>
-
-  <g transform="translate(1000 430)" filter="url(#shadow)">
-    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
-    <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
-    <image href="../../../assets/icons/dashboard.svg" x="95" y="52" width="40" height="40"/>
-    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Menú</text>
-    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Cambiar sección</text>
-  </g>
-
-  <g transform="translate(1300 430)" filter="url(#shadow)">
-    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
-    <circle cx="115" cy="72" r="34" fill="#FFF3D9"/>
-    <image href="../../../assets/icons/appointments.svg" x="95" y="52" width="40" height="40"/>
-    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Citas</text>
-    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Gestionar actividades</text>
-  </g>
-
-  <g transform="translate(1600 430)" filter="url(#shadow)">
-    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
-    <circle cx="115" cy="72" r="34" fill="#FDE8E8"/>
-    <image href="../../../assets/icons/logout.svg" x="95" y="52" width="40" height="40"/>
-    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Cerrar</text>
-    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Cerrar sesión</text>
-  </g>
-
-  <!-- Retorno secundario al login -->
-  <path d="M1715 650 C1715 760 515 790 515 650" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" opacity="0.75"/>
-  <path d="M515 650 l-16 24 h32 z" fill="#7DD3FC"/>
-  <text x="1115" y="790" text-anchor="middle" class="sans sky bold" font-size="21">Al cerrar sesión, la aplicación regresa al inicio de sesión.</text>
+  <!-- Retorno visual, separado del recorrido principal -->
+  <path d="M1750 625 C1750 760 490 795 490 625" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" opacity="0.72"/>
+  <path d="M490 625 l-16 24 h32 z" fill="#7DD3FC"/>
+  <text x="1120" y="790" text-anchor="middle" class="sans sky bold" font-size="21">Al cerrar sesión, la aplicación regresa al inicio de sesión.</text>
 
   <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">05</text>
 </svg>
