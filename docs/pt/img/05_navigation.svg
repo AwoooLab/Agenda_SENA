@@ -38,17 +38,17 @@
 
   <text x="960" y="348" text-anchor="middle" class="sans sky bold" font-size="22" letter-spacing="0.8">FLUJO PRINCIPAL</text>
 
-  <!-- Flechas del flujo -->
+  <!-- Conectores uniformes entre los seis pasos -->
   <g fill="none" stroke="#7DD3FC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
-    <path d="M330 530 H370"/><path d="M630 530 H670"/><path d="M990 530 H1020"/>
-    <path d="M1270 530 H1310"/><path d="M1560 530 H1600"/>
+    <path d="M330 530 H400"/><path d="M630 530 H700"/><path d="M930 530 H1000"/>
+    <path d="M1230 530 H1300"/><path d="M1530 530 H1600"/>
   </g>
   <g fill="#7DD3FC">
-    <path d="M370 530 l-14 -10 v20 z"/><path d="M670 530 l-14 -10 v20 z"/><path d="M1020 530 l-14 -10 v20 z"/>
-    <path d="M1310 530 l-14 -10 v20 z"/><path d="M1600 530 l-14 -10 v20 z"/>
+    <path d="M400 530 l-14 -10 v20 z"/><path d="M700 530 l-14 -10 v20 z"/><path d="M1000 530 l-14 -10 v20 z"/>
+    <path d="M1300 530 l-14 -10 v20 z"/><path d="M1600 530 l-14 -10 v20 z"/>
   </g>
 
-  <!-- Nodo 01 -->
+  <!-- Los seis pasos utilizan exactamente la misma medida. -->
   <g transform="translate(100 430)" filter="url(#shadow)">
     <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
     <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
@@ -57,7 +57,6 @@
     <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Aplicación</text>
   </g>
 
-  <!-- Nodo 02 -->
   <g transform="translate(400 430)" filter="url(#shadow)">
     <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
     <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
@@ -66,17 +65,15 @@
     <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Iniciar sesión</text>
   </g>
 
-  <!-- Nodo 03 destacado -->
-  <g transform="translate(700 405)" filter="url(#shadow)">
-    <rect width="290" height="250" rx="28" fill="#2563EB" stroke="#A5D8FF" stroke-width="3"/>
-    <circle cx="145" cy="88" r="45" fill="#FFFFFF" fill-opacity="0.18"/>
-    <image href="../../../assets/icons/calendar.svg" x="118" y="61" width="54" height="54"/>
-    <text x="145" y="166" text-anchor="middle" class="sans white bold" font-size="34">Agenda</text>
-    <text x="145" y="200" text-anchor="middle" class="sans soft" font-size="20">Consultar información</text>
+  <g transform="translate(700 430)" filter="url(#shadow)">
+    <rect width="230" height="200" rx="24" fill="#2563EB" stroke="#A5D8FF" stroke-width="3"/>
+    <circle cx="115" cy="72" r="34" fill="#FFFFFF" fill-opacity="0.18"/>
+    <image href="../../../assets/icons/calendar.svg" x="95" y="52" width="40" height="40"/>
+    <text x="115" y="139" text-anchor="middle" class="sans white bold" font-size="28">Agenda</text>
+    <text x="115" y="170" text-anchor="middle" class="sans soft" font-size="18">Consultar información</text>
   </g>
 
-  <!-- Nodo 04 -->
-  <g transform="translate(1040 430)" filter="url(#shadow)">
+  <g transform="translate(1000 430)" filter="url(#shadow)">
     <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
     <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
     <image href="../../../assets/icons/dashboard.svg" x="95" y="52" width="40" height="40"/>
@@ -84,8 +81,7 @@
     <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Cambiar sección</text>
   </g>
 
-  <!-- Nodo 05 -->
-  <g transform="translate(1340 430)" filter="url(#shadow)">
+  <g transform="translate(1300 430)" filter="url(#shadow)">
     <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
     <circle cx="115" cy="72" r="34" fill="#FFF3D9"/>
     <image href="../../../assets/icons/appointments.svg" x="95" y="52" width="40" height="40"/>
@@ -93,19 +89,18 @@
     <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Gestionar actividades</text>
   </g>
 
-  <!-- Nodo 06 -->
-  <g transform="translate(1630 430)" filter="url(#shadow)">
-    <rect width="220" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
-    <circle cx="110" cy="72" r="34" fill="#FDE8E8"/>
-    <image href="../../../assets/icons/logout.svg" x="90" y="52" width="40" height="40"/>
-    <text x="110" y="132" text-anchor="middle" class="sans navy bold" font-size="25">Cerrar</text>
-    <text x="110" y="165" text-anchor="middle" class="sans muted" font-size="18">Cerrar sesión</text>
+  <g transform="translate(1600 430)" filter="url(#shadow)">
+    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="115" cy="72" r="34" fill="#FDE8E8"/>
+    <image href="../../../assets/icons/logout.svg" x="95" y="52" width="40" height="40"/>
+    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Cerrar</text>
+    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Cerrar sesión</text>
   </g>
 
-  <!-- Retorno al login -->
-  <path d="M1740 650 C1740 760 520 790 515 650" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" opacity="0.75"/>
+  <!-- Retorno secundario al login -->
+  <path d="M1715 650 C1715 760 515 790 515 650" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" opacity="0.75"/>
   <path d="M515 650 l-16 24 h32 z" fill="#7DD3FC"/>
-  <text x="1120" y="760" text-anchor="middle" class="sans sky bold" font-size="21">Al cerrar sesión, la aplicación regresa al inicio de sesión.</text>
+  <text x="1115" y="790" text-anchor="middle" class="sans sky bold" font-size="21">Al cerrar sesión, la aplicación regresa al inicio de sesión.</text>
 
   <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">05</text>
 </svg>
