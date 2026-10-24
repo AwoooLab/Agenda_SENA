@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
   <title id="title">Ventana de inicio de sesión de Agenda SENA</title>
-  <desc id="desc">Diseño editable de la ventana independiente de inicio de sesión para Agenda SENA.</desc>
+  <desc id="desc">Primera ventana de Agenda SENA. Contiene únicamente el botón Siguiente para continuar hacia la agenda.</desc>
   <defs>
     <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#eff6ff"/>
@@ -15,6 +15,7 @@
       .muted { fill: #64748b; }
       .white { fill: #ffffff; }
       .bold { font-weight: 700; }
+      .siguiente { cursor: pointer; }
     </style>
   </defs>
 
@@ -29,32 +30,25 @@
 
   <rect x="160" y="148" width="440" height="662" fill="#eff6ff"/>
   <line x1="600" y1="148" x2="600" y2="810" stroke="#e2e8f0" stroke-width="2"/>
-  <text x="250" y="300" class="sans bold" font-size="52" fill="#172554">Agenda</text>
-  <text x="250" y="360" class="sans bold" font-size="52" fill="#2563eb">SENA</text>
+  <text x="250" y="300" class="sans azul bold" font-size="52">Agenda</text>
+  <text x="250" y="360" class="sans bold" fill="#2563eb" font-size="52">SENA</text>
   <text x="250" y="410" class="sans muted" font-size="22">Organiza tus citas, actividades</text>
   <text x="250" y="443" class="sans muted" font-size="22">y compromisos desde un solo lugar.</text>
   <rect x="250" y="505" width="190" height="8" rx="4" fill="#2563eb"/>
   <rect x="250" y="533" width="265" height="8" rx="4" fill="#bfdbfe"/>
   <rect x="250" y="561" width="220" height="8" rx="4" fill="#bfdbfe"/>
 
-  <g transform="translate(690 170)">
-    <rect width="490" height="620" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
-    <circle cx="245" cy="66" r="34" fill="#dbeafe"/>
-    <path d="M245 43c-15 0-27 12-27 27s12 27 27 27 27-12 27-27-12-27-27-27zm0 91c-38 0-69 19-69 43h138c0-24-31-43-69-43z" fill="#2563eb"/>
-    <text x="245" y="200" text-anchor="middle" class="sans azul bold" font-size="34">Iniciar sesión</text>
-    <text x="245" y="232" text-anchor="middle" class="sans muted" font-size="18">Accede a tu agenda local</text>
+  <g transform="translate(690 205)">
+    <rect width="490" height="525" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <circle cx="245" cy="76" r="38" fill="#dbeafe"/>
+    <path d="M245 52c-15 0-27 12-27 27s12 27 27 27 27-12 27-27-12-27-27-27zm0 91c-38 0-69 19-69 43h138c0-24-31-43-69-43z" fill="#2563eb"/>
+    <text x="245" y="220" text-anchor="middle" class="sans azul bold" font-size="34">Inicio de sesión</text>
+    <text x="245" y="260" text-anchor="middle" class="sans muted" font-size="19">Continúa para entrar a tu agenda local.</text>
+    <text x="245" y="300" text-anchor="middle" class="sans muted" font-size="17">En esta etapa se prepara la entrada al programa.</text>
 
-    <text x="55" y="286" class="sans azul bold" font-size="16">Usuario o correo</text>
-    <rect x="55" y="300" width="380" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
-    <text x="75" y="333" class="sans muted" font-size="17">Escribe tu usuario</text>
-
-    <text x="55" y="390" class="sans azul bold" font-size="16">Contraseña</text>
-    <rect x="55" y="404" width="380" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
-    <text x="75" y="437" class="sans muted" font-size="17">Escribe tu contraseña</text>
-    <text x="55" y="486" class="sans muted" font-size="15">¿Olvidaste tu contraseña?</text>
-
-    <rect x="55" y="510" width="380" height="56" rx="9" fill="#2563eb"/>
-    <text x="245" y="546" text-anchor="middle" class="sans white bold" font-size="19">Ingresar</text>
-    <text x="245" y="590" text-anchor="middle" class="sans muted" font-size="16">¿No tienes una cuenta? <tspan fill="#2563eb" font-weight="700">Registrarte</tspan></text>
+    <g class="siguiente" data-action="next" role="button" tabindex="0" aria-label="Siguiente">
+      <rect x="55" y="365" width="380" height="64" rx="10" fill="#2563eb"/>
+      <text x="245" y="406" text-anchor="middle" class="sans white bold" font-size="20">Siguiente</text>
+    </g>
   </g>
 </svg>

@@ -17,7 +17,7 @@ carpeta sin importar código de otras etapas.
 3. Crear o modificar únicamente los archivos solicitados dentro de ese stage.
 4. Ejecutar la prueba local indicada.
 5. Actualizar el preview.html con la salida visual del módulo.
-6. Revisar el resultado desde el visor principal de GitHub Pages.
+6. Revisar el flujo de las dos ventanas desde el visor principal de GitHub Pages.
 7. Corregir la etapa hasta que cumpla sus requisitos.
 
 El estudiante no modifica main.py, src/, web/ ni config/. Esos archivos forman
@@ -30,8 +30,9 @@ después de la integración. Esto significa que el login puede probarse solo,
 pero luego puede conectarse como una vista dentro de la ventana principal.
 
 El preview.html del stage sirve para validar ese módulo. La página principal
-solo muestra los previews que aparecen en config/integration.json; la carpeta
-de un stage futuro no se muestra automáticamente.
+muestra solamente las dos ventanas de `assets/`: la entrada con `Siguiente` y
+la agenda con espacios marcados. La carpeta de un stage futuro no se muestra
+automáticamente.
 
 ## Contrato del módulo
 

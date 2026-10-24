@@ -3,132 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta name="description" content="Aplicación Agenda SENA para PC." />
-    <link rel="stylesheet" href="assets/stage-preview.css" />
-    <title>Agenda SENA | Aplicación integrada</title>
+    <meta name="description" content="Ventanas visuales de Agenda SENA para PC." />
+    <title>Agenda SENA</title>
     <style>
-      :root {
-        --azul: #2563eb;
-        --azul-oscuro: #172554;
-        --azul-claro: #dbeafe;
-        --gris-900: #172033;
-        --gris-600: #64748b;
-        --gris-200: #e2e8f0;
-        --gris-100: #f1f5f9;
-        --blanco: #ffffff;
-      }
-
+      :root { color-scheme: light; }
       * { box-sizing: border-box; }
-
-      body {
-        margin: 0;
-        color: var(--gris-900);
-        background: #f8fafc;
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.5;
-      }
-
-      .contenedor { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-
-      main { padding: 28px 0 64px; }
-
-      .panel {
-        overflow: hidden;
-        border: 1px solid var(--gris-200);
-        border-radius: 16px;
-        background: var(--blanco);
-        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-      }
-
-      .ventana-app { overflow: hidden; background: var(--blanco); }
-
-      .barra-app-principal {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        padding: 17px 24px;
-        color: var(--blanco);
-        background: var(--azul-oscuro);
-      }
-
-      .barra-app-principal strong { font-size: 1.2rem; }
-      .barra-app-principal span { color: var(--azul-claro); font-size: 0.92rem; }
-
-      .app-layout {
-        display: grid;
-        grid-template-columns: 210px minmax(0, 1fr);
-        min-height: 460px;
-      }
-
-      .app-sidebar {
-        padding: 24px 18px;
-        background: #eff6ff;
-        border-right: 1px solid var(--gris-200);
-      }
-
-      .app-sidebar strong { display: block; margin-bottom: 14px; color: var(--azul-oscuro); }
-
-      .app-sidebar a {
-        display: block;
-        margin: 7px 0;
-        border-radius: 7px;
-        padding: 9px 10px;
-        color: var(--azul-oscuro);
-        text-decoration: none;
-      }
-
-      .app-sidebar a:hover { background: var(--azul-claro); }
-      .app-sidebar a[aria-current="page"] {
-        color: var(--azul-oscuro);
-        background: var(--azul-claro);
-        font-weight: 700;
-      }
-      .app-content { min-width: 0; padding: 28px; background: #f8fafc; }
-      .cargando { margin: 0; color: var(--gris-600); text-align: center; }
-
-      footer {
-        padding: 24px;
-        color: var(--gris-600);
-        background: var(--gris-100);
-        text-align: center;
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 760px) {
-        .contenedor { width: min(100% - 20px, 1120px); }
-        .app-layout { grid-template-columns: 1fr; }
-        .app-sidebar { border-right: 0; border-bottom: 1px solid var(--gris-200); }
-        .app-sidebar a { display: inline-block; margin-right: 5px; }
-        .app-content { padding: 16px; }
-        .barra-app-principal { align-items: flex-start; flex-direction: column; }
-      }
+      html, body { min-height: 100%; }
+      body { margin: 0; background: #eef2f7; font-family: Arial, Helvetica, sans-serif; }
+      #screen { width: 100%; min-height: 100vh; }
+      #screen > svg { display: block; width: 100%; height: auto; min-height: 100vh; }
     </style>
   </head>
   <body>
-    <main class="contenedor">
-      <section class="panel" aria-label="Aplicación Agenda SENA">
-        <div class="ventana-app">
-          <div class="barra-app-principal">
-            <strong>Agenda SENA</strong>
-            <span id="usuario-activo">Mi agenda local para PC</span>
-          </div>
-          <div class="app-layout">
-            <aside class="app-sidebar" aria-label="Navegación de Agenda SENA">
-              <strong>Menú</strong>
-              <nav id="app-navigation"></nav>
-            </aside>
-            <section id="app-content" class="app-content" aria-live="polite">
-              <p class="cargando">Cargando la aplicación...</p>
-            </section>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script src="web/app.js"></script>
+    <main id="screen" aria-live="polite"></main>
+    <script src="web/screen.js"></script>
   </body>
 </html>

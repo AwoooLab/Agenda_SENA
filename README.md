@@ -12,10 +12,10 @@ Ejecutar: python main.py
 - main.py: punto de entrada de la aplicación integrada para PC.
 - src/: carcasa de una sola ventana, estado, navegación y vistas integradas.
 - stages/: único espacio de trabajo del estudiante.
-- web/: comportamiento del visor de GitHub Pages.
+- web/: comportamiento de la secuencia visual de GitHub Pages.
 - config/: registro interno de módulos aprobados para la integración.
 - docs/parts/: especificaciones, teoría y requisitos de cada stage.
-- index.html: único visor web de la aplicación integrada actual.
+- index.html: único visor web de las dos ventanas visuales.
 - assets/: estilos compartidos.
 
 ## Metodología
@@ -43,12 +43,11 @@ stages/01_python_window/
 No necesita modificar main.py, src/, web/ ni config/. Esa integración se
 realiza después de revisar que el módulo cumple su especificación.
 
-GitHub Pages no ejecuta Python. preview.html permite comprobar visualmente el
-resultado del módulo e index.html muestra solamente la versión integrada.
+GitHub Pages no ejecuta Python. El visor muestra únicamente dos ventanas
+visuales: la pantalla inicial con `Siguiente` y la ventana principal de Agenda
+con espacios preparados para los componentes.
 
-La vista integrada mantiene una sola ventana y una navegación interna. En el
-estado actual solo aparece `Inicio`, porque únicamente
-`01_python_window` está registrado. Las demás carpetas no se muestran hasta
-que sus módulos sean revisados e integrados.
+El archivo `web/screen.js` cambia de una ventana a la otra. No muestra menús,
+tarjetas de stages, indicadores de avance ni elementos adicionales.
 
 La metodología completa está en docs/stage_contract.md.

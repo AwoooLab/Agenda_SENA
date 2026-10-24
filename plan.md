@@ -5,9 +5,9 @@
 El estudiante construye módulos independientes dentro de stages/. Después de
 validar cada módulo, se integra en una aplicación de una sola ventana.
 
-La aplicación integrada utiliza main.py y src/. GitHub Pages muestra su
-representación web mediante index.html. Solo se muestran los módulos
-registrados en config/integration.json.
+La aplicación integrada utiliza main.py y src/. GitHub Pages muestra una
+secuencia visual mediante index.html: primero la entrada inicial y después la
+ventana principal de la agenda.
 
 ## Base de integración
 
@@ -15,8 +15,18 @@ registrados en config/integration.json.
 - src/router.py: navegación entre vistas dentro de esa ventana.
 - src/state.py: estado compartido, como el usuario autenticado.
 - src/views/: vistas integradas.
-- web/app.js: visor web del estado integrado.
+- web/screen.js: secuencia visual de las dos ventanas de Pages.
 - config/integration.json: módulos aprobados y visibles.
+
+## Flujo visual inicial
+
+GitHub Pages muestra únicamente dos ventanas, una a la vez:
+
+1. Inicio de sesión o entrada inicial con el botón `Siguiente`.
+2. Ventana principal de Agenda SENA con espacios marcados para sus componentes.
+
+La segunda ventana está vacía de datos intencionalmente. Cada stage posterior
+ocupará uno de esos espacios sin crear otra pantalla externa.
 
 ## Secuencia de construcción
 

@@ -51,20 +51,25 @@ modificar main.py, src/, web/ ni config/ mientras desarrolla el stage.
 
 ## Visibilidad en GitHub Pages
 
-La página principal es el único visor. Carga únicamente los módulos declarados
-en config/integration.json. La configuración actual contiene solo
-01_python_window, porque es el único resultado terminado y aprobado.
+La página principal es el único visor y actualmente muestra solo dos ventanas
+SVG, una a la vez:
 
-Cuando otro stage esté listo, se valida su salida y se agrega su módulo a la
-configuración de integración. No se agregan funciones futuras antes de tiempo.
+1. `assets/login-window.svg`, con el botón `Siguiente`.
+2. `assets/agenda-window.svg`, con los espacios preparados de la aplicación.
+
+`web/screen.js` realiza el cambio entre ambas ventanas. No se muestran tarjetas,
+menús de stages, indicadores de avance ni otras secciones externas.
+
+Cuando otro stage esté listo, su componente se incorpora en el espacio
+correspondiente de la ventana de agenda. La carpeta del stage y su preview no
+se muestran automáticamente en Pages.
 
 ## Navegación de la aplicación integrada
 
-La aplicación integrada conserva una sola ventana. El menú y el área central
-son compartidos por todas las funciones aprobadas. En el PC, `src/router.py`
-reemplaza la vista central sin abrir otra ventana. En GitHub Pages, `web/app.js`
-usa el mismo principio: crea el menú con los módulos registrados y muestra una
-vista a la vez dentro del mismo visor.
+La aplicación de PC conservará una ventana principal después del inicio. En el
+PC, `src/router.py` reemplaza la vista central sin abrir otra ventana. En
+GitHub Pages, `web/screen.js` muestra una pantalla a la vez para comprobar el
+flujo inicial y la agenda.
 
 Por eso el estudiante puede construir una etapa aislada como login, calendario
 o tabla, pero la integración posterior permite navegar entre esas funciones

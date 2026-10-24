@@ -22,8 +22,8 @@ depender de una tabla o de un botón construido en otra carpeta.
 - src/state.py: contiene el estado compartido, como el usuario actual.
 - src/views/: recibe las vistas de los módulos aprobados.
 - config/integration.json: registra los módulos que ya están integrados.
-- web/app.js: carga en Pages únicamente los previews registrados.
-- index.html: muestra la única ventana web de la aplicación integrada.
+- web/screen.js: controla la secuencia de las dos ventanas visuales.
+- index.html: muestra únicamente una ventana SVG a la vez.
 
 La estructura de integración es una base preparada. El estudiante no tiene que
 editarla durante la lección de un stage.
@@ -38,7 +38,7 @@ Contrato de integración
         ->
 Conexión en src/ o main.py
         ->
-Registro del módulo en config/integration.json
+Incorporación en un espacio de la ventana de agenda
         ->
 Revisión en la única página de GitHub Pages
 
@@ -51,15 +51,17 @@ en la configuración de integración.
 El router reemplaza el contenido del área central. No se crean ventanas
 separadas para login, calendario, tablas o actividades.
 
-La misma regla se aplica al visor web: `web/app.js` crea la navegación a partir
-de los módulos aprobados y muestra una sola vista dentro del área central. La
-existencia de una carpeta en `stages/` no crea una ruta ni una pantalla nueva.
+La misma regla se aplica al visor web: `web/screen.js` muestra primero la
+ventana inicial y, al pulsar `Siguiente`, reemplaza esa pantalla por la agenda.
+La existencia de una carpeta en `stages/` no crea una pantalla nueva.
 
 ## GitHub Pages
 
-GitHub Pages no ejecuta main.py. Su función es mostrar la representación web
-del estado integrado actual. La página no debe cargar todos los previews que
-existan en el repositorio; debe cargar únicamente los módulos aprobados en
-config/integration.json.
+GitHub Pages no ejecuta `main.py`. Su función actual es mostrar una secuencia
+visual mínima: primero `assets/login-window.svg` y luego
+`assets/agenda-window.svg`. La segunda ventana contiene espacios marcados donde
+se incorporarán los componentes de las etapas posteriores.
 
-La caché se reduce mediante versiones en la URL y el botón Actualizar vista.
+Los previews de `stages/` y el registro de `config/integration.json` se
+conservan para la metodología educativa y la integración futura, pero no se
+cargan automáticamente en este visor.
