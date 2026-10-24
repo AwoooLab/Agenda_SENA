@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">¿Cómo se navega en la aplicación?</title>
+  <desc id="desc">Flujo de navegación de Agenda SENA desde la apertura hasta el cierre de sesión.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1535"/>
+      <stop offset="0.58" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#020617" flood-opacity="0.28"/>
+    </filter>
+    <style>
+      .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .navy { fill: #122554; }
+      .muted { fill: #60789F; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <circle cx="1710" cy="70" r="260" fill="#60A5FA" opacity="0.08"/>
+  <circle cx="1660" cy="1040" r="360" fill="#93C5FD" opacity="0.05"/>
+  <path d="M0 970 C360 860 650 1055 1010 954 S1600 830 1920 920" fill="none" stroke="#7DD3FC" stroke-opacity="0.12" stroke-width="2"/>
+
+  <g transform="translate(140 118)">
+    <text x="0" y="0" class="display white bold" font-size="64">¿Cómo se navega en la aplicación?</text>
+    <rect x="0" y="46" width="700" height="5" rx="2.5" fill="#7DD3FC" opacity="0.75"/>
+    <text x="0" y="130" class="sans white medium" font-size="38">El usuario sigue un flujo sencillo y continuo:</text>
+    <text x="0" y="190" class="sans soft" font-size="25">Abrir aplicación  →  Iniciar sesión  →  Ver agenda  →  Navegar por el menú  →  Gestionar citas y actividades  →  Cerrar sesión</text>
+  </g>
+
+  <text x="960" y="348" text-anchor="middle" class="sans sky bold" font-size="22" letter-spacing="0.8">FLUJO PRINCIPAL</text>
+
+  <!-- Flechas del flujo -->
+  <g fill="none" stroke="#7DD3FC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <path d="M330 530 H370"/><path d="M630 530 H670"/><path d="M990 530 H1020"/>
+    <path d="M1270 530 H1310"/><path d="M1560 530 H1600"/>
+  </g>
+  <g fill="#7DD3FC">
+    <path d="M370 530 l-14 -10 v20 z"/><path d="M670 530 l-14 -10 v20 z"/><path d="M1020 530 l-14 -10 v20 z"/>
+    <path d="M1310 530 l-14 -10 v20 z"/><path d="M1600 530 l-14 -10 v20 z"/>
+  </g>
+
+  <!-- Nodo 01 -->
+  <g transform="translate(100 430)" filter="url(#shadow)">
+    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
+    <image href="../../../assets/icons/dashboard.svg" x="95" y="52" width="40" height="40"/>
+    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Abrir</text>
+    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Aplicación</text>
+  </g>
+
+  <!-- Nodo 02 -->
+  <g transform="translate(400 430)" filter="url(#shadow)">
+    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
+    <image href="../../../assets/icons/lock.svg" x="95" y="52" width="40" height="40"/>
+    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Login</text>
+    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Iniciar sesión</text>
+  </g>
+
+  <!-- Nodo 03 destacado -->
+  <g transform="translate(700 405)" filter="url(#shadow)">
+    <rect width="290" height="250" rx="28" fill="#2563EB" stroke="#A5D8FF" stroke-width="3"/>
+    <circle cx="145" cy="88" r="45" fill="#FFFFFF" fill-opacity="0.18"/>
+    <image href="../../../assets/icons/calendar.svg" x="118" y="61" width="54" height="54"/>
+    <text x="145" y="166" text-anchor="middle" class="sans white bold" font-size="34">Agenda</text>
+    <text x="145" y="200" text-anchor="middle" class="sans soft" font-size="20">Consultar información</text>
+  </g>
+
+  <!-- Nodo 04 -->
+  <g transform="translate(1040 430)" filter="url(#shadow)">
+    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="115" cy="72" r="34" fill="#E4EEFF"/>
+    <image href="../../../assets/icons/dashboard.svg" x="95" y="52" width="40" height="40"/>
+    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Menú</text>
+    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Cambiar sección</text>
+  </g>
+
+  <!-- Nodo 05 -->
+  <g transform="translate(1340 430)" filter="url(#shadow)">
+    <rect width="230" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="115" cy="72" r="34" fill="#FFF3D9"/>
+    <image href="../../../assets/icons/appointments.svg" x="95" y="52" width="40" height="40"/>
+    <text x="115" y="139" text-anchor="middle" class="sans navy bold" font-size="28">Citas</text>
+    <text x="115" y="170" text-anchor="middle" class="sans muted" font-size="18">Gestionar actividades</text>
+  </g>
+
+  <!-- Nodo 06 -->
+  <g transform="translate(1630 430)" filter="url(#shadow)">
+    <rect width="220" height="200" rx="24" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <circle cx="110" cy="72" r="34" fill="#FDE8E8"/>
+    <image href="../../../assets/icons/logout.svg" x="90" y="52" width="40" height="40"/>
+    <text x="110" y="132" text-anchor="middle" class="sans navy bold" font-size="25">Cerrar</text>
+    <text x="110" y="165" text-anchor="middle" class="sans muted" font-size="18">Cerrar sesión</text>
+  </g>
+
+  <!-- Retorno al login -->
+  <path d="M1740 650 C1740 760 520 790 515 650" fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 12" opacity="0.75"/>
+  <path d="M515 650 l-16 24 h32 z" fill="#7DD3FC"/>
+  <text x="1120" y="760" text-anchor="middle" class="sans sky bold" font-size="21">Al cerrar sesión, la aplicación regresa al inicio de sesión.</text>
+
+  <g transform="translate(140 875)">
+    <rect width="1640" height="78" rx="18" fill="#FFFFFF" fill-opacity="0.13" stroke="#7DD3FC" stroke-opacity="0.35" stroke-width="2"/>
+    <circle cx="38" cy="39" r="12" fill="#2563EB"/>
+    <path d="M31 39 h14 M40 31 l8 8 l-8 8" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="70" y="49" class="sans white bold" font-size="27">La navegación mantiene al usuario dentro de una sola aplicación.</text>
+  </g>
+
+  <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">05</text>
+</svg>
