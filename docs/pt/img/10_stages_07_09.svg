@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title id="title">Stages 07 al 09 — Agenda funcional</title>
+  <desc id="desc">La ventana principal integra la navegaci&#243;n, el calendario mensual y las actividades en una sola agenda.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091735"/>
+      <stop offset="0.56" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="appHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#102456"/>
+      <stop offset="1" stop-color="#20499D"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#020617" flood-opacity="0.32"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .navy { fill: #102456; }
+      .muted { fill: #587095; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .blue { fill: #2563EB; }
+      .green { fill: #16A34A; }
+      .orange { fill: #F97316; }
+      .purple { fill: #7C3AED; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+      text[font-size="13"], text[font-size="14"], text[font-size="15"], text[font-size="16"], text[font-size="17"], text[font-size="18"], text[font-size="19"], text[font-size="20"], text[font-size="21"] { font-size: 22px !important; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <circle cx="1710" cy="35" r="265" fill="#60A5FA" opacity="0.08"/>
+  <circle cx="1690" cy="1080" r="380" fill="#93C5FD" opacity="0.05"/>
+  <path d="M0 982 C350 875 670 1040 1040 950 S1610 850 1920 940" fill="none" stroke="#7DD3FC" stroke-opacity="0.13" stroke-width="2"/>
+
+  <g transform="translate(120 100)">
+    <text x="0" y="0" class="display white bold" font-size="62">Stages 07 al 09 &#8212; Agenda funcional</text>
+    <rect x="0" y="48" width="720" height="5" rx="2.5" fill="#7DD3FC" opacity="0.78"/>
+    <text x="0" y="125" class="sans white medium" font-size="35">Navegaci&#243;n, calendario y actividades en una sola ventana.</text>
+  </g>
+
+  <!-- The finished application is the main visual. -->
+  <g transform="translate(220 255)" filter="url(#shadow)">
+    <rect width="1480" height="710" rx="26" fill="#F5F8FD"/>
+
+    <!-- Application header -->
+    <rect width="1480" height="86" rx="26" fill="url(#appHeader)"/>
+    <rect y="58" width="1480" height="28" fill="url(#appHeader)"/>
+    <circle cx="38" cy="43" r="9" fill="#FF5F57"/>
+    <circle cx="68" cy="43" r="9" fill="#FEBC2E"/>
+    <circle cx="98" cy="43" r="9" fill="#28C840"/>
+    <text x="135" y="54" class="sans white bold" font-size="29">Agenda SENA</text>
+    <rect x="355" y="20" width="455" height="46" rx="13" fill="#FFFFFF" fill-opacity="0.14" stroke="#A9C9FF" stroke-opacity="0.20" stroke-width="2"/>
+    <circle cx="385" cy="42" r="12" fill="none" stroke="#D8E7FF" stroke-width="3"/>
+    <path d="M394 51l11 11" stroke="#D8E7FF" stroke-width="3" stroke-linecap="round"/>
+    <text x="420" y="51" class="sans soft medium" font-size="23">Buscar citas, actividades o usuarios</text>
+    <circle cx="1325" cy="43" r="22" fill="#FFFFFF" fill-opacity="0.14"/>
+    <path d="M1315 43h20M1325 33v20" stroke="#7DD3FC" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="1385" cy="43" r="22" fill="#FFFFFF" fill-opacity="0.14"/>
+    <path d="M1377 49h16M1379 46v-9c0-8 12-8 12 0v9" fill="none" stroke="#7DD3FC" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="1440" cy="43" r="27" fill="#7DD3FC"/>
+    <text x="1440" y="51" text-anchor="middle" class="sans navy bold" font-size="23">AS</text>
+
+    <!-- Sidebar: Stage 07 -->
+    <rect y="86" width="260" height="624" fill="#101F55"/>
+    <rect x="24" y="108" width="212" height="40" rx="20" fill="#2563EB" fill-opacity="0.24" stroke="#7DD3FC" stroke-opacity="0.55" stroke-width="2"/>
+    <text x="40" y="135" class="sans sky bold" font-size="22" letter-spacing="1">07  NAVEGACI&#211;N</text>
+    <text x="32" y="193" class="sans soft bold" font-size="24">MEN&#218; PRINCIPAL</text>
+
+    <rect x="24" y="218" width="212" height="53" rx="12" fill="#2563EB"/>
+    <circle cx="51" cy="245" r="12" fill="#DCEBFF"/>
+    <path d="M45 245l5 5 9-10" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="78" y="253" class="sans white bold" font-size="24">Inicio</text>
+
+    <g fill="none" stroke="#7DD3FC" stroke-width="3" stroke-linecap="round">
+      <circle cx="51" cy="307" r="10"/><path d="M51 301v12M45 307h12"/>
+      <rect x="41" y="351" width="20" height="18" rx="3"/><path d="M46 357h10M46 363h7"/>
+      <path d="M43 421c0-11 16-11 16 0M47 405c0-8 9-8 9 0"/>
+      <rect x="41" y="462" width="20" height="18" rx="3"/><path d="M46 456v11M56 456v11M41 469h20"/>
+      <path d="M42 536l10-10 7 7 12-15"/>
+    </g>
+    <text x="78" y="315" class="sans soft medium" font-size="24">Nueva cita</text>
+    <text x="78" y="365" class="sans soft medium" font-size="24">Citas</text>
+    <text x="78" y="428" class="sans soft medium" font-size="24">Usuarios</text>
+    <text x="78" y="478" class="sans soft medium" font-size="24">Calendario</text>
+    <text x="78" y="543" class="sans soft medium" font-size="24">Actividades</text>
+    <line x1="32" y1="580" x2="228" y2="580" stroke="#7DD3FC" stroke-opacity="0.30" stroke-width="2"/>
+    <text x="32" y="622" class="sans soft medium" font-size="22">Sesi&#243;n activa</text>
+    <circle cx="202" cy="615" r="10" fill="#16A34A"/>
+
+    <!-- Main content -->
+    <rect x="260" y="86" width="1220" height="624" fill="#F7F9FC"/>
+    <text x="300" y="145" class="sans navy bold" font-size="36">Buenos d&#237;as, Alejandro</text>
+    <text x="300" y="180" class="sans muted medium" font-size="23">Resumen de tu agenda para hoy, viernes 23 de octubre de 2026.</text>
+    <rect x="1138" y="116" width="280" height="52" rx="16" fill="#2563EB"/>
+    <circle cx="1170" cy="142" r="13" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <path d="M1170 134v16M1162 142h16" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <text x="1200" y="150" class="sans white bold" font-size="24">Nueva cita</text>
+
+    <!-- Summary cards -->
+    <g transform="translate(300 218)" filter="url(#softShadow)">
+      <rect width="205" height="108" rx="17" fill="#FFFFFF" stroke="#D8E2F0" stroke-width="2"/>
+      <text x="20" y="34" class="sans muted" font-size="22">Citas de hoy</text>
+      <text x="20" y="82" class="sans navy bold" font-size="34">04</text>
+      <circle cx="167" cy="54" r="26" fill="#E6EEFF"/>
+      <rect x="154" y="45" width="26" height="22" rx="4" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <path d="M159 39v12M175 39v12M154 52h26" stroke="#2563EB" stroke-width="3"/>
+    </g>
+    <g transform="translate(525 218)" filter="url(#softShadow)">
+      <rect width="205" height="108" rx="17" fill="#FFFFFF" stroke="#D8E2F0" stroke-width="2"/>
+      <text x="20" y="34" class="sans muted" font-size="22">Pendientes</text>
+      <text x="20" y="82" class="sans navy bold" font-size="34">08</text>
+      <circle cx="167" cy="54" r="26" fill="#FFF3D9"/>
+      <circle cx="167" cy="54" r="13" fill="none" stroke="#16A34A" stroke-width="3"/>
+      <path d="M160 54l5 5 10-11" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(750 218)" filter="url(#softShadow)">
+      <rect width="205" height="108" rx="17" fill="#FFFFFF" stroke="#D8E2F0" stroke-width="2"/>
+      <text x="20" y="34" class="sans muted" font-size="22">Pr&#243;xima cita</text>
+      <text x="20" y="82" class="sans navy bold" font-size="34">10:00</text>
+      <circle cx="167" cy="54" r="26" fill="#E4F8F0"/>
+      <circle cx="167" cy="54" r="13" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <path d="M167 45v10l7 5" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(975 218)" filter="url(#softShadow)">
+      <rect width="205" height="108" rx="17" fill="#FFFFFF" stroke="#D8E2F0" stroke-width="2"/>
+      <text x="20" y="34" class="sans muted" font-size="22">Actividades</text>
+      <text x="20" y="82" class="sans navy bold" font-size="34">12</text>
+      <circle cx="167" cy="54" r="26" fill="#F0EAFE"/>
+      <path d="M155 66l10-12 7 6 12-16" fill="none" stroke="#7C3AED" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Stage 08 calendar -->
+    <g transform="translate(300 360)" filter="url(#softShadow)">
+      <rect width="650" height="315" rx="19" fill="#FFFFFF" stroke="#D8E2F0" stroke-width="2"/>
+      <rect x="20" y="18" width="210" height="38" rx="19" fill="#E6EEFF" stroke="#BFD2EA" stroke-width="2"/>
+      <rect x="39" y="29" width="20" height="18" rx="3" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <path d="M43 25v9M55 25v9M39 35h20" stroke="#2563EB" stroke-width="3"/>
+      <text x="72" y="45" class="sans blue bold" font-size="22">08  CALENDARIO</text>
+      <text x="24" y="94" class="sans navy bold" font-size="30">Calendario mensual</text>
+      <text x="24" y="127" class="sans muted" font-size="23">Octubre 2026</text>
+      <text x="575" y="95" class="sans blue bold" font-size="28">&#8249;  &#8250;</text>
+      <line x1="24" y1="148" x2="626" y2="148" stroke="#D8E2F0" stroke-width="2"/>
+      <g class="sans muted medium" font-size="22">
+        <text x="38" y="178">LUN</text><text x="121" y="178">MAR</text><text x="206" y="178">MI&#201;</text><text x="292" y="178">JUE</text><text x="378" y="178">VIE</text><text x="464" y="178">S&#193;B</text><text x="550" y="178">DOM</text>
+      </g>
+      <g fill="none" stroke="#E1E8F2" stroke-width="2">
+        <rect x="24" y="195" width="82" height="52"/><rect x="110" y="195" width="82" height="52"/><rect x="196" y="195" width="82" height="52"/><rect x="282" y="195" width="82" height="52"/><rect x="368" y="195" width="82" height="52"/><rect x="454" y="195" width="82" height="52"/><rect x="540" y="195" width="82" height="52"/>
+        <rect x="24" y="251" width="82" height="52"/><rect x="110" y="251" width="82" height="52"/><rect x="196" y="251" width="82" height="52"/><rect x="282" y="251" width="82" height="52"/><rect x="368" y="251" width="82" height="52"/><rect x="454" y="251" width="82" height="52"/><rect x="540" y="251" width="82" height="52"/>
+      </g>
+      <rect x="110" y="251" width="82" height="52" fill="#E6EEFF" stroke="#2563EB" stroke-width="3"/>
+      <rect x="368" y="195" width="82" height="52" fill="#E4F8F0" stroke="#16A34A" stroke-width="3"/>
+      <g class="sans navy medium" font-size="22">
+        <text x="40" y="227">1</text><text x="126" y="227">2</text><text x="212" y="227">3</text><text x="298" y="227">4</text><text x="384" y="227">5</text><text x="470" y="227">6</text><text x="556" y="227">7</text>
+        <text x="40" y="283">8</text><text x="126" y="283" class="blue bold">9</text><text x="212" y="283">10</text><text x="298" y="283">11</text><text x="384" y="283">12</text><text x="470" y="283">13</text><text x="556" y="283">14</text>
+      </g>
+      <rect x="123" y="289" width="54" height="8" rx="4" fill="#2563EB"/>
+      <rect x="381" y="233" width="54" height="8" rx="4" fill="#16A34A"/>
+    </g>
+
+    <!-- Stage 09 activities -->
+    <g transform="translate(975 360)" filter="url(#softShadow)">
+      <rect width="505" height="315" rx="19" fill="#FFFFFF" stroke="#D8E2F0" stroke-width="2"/>
+      <rect x="18" y="18" width="220" height="38" rx="19" fill="#F0EAFE" stroke="#D8C9F7" stroke-width="2"/>
+      <path d="M34 45l8-9 6 6 10-13" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="67" y="45" class="sans purple bold" font-size="22">09 ACTIVIDADES</text>
+      <text x="22" y="94" class="sans navy bold" font-size="27">Agenda de hoy</text>
+      <text x="22" y="126" class="sans muted" font-size="22">Viernes 23</text>
+      <line x1="22" y1="145" x2="483" y2="145" stroke="#D8E2F0" stroke-width="2"/>
+      <line x1="37" y1="181" x2="37" y2="286" stroke="#D8E2F0" stroke-width="3"/>
+      <circle cx="37" cy="178" r="7" fill="#2563EB"/>
+      <text x="60" y="184" class="sans muted" font-size="22">09:00</text>
+      <text x="160" y="184" class="sans navy bold" font-size="22">Plan semanal</text>
+      <rect x="360" y="160" width="130" height="28" rx="14" fill="#E6EEFF"/><text x="383" y="181" class="sans blue medium" font-size="22">Trabajo</text>
+      <circle cx="37" cy="231" r="7" fill="#F97316"/>
+      <text x="60" y="237" class="sans muted" font-size="22">10:00</text>
+      <text x="160" y="237" class="sans navy bold" font-size="22">Reuni&#243;n</text>
+      <rect x="360" y="213" width="130" height="28" rx="14" fill="#FFF3D9"/><text x="382" y="234" class="sans orange medium" font-size="22">Importante</text>
+      <circle cx="37" cy="284" r="7" fill="#16A34A"/>
+      <text x="60" y="290" class="sans muted" font-size="22">14:30</text>
+      <text x="160" y="290" class="sans navy bold" font-size="22">Entrega SENA</text>
+      <rect x="360" y="266" width="130" height="28" rx="14" fill="#E4F8F0"/><text x="381" y="287" class="sans green medium" font-size="22">Acad&#233;mica</text>
+    </g>
+  </g>
+
+  <g transform="translate(120 1000)">
+    <circle cx="12" cy="12" r="8" fill="#7DD3FC"/>
+    <text x="38" y="22" class="sans white bold" font-size="28">Resultado: una agenda visualmente completa para administrar actividades.</text>
+  </g>
+
+  <text x="1810" y="1045" text-anchor="end" class="sans soft" font-size="22" opacity="0.75">10</text>
+</svg>
