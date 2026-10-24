@@ -57,6 +57,25 @@ iconos y la composición de cada diapositiva.
 - Diagramas con flechas simples y etiquetas cortas.
 - Mantener un margen mínimo de 70 px en cada lado.
 
+### Reglas de lectura y dirección visual
+
+- Cada diapositiva debe tener una escena principal, no una colección de
+  tarjetas independientes.
+- Las interfaces deben mostrarse grandes y completas; no se deben comprimir
+  varias pantallas pequeñas en una misma fila.
+- Usar el espacio para explicar relaciones visuales: una pantalla central,
+  una conexión clara y pocas anotaciones.
+- Evitar líneas de tiempo genéricas, diagramas circulares, filas repetitivas
+  de seis cajas y paneles con texto diminuto.
+- Los textos dentro de una ilustración deben ser etiquetas funcionales, no
+  párrafos. Una etiqueta debe poder leerse sin hacer zoom.
+- En las imágenes 08–12 usar como referencia: título de 60–64 px, texto de
+  apoyo de 28–34 px y etiquetas internas de 24 px como mínimo.
+- Las pantallas de la aplicación deben conservar la misma proporción,
+  navegación, colores y jerarquía de las ventanas de referencia.
+- La diapositiva debe entenderse en tres segundos por su composición y luego
+  poder explicarse con el texto de apoyo.
+
 ---
 
 # Diapositiva 01 — Portada
@@ -522,22 +541,29 @@ representar información.
 
 ## Distribución
 
-- Mostrar una línea de tiempo con tres bloques numerados.
-- Cada bloque debe contener el nombre del stage, su explicación y un icono.
-- Colocar la frase `Resultado de la fase` en una tarjeta inferior.
+- No usar tres tarjetas iguales ni una línea de tiempo escolar.
+- Usar una composición horizontal de tres escenas grandes que compartan el
+  mismo objeto: una cita de Agenda SENA.
+- Colocar un rótulo grande encima de cada escena: `01 VENTANA`, `02 DATO` y
+  `03 GUARDADO`.
+- Reservar la parte inferior para una sola frase de resultado, sin tarjeta
+  decorativa adicional.
 
 ## Imagen o representación visual
 
-Crear una línea de tiempo horizontal:
+Crear una secuencia visual de una misma cita que se transforma:
 
-`01 Ventana → 02 Modelo → 03 JSON`
+`ventana de agenda → objeto Cita → archivo agenda.json`
 
-El primer bloque debe mostrar una ventana de escritorio. El segundo, una ficha
-de datos con campos `título`, `fecha` y `hora`. El tercero, un archivo JSON con
-llaves y registros representados de forma simplificada.
+La escena izquierda debe mostrar una ventana de Agenda SENA con el formulario
+de una cita. La escena central debe ampliar esa misma información como una
+ficha de dominio con los campos `title`, `date`, `time` y `category`. La escena
+derecha debe mostrar un archivo `agenda.json` grande, con dos o tres registros
+legibles y resaltando las mismas propiedades.
 
-Las tres representaciones deben estar conectadas con una línea azul y puntos de
-avance. No mostrar código Python completo ni texto diminuto.
+Conectar las escenas con dos flechas amplias y una frase corta: `la interfaz
+captura`, `el modelo organiza`, `JSON conserva`. No mostrar código Python
+completo, listas microscópicas ni puntos de avance.
 
 ## Iconos
 
@@ -575,23 +601,31 @@ Proteger la contraseña, autenticar al usuario y mantener la sesión activa.
 
 ## Distribución
 
-- Usar tres columnas con los stages 04, 05 y 06.
-- Debajo de las columnas colocar una flecha que lleve a una tarjeta de login.
-- La tarjeta inferior debe decir `Usuario autenticado`.
+- No usar tres columnas de tarjetas.
+- Construir una escena de acceso: una ventana de login grande en el centro,
+  una fuente de datos a la izquierda y una confirmación de sesión a la
+  derecha.
+- La lectura debe ir de izquierda a derecha: `datos locales` → `registro` →
+  `inicio de sesión`.
+- La parte inferior debe contener una única línea de resultado: `Usuario
+  autenticado: puede entrar a la agenda`.
 
 ## Imagen o representación visual
 
-Crear un flujo de izquierda a derecha:
+Crear una escena de control de acceso de izquierda a derecha:
 
 `Base de datos → Registro → Login`
 
-El primer bloque debe mostrar un cilindro de base de datos con dos tablas
-pequeñas: `users` y `events`. El segundo debe mostrar un formulario con nombre,
-correo y contraseña. El tercero debe mostrar una tarjeta de inicio de sesión
-con un candado y un check verde.
+En el tercio izquierdo mostrar un cilindro de SQLite ampliado con las tablas
+`users` y `events`, usando solo esos nombres. En el centro mostrar un formulario
+de registro grande con `Nombre`, `Correo` y `Contraseña`, sin datos reales. En
+el tercio derecho mostrar la ventana de login de Agenda SENA con el candado,
+los campos y un botón `Ingresar`. Sobre la salida colocar un sello verde
+`Sesión activa`.
 
-No mostrar contraseñas reales ni información personal. Los datos representados
-deben ser genéricos y ficticios.
+Las tres zonas deben verse como partes de una misma aplicación, no como tres
+interfaces separadas. No mostrar contraseñas reales ni información personal.
+Los datos representados deben ser genéricos y ficticios.
 
 ## Iconos
 
@@ -631,14 +665,17 @@ administrar actividades.
 
 ## Distribución
 
-- Colocar tres bloques superiores para los stages.
-- En la parte inferior mostrar una composición amplia de la agenda.
-- Resaltar el calendario, la lista de actividades y las categorías con colores.
+- La agenda terminada debe ocupar aproximadamente el 72 % de la diapositiva.
+- No colocar tres tarjetas superiores que compitan con la aplicación.
+- Identificar las tres funciones con etiquetas grandes y discretas conectadas
+  directamente a la zona correspondiente de la interfaz.
+- Dejar aire alrededor de la ventana para que se perciba como el resultado
+  principal de la fase.
 
 ## Imagen o representación visual
 
-Crear una ilustración de la ventana principal de Agenda SENA vista desde arriba.
-Debe contener:
+Crear una ilustración amplia de la ventana principal de Agenda SENA. Debe
+contener:
 
 - Barra superior azul con búsqueda y usuario.
 - Menú lateral con `Inicio`, `Nueva cita`, `Citas`, `Calendario` y
@@ -648,8 +685,14 @@ Debe contener:
 - Agenda de hoy con tres actividades.
 - Etiquetas de categoría `Trabajo`, `Importante` y `Académica`.
 
+Sobre la interfaz colocar solamente tres etiquetas numeradas, con líneas de
+conexión cortas y gruesas: `07 Navegación` apuntando al menú lateral, `08
+Calendario` apuntando al calendario mensual y `09 Actividades` apuntando a la
+agenda de hoy y sus categorías. Las etiquetas no deben tapar la ventana.
+
 La imagen debe ser una referencia visual limpia, no una captura con texto
-pequeño. Los elementos principales deben ser reconocibles a simple vista.
+pequeño. La aplicación es la protagonista; las etiquetas explican la relación
+entre el stage y la zona construida.
 
 ## Iconos
 
@@ -691,22 +734,27 @@ Preparar una versión `.exe` para Windows.
 
 ## Distribución
 
-- Dividir la diapositiva en tres columnas: `Pruebas`, `Seguridad` y
-  `Ejecutable`.
-- Cada columna debe tener una tarjeta grande con un icono.
-- Colocar la frase final en la parte inferior, centrada.
-- Mostrar un pequeño archivo `AgendaSENA.exe` como resultado final.
+- Usar una composición de salida: a la izquierda un bloque vertical de
+  validación y a la derecha una caja grande de entrega `AgendaSENA.exe`.
+- El bloque de validación debe tener tres filas amplias: `Pruebas`,
+  `Seguridad` y `Ejecutable`, cada una con un check y una frase corta.
+- La caja del ejecutable debe verse como el resultado dominante, no como un
+  icono pequeño.
+- Cerrar con la frase final en una banda limpia, sin añadir otra fila de
+  tarjetas.
 
 ## Imagen o representación visual
 
-Crear una línea de producción con tres estaciones conectadas:
+Crear una escena de liberación del producto, no una línea de producción:
 
 `Código → Pruebas aprobadas → AgendaSENA.exe`
 
-Sobre la línea colocar un escudo semitransparente para representar la
-seguridad. La estación de pruebas debe tener tres checks pequeños: base de
-datos, login y actividades. La estación final debe mostrar una caja de
-ejecutable con el nombre `AgendaSENA.exe`.
+En el lado izquierdo mostrar una columna de tres comprobaciones grandes:
+`Base de datos`, `Login` y `Actividades`, todas con check verde. Integrar un
+escudo azul junto a la fila `Seguridad`, con la frase `datos locales protegidos`.
+En el lado derecho mostrar una caja de aplicación para Windows con el nombre
+`AgendaSENA.exe`, un botón visual `Abrir` y una etiqueta `Listo para entregar`.
+Una flecha amplia debe unir las comprobaciones con el ejecutable.
 
 ## Iconos
 
@@ -749,20 +797,26 @@ por función.**
 
 ## Distribución
 
-- Usar una composición final con el título a la izquierda.
-- Colocar la lista de resultados debajo del título.
-- Mostrar al lado derecho una representación de la agenda terminada.
-- Ubicar `Gracias` en la parte inferior derecha.
-- Mantener el cierre limpio, con espacio visual y sin exceso de elementos.
+- Usar una composición final tipo portada de producto.
+- Colocar el título y una lista breve de resultados en el tercio izquierdo.
+- Hacer que la ventana terminada de Agenda SENA ocupe el tercio derecho y el
+  centro de la diapositiva.
+- Colocar el login detrás de la agenda, más pequeño y parcialmente desplazado,
+  para mostrar el recorrido de entrada sin competir con el resultado final.
+- Ubicar `Gracias` abajo, con mucho espacio alrededor.
 
 ## Imagen o representación visual
 
 Crear una composición final con las dos referencias del producto conectadas:
 
-- Una tarjeta pequeña de login en la parte posterior izquierda.
-- Una ventana grande de agenda en primer plano.
-- Una flecha suave entre ambas que represente el ingreso a la aplicación.
-- Pequeños elementos flotantes de calendario, usuario, cita y check.
+- Una ventana de login completa, pequeña y nítida, en la parte posterior
+  izquierda.
+- Una ventana grande de agenda en primer plano, mostrando navegación,
+  calendario y agenda de hoy.
+- Una conexión visual sencilla entre ambas, como una flecha o un recorrido de
+  luz, sin texto adicional.
+- Como máximo tres elementos flotantes: calendario, usuario y check. Deben ser
+  grandes, separados y funcionales, no adornos diminutos.
 
 La agenda debe ser el elemento visual dominante. La composición debe transmitir
 que todos los stages terminaron reunidos en una sola aplicación navegable.
