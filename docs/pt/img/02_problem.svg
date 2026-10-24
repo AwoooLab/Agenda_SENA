@@ -126,19 +126,19 @@
     <rect x="0" y="0" width="1680" height="1" fill="#7DD3FC" opacity="0.35"/>
     <g transform="translate(0 32)">
       <circle cx="8" cy="8" r="7" fill="#FCA5A5"/>
-      <text x="28" y="14" class="sans soft" font-size="20">Las citas se dispersan en notas, mensajes o calendarios.</text>
+      <text x="28" y="17" class="sans soft" font-size="26">Las citas se dispersan en notas, mensajes o calendarios.</text>
     </g>
     <g transform="translate(900 32)">
       <circle cx="8" cy="8" r="7" fill="#FBBF24"/>
-      <text x="28" y="14" class="sans soft" font-size="20">La información importante debe consultarse rápidamente.</text>
+      <text x="28" y="17" class="sans soft" font-size="26">La información importante debe consultarse rápidamente.</text>
     </g>
     <g transform="translate(0 76)">
       <circle cx="8" cy="8" r="7" fill="#60A5FA"/>
-      <text x="28" y="14" class="sans soft" font-size="20">Una agenda necesita fechas, horas, usuarios, estados y categorías.</text>
+      <text x="28" y="17" class="sans soft" font-size="26">Una agenda necesita fechas, horas, usuarios, estados y categorías.</text>
     </g>
     <g transform="translate(900 76)">
       <circle cx="8" cy="8" r="7" fill="#39C875"/>
-      <text x="28" y="14" class="sans white medium" font-size="20">El proyecto convierte esa necesidad en una aplicación funcional.</text>
+      <text x="28" y="17" class="sans white medium" font-size="26">El proyecto convierte esa necesidad en una aplicación funcional.</text>
     </g>
   </g>
 
