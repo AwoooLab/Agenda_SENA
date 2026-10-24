@@ -157,3 +157,14 @@ La etapa se puede publicar cuando el esquema, el código, las pruebas y
 `preview.html` están en GitHub, y la Clase 04 muestra claramente las tablas en
 la única ventana integrada. La creación y consulta de SQLite queda definida en Python y se
 probará al ejecutar el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+El espacio principal es `agenda.appointments` y el espacio secundario es
+`agenda.summary`. El esquema debe permitir obtener usuarios, citas, estados,
+categorías y fechas suficientes para alimentar las tarjetas de resumen, el
+calendario, la agenda del día y la tabla de citas.
+
+El preview no muestra una herramienta de base de datos aislada: muestra una
+representación de los datos que la agenda utilizará, indicando las tablas
+`users` y `events` y una relación por `user_id`.

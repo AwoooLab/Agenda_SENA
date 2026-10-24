@@ -150,3 +150,19 @@ La etapa se puede publicar cuando las pruebas, el script, la guía y
 `preview.html` están en GitHub sin mostrar datos privados. La generación y
 ejecución del `.exe` se comprobarán posteriormente en
 un PC con Windows.
+
+## Alineación con las ventanas de referencia
+
+La validación final debe comprobar el flujo completo y no solamente servicios
+aislados:
+
+1. Abrir la aplicación en el login.
+2. Registrar o seleccionar un usuario de prueba.
+3. Iniciar sesión con credenciales válidas.
+4. Confirmar que aparece la agenda en la misma ventana.
+5. Navegar por Inicio, Nueva cita, Citas, Calendario y Actividades.
+6. Crear una cita y comprobarla en calendario, agenda del día y tabla.
+7. Cerrar sesión y confirmar el regreso al login.
+
+El preview de la entrega muestra el resultado de esta comprobación sin
+convertirse en una tercera pantalla.

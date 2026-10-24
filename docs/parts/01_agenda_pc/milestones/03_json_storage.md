@@ -144,3 +144,14 @@ La etapa se puede publicar cuando los archivos de JSON están en GitHub,
 `preview.html` explica visualmente el flujo y la Clase 03 se integra en la
 única ventana integrada. Guardar y cargar los datos queda definido en Python y se probará al
 ejecutar el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+Este hito es una introducción a la persistencia. Su espacio es
+`agenda.appointments`. El preview debe mostrar el mismo registro antes de
+guardar, después de guardar y después de cargar, usando una tabla de citas
+similar a la de `agenda-window.svg`.
+
+JSON es un paso educativo y temporal. La versión integrada de la agenda usará
+SQLite desde el Hito 04; ningún dato de prueba de este hito debe convertirse en
+una dependencia de otro stage.

@@ -156,3 +156,15 @@ La etapa se puede publicar cuando los archivos del registro están en GitHub,
 `preview.html` representa correctamente la Clase 05 y el registro aparece en la
 la única ventana integrada. El registro y sus validaciones quedan definidos en Python y se
 probarán al ejecutar el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+El registro pertenece al estado `login` y usa `login.form` y
+`login.feedback`. `Crear cuenta` no abre una ventana Tkinter nueva: puede
+mostrar un estado del mismo formulario o una vista interna controlada por el
+login.
+
+El preview debe incluir nombre de usuario, correo, contraseña, confirmación,
+botón de registro, mensaje de éxito y errores de campos vacíos o duplicados.
+Después de registrarse, el usuario de prueba debe poder utilizarse en el
+Hito 06.

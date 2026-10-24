@@ -146,3 +146,14 @@ La etapa se puede publicar cuando los archivos del calendario están en GitHub,
 `preview.html` muestra la cuadrícula y la Clase 08 se integra en la única ventana integrada. El
 cálculo, la navegación y la selección quedan definidos en Python y se probarán
 al ejecutar el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+El componente ocupa `agenda.calendar` dentro del contenido central de la
+agenda. Debe mostrar encabezado del mes, botones anterior y siguiente, acción
+`Hoy`, siete columnas de lunes a domingo, celdas de día, día seleccionado y
+marcas de actividades.
+
+El calendario recibe datos de prueba sin depender de otro stage. El preview
+debe conservar la barra superior, el menú y el espacio de calendario, aunque
+las citas reales se conecten después de aprobar el módulo.

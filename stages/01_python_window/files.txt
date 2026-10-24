@@ -229,3 +229,35 @@ Antes de integrar, comprobar la entrada independiente, la salida producida,
 las funciones públicas, los datos de prueba, las validaciones, los errores y
 el punto de conexión futuro. Este módulo no debe conservar funciones de otros
 stages dentro de su propio código.
+
+======================================================================
+CONTRATO VISUAL Y DE INTEGRACIÓN
+======================================================================
+
+VENTANA Y ESPACIO
+-----------------
+- Ventana: login.
+- Espacios: login.brand y login.form.
+- Estado: chasis inicial, sin autenticación real.
+
+Este ejercicio usa una ventana pequeña para aprender Tkinter. No se debe
+confundir con el diseño final de `assets/login-window.svg`; las etapas 05 y 06
+completan sus campos, mensajes y acciones.
+
+PREVIEW
+-------
+El fragmento debe declarar:
+
+    <section data-screen="login" data-slot="login.form">
+
+Debe mostrar la identidad de Agenda SENA, reservar visualmente el formulario de
+acceso y conservar una sola ventana. El preview no debe presentar calendario,
+menú lateral ni otra pantalla.
+
+VALIDACIÓN
+----------
+- Ejecutar `python stages/01_python_window/app.py`.
+- Confirmar que la ventana se crea y se cierra correctamente.
+- Comparar marca, jerarquía, fondo y alineación con la referencia.
+- Subir `app.py` y `preview.html` y comprobar el fragmento desde la página
+  principal.

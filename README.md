@@ -52,4 +52,22 @@ El archivo `web/screen.js` cambia de una ventana a la otra cuando se pulsa
 `Ingresar`. No muestra menús de stages, indicadores de avance ni elementos
 adicionales fuera de la aplicación.
 
+## Referencias del producto terminado
+
+Las dos referencias visuales editables son:
+
+- `assets/login-window.svg`: estado de inicio de sesión.
+- `assets/agenda-window.svg`: estado autenticado con todos los espacios de la
+  agenda.
+
+La recreación se realiza por espacios, no por pantallas nuevas. Los stages
+declaran si trabajan en `login` o `agenda` y especifican un `data-slot`, por
+ejemplo `agenda.calendar` o `agenda.appointments`. Los iconos reutilizables se
+encuentran en `assets/icons/`.
+
+Cada `preview.html` comprueba una parte de la ventana final. La integración
+conserva los componentes aprobados y reemplaza solamente el espacio de la
+etapa actual. El estudiante no necesita editar el orquestador mientras
+desarrolla un stage.
+
 La metodología completa está en docs/stage_contract.md.

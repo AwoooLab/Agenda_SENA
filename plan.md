@@ -28,12 +28,28 @@ GitHub Pages muestra únicamente dos ventanas, una a la vez:
 Los datos mostrados son demostrativos. Cada stage posterior reemplazará o
 ampliará la función correspondiente sin crear otra ventana externa.
 
+## Especificación visual que debe reproducirse
+
+El login debe conservar marca, bienvenida, usuario o correo, contraseña,
+mostrar/ocultar, recordarme, recuperar contraseña, ingresar y crear cuenta.
+
+La agenda debe conservar barra superior, búsqueda, usuario, menú lateral,
+saludo, nueva cita, tarjetas de resumen, calendario mensual, agenda del día,
+tabla de citas recientes y panel de actividades. Los iconos se toman de
+`assets/icons/` y no se redibujan dentro de cada stage.
+
+Cada hito documenta qué espacio recibe el componente y qué datos de prueba
+deben aparecer en ese espacio. El preview del stage es un fragmento visual;
+`index.html` sigue siendo el único visor de las dos ventanas.
+
 ## Secuencia de construcción
 
 ### Stage 01 — Ventana inicial
 
-Construir y validar una ventana inicial independiente. Después se registra como
-la primera vista integrada.
+Construir la base de una sola ventana y el espacio visual del inicio de sesión.
+La antigua ventana genérica con `Cerrar` se conserva solo como ejercicio
+introductorio; el resultado de la parte debe avanzar hacia
+`assets/login-window.svg`.
 
 ### Stage 02 — Modelo de datos
 
@@ -69,10 +85,24 @@ Construir calendario, navegación de meses y selección de días.
 
 ### Stage 09 — Actividades, categorías y colores
 
-Construir actividades, categorías, colores y filtros.
+Completar los componentes que faltan en la agenda: formulario de actividad,
+agenda de hoy, citas recientes, resumen, categorías, colores, progreso e
+iconos reutilizables.
 
 ### Stage 10 — Pruebas, seguridad y ejecutable
 
 Validar la aplicación integrada y preparar el ejecutable de Windows.
 
 La documentación detallada del contrato está en docs/stage_contract.md.
+
+## Orden de validación
+
+Para cada etapa se sigue el mismo ciclo:
+
+1. Leer el milestone y el `files.txt`.
+2. Identificar `screen`, `slot`, datos de prueba y archivos permitidos.
+3. Ejecutar el módulo independiente en el PC.
+4. Actualizar `preview.html` con la misma jerarquía y estados.
+5. Comprobar controles, mensajes, errores y conservación de componentes.
+6. Aprobar el stage y registrar su espacio en la integración.
+7. Revisar el flujo completo en GitHub Pages y en `main.py`.

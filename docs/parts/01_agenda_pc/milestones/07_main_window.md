@@ -137,3 +137,14 @@ La etapa se puede publicar cuando los archivos de la ventana principal están
 en GitHub, `preview.html` muestra la distribución completa y la Clase 07
 se integra en la única ventana integrada. La navegación funcional queda definida en Python y se
 probará al ejecutar el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+Este hito ocupa `agenda.topbar` y `agenda.sidebar` y prepara los espacios
+`agenda.summary`, `agenda.calendar`, `agenda.today`, `agenda.appointments` y
+`agenda.activities`.
+
+La ventana debe tener una barra superior, búsqueda, usuario activo, menú
+lateral y un contenedor central. Las opciones del menú cambian el contenido
+central; no destruyen la barra, no crean otra ventana y no muestran funciones
+que todavía no tengan una vista definida.

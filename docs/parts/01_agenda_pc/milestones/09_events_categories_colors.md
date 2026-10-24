@@ -187,3 +187,22 @@ La etapa se puede publicar cuando los archivos de actividades están en GitHub,
 `preview.html` representa formulario, categorías y colores, y la Clase 09
 se integra en la única ventana integrada. Las operaciones funcionales quedan definidas en
 Python y se probarán al ejecutar el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+Este hito completa los espacios de contenido que hacen que la agenda se vea
+terminada:
+
+- `agenda.summary`: citas de hoy, pendientes, próxima cita y actividades.
+- `agenda.today`: lista con hora, título y categoría.
+- `agenda.appointments`: tabla de citas recientes con estado.
+- `agenda.activities`: progreso semanal, actividades y leyenda de colores.
+
+El formulario debe permitir crear, validar, completar, editar y eliminar una
+actividad. Las categorías iniciales son Trabajo, Personal, Estudio y Salud.
+Cada color debe estar acompañado por texto y los iconos deben referenciarse
+desde `assets/icons/`.
+
+El preview debe mostrar datos de prueba en todos los espacios anteriores y
+conservar el calendario si ya fue integrado. La acción `Guardar actividad` debe
+producir un cambio visible de estado.

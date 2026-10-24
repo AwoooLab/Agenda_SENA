@@ -154,3 +154,13 @@ La etapa se puede publicar cuando los archivos definidos están en GitHub,
 `preview.html` muestra claramente los datos de `Cita` y la Clase 02 se integra
 en la única ventana integrada. La conversión a diccionario queda definida en el
 código Python y se probará cuando pueda ejecutarse el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+El espacio visual de este hito es `agenda.appointments`. El modelo no dibuja la
+interfaz, pero `preview.html` debe mostrar una cita de prueba con la misma
+información que utilizará la tabla de citas recientes: título, fecha, hora,
+descripción y estado.
+
+La cita de prueba debe poder reconocerse en la agenda final como una fila o una
+tarjeta. El hito no crea todavía SQLite, login ni una segunda ventana.

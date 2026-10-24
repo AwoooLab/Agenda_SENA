@@ -174,3 +174,13 @@ La etapa se puede publicar cuando los archivos del login están en GitHub,
 `preview.html` muestra usuario, contraseña, mensajes e iconos, y la Clase 06
 se integra en la única ventana integrada. La autenticación y la seguridad quedan definidas en
 Python y se probarán al ejecutar el proyecto en un PC.
+
+## Alineación con las ventanas de referencia
+
+Este hito completa `login.form` y `login.feedback`. Debe reproducir el orden
+visual de `assets/login-window.svg`: usuario o correo, contraseña, mostrar,
+recordarme, recuperación, ingresar y crear cuenta.
+
+La validación correcta cambia el contenido de la misma ventana a
+`agenda.topbar` y `agenda.sidebar`. La validación incorrecta conserva el login
+y muestra un mensaje claro sin imprimir la contraseña.

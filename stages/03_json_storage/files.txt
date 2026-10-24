@@ -209,3 +209,29 @@ Antes de integrar, comprobar la entrada independiente, la salida producida,
 las funciones públicas, los datos de prueba, las validaciones, los errores y
 el punto de conexión futuro. Este módulo no debe conservar funciones de otros
 stages dentro de su propio código.
+
+======================================================================
+CONTRATO VISUAL Y DE INTEGRACIÓN
+======================================================================
+
+VENTANA Y ESPACIO
+-----------------
+- Ventana: agenda.
+- Espacio: agenda.appointments.
+- Estado: datos de demostración antes, durante y después de guardar.
+
+PREVIEW
+-------
+El fragmento debe comenzar con:
+
+    <section data-screen="agenda" data-slot="agenda.appointments">
+
+Debe representar el ciclo `lista en memoria -> JSON guardado -> lista cargada`
+con una tabla visual de citas y un mensaje de estado. El botón de carga debe
+tener una respuesta visible en el preview.
+
+ALCANCE
+-------
+JSON es una lección de persistencia temporal. La integración final utilizará
+SQLite del siguiente stage; por eso no se debe importar este módulo desde otro
+stage ni convertir `agenda.json` en un archivo permanente del producto.

@@ -147,3 +147,14 @@ la única ventana integrada de `index.html` y la representación visual cumple l
 especificación. El registro del módulo en `config/integration.json` se realiza
 después de aprobar la etapa. El comportamiento del botón pertenece al código
 Python y se comprobará cuando la aplicación se ejecute en un PC.
+
+## Alineación con las ventanas de referencia
+
+Este hito es el chasis inicial de la aplicación, no el login terminado. Su
+espacio es `login.brand` y `login.form`. La ventana pequeña de esta lección
+permite aprender `Tk`, `Frame`, `Label` y `Button`; posteriormente se amplía
+hasta la composición de `assets/login-window.svg`.
+
+El preview debe conservar una sola ventana visual, mostrar la marca y reservar
+el lugar donde aparecerán los campos de acceso. No debe crear una pantalla de
+agenda ni una segunda ventana.

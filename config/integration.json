@@ -1,11 +1,83 @@
 {
   "application": "Agenda SENA",
+  "reference_windows": {
+    "login": "assets/login-window.svg",
+    "agenda": "assets/agenda-window.svg"
+  },
+  "navigation": {
+    "initial_screen": "login",
+    "after_login": "agenda",
+    "logout_screen": "login",
+    "single_window": true
+  },
   "active_modules": [
     {
       "id": "01_python_window",
-      "label": "Inicio",
-      "target": "inicio",
-      "preview": "stages/01_python_window/preview.html"
+      "label": "Base de la ventana y login",
+      "screen": "login",
+      "slot": "login.form",
+      "target": "login",
+      "preview": "stages/01_python_window/preview.html",
+      "status": "base"
     }
+  ],
+  "planned_modules": [
+    {
+      "id": "02_data_model",
+      "screen": "agenda",
+      "slots": ["agenda.appointments"]
+    },
+    {
+      "id": "03_json_storage",
+      "screen": "agenda",
+      "slots": ["agenda.appointments"]
+    },
+    {
+      "id": "04_sqlite_database",
+      "screen": "agenda",
+      "slots": ["agenda.summary", "agenda.appointments"]
+    },
+    {
+      "id": "05_user_registration",
+      "screen": "login",
+      "slots": ["login.form", "login.feedback"]
+    },
+    {
+      "id": "06_login_session",
+      "screen": "login",
+      "slots": ["login.form", "login.feedback", "agenda.topbar"]
+    },
+    {
+      "id": "07_main_window",
+      "screen": "agenda",
+      "slots": ["agenda.topbar", "agenda.sidebar"]
+    },
+    {
+      "id": "08_monthly_calendar",
+      "screen": "agenda",
+      "slots": ["agenda.calendar"]
+    },
+    {
+      "id": "09_events_categories_colors",
+      "screen": "agenda",
+      "slots": ["agenda.summary", "agenda.today", "agenda.appointments", "agenda.activities"]
+    },
+    {
+      "id": "10_tests_security_executable",
+      "screen": "login+agenda",
+      "slots": ["login.form", "agenda.activities"]
+    }
+  ],
+  "slot_order": [
+    "login.brand",
+    "login.form",
+    "login.feedback",
+    "agenda.topbar",
+    "agenda.sidebar",
+    "agenda.summary",
+    "agenda.calendar",
+    "agenda.today",
+    "agenda.appointments",
+    "agenda.activities"
   ]
 }

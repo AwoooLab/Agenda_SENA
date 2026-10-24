@@ -241,3 +241,34 @@ Antes de integrar, comprobar la entrada independiente, la salida producida,
 las funciones públicas, los datos de prueba, las validaciones, los errores y
 el punto de conexión futuro. Este módulo no debe conservar funciones de otros
 stages dentro de su propio código.
+
+======================================================================
+CONTRATO VISUAL Y DE INTEGRACIÓN
+======================================================================
+
+VENTANA Y ESPACIOS
+------------------
+- Ventana: agenda.
+- Espacios: agenda.summary, agenda.today, agenda.appointments y
+  agenda.activities.
+- Estado: agenda con datos de prueba, categorías y progreso visible.
+
+COMPONENTES QUE DEBEN APARECER
+------------------------------
+1. Tarjetas de citas de hoy, pendientes, próxima cita y actividades.
+2. Lista de agenda de hoy con hora, título y categoría.
+3. Tabla de citas recientes con título, fecha, hora y estado.
+4. Formulario de nueva actividad.
+5. Progreso semanal y lista de actividades.
+6. Leyenda con nombre y color de cada categoría.
+7. Iconos referenciados desde `assets/icons/`.
+
+PREVIEW
+-------
+El fragmento puede contener varios espacios, pero cada uno debe declararse
+explícitamente, por ejemplo:
+
+    <section data-screen="agenda" data-slot="agenda.activities">
+
+Guardar, completar, editar, filtrar y eliminar deben producir una respuesta
+visible. Los colores nunca deben ser el único medio para comunicar un estado.

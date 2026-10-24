@@ -22,3 +22,18 @@ abrir en un editor de vectores o revisar directamente en el navegador.
 La carpeta `icons/` contiene iconos SVG reutilizables para los stages. Cada
 archivo es independiente, editable y conserva el mismo estilo visual de
 Agenda SENA. La guía de uso está en `assets/icons/README.md`.
+
+## Relación con los stages
+
+Los SVG de esta carpeta son referencias del resultado visual final. Los stages
+no deben modificarlos durante una lección ni convertirlos en dependencias de
+Python. Cada milestone indica qué espacio de la referencia está construyendo:
+
+- Login: `login.brand`, `login.form`, `login.feedback`.
+- Agenda: `agenda.topbar`, `agenda.sidebar`, `agenda.summary`,
+  `agenda.calendar`, `agenda.today`, `agenda.appointments` y
+  `agenda.activities`.
+
+El código Python reproduce la jerarquía y el comportamiento con Tkinter. El
+`preview.html` reproduce el mismo componente con HTML y CSS para la revisión
+visual.

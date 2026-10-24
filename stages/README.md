@@ -40,6 +40,33 @@ entradas, salidas, funciones públicas, datos de prueba, validación visual y
 forma de integración futura. La referencia común está en
 docs/stage_contract.md.
 
+## Relación con las dos ventanas
+
+Cada stage debe indicar en su `files.txt`:
+
+- La ventana objetivo: `login` o `agenda`.
+- El espacio objetivo, por ejemplo `login.form`, `agenda.calendar` o
+  `agenda.activities`.
+- Los elementos de etapas anteriores que deben conservarse visibles.
+- Los datos de prueba que deben aparecer en `preview.html`.
+- La acción que permite comprobar el componente.
+
+El `preview.html` debe comenzar con un fragmento que declare el espacio:
+
+```html
+<section data-screen="agenda" data-slot="agenda.calendar">
+```
+
+El fragmento no debe crear una tercera ventana, una lista de progreso ni un
+menú externo. GitHub Pages continúa mostrando solamente el login y la agenda.
+
+## Recursos visuales
+
+Los iconos compartidos están en `assets/icons/`. Se pueden referenciar desde
+el preview, pero no se deben copiar ni redibujar en cada stage. Los SVG de
+`assets/` son referencias de diseño; los archivos Python deben reproducir su
+jerarquía y comportamiento dentro de Tkinter.
+
 ## Recursos visuales compartidos
 
 Los stages pueden reutilizar los iconos de `assets/icons/` desde su

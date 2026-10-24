@@ -205,3 +205,29 @@ Antes de integrar, comprobar la entrada independiente, la salida producida,
 las funciones públicas, los datos de prueba, las validaciones, los errores y
 el punto de conexión futuro. Este módulo no debe conservar funciones de otros
 stages dentro de su propio código.
+
+======================================================================
+CONTRATO VISUAL Y DE INTEGRACIÓN
+======================================================================
+
+VENTANA Y ESPACIOS
+------------------
+- Ventanas: login y agenda.
+- Espacios revisados: todos los espacios registrados por las etapas anteriores.
+- Estado: flujo completo aprobado.
+
+PRUEBA DE ACEPTACIÓN
+---------------------
+La prueba final debe abrir el login, aceptar un usuario de prueba, mostrar la
+agenda en la misma ventana, navegar por el menú, crear una cita, comprobarla
+en calendario, agenda de hoy y tabla, cerrar sesión y regresar al login.
+
+PREVIEW
+-------
+El fragmento debe comenzar con:
+
+    <section data-screen="agenda" data-slot="agenda.activities">
+
+Debe comunicar pruebas aprobadas, credenciales protegidas, navegación completa
+y ejecutable preparado. No debe mostrar secretos reales ni crear una pantalla
+adicional fuera de las dos ventanas de referencia.
