@@ -13,10 +13,20 @@
   "active_modules": [
     {
       "id": "01_python_window",
-      "label": "Base de la ventana y login",
-      "screen": "login",
-      "slot": "login.form",
-      "target": "login",
+      "label": "Bienvenida, navegación y agenda base",
+      "screen": "login+agenda",
+      "slots": [
+        "login.brand",
+        "login.form",
+        "agenda.topbar",
+        "agenda.sidebar",
+        "agenda.summary",
+        "agenda.calendar",
+        "agenda.today",
+        "agenda.appointments",
+        "agenda.activities"
+      ],
+      "target": "login->agenda",
       "preview": "stages/01_python_window/preview.html",
       "status": "base"
     }

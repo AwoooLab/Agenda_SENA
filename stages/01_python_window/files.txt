@@ -1,19 +1,23 @@
-ETAPA 01 — VENTANA INICIAL DE LA AGENDA
+ETAPA 01 — BIENVENIDA, NAVEGACIÓN Y AGENDA BASE
 ========================================
 
 PROPÓSITO
 ---------
-Construir la ventana inicial de Agenda SENA, que será el punto de entrada visual
-de la aplicación de escritorio local. Esta etapa define la identidad de la
-aplicación, las dimensiones de la ventana y el primer control interactivo para
-cerrarla.
+Construir la primera versión navegable de Agenda SENA en una sola ventana de
+escritorio. Esta etapa presenta una bienvenida con un único botón `Siguiente` y,
+al pulsarlo, reemplaza ese contenido por una agenda base con todos sus espacios
+visuales: menú, resumen, calendario, citas y actividades.
+
+La etapa define el chasis visual y la navegación inicial. No implementa todavía
+usuarios, contraseñas, persistencia ni operaciones reales sobre citas.
 
 PLATAFORMA OBJETIVO
 -------------------
 La aplicación que se está construyendo es para un PC con Windows y se ejecuta
-con Python y Tkinter. El tamaño 520x320 corresponde a la ventana de escritorio.
-`preview.html` es únicamente una representación visual para revisar el diseño
-en el navegador; no reemplaza ni ejecuta `app.py`.
+con Python y Tkinter. La ventana de trabajo debe ser cercana a `1180x760`,
+redimensionable y con una sola instancia de `tk.Tk()`.
+`preview.html` es únicamente una representación visual para revisar en el
+navegador los mismos dos estados; no reemplaza ni ejecuta `app.py`.
 
 ARCHIVO DE LA ETAPA
 -------------------
@@ -36,7 +40,15 @@ ARCHIVO: app.py
 PROPÓSITO DEL ARCHIVO
 ---------------------
 Este archivo será un programa independiente. Su trabajo es crear una ventana
-pequeña, mostrar información básica de la agenda y permitir cerrarla.
+con dos estados internos:
+
+1. Bienvenida: marca, explicación breve y un único botón `Siguiente`.
+2. Agenda: barra superior, búsqueda, usuario de demostración, menú lateral,
+   tarjetas de resumen, calendario, agenda del día, citas recientes y
+   actividades.
+
+El segundo estado se muestra limpiando y reconstruyendo el contenido de la
+misma ventana; no se abre otro `Tk()`.
 
 LIBRERÍAS QUE SE PUEDEN USAR
 -----------------------------
@@ -61,17 +73,35 @@ Fragmento:
 
 LECCIÓN 3 — CONFIGURAR LA VENTANA
 ---------------------------------
-Configurar el título, el tamaño y si se permite cambiar el tamaño.
+Configurar el título, el tamaño inicial y que la ventana pueda adaptarse a la
+pantalla del PC.
 
 Fragmentos:
-    ventana.title("Agenda SENA — Etapa 01")
-    ventana.geometry("520x320")
-    ventana.resizable(False, False)
+    ventana.title("Agenda SENA")
+    ventana.geometry("1180x760")
+    ventana.minsize(980, 640)
 
 El texto del título debe ser exactamente el indicado. geometry recibe ancho por
 alto en píxeles.
 
-LECCIÓN 4 — MOSTRAR TEXTO CON LABEL
+LECCIÓN 4 — ORGANIZAR LA VENTANA EN ESTADOS
+--------------------------------------------
+La bienvenida y la agenda son dos estados de una misma ventana. Un `Frame`
+puede actuar como contenedor de cada estado. La función de transición retira
+el contenido anterior y construye la siguiente vista.
+
+Fragmento:
+    def limpiar(ventana):
+        for widget in ventana.winfo_children():
+            widget.destroy()
+
+    boton = tk.Button(ventana, text="Siguiente",
+                      command=lambda: mostrar_agenda(ventana))
+
+La función pasada a `command` debe existir antes de que el usuario pulse el
+botón. El `lambda` permite enviar la ventana como argumento.
+
+LECCIÓN 5 — MOSTRAR TEXTO CON LABEL
 -----------------------------------
 Un Label muestra un texto. font recibe el nombre de letra, tamaño y estilo.
 pack organiza el control en la ventana.
@@ -85,28 +115,45 @@ Fragmentos:
 
 Se puede usar font=("Arial", 22, "bold") para el título.
 
-LECCIÓN 5 — CREAR UN BOTÓN
+LECCIÓN 6 — CREAR EL BOTÓN SIGUIENTE
 --------------------------
-Un Button muestra una acción. command recibe una función, no el resultado de
-ejecutarla.
+Un `Button` muestra la única acción de la bienvenida. `command` recibe una
+función, no el resultado de ejecutarla.
 
 Fragmento:
-    boton = tk.Button(ventana, text="Cerrar", command=ventana.destroy)
+    boton = tk.Button(ventana, text="Siguiente",
+                      command=lambda: mostrar_agenda(ventana))
     boton.pack(pady=20)
 
-Correcto: command=ventana.destroy
-Incorrecto: command=ventana.destroy()
+Correcto: command=lambda: mostrar_agenda(ventana)
+Incorrecto: command=mostrar_agenda(ventana)
 
-LECCIÓN 6 — INICIAR EL BUCLE DE LA INTERFAZ
+LECCIÓN 7 — CREAR TARJETAS Y SECCIONES DE LA AGENDA
 -------------------------------------------
-mainloop mantiene abierta la ventana y espera clics del usuario.
+La agenda se puede dividir en `Frame` pequeños: barra superior, menú lateral,
+resumen, calendario y paneles inferiores. Cada sección debe tener un título,
+un contenedor y datos demostrativos, aunque todavía no tenga lógica real.
+
+Ejemplo de una tarjeta visual:
+    tarjeta = tk.Frame(contenido, bg="white", padx=16, pady=12)
+    tk.Label(tarjeta, text="Citas de hoy", bg="white").pack(anchor="w")
+    tk.Label(tarjeta, text="3", bg="white",
+             font=("Arial", 22, "bold")).pack(anchor="w")
+    tarjeta.pack(side="left", padx=8)
+
+Los iconos de esta etapa pueden ser símbolos de texto en Tkinter. Los SVG de
+`assets/icons/` se reservan para `preview.html` y para la referencia visual.
+
+LECCIÓN 8 — INICIAR EL BUCLE DE LA INTERFAZ
+-------------------------------------------
+`mainloop` mantiene abierta la ventana y espera clics del usuario.
 
 Fragmento:
     ventana.mainloop()
 
 Sin mainloop la ventana aparece y se cierra inmediatamente.
 
-LECCIÓN 7 — ORGANIZAR EL PUNTO DE ENTRADA
+LECCIÓN 9 — ORGANIZAR EL PUNTO DE ENTRADA
 -----------------------------------------
 Es recomendable colocar la construcción de la ventana dentro de main y ejecutar
 main solo cuando el archivo se abra directamente.
@@ -118,37 +165,39 @@ Fragmento:
     if __name__ == "__main__":
         main()
 
-LÓGICA COMPLETA QUE DEBE ESCRIBIR EL ESTUDIANTE
+LÓGICA COMPLETA QUE DEBE IMPLEMENTAR EL ESTUDIANTE
 ------------------------------------------------
 1. Importar tkinter como tk.
 2. Definir main.
 3. Crear la ventana.
-4. Configurar título, tamaño y redimensionamiento.
-5. Crear el título.
-6. Crear el subtítulo.
-7. Crear el botón Cerrar.
-8. Iniciar mainloop.
-9. Agregar el bloque de ejecución directa.
+4. Configurar título, tamaño inicial y redimensionamiento.
+5. Crear la función que limpia el contenido actual.
+6. Crear la bienvenida con marca, explicación y botón `Siguiente`.
+7. Crear la función que construye la agenda base.
+8. Mostrar en la agenda los siete espacios visuales solicitados.
+9. Iniciar mainloop.
+10. Agregar el bloque de ejecución directa.
 
 DISEÑO OBLIGATORIO
 ------------------
-- Título de ventana: Agenda SENA — Etapa 01.
-- Tamaño: 520x320.
-- Fondo blanco o gris muy claro.
-- Texto grande: Agenda SENA.
-- Subtítulo: Mi agenda local para PC.
-- Botón: Cerrar.
-- El título y el subtítulo deben quedar centrados.
+- Título de ventana: `Agenda SENA`.
+- Tamaño inicial cercano a `1180x760`, con mínimo `980x640`.
+- Bienvenida inicial con marca, explicación breve y botón `Siguiente`.
+- Agenda posterior con barra superior, búsqueda, usuario, menú lateral,
+  resumen, calendario, agenda del día, citas recientes y actividades.
+- Fondo claro, barra superior azul marino, tarjetas blancas, bordes suaves y
+  texto con jerarquía clara.
+- El cambio de estado ocurre dentro de la misma ventana.
 
 LO QUE TODAVÍA NO SE DEBE CONSTRUIR
 -----------------------------------
-- Formularios de citas.
-- Menús.
-- Usuarios.
-- Inicio de sesión.
-- Calendario.
+- Campos de usuario y contraseña.
+- Validación de credenciales y sesiones.
+- Formularios funcionales de citas.
+- Guardado de citas, usuarios o actividades.
 - JSON o SQLite.
 - Conexión a internet.
+- Una segunda ventana.
 
 PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
@@ -156,8 +205,9 @@ Si se dispone de Python instalado, ejecutar desde la raíz:
 
     python stages/01_python_window/app.py
 
-El resultado esperado es que aparezca la ventana y que Cerrar y la X terminen
-el programa. Esta prueba es opcional y no se realiza en GitHub Pages.
+El resultado esperado es que aparezca la bienvenida, que `Siguiente` muestre la
+agenda dentro de la misma ventana y que la X termine el programa. Esta prueba
+es opcional y no se realiza en GitHub Pages.
 
 INTEGRACIÓN DESPUÉS DE APROBAR EL STAGE
 ---------------------------------------
@@ -184,24 +234,30 @@ CONCEPTOS NECESARIOS
 
 FRAGMENTOS DE REFERENCIA
 -------------------------
-    <main class="ventana">
+    <section data-screen="login" data-slot="login.form">
       <h1>Agenda SENA</h1>
-      <p>Mi agenda local para PC</p>
-      <button>Cerrar</button>
-    </main>
+      <p>Bienvenido a tu agenda local para PC.</p>
+      <button data-action="next-agenda">Siguiente</button>
+    </section>
 
-La vista debe conservar el título, subtítulo y botón del resultado de Python.
+    <section data-screen="agenda" data-slot="agenda.topbar" hidden>
+      <!-- barra, menú, resumen, calendario y paneles de demostración -->
+    </section>
+
+La vista debe conservar los dos estados y la transición visual del resultado de
+Python. El fragmento de agenda debe mostrar los espacios base aunque sus datos
+sean estáticos.
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Subir `app.py` y `preview.html` y abrir únicamente la página
-principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que la ventana
-visual coincide con el diseño definido para app.py.
+Subir `app.py` y `preview.html` y abrir únicamente la página principal
+https://awooolab.github.io/Agenda_SENA/. Comprobar allí la bienvenida, pulsar
+`Siguiente` y confirmar la agenda en la misma ventana.
 
 FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar app.py en GitHub.
-2. Actualizar preview.html con los mismos textos, tamaños, botón e iconos.
+2. Actualizar preview.html con los mismos estados, textos, espacios e iconos.
 3. Subir los cambios y abrir únicamente la página principal.
 4. Comprobar allí que el módulo 01 aparece dentro de la única ventana integrada.
 
@@ -213,6 +269,8 @@ CONTRATO DE INDEPENDENCIA E INTEGRACIÓN
 Este stage se construye como un módulo independiente. No debe importar archivos
 de otros stages ni depender de que otra etapa esté terminada. Sus datos de
 prueba, entradas, salidas y validaciones pertenecen únicamente a este módulo.
+La agenda base es demostrativa: deja preparados los espacios donde las etapas
+posteriores conectarán usuarios, almacenamiento, citas y calendario.
 
 preview.html representa este stage y se revisa desde la única página principal:
 https://awooolab.github.io/Agenda_SENA/
@@ -236,28 +294,33 @@ CONTRATO VISUAL Y DE INTEGRACIÓN
 
 VENTANA Y ESPACIO
 -----------------
-- Ventana: login.
-- Espacios: login.brand y login.form.
-- Estado: chasis inicial, sin autenticación real.
+- Ventana única con dos estados: `login` y `agenda`.
+- Espacios iniciales: `login.brand`, `login.form`, `agenda.topbar`,
+  `agenda.sidebar`, `agenda.summary`, `agenda.calendar`, `agenda.today`,
+  `agenda.appointments` y `agenda.activities`.
+- Estado: base visual, sin autenticación ni persistencia real.
 
-Este ejercicio usa una ventana pequeña para aprender Tkinter. No se debe
-confundir con el diseño final de `assets/login-window.svg`; las etapas 05 y 06
-completan sus campos, mensajes y acciones.
+Esta etapa usa la misma composición general de las referencias SVG. Las etapas
+05 y 06 completarán el acceso real; las etapas de datos y calendario conectarán
+los paneles de demostración.
 
 PREVIEW
 -------
-El fragmento debe declarar:
+El fragmento debe declarar al menos:
 
     <section data-screen="login" data-slot="login.form">
 
-Debe mostrar la identidad de Agenda SENA, reservar visualmente el formulario de
-acceso y conservar una sola ventana. El preview no debe presentar calendario,
-menú lateral ni otra pantalla.
+Debe mostrar la identidad de Agenda SENA y el único botón `Siguiente`. También
+debe contener un segundo fragmento oculto con `data-screen="agenda"` y los
+espacios visuales de la agenda. Al pulsar `Siguiente`, el primer estado se
+oculta y el segundo se muestra sin cambiar de página.
 
 VALIDACIÓN
 ----------
 - Ejecutar `python stages/01_python_window/app.py`.
-- Confirmar que la ventana se crea y se cierra correctamente.
-- Comparar marca, jerarquía, fondo y alineación con la referencia.
+- Confirmar que la bienvenida se crea y que `Siguiente` muestra la agenda.
+- Confirmar que no se crea una segunda ventana.
+- Comparar marca, jerarquía, fondo, alineación, menú, tarjetas, calendario y
+  paneles con la referencia.
 - Subir `app.py` y `preview.html` y comprobar el fragmento desde la página
   principal.

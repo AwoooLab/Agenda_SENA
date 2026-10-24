@@ -44,19 +44,21 @@ stages/01_python_window/
 No necesita modificar main.py, src/, web/ ni config/. Esa integración se
 realiza después de revisar que el módulo cumple su especificación.
 
-GitHub Pages no ejecuta Python. El visor muestra únicamente dos ventanas
-visuales: la pantalla final de inicio de sesión y la ventana principal de
-Agenda con datos de ejemplo.
+GitHub Pages no ejecuta Python. En la Etapa 01 el visor muestra únicamente dos
+ventanas visuales: la bienvenida inicial con `Siguiente` y la ventana principal
+de Agenda con datos de ejemplo. Las etapas posteriores completarán el acceso
+real dentro de la primera referencia.
 
 El archivo `web/screen.js` cambia de una ventana a la otra cuando se pulsa
-`Ingresar`. No muestra menús de stages, indicadores de avance ni elementos
+`Siguiente`. No muestra menús de stages, indicadores de avance ni elementos
 adicionales fuera de la aplicación.
 
 ## Referencias del producto terminado
 
 Las dos referencias visuales editables son:
 
-- `assets/login-window.svg`: estado de inicio de sesión.
+- `assets/login-window.svg`: estado inicial de bienvenida y acceso; las etapas
+  posteriores completarán el inicio de sesión.
 - `assets/agenda-window.svg`: estado autenticado con todos los espacios de la
   agenda.
 

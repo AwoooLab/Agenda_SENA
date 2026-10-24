@@ -14,7 +14,9 @@
     const svg = screen.querySelector("svg");
     if (!svg) throw new Error("El asset no contiene una imagen SVG válida.");
 
-    const openAgenda = screen.querySelector('[data-action="open-agenda"]');
+    const openAgenda = screen.querySelector(
+      '[data-action="open-agenda"], [data-action="next-agenda"]',
+    );
     if (openAgenda) {
       const goToAgenda = () => {
         window.location.hash = "agenda";

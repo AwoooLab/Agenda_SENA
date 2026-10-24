@@ -125,7 +125,7 @@ mostrando solamente las dos ventanas de la aplicación.
 
 ## Stages de la parte
 
-01 — Ventana inicial — 01_python_window
+01 — Bienvenida, navegación y agenda base — 01_python_window
 02 — Modelo de datos — 02_data_model
 03 — Guardado JSON — 03_json_storage
 04 — Base de datos SQLite — 04_sqlite_database

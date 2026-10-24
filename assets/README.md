@@ -3,16 +3,19 @@
 Estos archivos son referencias visuales editables de la aplicación completa.
 No son módulos de `stages/` ni deben importarse desde un stage.
 
-- `login-window.svg`: ventana final de inicio de sesión.
+- `login-window.svg`: ventana inicial de acceso y bienvenida de la Etapa 01.
 - `agenda-window.svg`: ventana principal final con menú, resumen, calendario,
   citas, actividades y categorías.
 
 ## Flujo visual en GitHub Pages
 
 GitHub Pages muestra únicamente estas dos ventanas, una a la vez. Primero carga
-`login-window.svg`. Al pulsar `Ingresar`, `web/screen.js` reemplaza la pantalla
+`login-window.svg`. En la Etapa 01, al pulsar `Siguiente`, `web/screen.js` reemplaza la pantalla
 por `agenda-window.svg`, que representa el programa terminado con datos de
 ejemplo.
+
+Las etapas de usuarios y sesión completarán después los campos reales de acceso
+en esta primera referencia sin crear una ventana adicional.
 
 Los SVG conservan el texto y las formas como elementos editables. Se pueden
 abrir en un editor de vectores o revisar directamente en el navegador.

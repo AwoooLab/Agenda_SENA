@@ -1,19 +1,26 @@
-# Hito 01 — Ventana inicial de la agenda
+# Hito 01 — Bienvenida, navegación y agenda base
+
+> **Especificación vigente:** esta etapa construye dos estados dentro de una
+> sola ventana: bienvenida con `Siguiente` y agenda base con datos de ejemplo.
+> Las referencias anteriores a una ventana de `520x320` con `Cerrar` describen
+> un ejercicio introductorio y quedan reemplazadas por esta especificación.
 
 ## Propósito
 
-Construir una ventana de escritorio mínima para comprobar que Python y Tkinter
-funcionan correctamente en el computador del alumno.
+Construir la base visual de Agenda SENA para PC usando una sola ventana de
+Tkinter. La aplicación comienza con una bienvenida y un botón `Siguiente`; al
+presionarlo, reemplaza el contenido por la ventana principal de la agenda.
 
-Esta etapa no crea todavía citas, usuarios, archivos, bases de datos ni
-calendarios. Solo crea la primera ventana.
+Esta etapa crea estructura visual, espacios, datos de demostración e iconos.
+Todavía no crea usuarios reales, contraseñas, archivos, base de datos ni
+operaciones de citas.
 
 ## Plataforma de esta etapa
 
-El resultado principal se ejecuta en un PC con Python y Tkinter. Las medidas y
-controles descritos abajo corresponden a una ventana de escritorio, no a una
-página web. `preview.html` solo sirve para representar esa ventana en el
-navegador y revisar visualmente que el diseño coincida.
+El resultado principal se ejecuta en un PC con Python y Tkinter. La ventana de
+trabajo usa `1180x760` y puede redimensionarse. Las medidas de los SVG son la
+referencia proporcional del diseño final. `preview.html` representa los dos
+estados en el navegador y no ejecuta Python.
 
 ## Archivos que debe crear el alumno
 
@@ -39,34 +46,41 @@ No crear otros archivos dentro de esta etapa.
 
 La ventana de Tkinter debe cumplir lo siguiente:
 
-- Título: `Agenda SENA — Etapa 01`.
-- Tamaño: `520x320`.
-- No permitir cambiar el tamaño durante esta primera etapa de prueba.
-- Fondo principal: blanco o gris muy claro.
-- Mostrar el título `Agenda SENA` centrado, con letra grande y negrita.
-- Mostrar debajo el texto `Mi agenda local para PC`.
-- Mostrar un botón con el texto `Cerrar`.
-- El botón `Cerrar` debe cerrar la ventana sin mostrar errores.
+- Usar una sola instancia de `tk.Tk()`.
+- Estado inicial: marca Agenda SENA, bienvenida y un único botón `Siguiente`.
+- No solicitar usuario ni contraseña en esta etapa.
+- Al pulsar `Siguiente`, reemplazar la bienvenida por la agenda en la misma
+  ventana.
+- Agenda: barra superior, búsqueda visual, usuario de demostración, menú
+  lateral, tarjetas de resumen, calendario, agenda del día, citas recientes y
+  actividades.
+- Menú visible: Inicio, Nueva cita, Citas, Usuarios, Calendario, Actividades y
+  Cerrar sesión. En esta etapa son elementos visuales.
+- Usar iconos textuales compatibles con Tkinter. Los SVG reutilizables se usan
+  directamente en `preview.html` y en `assets/agenda-window.svg`.
+- Mantener fondo claro, barra azul marino, tarjetas blancas, bordes suaves y
+  jerarquía equivalente a las referencias.
 
-El archivo HTML debe imitar estos mismos elementos para poder compararlos en
-GitHub Pages. No se debe construir la aplicación de PC dentro del HTML.
+El HTML debe imitar estos dos estados para compararlos en GitHub Pages. No
+ejecuta ni reemplaza la aplicación de PC.
 
 ## Comportamiento esperado
 
-1. Al ejecutar el archivo aparece una ventana.
-2. La ventana tiene el título indicado.
-3. El título y el subtítulo están centrados.
-4. Al presionar `Cerrar`, la aplicación termina.
-5. Al cerrar la ventana con la X, la aplicación también termina.
+1. Al ejecutar aparece la bienvenida.
+2. Solo hay una acción principal: `Siguiente`.
+3. Al presionar `Siguiente`, aparece la agenda sin abrir otra ventana.
+4. La agenda conserva barra, menú, tarjetas, calendario, citas y actividades.
+5. Al cerrar con la X, la aplicación termina.
 
 ## Lo que no se debe hacer en esta etapa
 
-- No crear menús.
-- No crear formularios de citas.
-- No guardar información.
+- No crear campos reales de usuario o contraseña.
+- No validar credenciales ni crear sesiones.
+- No crear formularios funcionales de citas.
+- No guardar información ni usar SQLite, JSON o internet.
 - No importar archivos de otras etapas ni del `main.py` de la raíz.
-- No usar SQLite, JSON ni internet.
-- No crear todavía inicio de sesión ni calendario.
+- No crear una segunda ventana `tk.Tk()`.
+- No implementar todavía operaciones reales de usuarios, citas o calendario.
 
 ## Flujo de la clase y validación en GitHub Pages
 
@@ -76,22 +90,27 @@ GitHub Pages. El trabajo se realiza en este orden:
 
 1. Revisar los requisitos de esta especificación.
 2. Crear únicamente los archivos dentro de `stages/01_python_window/`.
-3. Actualizar `preview.html` para representar la pantalla de PC y cualquier
-   cambio visual realizado.
-4. Actualizar `preview.html` para representar esta etapa de forma independiente.
-   La página principal solo carga los módulos aprobados registrados en
-   `config/integration.json`.
-5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
-6. Verificar allí que la ventana inicial aparece correctamente.
+3. Construir la bienvenida con el único botón `Siguiente`.
+4. Construir el estado agenda dentro de la misma ventana, con sus espacios
+   visuales e iconos de referencia.
+5. Actualizar `preview.html` para representar los dos estados y la transición.
+6. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
+7. Verificar allí la transición `Siguiente` y la agenda completa de demostración.
 
 El preview no ejecuta Python. La etapa no está terminada hasta que la
 representación visual publicada cumple los requisitos de la especificación.
 
 ### Validación visual específica
 
-- La ventana visual conserva el título `Agenda SENA` y el subtítulo.
-- El botón `Cerrar` es visible y está ubicado dentro de la ventana.
-- El tamaño y la distribución general corresponden a `520x320`.
+- La primera vista muestra la marca, una bienvenida y un único botón
+  `Siguiente`.
+- Al pulsar `Siguiente`, la misma ventana muestra la agenda base.
+- La agenda muestra barra superior, búsqueda, usuario de demostración, menú
+  lateral, tarjetas de resumen, calendario, agenda del día, citas recientes y
+  actividades.
+- Los iconos se ven en los espacios correspondientes y provienen de la
+  biblioteca reutilizable de `assets/icons/`.
+- No aparecen ventanas, páginas ni formularios adicionales.
 
 ## Comprobación visual en GitHub Pages
 
@@ -100,11 +119,11 @@ GitHub Pages:
 
 1. Agregar o actualizar `stages/01_python_window/app.py` y
    `stages/01_python_window/preview.html`.
-2. Actualizar únicamente el fragmento visual de `preview.html`.
+2. Actualizar los dos estados visuales del preview: bienvenida y agenda.
 3. Abrir únicamente `https://awooolab.github.io/Agenda_SENA/`.
-4. Confirmar allí que se ven `Agenda SENA`, el subtítulo y el botón `Cerrar`.
-5. Si se agregó un icono o se cambió un texto en el diseño, comprobar el cambio
-   dentro de la única ventana integrada.
+4. Confirmar allí que la primera vista solo ofrece `Siguiente`.
+5. Pulsar `Siguiente` y comprobar que la agenda aparece en la misma ventana,
+   con sus componentes e iconos.
 
 GitHub Pages no ejecuta `app.py`. La página solo permite revisar la
 representación visual de la ventana de PC.
@@ -131,30 +150,37 @@ La aplicación integrada no importa automáticamente los archivos de `stages/`.
 ```text
 Genera únicamente el archivo `stages/01_python_window/app.py` para un proyecto
 educativo llamado Agenda SENA. Usa Python 3 y tkinter, sin paquetes externos.
-Crea una función main() y el bloque if __name__ == "__main__". La ventana debe
-medir 520x320, no debe poder redimensionarse, debe tener el título
-"Agenda SENA — Etapa 01", mostrar "Agenda SENA", mostrar debajo
-"Mi agenda local para PC" y tener un botón "Cerrar" que cierre la ventana.
-No agregues base de datos, archivos, inicio de sesión, calendario ni otros módulos.
-Devuelve únicamente el código de ese archivo.
+Crea una función `main()` y el bloque `if __name__ == "__main__"`. Usa una sola
+instancia de `tk.Tk()` y una ventana redimensionable cercana a `1180x760`.
+Construye primero una bienvenida con la marca, una explicación breve y un único
+botón `Siguiente`. Al pulsarlo, limpia el contenido de esa misma ventana y
+muestra una agenda base con barra superior, búsqueda, usuario de demostración,
+menú lateral, tarjetas de resumen, calendario mensual, agenda del día, citas
+recientes y actividades. Usa datos de demostración y símbolos textuales para
+los iconos. No agregues campos de credenciales, persistencia, base de datos,
+JSON, internet ni ventanas adicionales. Devuelve únicamente el código de ese
+archivo.
 ```
 
 ## Criterio de terminado
 
 La etapa se puede publicar cuando `stages/01_python_window/app.py` y
-`stages/01_python_window/preview.html` están en GitHub, la función aparece en
-la única ventana integrada de `index.html` y la representación visual cumple la
-especificación. El registro del módulo en `config/integration.json` se realiza
-después de aprobar la etapa. El comportamiento del botón pertenece al código
-Python y se comprobará cuando la aplicación se ejecute en un PC.
+`stages/01_python_window/preview.html` están en GitHub, la única ventana
+integrada muestra primero la bienvenida y después la agenda base, y la
+representación visual cumple la especificación. El registro del módulo en
+`config/integration.json` identifica los espacios visuales cubiertos por esta
+base. El comportamiento de `Siguiente` pertenece al código Python y se
+comprueba cuando la aplicación se ejecuta en un PC; la misma transición se
+comprueba visualmente en GitHub Pages.
 
 ## Alineación con las ventanas de referencia
 
-Este hito es el chasis inicial de la aplicación, no el login terminado. Su
-espacio es `login.brand` y `login.form`. La ventana pequeña de esta lección
-permite aprender `Tk`, `Frame`, `Label` y `Button`; posteriormente se amplía
-hasta la composición de `assets/login-window.svg`.
+Este hito es la base visual navegable de la aplicación, no el login terminado.
+Su flujo cubre el estado `login` de bienvenida y el estado `agenda` de
+demostración. La etapa permite aprender `Tk`, `Frame`, `Label`, `Button` y la
+reconstrucción de una vista dentro de la misma ventana. Las credenciales reales,
+la persistencia y la lógica de negocio se agregan en etapas posteriores.
 
-El preview debe conservar una sola ventana visual, mostrar la marca y reservar
-el lugar donde aparecerán los campos de acceso. No debe crear una pantalla de
-agenda ni una segunda ventana.
+El preview debe conservar una sola ventana visual. Primero muestra la
+bienvenida con `Siguiente`; después muestra la agenda base con los espacios
+reservados para las funcionalidades futuras.

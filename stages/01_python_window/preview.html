@@ -1,16 +1,74 @@
 <section id="inicio" class="fragmento" data-screen="login" data-slot="login.form">
   <div class="fragmento-cabecera">
-    <span class="etiqueta">Inicio</span>
+    <span class="etiqueta">Etapa 01 · Inicio</span>
     <h2>Agenda SENA</h2>
-    <p>Esta es la ventana inicial de la agenda local para PC.</p>
+    <p>La primera vista solo prepara la ventana y permite pasar a la agenda.</p>
   </div>
   <div class="ventana" aria-label="Ventana inicial de Agenda SENA">
     <div class="barra-ventana"><span></span><span></span><span></span> Agenda SENA</div>
-    <div class="relleno bloque-centrado">
-      <h2>Mi agenda local para PC</h2>
-      <p>Esta ventana es el punto de entrada de la aplicación.</p>
-      <button type="button" class="secundario" data-action="close-window">Cerrar</button>
-      <p id="estado-inicio" class="estado-exito oculto" aria-live="polite"></p>
+    <div class="rejilla rejilla-2">
+      <div class="relleno" style="color:white;background:#111d4a">
+        <h2 style="color:white">Agenda SENA</h2>
+        <p style="color:#dbeafe">Organiza tu tiempo.<br />Cumple tus objetivos.</p>
+        <p style="color:#bcd1f4">Una sola ventana para revisar la agenda.</p>
+      </div>
+      <div class="relleno bloque-centrado">
+        <span class="etiqueta">Inicio</span>
+        <h2>Bienvenido</h2>
+        <p>Esta etapa todavía no solicita usuario ni contraseña.</p>
+        <button type="button" data-action="next-agenda">Siguiente</button>
+      </div>
     </div>
   </div>
 </section>
+
+<section id="agenda-stage" class="fragmento oculto" data-screen="agenda" data-slot="agenda.topbar">
+  <div class="fragmento-cabecera">
+    <span class="etiqueta">Etapa 01 · Agenda</span>
+    <h2>Ventana principal</h2>
+    <p>La agenda ya tiene sus espacios visuales e iconos; las etapas siguientes agregarán la lógica.</p>
+  </div>
+  <div class="ventana" aria-label="Ventana de agenda de Agenda SENA">
+    <div class="barra-app"><strong>Agenda SENA</strong><span style="float:right"><img src="../../assets/icons/settings.svg" width="18" alt="" /> <img src="../../assets/icons/bell.svg" width="18" alt="" /> AS · Usuario de prueba</span></div>
+    <div style="display:grid;grid-template-columns:180px 1fr">
+      <nav class="barra-lateral">
+        <strong>MENÚ</strong>
+        <a href="#inicio"><img src="../../assets/icons/dashboard.svg" width="18" alt="" /> Inicio</a>
+        <a href="#nueva-cita"><img src="../../assets/icons/plus.svg" width="18" alt="" /> Nueva cita</a>
+        <a href="#citas"><img src="../../assets/icons/appointments.svg" width="18" alt="" /> Citas</a>
+        <a href="#usuarios"><img src="../../assets/icons/users.svg" width="18" alt="" /> Usuarios</a>
+        <a href="#calendario"><img src="../../assets/icons/calendar.svg" width="18" alt="" /> Calendario</a>
+        <a href="#actividades"><img src="../../assets/icons/activity.svg" width="18" alt="" /> Actividades</a>
+        <a href="#cerrar-sesion"><img src="../../assets/icons/logout.svg" width="18" alt="" /> Cerrar sesión</a>
+      </nav>
+      <main class="contenido-app">
+        <h2>Buenos días, Alejandro</h2>
+        <p>Resumen de tu agenda para hoy.</p>
+        <div class="resumenes">
+          <div class="resumen"><strong><img src="../../assets/icons/calendar.svg" width="18" alt="" /> Citas de hoy</strong><span>04 · +2 esta semana</span></div>
+          <div class="resumen"><strong><img src="../../assets/icons/check.svg" width="18" alt="" /> Pendientes</strong><span>08 · 3 importantes</span></div>
+          <div class="resumen"><strong><img src="../../assets/icons/clock.svg" width="18" alt="" /> Próxima cita</strong><span>10:00 · Reunión</span></div>
+          <div class="resumen"><strong><img src="../../assets/icons/activity.svg" width="18" alt="" /> Actividades</strong><span>12 · En progreso</span></div>
+        </div>
+        <div class="rejilla rejilla-2" style="margin-top:16px">
+          <div class="tarjeta relleno"><h3><img src="../../assets/icons/calendar.svg" width="20" alt="" /> Calendario mensual</h3><p>Octubre 2026 · días y actividades de ejemplo.</p></div>
+          <div class="tarjeta relleno"><h3><img src="../../assets/icons/clock.svg" width="20" alt="" /> Agenda de hoy</h3><p>09:00 Plan de trabajo · 10:00 Reunión.</p></div>
+        </div>
+        <div class="rejilla rejilla-2" style="margin-top:16px">
+          <div class="tarjeta relleno"><h3><img src="../../assets/icons/appointments.svg" width="20" alt="" /> Citas recientes</h3><p>Reunión de proyecto · Pendiente.</p></div>
+          <div class="tarjeta relleno"><h3><img src="../../assets/icons/activity.svg" width="20" alt="" /> Actividades</h3><p>Progreso semanal · 70%.</p></div>
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<script>
+  const nextButton = document.querySelector('[data-action="next-agenda"]');
+  const loginView = document.getElementById("inicio");
+  const agendaView = document.getElementById("agenda-stage");
+  nextButton?.addEventListener("click", () => {
+    loginView.classList.add("oculto");
+    agendaView.classList.remove("oculto");
+  });
+</script>

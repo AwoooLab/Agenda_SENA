@@ -20,13 +20,16 @@ ventana principal de la agenda.
 
 ## Flujo visual inicial
 
-GitHub Pages muestra únicamente dos ventanas, una a la vez:
+Durante la Etapa 01, GitHub Pages muestra únicamente una ventana a la vez y
+permite comprobar este recorrido:
 
-1. Inicio de sesión con usuario, contraseña y botón `Ingresar`.
-2. Ventana principal terminada de Agenda SENA con datos de ejemplo.
+1. Bienvenida de Agenda SENA con el único botón `Siguiente`.
+2. Ventana principal de Agenda SENA con sus espacios base y datos de ejemplo.
 
-Los datos mostrados son demostrativos. Cada stage posterior reemplazará o
-ampliará la función correspondiente sin crear otra ventana externa.
+En etapas posteriores, la bienvenida se ampliará hasta el inicio de sesión con
+usuario, contraseña y botón `Ingresar`. Los datos mostrados son demostrativos.
+Cada stage reemplazará o ampliará la función correspondiente sin crear otra
+ventana externa.
 
 ## Especificación visual que debe reproducirse
 
@@ -44,12 +47,13 @@ deben aparecer en ese espacio. El preview del stage es un fragmento visual;
 
 ## Secuencia de construcción
 
-### Stage 01 — Ventana inicial
+### Stage 01 — Bienvenida, navegación y agenda base
 
-Construir la base de una sola ventana y el espacio visual del inicio de sesión.
-La antigua ventana genérica con `Cerrar` se conserva solo como ejercicio
-introductorio; el resultado de la parte debe avanzar hacia
-`assets/login-window.svg`.
+Construir una sola ventana con dos estados: una bienvenida inicial con el único
+botón `Siguiente` y, después, una agenda base con menú, resumen, calendario,
+agenda del día, citas recientes y actividades. Esta etapa no solicita
+credenciales ni guarda datos; prepara la composición que las etapas posteriores
+completarán con login, persistencia y lógica de negocio.
 
 ### Stage 02 — Modelo de datos
 
