@@ -40,14 +40,25 @@ una función on_select.
 Fragmento:
     boton = tk.Button(parent, text=str(dia), command=lambda: on_select(dia))
 
+La celda encapsula número, apariencia y evento. Al reutilizarla, el calendario
+puede crear todos los días sin copiar la misma estructura en cada posición.
+
 LECCIÓN 2 — DÍA ACTUAL Y SELECCIONADO
 -------------------------------------
 Usar color y texto para que el estado no dependa solo del color. Por ejemplo,
 un borde o una etiqueta puede indicar Seleccionado.
 
+El día actual proviene de la fecha de referencia y el seleccionado de una
+acción. Son estados distintos y deben poder entenderse con texto, borde o
+marcador incluso si el color no se percibe.
+
 LECCIÓN 3 — UBICACIÓN EN LA CUADRÍCULA
 --------------------------------------
 La celda debe poder ubicarse con grid(row=fila, column=columna).
+
+La coordenada conecta el cálculo de semanas con la composición visual. Las
+celdas vacías conservan el lugar donde comienza el mes y mantienen alineadas
+las siete columnas.
 
 ======================================================================
 ARCHIVO: monthly_calendar.py
@@ -73,6 +84,10 @@ Fragmento:
     self.anio = hoy.year
     self.mes = hoy.month
 
+Guardar año y mes como números separa el estado del calendario de las etiquetas
+en español. Así, avanzar o retroceder modifica datos simples y después
+reconstruye la vista.
+
 LECCIÓN 2 — NOMBRES EN ESPAÑOL
 ------------------------------
 Crear listas fijas para meses y días:
@@ -80,10 +95,18 @@ Crear listas fijas para meses y días:
     meses = ["Enero", "Febrero", "Marzo", ...]
     dias_semana = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
 
+Los nombres pertenecen a la presentación. Mantenerlos en una lista evita
+depender de la configuración regional de Windows y conserva el cálculo
+independiente del idioma.
+
 LECCIÓN 3 — CONSTRUIR LA CUADRÍCULA
 -----------------------------------
 calendar.Calendar(firstweekday=0).monthdayscalendar(anio, mes) devuelve semanas
 con números de día y ceros para las celdas vacías.
+
+La biblioteca calcula semanas y cantidad de días; la clase decide cómo convertir
+cada número en una `calendar_cell`. Esta separación permite probar fechas sin
+abrir una ventana.
 
 LECCIÓN 4 — CAMBIAR DE MES
 --------------------------
@@ -95,10 +118,18 @@ Fragmento:
         mes = 1
         anio += 1
 
+El cambio de diciembre a enero y de enero a diciembre es una regla de estado,
+no un detalle visual. Después de modificar los valores se actualizan encabezado,
+celdas y actividades como una sola operación.
+
 LECCIÓN 5 — BOTONES DE CONTROL
 -----------------------------
 Crear botones ‹, Hoy y ›. Cada cambio debe actualizar el texto del encabezado y
 reconstruir las celdas.
+
+Los botones son eventos que llaman métodos del calendario. `Hoy` devuelve la
+fecha de referencia de la demostración y evita que el usuario tenga que volver
+mes por mes al periodo actual.
 
 ======================================================================
 ARCHIVO: test_calendar.py
@@ -123,6 +154,10 @@ CASOS NECESARIOS
 - Diciembre seguido de enero aumenta el año.
 - Enero seguido de diciembre disminuye el año.
 - La semana comienza en lunes.
+
+Estos casos cubren meses cortos, años bisiestos, límites de año y la primera
+columna. Juntos protegen la cuadrícula que después alimentará
+`agenda.calendar`.
 
 PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------

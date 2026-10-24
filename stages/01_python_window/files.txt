@@ -74,6 +74,13 @@ LECCIÓN 1 — IMPORTAR TKINTER
 Tkinter contiene las herramientas para crear ventanas y controles de escritorio.
 La forma corta permite escribir tk.Label y tk.Button:
 
+La biblioteca estándar ofrece una capa de widgets nativos: cada control se
+crea con una referencia a su contenedor y conserva una relación de padre e
+hijo. La raíz `Tk` será el único proceso gráfico de esta etapa; los `Frame`
+organizarán grupos internos sin abrir ventanas adicionales. Esta decisión
+facilita que las etapas siguientes agreguen pantallas dentro de la misma
+aplicación.
+
 Fragmento:
     import tkinter as tk
 
@@ -82,6 +89,12 @@ LECCIÓN 2 — CREAR LA VENTANA PRINCIPAL
 tk.Tk() crea la ventana principal. Todo control de esta etapa debe pertenecer a
 esa ventana.
 
+La ventana raíz representa el proceso visual completo y debe existir una sola
+vez. Los controles no se crean antes de disponer de esa raíz, ya que Tkinter
+necesita un propietario para administrar sus recursos y eventos. Mantener esta
+jerarquía desde el primer archivo evita que las futuras pantallas se separen en
+varias ventanas independientes.
+
 Fragmento:
     ventana = tk.Tk()
 
@@ -89,6 +102,13 @@ LECCIÓN 3 — CONFIGURAR LA VENTANA
 ---------------------------------
 Configurar el título, el tamaño inicial y que la ventana pueda adaptarse a la
 pantalla del PC.
+
+`geometry` establece una condición inicial, mientras que `minsize` protege la
+interfaz contra un tamaño que vuelva ilegibles los controles. La distribución
+real debe quedar en manos de `pack` o `grid`; no se deben fijar todos los
+elementos con coordenadas. Una interfaz que conserva sus bloques al ampliar o
+reducir la ventana prepara el mismo comportamiento que se revisará en
+`preview.html`.
 
 Fragmentos:
     ventana.title("Agenda SENA")
@@ -103,6 +123,12 @@ LECCIÓN 4 — ORGANIZAR LA VENTANA EN ESTADOS
 La bienvenida y la agenda son dos estados de una misma ventana. Un `Frame`
 puede actuar como contenedor de cada estado. La función de transición retira
 el contenido anterior y construye la siguiente vista.
+
+Un estado describe qué contenido está visible en un momento concreto. En este
+caso, el primer estado solo necesita marca, texto y `Siguiente`; el segundo
+presenta la estructura completa de la agenda. Reutilizar la raíz y cambiar sus
+widgets es una primera forma de navegación: más adelante el mismo patrón podrá
+mostrar login, calendario, formularios y tablas sin multiplicar ventanas.
 
 Fragmento:
     def limpiar(ventana):
@@ -120,6 +146,12 @@ LECCIÓN 5 — MOSTRAR TEXTO CON LABEL
 Un Label muestra un texto. font recibe el nombre de letra, tamaño y estilo.
 pack organiza el control en la ventana.
 
+Los `Label` no son únicamente adornos: hacen visible el significado de cada
+espacio. Un título identifica la pantalla, un subtítulo orienta al usuario y
+los valores de una tarjeta representan datos que después vendrán de modelos o
+de una base de datos. Separar texto, tamaño, color y alineación permite que el
+contenido se mantenga claro cuando las tarjetas cambien de ancho.
+
 Fragmentos:
     titulo = tk.Label(ventana, text="Agenda SENA")
     titulo.pack(pady=40)
@@ -133,6 +165,12 @@ LECCIÓN 6 — CREAR EL BOTÓN SIGUIENTE
 --------------------------
 Un `Button` muestra la única acción de la bienvenida. `command` recibe una
 función, no el resultado de ejecutarla.
+
+El callback es el puente entre una interacción y un cambio de estado. Al
+hacer clic, la función debe limpiar la bienvenida y llamar a la construcción
+de la agenda; no debe crear otra raíz ni esconder el resultado en una variable
+que la vista no pueda mostrar. Esta relación entre evento y acción será
+reutilizada por los controles de navegación de las siguientes etapas.
 
 Fragmento:
     boton = tk.Button(ventana, text="Siguiente",
@@ -148,6 +186,13 @@ La agenda se puede dividir en `Frame` pequeños: barra superior, menú lateral,
 resumen, calendario y paneles inferiores. Cada sección debe tener un título,
 un contenedor y datos demostrativos, aunque todavía no tenga lógica real.
 
+Una tarjeta es un componente visual con una responsabilidad limitada: mostrar
+un indicador, un grupo de citas o una lista. Agruparla en un `Frame` permite
+controlar margen, fondo y expansión sin afectar los demás bloques. Los datos
+estáticos de esta lección funcionan como contrato visual; los servicios y
+repositorios que aparecerán después podrán reemplazarlos sin cambiar la
+jerarquía de la ventana.
+
 Ejemplo de una tarjeta visual:
     tarjeta = tk.Frame(contenido, bg="white", padx=16, pady=12)
     tk.Label(tarjeta, text="Citas de hoy", bg="white").pack(anchor="w")
@@ -162,6 +207,12 @@ LECCIÓN 8 — INICIAR EL BUCLE DE LA INTERFAZ
 -------------------------------------------
 `mainloop` mantiene abierta la ventana y espera clics del usuario.
 
+Tkinter trabaja con un bucle de eventos: espera acciones del sistema, detecta
+el clic y ejecuta el callback registrado. Por eso la construcción de widgets y
+la entrada al bucle son responsabilidades distintas. Si el programa entra al
+bucle antes de crear la interfaz, no habrá contenido que mostrar; si nunca
+entra, la ventana no puede responder.
+
 Fragmento:
     ventana.mainloop()
 
@@ -171,6 +222,12 @@ LECCIÓN 9 — ORGANIZAR EL PUNTO DE ENTRADA
 -----------------------------------------
 Es recomendable colocar la construcción de la ventana dentro de main y ejecutar
 main solo cuando el archivo se abra directamente.
+
+El punto de entrada ordena el ciclo de vida: preparar la raíz, construir el
+estado inicial y comenzar el bucle. La condición `__name__` evita iniciar la
+interfaz cuando otro módulo solo importa una función. Esa frontera será útil
+cuando la aplicación integrada llame componentes de una etapa sin ejecutar
+accidentalmente una segunda aplicación.
 
 Fragmento:
     def main():

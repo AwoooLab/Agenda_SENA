@@ -41,6 +41,10 @@ Fragmento:
     panel = tk.Frame(parent, bg="#E5E7EB")
     panel.pack(side="left", fill="y")
 
+El `Frame` crea límites claros entre navegación y contenido. Cuando el área
+central cambie, el panel lateral debe conservar identidad, tamaño razonable y
+acciones disponibles.
+
 LECCIÓN 2 — BOTONES CON CALLBACK
 --------------------------------
 Cada botón recibe una función que se ejecutará al hacer clic.
@@ -48,10 +52,17 @@ Cada botón recibe una función que se ejecutará al hacer clic.
 Fragmento:
     tk.Button(panel, text="Calendario", command=al_abrir_calendario).pack()
 
+El callback expresa la intención de navegación y deja la implementación fuera
+del botón. Más adelante podrá abrir el calendario real sin cambiar el menú.
+
 LECCIÓN 3 — TRES ACCIONES
 -------------------------
 Crear las opciones Calendario, Actividades y Cerrar sesión. Las dos primeras
 pueden mostrar el texto Sección en construcción.
+
+Las tres acciones representan el contrato mínimo del panel. Una respuesta
+temporal es válida en esta etapa siempre que el clic sea observable y conserve
+la misma ventana.
 
 ======================================================================
 ARCHIVO: main_window.py
@@ -81,15 +92,24 @@ LECCIÓN 1 — RECIBIR UN USUARIO
 ------------------------------
 La función o clase debe recibir el usuario autenticado, no pedirlo otra vez.
 
+Recibir el usuario por parámetro mantiene la autenticación fuera de la vista y
+permite mostrar nombre, iniciales o correo en la barra superior.
+
 LECCIÓN 2 — CAMBIAR EL CONTENIDO
 --------------------------------
 El área central puede limpiarse con destroy y luego recibir un nuevo Label o
 Frame. Mantener la navegación fuera del área central.
 
+Separar navegación y vista activa evita reconstruir el menú cada vez que cambia
+Calendario o Actividades. El router reemplaza un contenedor, no la ventana raíz.
+
 LECCIÓN 3 — CERRAR SESIÓN
 -------------------------
 El botón debe cerrar la ventana y llamar on_logout. No duplicar la lógica de
 contraseñas.
+
+Cerrar sesión elimina el contexto activo y devuelve la responsabilidad al flujo
+de acceso. No borra datos ni crea una segunda ventana principal.
 
 ======================================================================
 ARCHIVO: app.py
@@ -106,6 +126,10 @@ LÓGICA
 3. Mostrar la navegación.
 4. Mostrar secciones temporales.
 5. Permitir cerrar sesión.
+
+La demostración usa un usuario en memoria para concentrarse en la jerarquía de
+la ventana y sus callbacks. El preview valida la misma composición con barra,
+menú y área central, aunque no ejecute Tkinter.
 
 PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------

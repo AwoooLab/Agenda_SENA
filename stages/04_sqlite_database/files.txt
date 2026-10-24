@@ -39,6 +39,10 @@ CONCEPTOS QUE DEBE APRENDER
 - UNIQUE: evita duplicados.
 - DEFAULT: proporciona un valor inicial.
 
+Estas restricciones convierten reglas del programa en reglas que la base puede
+proteger aunque los datos lleguen desde otra vista. Serán la base del registro,
+login, calendario y consultas de la agenda.
+
 LECCIÓN 1 — CREAR UNA TABLA
 ---------------------------
 Fragmento:
@@ -46,6 +50,9 @@ Fragmento:
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT NOT NULL UNIQUE
     );
+
+`IF NOT EXISTS` permite preparar la base varias veces sin borrar información
+ni exigir que el estudiante cree las tablas manualmente en cada ejecución.
 
 LECCIÓN 2 — TABLA users
 -----------------------
@@ -61,6 +68,9 @@ Crear estas columnas:
 
 En esta etapa las credenciales pueden estar vacías. La contraseña real nunca se
 guarda; el resumen y la sal se completarán en la etapa de inicio de sesión.
+
+Separar identidad y credenciales deja preparada la tabla para registro y
+autenticación sin cambiar la relación básica entre usuario y actividad.
 
 LECCIÓN 3 — TABLA events
 ------------------------
@@ -81,10 +91,18 @@ La columna user_id debe referenciar users(id):
 
     FOREIGN KEY (user_id) REFERENCES users(id)
 
+La clave foránea evita que una actividad apunte a una persona inexistente. Las
+fechas, horas, estado y categoría conservan convenciones que luego usará el
+calendario para ordenar y filtrar.
+
 LECCIÓN 4 — ORDEN Y SINTAXIS SQL
 --------------------------------
 Cada columna se separa con coma, excepto la última antes del paréntesis. Las
 instrucciones terminan en punto y coma. Mantener una tabla por bloque CREATE.
+
+Separar sentencias, nombres y valores ayuda a localizar errores del esquema.
+Primero se define la estructura, después se insertan registros y finalmente se
+leen resultados; ese orden refleja el ciclo de vida de la información.
 
 ======================================================================
 ARCHIVO: database.py
@@ -107,6 +125,10 @@ Fragmento:
 
 La función conectar debe recibir Path y devolver sqlite3.Connection.
 
+La conexión es el recurso que permite ejecutar SQL. Debe abrirse en un punto
+controlado, reutilizarse durante la operación y cerrarse al terminar para no
+dejar archivos bloqueados.
+
 LECCIÓN 2 — PREPARAR LA CARPETA
 -------------------------------
 Antes de abrir la base, crear la carpeta superior:
@@ -119,6 +141,9 @@ SQLite requiere activar esta regla por conexión:
 
     conexion.execute("PRAGMA foreign_keys = ON")
 
+Esta instrucción hace que la relación `user_id -> users.id` también se cumpla
+durante la ejecución y no solo exista escrita en `schema.sql`.
+
 LECCIÓN 4 — LEER EL ESQUEMA
 ---------------------------
 Leer schema.sql con UTF-8 y ejecutar todas sus instrucciones:
@@ -126,11 +151,17 @@ Leer schema.sql con UTF-8 y ejecutar todas sus instrucciones:
     texto = ruta_schema.read_text(encoding="utf-8")
     conexion.executescript(texto)
 
+Leer el esquema desde un archivo separa la definición de datos del código de
+conexión y permite revisar las tablas como una unidad.
+
 LECCIÓN 5 — FÁBRICA DE FILAS
 ----------------------------
 Para poder leer las columnas por nombre:
 
     conexion.row_factory = sqlite3.Row
+
+Las filas con nombres de columna facilitan convertir resultados en modelos y
+evitan que la interfaz dependa de índices numéricos difíciles de recordar.
 
 ======================================================================
 ARCHIVO: test_database.py
@@ -164,6 +195,9 @@ LECCIÓN 3 — COMPROBACIONES
 --------------------------
 Usar self.assertIsNotNone, self.assertEqual y self.assertTrue para comprobar
 que se crearon las tablas y que los datos se pueden leer.
+
+Una prueba de relación demuestra que la base no es solo una colección de filas:
+una actividad pertenece a un usuario y puede recuperarse respetando ese vínculo.
 
 ORDEN DE LA PRUEBA
 ------------------

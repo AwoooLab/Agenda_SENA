@@ -39,6 +39,11 @@ LECCIÓN 1 — CLASES Y DATOS
 Una clase agrupa datos y comportamientos relacionados. Una cita necesita datos
 que siempre deben viajar juntos.
 
+Título, fecha, hora y descripción forman una unidad del dominio. Mantenerlos
+juntos evita que una función reciba cuatro valores sin relación explícita y
+facilita transportar la misma cita entre el formulario, el almacenamiento y la
+tarjeta visual de `agenda.appointments`.
+
 Fragmento:
     class Cita:
         pass
@@ -46,6 +51,11 @@ Fragmento:
 LECCIÓN 2 — DATACLASS
 ---------------------
 @dataclass genera automáticamente el constructor y otras operaciones básicas.
+
+La dataclass funciona como un contrato legible: deja a la vista los campos,
+genera una forma consistente de crear objetos y reduce código repetitivo. El
+orden de los campos también comunica qué datos son indispensables y cuáles
+pueden comenzar vacíos.
 
 Fragmento:
     from dataclasses import dataclass
@@ -70,6 +80,10 @@ La clase completa debe tener:
 La fecha se manejará como texto AAAA-MM-DD y la hora como texto HH:MM. En esta
 etapa no se deben usar objetos de fecha para no complicar el primer modelo.
 
+Estos formatos son el acuerdo que compartirán JSON, SQLite y la interfaz. Un
+formato estable permite comparar registros y convertirlos más adelante sin
+mezclar todavía reglas de calendario con la clase básica.
+
 LECCIÓN 4 — CREAR UN OBJETO
 ---------------------------
 Los datos se entregan al constructor en el mismo orden de los campos.
@@ -79,9 +93,18 @@ Fragmento:
 
 Como descripcion tiene un valor inicial, puede omitirse.
 
+Leer `cita.titulo` o `cita.fecha` representa la operación que después hará una
+tarjeta o una fila de la tabla de citas. El ejemplo permite comprobar que el
+constructor recibió cada valor en el campo correcto.
+
 LECCIÓN 5 — CONVERTIR A DICCIONARIO
 -----------------------------------
 asdict convierte una dataclass en un diccionario con sus nombres de campo.
+
+El diccionario es la frontera entre el objeto Python y un formato de
+intercambio. `a_diccionario` deja una salida estable para que la etapa JSON y
+la base de datos trabajen con nombres claros, sin depender de la posición de
+los atributos.
 
 Fragmento:
     from dataclasses import asdict
@@ -105,10 +128,18 @@ Fragmento:
             descripcion=datos.get("descripcion", ""),
         )
 
+La reconstrucción convierte datos externos en una instancia válida. `get`
+permite leer registros antiguos que todavía no tenían descripción y evita que
+una ampliación pequeña rompa el historial.
+
 LECCIÓN 7 — EJEMPLO DIRECTO
 ---------------------------
 El archivo debe tener un pequeño ejemplo bajo if __name__ == "__main__".
 Debe crear una cita y mostrar su diccionario.
+
+El ejemplo es una prueba mínima del contrato: crear, convertir y reconstruir.
+El preview muestra el mismo resultado como tarjeta dentro de
+`agenda.appointments`, pero no ejecuta Python.
 
 Fragmento:
     if __name__ == "__main__":

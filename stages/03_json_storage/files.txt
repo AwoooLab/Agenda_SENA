@@ -41,6 +41,9 @@ Fragmento:
     from pathlib import Path
     ruta = Path("data") / "agenda.json"
 
+Separar la ruta de la función permite cambiar el archivo real por una ruta
+temporal durante las pruebas sin reescribir el mecanismo de guardado.
+
 LECCIÓN 2 — CONVERTIR DATOS A JSON
 ----------------------------------
 json.dumps convierte una lista o diccionario en texto JSON.
@@ -50,6 +53,10 @@ Fragmento:
     texto = json.dumps(datos, indent=2, ensure_ascii=False)
 
 indent=2 hace el archivo legible y ensure_ascii=False conserva tildes.
+
+JSON es la frontera entre la lista que vive en memoria y el texto persistente.
+La indentación facilita inspeccionar el resultado durante la clase y la
+codificación conserva títulos y descripciones en español.
 
 LECCIÓN 3 — GUARDAR TEXTO EN UTF-8
 ----------------------------------
@@ -61,6 +68,10 @@ Fragmento:
 
 Crear la carpeta superior evita errores cuando data todavía no existe.
 
+La preparación de la carpeta pertenece al almacenamiento, no a la interfaz.
+Así, cualquier parte del programa puede guardar una cita sin recordar pasos
+previos de infraestructura.
+
 LECCIÓN 4 — DISEÑAR guardar
 ---------------------------
 La función recibe list[dict] y Path, convierte los datos en texto y los guarda.
@@ -69,6 +80,10 @@ Firma esperada:
     def guardar(datos: list[dict], ruta: Path) -> None:
         ...
 
+La función recibe datos ya preparados y se limita a escribirlos. Esta frontera
+evita mezclar botones o reglas de negocio con operaciones de archivo y conserva
+la misma forma de datos definida en la etapa 02.
+
 LECCIÓN 5 — LEER Y CONVERTIR JSON
 ---------------------------------
 Path.read_text lee el texto. json.loads convierte el texto en objetos Python.
@@ -76,6 +91,10 @@ Path.read_text lee el texto. json.loads convierte el texto en objetos Python.
 Fragmento:
     texto = ruta.read_text(encoding="utf-8")
     datos = json.loads(texto)
+
+Después de convertir el texto conviene comprobar que el resultado tiene la
+forma esperada, por ejemplo una lista de diccionarios. Un archivo legible no es
+automáticamente un archivo válido para la agenda.
 
 LECCIÓN 6 — ARCHIVO INEXISTENTE
 -------------------------------
@@ -88,6 +107,10 @@ Fragmento:
 
 Si el contenido no es una lista, se puede lanzar ValueError con un mensaje
 claro.
+
+La ruta inexistente representa una agenda nueva; un JSON dañado representa un
+problema distinto. Separar ambos casos permite mostrar “sin citas” en el primer
+caso y un mensaje de recuperación en el segundo.
 
 ======================================================================
 ARCHIVO: demo.py
@@ -133,6 +156,10 @@ LECCIÓN 3 — FLUJO DEL DEMO
 3. Llamar guardar.
 4. Llamar cargar.
 5. Imprimir la lista cargada.
+
+El demo comprueba el ciclo completo sin depender de una ventana: memoria,
+archivo guardado y datos recuperados. `preview.html` representa esos estados
+con botones y mensajes, pero no escribe en el disco del navegador.
 
 RESTRICCIONES
 -------------

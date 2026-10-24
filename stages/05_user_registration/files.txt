@@ -47,9 +47,16 @@ Campos:
     is_active: bool = True
     created_at: str = ""
 
+El modelo solo representa información: no abre ventanas, no consulta SQLite y
+no decide si un registro es válido. Esta separación permite probarlo y
+reutilizarlo en registro e inicio de sesión.
+
 LECCIÓN 2 — MODELO SIN LÓGICA EXTERNA
 -------------------------------------
 El modelo solo guarda información. No debe importar sqlite3 ni tkinter.
+
+Una modificación visual no debe obligar a cambiar la forma de los datos. Cada
+responsabilidad queda preparada para probarse sin levantar toda la aplicación.
 
 ======================================================================
 ARCHIVO: user_repository.py
@@ -85,6 +92,10 @@ Fragmento:
         (username,),
     ).fetchone()
 
+El repositorio traduce operaciones del programa a SQL. La vista solicita crear
+o buscar un usuario y recibe un objeto, sin conocer tablas ni construir
+consultas dentro de un botón.
+
 LECCIÓN 3 — INSERTAR Y CONFIRMAR
 --------------------------------
 Después de INSERT usar commit. Obtener lastrowid para devolver el usuario con
@@ -95,10 +106,17 @@ Fragmento:
     self.conexion.commit()
     nuevo_id = cursor.lastrowid
 
+`commit` confirma el registro y `lastrowid` permite devolver un `Usuario`
+completo al servicio. Sin ese paso, el formulario no sabría qué identidad acaba
+de crear.
+
 LECCIÓN 4 — CONVERTIR FILAS EN OBJETOS
 --------------------------------------
 Una fila de sqlite3.Row puede convertirse en Usuario usando sus columnas por
 nombre. Mantener esta conversión en el repositorio.
+
+El mapeo funciona como frontera entre SQLite y el dominio. El servicio y la
+interfaz reciben atributos legibles en lugar de posiciones numéricas.
 
 MÉTODOS OBLIGATORIOS
 --------------------
@@ -129,6 +147,9 @@ Fragmento:
     username = username.strip()
     email = email.strip().lower()
 
+La normalización evita que espacios o diferencias de mayúsculas representen
+identidades distintas. Debe ser predecible y ejecutarse antes de validar.
+
 LECCIÓN 2 — VALIDAR ANTES DE GUARDAR
 ------------------------------------
 Rechazar datos vacíos y duplicados antes de llamar a crear. Lanzar ValueError
@@ -138,10 +159,18 @@ Fragmento:
     if not username:
         raise ValueError("El nombre de usuario es obligatorio.")
 
+Validar antes de guardar mantiene la base limpia y permite mostrar el mensaje
+junto al campo correcto. Los duplicados se comprueban antes de llamar al
+repositorio para traducir el error a lenguaje de la interfaz.
+
 LECCIÓN 3 — SEPARAR RESPONSABILIDADES
 -------------------------------------
 El servicio decide si los datos son válidos. El repositorio decide cómo se
 guardan. No mezclar ambas funciones.
+
+Esta división permite probar el registro sin abrir una ventana y cambiar la
+presentación sin duplicar reglas. El preview representa la entrada, la acción y
+el mensaje; Python conserva la lógica.
 
 ORDEN DE registrar
 ------------------
@@ -176,6 +205,10 @@ CASOS QUE DEBE PROBAR
 - Nombre duplicado.
 - Correo duplicado con mayúsculas diferentes.
 - Usuario creado como activo.
+
+El registro correcto comprueba el camino normal; los campos vacíos y duplicados
+comprueban los límites. Probar ambos lados evita aceptar datos que después
+romperían el login o la base.
 
 Fragmento de comprobación de error:
     with self.assertRaises(ValueError):

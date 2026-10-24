@@ -30,6 +30,15 @@ PROPÓSITO
 ---------
 Representar una actividad con sus datos y estado.
 
+LECCIÓN 1 — MODELAR UNA ACTIVIDAD
+----------------------------------
+Una actividad es una entidad del dominio: reúne la información necesaria para
+mostrar, guardar y modificar una cita sin depender de una ventana ni de una
+consulta SQL. La clase debe describir datos y estado, mientras que las reglas
+de fechas, horarios y operaciones quedarán en el servicio. Esta separación
+permite que la misma actividad aparezca en el calendario, en la agenda del día
+y en una tabla sin duplicar su significado.
+
 LIBRERÍAS
 ---------
 - dataclasses.dataclass.
@@ -49,6 +58,13 @@ CAMPOS
 
 El título, fecha, hora inicial y hora final son obligatorios.
 
+`dataclass` genera una estructura legible para construir y comparar objetos.
+Los tipos documentan el contrato que consumen el servicio y el formulario; por
+ejemplo, `completado` debe ser un booleano y no el texto de un control visual.
+El identificador puede estar vacío antes de guardar y recibir valor después de
+la inserción. Mantener este ciclo explícito evita confundir un objeto nuevo con
+uno que ya existe en la base de datos.
+
 ======================================================================
 ARCHIVO: category.py
 ======================================================================
@@ -56,6 +72,14 @@ ARCHIVO: category.py
 PROPÓSITO
 ---------
 Representar una categoría y su color.
+
+LECCIÓN 2 — DEFINIR CATEGORÍAS Y SIGNIFICADO VISUAL
+----------------------------------------------------
+La categoría es un dato reutilizable, no una decoración de la tarjeta. Su
+nombre permite filtrar y leer la actividad; su color crea una señal rápida en
+el calendario y en la lista. El modelo guarda el valor del color junto al
+nombre para que la interfaz pueda representar la misma categoría en todos los
+componentes y para que un cambio de diseño no altere la lógica.
 
 CAMPOS
 ------
@@ -72,6 +96,11 @@ CATEGORÍAS INICIALES
 
 No usar colores sin mostrar también el nombre de la categoría.
 
+La combinación color más texto mejora la accesibilidad y evita que una persona
+dependa de distinguir tonos. Conviene conservar una paleta con contraste y
+usar códigos hexadecimales consistentes, de modo que el `preview.html` y la
+ventana de Tkinter comuniquen la misma semántica.
+
 ======================================================================
 ARCHIVO: event_service.py
 ======================================================================
@@ -79,6 +108,12 @@ ARCHIVO: event_service.py
 PROPÓSITO
 ---------
 Aplicar las reglas de actividades y separar la lógica de la interfaz.
+
+El servicio es la frontera entre los datos recibidos por el formulario y el
+repositorio. Allí se normalizan entradas, se validan invariantes y se decide
+qué operación debe ejecutarse. El formulario no debe saber cómo se construye
+un `INSERT`, y el repositorio no debe decidir si una hora es válida; cada capa
+conserva una responsabilidad que puede probarse de forma independiente.
 
 LIBRERÍAS
 ---------
@@ -99,15 +134,33 @@ LECCIÓN 1 — VALIDAR UNA FECHA
 -----------------------------
 Usar datetime.strptime(fecha, "%Y-%m-%d") y capturar ValueError.
 
+La fecha se recibe como texto porque así llega desde un `Entry`, pero el
+servicio la convierte temporalmente a un valor de fecha para comprobar que el
+mes y el día existen. Después conserva el formato ISO `AAAA-MM-DD`, que ordena
+correctamente como texto y sirve como contrato común para SQLite, filtros y
+calendario.
+
 LECCIÓN 2 — VALIDAR HORAS
 -------------------------
 Usar datetime.strptime(hora, "%H:%M") y comparar la hora final con la inicial.
 La hora final debe ser posterior.
 
+Convertir ambas horas antes de compararlas evita comparar cadenas con formatos
+distintos. La regla de intervalo se expresa como `hora_inicio < hora_fin`;
+con ella se rechazan actividades vacías, invertidas o de duración cero. El
+servicio debe devolver un mensaje comprensible y no dejar que una excepción de
+la interfaz decida la regla.
+
 LECCIÓN 3 — SEPARAR CONSULTAS Y REGLAS
 --------------------------------------
 El servicio valida y decide. El repositorio o la conexión ejecuta SQL. No
 colocar consultas en event_form.py.
+
+Esta separación permite sustituir el almacenamiento o probar el servicio con
+un repositorio falso. El formulario solo recopila valores y reacciona al
+resultado; el servicio transforma esos valores en una decisión de dominio; el
+repositorio persiste la decisión. El flujo queda preparado para que una misma
+operación actualice calendario, agenda y tabla cuando se integre en la ventana.
 
 ======================================================================
 ARCHIVO: event_form.py
@@ -116,6 +169,14 @@ ARCHIVO: event_form.py
 PROPÓSITO
 ---------
 Crear el formulario para guardar una actividad.
+
+LECCIÓN 4 — CONSTRUIR EL FORMULARIO Y SU FLUJO
+-----------------------------------------------
+Un formulario convierte interacción en datos del dominio. Cada control debe
+tener una etiqueta, una referencia estable y una validación asociada al campo
+que representa. El botón `Guardar` inicia un flujo completo —leer, construir,
+validar y persistir— y `on_saved` comunica el resultado a la vista superior sin
+que el formulario conozca el calendario.
 
 LIBRERÍAS
 ---------
@@ -142,6 +203,12 @@ FLUJO DEL BOTÓN GUARDAR
 4. Si hay ValueError, mostrarlo en español.
 5. Si funciona, llamar on_saved(evento).
 
+El callback de éxito permite limpiar el formulario, cerrar un panel o
+refrescar las listas sin acoplar esas decisiones al componente. Los errores de
+entrada deben permanecer visibles junto al formulario y no ocultarse en la
+consola; así el estudiante puede verificar el comportamiento tanto en Python
+como en la referencia visual.
+
 ======================================================================
 ARCHIVO: color_legend.py
 ======================================================================
@@ -149,6 +216,13 @@ ARCHIVO: color_legend.py
 PROPÓSITO
 ---------
 Mostrar el significado de cada categoría.
+
+LECCIÓN 5 — CREAR UNA LEYENDA ACCESIBLE
+---------------------------------------
+La leyenda convierte los códigos de color en una explicación que la persona
+puede consultar. Cada fila reúne un indicador, el nombre y, si hace falta, una
+descripción breve. Al construirla con pequeños `Frame` se conserva la misma
+estructura cuando se muestre junto al calendario o debajo de una lista.
 
 Cada fila debe mostrar un indicador de color y el nombre escrito de la categoría.
 Usar Frame y Label. El color ayuda a reconocer, pero el texto debe comunicar la
@@ -171,6 +245,14 @@ CASOS NECESARIOS
 - Completar actividad.
 - Eliminar actividad.
 
+LECCIÓN 6 — PROBAR LAS REGLAS DEL SERVICIO
+-------------------------------------------
+Cada caso de prueba fija una entrada y una consecuencia esperada. Los casos
+válidos comprueban que el flujo produce una actividad utilizable; los inválidos
+demuestran que las reglas protegen el almacenamiento. Los filtros y el cambio
+de estado completado comprueban que la salida puede alimentar diferentes
+secciones de la misma agenda sin perder el identificador ni la categoría.
+
 PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
 Crear una actividad por categoría, editar una, completar otra, filtrar por fecha
@@ -191,12 +273,26 @@ PROPÓSITO
 Mostrar el formulario de actividades, una actividad guardada y la leyenda de
 categorías que se implementarán en la aplicación de escritorio.
 
+LECCIÓN 7 — REPRESENTAR EL MÓDULO EN EL PREVIEW
+------------------------------------------------
+El preview traduce el contrato del servicio a una comprobación visible. No
+simula una base de datos real: presenta los campos, estados y respuestas que
+la ventana debe poder mostrar. Los atributos `data-screen` y `data-slot`
+identifican el lugar que ocupará el módulo cuando el orquestador lo integre en
+la única ventana de GitHub Pages.
+
 CONCEPTOS NECESARIOS
 --------------------
 - input recibe título, fecha y hora.
 - select permite elegir una categoría.
 - Una tarjeta puede representar una actividad guardada.
 - Las categorías deben tener color y nombre escrito.
+
+La composición debe conservar los espacios aunque la cantidad de datos cambie.
+El formulario, la tarjeta guardada y la leyenda se organizan con CSS flexible;
+las columnas pueden pasar a una sola cuando el visor sea más estrecho. La
+validación visual revisa el resultado de las reglas, no solamente la presencia
+de etiquetas.
 
 FRAGMENTO DE REFERENCIA
 -----------------------

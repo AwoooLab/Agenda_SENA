@@ -41,6 +41,10 @@ LECCIÓN 1 — POR QUÉ NO SE GUARDA LA CONTRASEÑA
 La contraseña original es un secreto. La base solo debe guardar un resumen
 irreversible y una sal diferente para cada usuario.
 
+El modelo de seguridad trabaja con una comparación, no con recuperación del
+secreto. Esta decisión afecta la base, el servicio y el mensaje de error que
+verá la persona en `login.form`.
+
 LECCIÓN 2 — CREAR UNA SAL
 -------------------------
 Una sal es un valor aleatorio que evita que dos contraseñas iguales produzcan
@@ -49,6 +53,10 @@ el mismo resumen.
 Fragmento:
     import secrets
     salt = secrets.token_hex(16)
+
+La sal distingue dos usuarios que hayan elegido la misma contraseña y debe
+guardarse junto al resumen. No es la contraseña ni necesita mantenerse oculta;
+su función es cambiar el cálculo para cada registro.
 
 LECCIÓN 3 — DERIVAR EL RESUMEN
 ------------------------------
@@ -65,6 +73,10 @@ Fragmento orientativo:
 
 Convertir el resultado a hexadecimal con .hex().
 
+Las iteraciones elevan el costo de probar contraseñas automáticamente. El
+resultado hexadecimal es texto adecuado para una columna SQLite y nunca debe
+confundirse con el secreto original.
+
 LECCIÓN 4 — VERIFICAR
 ---------------------
 Crear nuevamente el resumen usando la sal guardada y comparar con
@@ -73,6 +85,10 @@ hmac.compare_digest.
 Fragmento:
     import hmac
     hmac.compare_digest(resumen_nuevo, resumen_guardado)
+
+La comprobación reproduce el cálculo con la sal almacenada. Una respuesta
+booleana basta para el servicio; la pantalla no necesita conocer el hash ni la
+sal.
 
 FUNCIONES OBLIGATORIAS
 ----------------------
@@ -112,10 +128,17 @@ Fragmento:
             self.repositorio = repositorio
             self._usuario_actual = None
 
+La inyección del repositorio mantiene el servicio independiente de la conexión.
+Así puede probarse con una base temporal y conservar una sola regla de acceso.
+
 LECCIÓN 2 — ESTABLECER CONTRASEÑA
 ---------------------------------
 crear_credenciales devuelve hash y salt. Luego actualizar_credenciales los
 guarda en el usuario indicado.
+
+Establecer la contraseña es un flujo separado del login: primero genera las
+credenciales, después las persiste y finalmente deja listo al usuario para
+autenticarse. La contraseña viaja solo durante esa operación.
 
 LECCIÓN 3 — INICIAR SESIÓN
 --------------------------
@@ -126,9 +149,17 @@ LECCIÓN 3 — INICIAR SESIÓN
 5. Si es correcta, guardar el usuario en _usuario_actual.
 6. Devolver el usuario.
 
+El orden evita revelar si falló el nombre, el estado o la contraseña. Para la
+interfaz, un resultado no válido se convierte en un mensaje general; el éxito
+guarda la identidad que usará la ventana de agenda.
+
 LECCIÓN 4 — CERRAR SESIÓN
 -------------------------
 Cerrar sesión significa asignar None al usuario actual.
+
+La sesión vive en memoria mientras la ventana está abierta. Cerrar sesión no
+borra usuarios ni actividades: elimina el contexto activo y devuelve el flujo
+a la pantalla de acceso en la misma ventana.
 
 MÉTODOS OBLIGATORIOS
 --------------------
@@ -166,10 +197,18 @@ Fragmento:
     usuario = entrada_usuario.get().strip()
     password = entrada_password.get()
 
+El formulario recoge entradas y el servicio toma la decisión. `strip` evita
+espacios accidentales en el identificador, mientras que la contraseña se toma
+sin modificar para no alterar el secreto que se está comprobando.
+
 LECCIÓN 3 — FUNCIÓN DE RESPUESTA
 --------------------------------
 La ventana recibe on_login(usuario). Si el servicio devuelve un usuario, llama
 a esa función. La ventana no debe construir la ventana principal.
+
+El callback `on_login` conecta la autenticación con el cambio de vista sin
+acoplar el formulario al router. Un error permanece en `login.feedback`; un
+éxito entrega el usuario a la agenda.
 
 DISEÑO OBLIGATORIO
 ------------------
@@ -182,6 +221,10 @@ DISEÑO OBLIGATORIO
 - Botón Iniciar sesión.
 - Botón Cerrar.
 - Mensaje de error en español.
+
+El tamaño es una referencia mínima para la vista de login; la composición debe
+crecer y reorganizarse sin ocultar campos. El preview representa formulario
+vacío, error y acceso exitoso como estados visibles.
 
 ======================================================================
 ARCHIVO: test_auth_service.py
@@ -201,6 +244,10 @@ CASOS OBLIGATORIOS
 - Usuario actual después de iniciar sesión.
 - Usuario actual vacío después de cerrar sesión.
 - La contraseña original no aparece en la base.
+
+Los casos cubren credenciales válidas, límites y limpieza de sesión. La prueba
+de almacenamiento confirma una propiedad de seguridad concreta: el secreto
+original nunca forma parte del registro persistido.
 
 PRUEBA FUNCIONAL OPCIONAL EN EL PC
 -------------------
