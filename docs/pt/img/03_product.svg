@@ -93,7 +93,7 @@
     <circle cx="58" cy="54" r="27" fill="#E0F2FE"/>
     <image href="../../../assets/icons/calendar.svg" x="42" y="38" width="32" height="32"/>
     <text x="105" y="60" class="sans navy bold" font-size="27">Calendario</text>
-    <text x="105" y="112" class="sans muted" font-size="20">Vista mensual para ubicar las actividades.</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Vista mensual de actividades.</text>
   </g>
 
   <g transform="translate(1320 560)" filter="url(#shadow)">

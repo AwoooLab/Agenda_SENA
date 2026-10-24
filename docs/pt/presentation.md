@@ -191,7 +191,7 @@ Acceso controlado a la agenda local.
 
 **Calendario**
 
-Vista mensual para ubicar las actividades.
+Vista mensual de actividades.
 
 ### Tarjeta 03
 
@@ -215,7 +215,7 @@ Categorías, colores y estados de cumplimiento.
 
 **Datos locales**
 
-Información almacenada en el computador.
+Datos guardados localmente.
 
 ## Imagen o representación visual
 
