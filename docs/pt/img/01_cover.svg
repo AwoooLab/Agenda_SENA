@@ -17,12 +17,6 @@
       <stop offset="0.45" stop-color="#7DD3FC" stop-opacity="0.8"/>
       <stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#020617" flood-opacity="0.40"/>
-    </filter>
-    <clipPath id="illustrationClip">
-      <rect x="1000" y="158" width="790" height="650" rx="34"/>
-    </clipPath>
     <style>
       .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
       .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
@@ -54,12 +48,7 @@
     <text x="0" y="52" class="sans soft medium" font-size="24" letter-spacing="1">SENA · 2026</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="982" y="140" width="826" height="686" rx="42" fill="#07122F" opacity="0.55" stroke="#A5D8FF" stroke-opacity="0.30" stroke-width="2"/>
-    <rect x="1000" y="158" width="790" height="650" rx="34" fill="#0F1F4D"/>
-    <image x="1000" y="158" width="790" height="650" preserveAspectRatio="xMidYMid slice" clip-path="url(#illustrationClip)" href="01_cover_illustration.png" xlink:href="01_cover_illustration.png"/>
-    <rect x="1000" y="158" width="790" height="650" rx="34" fill="none" stroke="#BFE3FF" stroke-opacity="0.42" stroke-width="2"/>
-  </g>
+  <image x="1000" y="158" width="790" height="650" preserveAspectRatio="xMidYMid slice" href="01_cover_illustration.png" xlink:href="01_cover_illustration.png"/>
 
   <g opacity="0.8">
     <circle cx="1750" cy="900" r="5" fill="#7DD3FC"/>
