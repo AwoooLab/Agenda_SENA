@@ -37,15 +37,15 @@
   <circle cx="425" cy="63" r="8" fill="none" stroke="#c9d7f5" stroke-width="2"/>
   <path d="M431 69l7 7" stroke="#c9d7f5" stroke-width="2" stroke-linecap="round"/>
   <text x="449" y="70" class="sans" fill="#c9d7f5" font-size="15">Buscar citas, actividades o usuarios</text>
-  <circle cx="1348" cy="62" r="18" fill="#ffffff" opacity="0.13"/>
-  <image href="assets/icons/settings.svg" x="1336" y="50" width="24" height="24"/>
-  <circle cx="1398" cy="62" r="18" fill="#ffffff" opacity="0.13"/>
-  <image href="assets/icons/bell.svg" x="1386" y="50" width="24" height="24"/>
-  <circle cx="1407" cy="52" r="5" fill="#f97316"/>
-  <circle cx="1460" cy="62" r="20" fill="#7dd3fc"/>
-  <text x="1460" y="68" text-anchor="middle" class="sans navy bold" font-size="15">AS</text>
-  <text x="1490" y="58" class="sans white bold" font-size="14">Alejandro</text>
-  <text x="1490" y="76" class="sans" fill="#b9c9ec" font-size="12">Administrador</text>
+  <circle cx="1288" cy="62" r="18" fill="#ffffff" opacity="0.13"/>
+  <image href="assets/icons/settings.svg" x="1276" y="50" width="24" height="24"/>
+  <circle cx="1338" cy="62" r="18" fill="#ffffff" opacity="0.13"/>
+  <image href="assets/icons/bell.svg" x="1326" y="50" width="24" height="24"/>
+  <circle cx="1348" cy="52" r="5" fill="#f97316"/>
+  <circle cx="1400" cy="62" r="20" fill="#7dd3fc"/>
+  <text x="1400" y="68" text-anchor="middle" class="sans navy bold" font-size="15">AS</text>
+  <text x="1430" y="58" class="sans white bold" font-size="14">Alejandro</text>
+  <text x="1430" y="76" class="sans" fill="#b9c9ec" font-size="12">Administrador</text>
 
   <rect x="36" y="98" width="250" height="876" fill="#111d4a"/>
   <text x="72" y="153" class="sans" fill="#a9bce3" font-size="13">MENÚ PRINCIPAL</text>
