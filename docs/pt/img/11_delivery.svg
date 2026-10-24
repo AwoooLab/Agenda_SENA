@@ -89,17 +89,17 @@
     </g>
 
     <!-- Security and transition -->
-    <g transform="translate(760 290)">
-      <path d="M0 0H120" fill="none" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
-      <path d="M120 0l-22-16v32z" fill="#2563EB"/>
-      <text x="0" y="-28" class="sans blue bold" font-size="25">aprobado</text>
-      <g transform="translate(28 75) scale(1.10)">
+    <g transform="translate(740 290)">
+      <path d="M0 0H275" fill="none" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
+      <path d="M275 0l-22-16v32z" fill="#2563EB"/>
+      <text x="138" y="-28" text-anchor="middle" class="sans blue bold" font-size="25">aprobado</text>
+      <g transform="translate(85 75) scale(1.10)">
         <path d="M48 0l42 17v38c0 34-21 59-42 72C27 114 6 89 6 55V17z" fill="#E6EEFF" stroke="#2563EB" stroke-width="4"/>
         <path d="M28 61l14 14 27-31" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
       </g>
-      <text x="58" y="250" text-anchor="middle" class="sans navy bold" font-size="27">Seguridad</text>
-      <text x="58" y="280" text-anchor="middle" class="sans muted medium" font-size="24">Datos locales</text>
-      <text x="58" y="309" text-anchor="middle" class="sans muted medium" font-size="24">protegidos</text>
+      <text x="138" y="250" text-anchor="middle" class="sans navy bold" font-size="27">Seguridad</text>
+      <text x="138" y="280" text-anchor="middle" class="sans muted medium" font-size="24">Datos locales</text>
+      <text x="138" y="309" text-anchor="middle" class="sans muted medium" font-size="24">protegidos</text>
     </g>
 
     <!-- Executable package -->
