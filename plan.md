@@ -99,14 +99,14 @@ Validar la aplicación integrada y preparar el ejecutable de Windows.
 
 La documentación detallada de cada etapa está directamente en `docs/`. La
 teoría de cada archivo y sus
-fragmentos de referencia está en el `files.txt` correspondiente dentro de
+fragmentos de referencia está en el `files.md` correspondiente dentro de
 `stages/`.
 
 ## Orden de validación
 
 Para cada etapa se sigue el mismo ciclo:
 
-1. Leer el milestone y el `files.txt`.
+1. Leer el milestone y el `files.md`.
 2. Identificar `screen`, `slot`, datos de prueba y archivos permitidos.
 3. Ejecutar el módulo independiente en el PC.
 4. Actualizar `preview.html` con la misma jerarquía y estados.

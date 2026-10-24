@@ -6,14 +6,14 @@ carpeta sin importar código de otras etapas.
 ## Qué contiene cada etapa
 
 - Archivos Python propios del módulo.
-- files.txt con teoría, ejemplos, restricciones y validaciones.
+- files.md con teoría, ejemplos, restricciones y validaciones.
 - preview.html con la salida visual independiente.
 - Datos de prueba propios cuando sean necesarios.
 
 ## Flujo de trabajo del estudiante
 
 1. Leer el milestone correspondiente en `docs/`.
-2. Leer el files.txt de la carpeta.
+2. Leer el files.md de la carpeta.
 3. Crear o modificar únicamente los archivos solicitados dentro de ese stage.
 4. Ejecutar la prueba local indicada.
 5. Actualizar el preview.html con la salida visual del módulo.
@@ -35,14 +35,14 @@ agenda. La carpeta de un stage futuro no se muestra automáticamente.
 
 ## Contrato del módulo
 
-Cada files.txt debe explicar propósito, alcance, archivos, dependencias,
+Cada files.md debe explicar propósito, alcance, archivos, dependencias,
 entradas, salidas, funciones públicas, datos de prueba, validación visual y
 forma de integración futura. Las diez especificaciones están directamente en
 `docs/`.
 
 ## Relación con las dos ventanas
 
-Cada stage debe indicar en su `files.txt`:
+Cada stage debe indicar en su `files.md`:
 
 - La ventana objetivo: `login` o `agenda`.
 - El espacio objetivo, por ejemplo `login.form`, `agenda.calendar` o

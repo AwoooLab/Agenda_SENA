@@ -74,4 +74,4 @@ etapa actual. El estudiante no necesita editar el orquestador mientras
 desarrolla un stage.
 
 La metodología y los requisitos están distribuidos en los diez archivos
-`docs/*_*.md` y en el `files.txt` de cada stage.
+`docs/*_*.md` y en el `files.md` de cada stage.

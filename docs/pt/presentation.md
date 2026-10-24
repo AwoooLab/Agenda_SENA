@@ -456,7 +456,7 @@ Especificación → Código → Prueba visual → Integración
 
 Al lado del diagrama colocar una carpeta ilustrada con la etiqueta
 `stages/`. La carpeta debe contener pequeñas tarjetas que representen
-`app.py`, `files.txt` y `preview.html`.
+`app.py`, `files.md` y `preview.html`.
 
 ## Iconos
 
