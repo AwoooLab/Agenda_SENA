@@ -20,7 +20,8 @@ operaciones de citas.
 El resultado principal se ejecuta en un PC con Python y Tkinter. La ventana de
 trabajo usa `1180x760` y puede redimensionarse. Las medidas de los SVG son la
 referencia proporcional del diseño final. `preview.html` representa los dos
-estados en el navegador y no ejecuta Python.
+estados en el navegador, incluye su propio CSS y JavaScript, y no ejecuta
+Python.
 
 ## Archivos que debe crear el alumno
 
@@ -97,7 +98,9 @@ GitHub Pages. El trabajo se realiza en este orden:
 6. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 7. Verificar allí la transición `Siguiente` y la agenda completa de demostración.
 
-El preview no ejecuta Python. La etapa no está terminada hasta que la
+El preview es autónomo: sus estilos y su transición JavaScript están dentro de
+`preview.html`; solo utiliza los SVG de iconos como recursos visuales. No
+ejecuta Python. La etapa no está terminada hasta que la
 representación visual publicada cumple los requisitos de la especificación.
 
 ### Validación visual específica

@@ -229,8 +229,10 @@ resultado visual desde el navegador.
 CONCEPTOS NECESARIOS
 --------------------
 - HTML define la estructura.
-- CSS define colores, tamaños y distribución.
-- La ruta ../../assets/stage-preview.css reutiliza los estilos del proyecto.
+- CSS define colores, tamaños y distribución, y se incluye dentro de este
+  mismo `preview.html` para que el archivo pueda abrirse de forma autónoma.
+- JavaScript se incluye dentro de este mismo `preview.html` para controlar el
+  cambio entre bienvenida y agenda.
 
 FRAGMENTOS DE REFERENCIA
 -------------------------
@@ -245,8 +247,9 @@ FRAGMENTOS DE REFERENCIA
     </section>
 
 La vista debe conservar los dos estados y la transición visual del resultado de
-Python. El fragmento de agenda debe mostrar los espacios base aunque sus datos
-sean estáticos.
+Python. El CSS y el JavaScript deben permanecer dentro de este archivo. El
+fragmento de agenda debe mostrar los espacios base aunque sus datos sean
+estáticos.
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
