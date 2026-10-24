@@ -296,51 +296,67 @@ docs/pt/img/04_two_states.png
 
 ---
 
-# Diapositiva 05 — Flujo de navegación
+# Diapositiva 05 — Recorrido de la aplicación
 
 ## Texto literal
 
-**¿Cómo se navega en la aplicación?**
+**Del acceso al cierre de sesión**
 
-**El usuario sigue un flujo sencillo y continuo:**
+**La aplicación acompaña todo el trabajo del usuario dentro de una misma
+ventana.**
 
-**Abrir aplicación → Iniciar sesión → Ver agenda → Navegar por el menú →
-Gestionar citas y actividades → Cerrar sesión**
+### Momento 01 — Acceso
 
-**Al cerrar sesión, la aplicación regresa al inicio de sesión.**
+**Abrir aplicación**
+
+Abrir el programa.
+
+**Iniciar sesión**
+
+Acceder con usuario y contraseña.
+
+### Momento 02 — Trabajo diario
+
+**Ver agenda · navegar por el menú · gestionar citas y actividades**
+
+Consultar y actualizar la información desde la ventana principal.
+
+### Momento 03 — Cierre
+
+**Cerrar sesión**
+
+Regresar al acceso.
 
 ## Distribución
 
-- Colocar el título arriba.
-- Ubicar el flujo principal en el centro, de izquierda a derecha.
-- Dividirlo en seis pasos numerados.
-- Colocar la frase final en la parte inferior.
-- Usar flechas amplias y claras entre cada paso.
+- Colocar el título y una frase breve en la parte superior.
+- Usar una ventana grande de Agenda SENA como elemento visual central.
+- Ubicar `Acceso` a la izquierda de la ventana.
+- Ubicar `Cierre` a la derecha de la ventana.
+- Ubicar `Trabajo diario` debajo de la ventana.
+- Conectar los tres momentos con flechas amplias y discretas.
+- Mantener la ventana central como el elemento dominante de la composición.
 
 ## Imagen o representación visual
 
-Crear un diagrama horizontal con seis nodos redondeados:
+Crear una composición centrada en una sola ventana de Agenda SENA. La ventana
+debe mostrar el menú lateral, un resumen de citas, el calendario mensual y una
+lista de actividades.
 
-1. `Abrir`.
-2. `Login`.
-3. `Agenda`.
-4. `Menú`.
-5. `Citas`.
-6. `Cerrar sesión`.
+Al lado izquierdo, mostrar el momento `Acceso` con los pasos `Abrir aplicación`
+y `Iniciar sesión`. Al lado derecho, mostrar el momento `Cierre` con `Cerrar
+sesión` y `Regresar al acceso`. Debajo de la ventana, mostrar `Trabajo diario`
+con `Ver agenda`, `navegar por el menú` y `gestionar citas y actividades`.
 
-Cada nodo debe tener un icono y una etiqueta corta. El nodo `Agenda` debe ser
-el más grande o usar el azul principal para marcarlo como el centro del flujo.
-Después de `Cerrar sesión`, dibujar una flecha curva que regrese al nodo
-`Login`.
+La imagen debe comunicar que el usuario trabaja dentro de una misma ventana y
+que la navegación cambia el contenido de la agenda, no el programa completo.
 
 ## Iconos
 
-- Ventana de aplicación.
-- Usuario o candado.
-- Panel de agenda.
-- Menú lateral.
-- Calendario o lista.
-- Flecha de regreso.
+- Candado para el acceso.
+- Ventana de aplicación y calendario para el trabajo diario.
+- Cerrar sesión para el cierre.
+- Flechas simples para conectar los tres momentos.
 
 ## Archivo de imagen posterior
 
