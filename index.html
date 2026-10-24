@@ -33,28 +33,7 @@
 
       .contenedor { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
 
-      .hero {
-        padding: 58px 24px 52px;
-        color: var(--blanco);
-        background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
-      }
-
-      .hero h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3.4rem); }
-      .hero p { max-width: 720px; margin: 0; color: var(--azul-claro); font-size: 1.1rem; }
-
-      .actualizar-vista {
-        margin-top: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.55);
-        border-radius: 9px;
-        padding: 10px 16px;
-        color: var(--blanco);
-        background: rgba(255, 255, 255, 0.14);
-        font: inherit;
-        font-weight: 700;
-        cursor: pointer;
-      }
-
-      main { padding: 42px 0 64px; }
+      main { padding: 28px 0 64px; }
 
       .panel {
         overflow: hidden;
@@ -130,19 +109,6 @@
     </style>
   </head>
   <body>
-    <header class="hero">
-      <div class="contenedor">
-        <h1>Agenda SENA</h1>
-        <p>
-          Visor web de la aplicación integrada. Aquí se revisa la ventana y la
-          navegación que se van construyendo con los módulos aprobados.
-        </p>
-        <button id="actualizar-vista" class="actualizar-vista" type="button">
-          Actualizar vista
-        </button>
-      </div>
-    </header>
-
     <main class="contenedor">
       <section class="panel" aria-label="Aplicación Agenda SENA">
         <div class="ventana-app">
@@ -163,7 +129,6 @@
       </section>
     </main>
 
-    <footer>Agenda SENA · Proyecto educativo de aplicación local para PC</footer>
     <script src="web/app.js"></script>
   </body>
 </html>

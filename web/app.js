@@ -6,11 +6,13 @@
   let modules = [];
   const previews = new Map();
 
-  refreshButton.addEventListener("click", () => {
-    const url = new URL(window.location.href);
-    url.searchParams.set("v", String(Date.now()));
-    window.location.replace(url.toString());
-  });
+  if (refreshButton) {
+    refreshButton.addEventListener("click", () => {
+      const url = new URL(window.location.href);
+      url.searchParams.set("v", String(Date.now()));
+      window.location.replace(url.toString());
+    });
+  }
 
   function renderNavigation(modules) {
     navigation.replaceChildren();
