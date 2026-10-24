@@ -40,10 +40,12 @@ iconos y la composición de cada diapositiva.
 
 - Títulos: Arial, Aptos o Inter, peso bold.
 - Texto general: Arial, Aptos o Inter, peso regular.
-- Título de diapositiva: entre 42 y 52 px.
-- Texto principal: entre 25 y 30 px.
-- Etiquetas pequeñas: entre 18 y 22 px.
-- No colocar texto pequeño dentro de las imágenes.
+- Título de diapositiva: entre 60 y 64 px.
+- Texto principal: entre 30 y 38 px.
+- Texto secundario y descripciones: mínimo 24 px.
+- Etiquetas y texto de apoyo: mínimo 22 px.
+- No usar texto visible por debajo de 22 px; si una miniatura no admite la
+  etiqueta, se debe acortar o retirar en lugar de reducir la tipografía.
 
 ### Composición común
 

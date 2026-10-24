@@ -25,6 +25,7 @@
       .sky { fill: #7DD3FC; }
       .bold { font-weight: 700; }
       .medium { font-weight: 500; }
+      text[font-size="18"], text[font-size="19"], text[font-size="20"], text[font-size="21"] { font-size: 22px !important; }
     </style>
   </defs>
 
@@ -56,5 +57,5 @@
     <circle cx="1810" cy="900" r="5" fill="#7DD3FC" opacity="0.30"/>
   </g>
 
-  <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">01</text>
+  <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="22" opacity="0.75">01</text>
 </svg>

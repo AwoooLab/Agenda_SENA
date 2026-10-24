@@ -25,6 +25,7 @@
       .muted { fill: #5F769B; }
       .bold { font-weight: 700; }
       .medium { font-weight: 500; }
+      text[font-size="17"], text[font-size="18"], text[font-size="19"], text[font-size="20"], text[font-size="21"] { font-size: 22px !important; }
     </style>
   </defs>
 
@@ -130,7 +131,7 @@
     <circle cx="58" cy="54" r="27" fill="#E8EDF4"/>
     <image href="../../../assets/icons/dashboard.svg" x="42" y="38" width="32" height="32"/>
     <text x="105" y="60" class="sans navy bold" font-size="27">Datos locales</text>
-    <text x="105" y="112" class="sans muted" font-size="20">Información almacenada en el computador.</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Datos guardados localmente.</text>
   </g>
 
   <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">03</text>

@@ -28,6 +28,7 @@
       .muted { fill: #60789F; }
       .bold { font-weight: 700; }
       .medium { font-weight: 500; }
+      text[font-size="13"], text[font-size="14"], text[font-size="15"], text[font-size="16"], text[font-size="17"], text[font-size="18"], text[font-size="19"], text[font-size="20"], text[font-size="21"] { font-size: 22px !important; }
     </style>
   </defs>
 
@@ -70,7 +71,7 @@
     <circle cx="50" cy="27" r="7" fill="#F8B84E"/>
     <circle cx="72" cy="27" r="7" fill="#39C875"/>
     <text x="102" y="36" class="sans white bold" font-size="25">Agenda SENA</text>
-    <text x="470" y="34" class="sans soft" font-size="17">Aplicaci&#243;n local</text>
+    <text x="470" y="34" class="sans soft" font-size="17">Local</text>
 
     <rect y="54" width="126" height="181" fill="#EEF5FF"/>
     <text x="22" y="91" class="sans navy bold" font-size="19">Men&#250;</text>
@@ -84,13 +85,13 @@
     <text x="154" y="91" class="sans navy bold" font-size="28">Una sola ventana</text>
     <text x="154" y="118" class="sans muted" font-size="18">La tecnolog&#237;a se integra en una aplicaci&#243;n.</text>
     <rect x="154" y="140" width="120" height="58" rx="12" fill="#EAF2FF"/>
-    <text x="170" y="163" class="sans muted" font-size="15">Citas de hoy</text>
+    <text x="170" y="163" class="sans muted" font-size="15">Hoy</text>
     <text x="170" y="188" class="sans navy bold" font-size="26">04</text>
     <rect x="286" y="140" width="120" height="58" rx="12" fill="#EAFBF1"/>
     <text x="302" y="163" class="sans muted" font-size="15">Pendientes</text>
     <text x="302" y="188" class="sans navy bold" font-size="26">08</text>
     <rect x="418" y="140" width="140" height="58" rx="12" fill="#FFF4DE"/>
-    <text x="434" y="163" class="sans muted" font-size="15">Pr&#243;xima cita</text>
+    <text x="434" y="163" class="sans muted" font-size="15">Pr&#243;xima</text>
     <text x="434" y="188" class="sans navy bold" font-size="26">10:00</text>
   </g>
 
