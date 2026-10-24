@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "files.txt": "plaintext"
+  },
+  "[plaintext]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 0,
+    "editor.wrappingIndent": "same"
+  }
+}
