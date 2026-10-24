@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">¿Qué vamos a construir?</title>
+  <desc id="desc">Una aplicación local de escritorio para administrar la agenda personal y de trabajo.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1535"/>
+      <stop offset="0.58" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="windowBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#101A3A"/>
+      <stop offset="1" stop-color="#2455C7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.30"/>
+    </filter>
+    <style>
+      .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .navy { fill: #122554; }
+      .muted { fill: #5F769B; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <circle cx="1700" cy="60" r="260" fill="#60A5FA" opacity="0.08"/>
+  <circle cx="1660" cy="1050" r="370" fill="#93C5FD" opacity="0.05"/>
+  <path d="M0 965 C380 860 680 1060 1030 955 S1610 830 1920 920" fill="none" stroke="#7DD3FC" stroke-opacity="0.12" stroke-width="2"/>
+
+  <g transform="translate(140 118)">
+    <text x="0" y="0" class="display white bold" font-size="64">¿Qué vamos a construir?</text>
+    <rect x="0" y="46" width="650" height="5" rx="2.5" fill="#7DD3FC" opacity="0.75"/>
+    <text x="0" y="130" class="sans white medium" font-size="38">Una aplicación local de escritorio para administrar la agenda</text>
+    <text x="0" y="180" class="sans white medium" font-size="38">personal y de trabajo.</text>
+    <text x="0" y="254" class="sans sky bold" font-size="25" letter-spacing="0.4">Funciones principales</text>
+  </g>
+
+  <!-- Ventana central del producto -->
+  <g transform="translate(760 350)" filter="url(#shadow)">
+    <rect width="400" height="150" rx="18" fill="#F8FBFF"/>
+    <rect width="400" height="42" rx="18" fill="url(#windowBar)"/>
+    <rect y="24" width="400" height="18" fill="url(#windowBar)"/>
+    <circle cx="24" cy="21" r="5" fill="#FB5B5B"/>
+    <circle cx="42" cy="21" r="5" fill="#F8B84E"/>
+    <circle cx="60" cy="21" r="5" fill="#39C875"/>
+    <text x="82" y="27" class="sans white bold" font-size="17">Agenda SENA</text>
+    <rect x="24" y="66" width="130" height="58" rx="10" fill="#E5F0FF"/>
+    <rect x="42" y="84" width="72" height="9" rx="4.5" fill="#2563EB"/>
+    <rect x="42" y="102" width="48" height="7" rx="3.5" fill="#8DB5F4"/>
+    <rect x="174" y="66" width="92" height="58" rx="10" fill="#EAFBF1"/>
+    <circle cx="198" cy="89" r="10" fill="#16A34A"/>
+    <rect x="218" y="84" width="30" height="8" rx="4" fill="#7BD69A"/>
+    <rect x="218" y="101" width="42" height="7" rx="3.5" fill="#B0E5C1"/>
+    <rect x="286" y="66" width="90" height="58" rx="10" fill="#FFF4DE"/>
+    <circle cx="310" cy="89" r="10" fill="#F59E0B"/>
+    <rect x="330" y="84" width="28" height="8" rx="4" fill="#F9BD61"/>
+    <rect x="330" y="101" width="38" height="7" rx="3.5" fill="#F7D79E"/>
+  </g>
+
+  <!-- Conectores de los módulos -->
+  <g fill="none" stroke="#7DD3FC" stroke-width="3" stroke-linecap="round" opacity="0.75">
+    <path d="M805 500 C650 515 360 530 350 565"/>
+    <path d="M960 500 L960 565"/>
+    <path d="M1115 500 C1270 515 1560 530 1570 565"/>
+    <path d="M805 500 C620 585 360 690 350 780"/>
+    <path d="M960 500 L960 780"/>
+    <path d="M1115 500 C1300 585 1560 690 1570 780"/>
+  </g>
+  <g fill="#7DD3FC">
+    <circle cx="805" cy="500" r="6"/><circle cx="960" cy="500" r="6"/><circle cx="1115" cy="500" r="6"/>
+  </g>
+
+  <!-- Tarjetas de módulos -->
+  <g transform="translate(100 560)" filter="url(#shadow)">
+    <rect width="500" height="178" rx="22" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="178" rx="4" fill="#2563EB"/>
+    <circle cx="58" cy="54" r="27" fill="#E4EEFF"/>
+    <image href="../../../assets/icons/lock.svg" x="42" y="38" width="32" height="32"/>
+    <text x="105" y="60" class="sans navy bold" font-size="27">Inicio de sesión</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Acceso controlado a la agenda local.</text>
+  </g>
+
+  <g transform="translate(710 560)" filter="url(#shadow)">
+    <rect width="500" height="178" rx="22" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="178" rx="4" fill="#0EA5E9"/>
+    <circle cx="58" cy="54" r="27" fill="#E0F2FE"/>
+    <image href="../../../assets/icons/calendar.svg" x="42" y="38" width="32" height="32"/>
+    <text x="105" y="60" class="sans navy bold" font-size="27">Calendario</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Vista mensual para ubicar las actividades.</text>
+  </g>
+
+  <g transform="translate(1320 560)" filter="url(#shadow)">
+    <rect width="500" height="178" rx="22" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="178" rx="4" fill="#F59E0B"/>
+    <circle cx="58" cy="54" r="27" fill="#FFF3D9"/>
+    <image href="../../../assets/icons/appointments.svg" x="42" y="38" width="32" height="32"/>
+    <text x="105" y="60" class="sans navy bold" font-size="27">Citas</text>
+    <text x="105" y="104" class="sans muted" font-size="20">Registro de fecha, hora, título y</text>
+    <text x="105" y="132" class="sans muted" font-size="20">descripción.</text>
+  </g>
+
+  <g transform="translate(100 785)" filter="url(#shadow)">
+    <rect width="500" height="178" rx="22" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="178" rx="4" fill="#8B5CF6"/>
+    <circle cx="58" cy="54" r="27" fill="#F0EAFE"/>
+    <image href="../../../assets/icons/users.svg" x="42" y="38" width="32" height="32"/>
+    <text x="105" y="60" class="sans navy bold" font-size="27">Usuarios</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Registro de personas y sesión activa.</text>
+  </g>
+
+  <g transform="translate(710 785)" filter="url(#shadow)">
+    <rect width="500" height="178" rx="22" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="178" rx="4" fill="#16A34A"/>
+    <circle cx="58" cy="54" r="27" fill="#E2F8EA"/>
+    <image href="../../../assets/icons/activity.svg" x="42" y="38" width="32" height="32"/>
+    <text x="105" y="60" class="sans navy bold" font-size="27">Actividades</text>
+    <text x="105" y="104" class="sans muted" font-size="20">Categorías, colores y estados de</text>
+    <text x="105" y="132" class="sans muted" font-size="20">cumplimiento.</text>
+  </g>
+
+  <g transform="translate(1320 785)" filter="url(#shadow)">
+    <rect width="500" height="178" rx="22" fill="#F8FBFF" stroke="#A5D8FF" stroke-width="2"/>
+    <rect width="8" height="178" rx="4" fill="#64748B"/>
+    <circle cx="58" cy="54" r="27" fill="#E8EDF4"/>
+    <image href="../../../assets/icons/dashboard.svg" x="42" y="38" width="32" height="32"/>
+    <text x="105" y="60" class="sans navy bold" font-size="27">Datos locales</text>
+    <text x="105" y="112" class="sans muted" font-size="20">Información almacenada en el computador.</text>
+  </g>
+
+  <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">03</text>
+</svg>
