@@ -67,18 +67,18 @@
       <text x="0" y="30" class="sans orange bold" font-size="24" letter-spacing="2">04  DATOS LOCALES</text>
       <text x="0" y="74" class="sans navy bold" font-size="32">SQLite guarda</text>
       <g transform="translate(30 118)">
-        <path d="M0 42V242c0 27 118 48 260 48s260-21 260-48V42" fill="url(#database)" stroke="#E7A91B" stroke-width="3"/>
+        <path d="M0 42V326c0 27 118 48 260 48s260-21 260-48V42" fill="url(#database)" stroke="#E7A91B" stroke-width="3"/>
         <ellipse cx="260" cy="42" rx="260" ry="48" fill="#FFF5D9" stroke="#E7A91B" stroke-width="3"/>
         <path d="M0 42c0 27 118 48 260 48s260-21 260-48" fill="none" stroke="#E7A91B" stroke-width="3"/>
-        <ellipse cx="260" cy="242" rx="260" ry="48" fill="none" stroke="#E7A91B" stroke-width="3"/>
+        <ellipse cx="260" cy="326" rx="260" ry="48" fill="none" stroke="#E7A91B" stroke-width="3"/>
         <text x="260" y="55" text-anchor="middle" class="sans navy bold" font-size="31">agenda.db</text>
         <text x="260" y="142" text-anchor="middle" class="sans navy bold" font-size="28">Base local</text>
-        <rect x="82" y="170" width="356" height="50" rx="14" fill="#FFFFFF" fill-opacity="0.78" stroke="#E7A91B" stroke-width="2"/>
-        <circle cx="111" cy="195" r="10" fill="#F59E0B"/>
-        <text x="138" y="204" class="sans navy bold" font-size="25">users</text>
-        <rect x="82" y="232" width="356" height="50" rx="14" fill="#FFFFFF" fill-opacity="0.78" stroke="#E7A91B" stroke-width="2"/>
-        <circle cx="111" cy="257" r="10" fill="#F59E0B"/>
-        <text x="138" y="266" class="sans navy bold" font-size="25">events</text>
+        <rect x="82" y="204" width="356" height="50" rx="14" fill="#FFFFFF" fill-opacity="0.78" stroke="#E7A91B" stroke-width="2"/>
+        <circle cx="111" cy="229" r="10" fill="#F59E0B"/>
+        <text x="138" y="238" class="sans navy bold" font-size="25">users</text>
+        <rect x="82" y="274" width="356" height="50" rx="14" fill="#FFFFFF" fill-opacity="0.78" stroke="#E7A91B" stroke-width="2"/>
+        <circle cx="111" cy="299" r="10" fill="#F59E0B"/>
+        <text x="138" y="308" class="sans navy bold" font-size="25">events</text>
       </g>
     </g>
 
@@ -112,28 +112,28 @@
     </g>
 
     <!-- connector 05 to 06 -->
-    <g transform="translate(1170 330)">
+    <g transform="translate(1155 330)">
       <path d="M0 0H70" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round"/>
       <path d="M70 0l-19-14v28z" fill="#2563EB"/>
     </g>
 
     <!-- Stage 06: login -->
-    <g transform="translate(1240 110)" filter="url(#softShadow)">
+    <g transform="translate(1225 110)" filter="url(#softShadow)">
       <text x="0" y="30" class="sans blue bold" font-size="24" letter-spacing="2">06  INICIO DE SESI&#211;N</text>
       <text x="0" y="74" class="sans navy bold" font-size="32">Entrar a la agenda</text>
-      <rect x="0" y="102" width="435" height="390" rx="22" fill="#FFFFFF" stroke="#BFD2EA" stroke-width="2"/>
-      <rect x="0" y="102" width="435" height="70" rx="22" fill="url(#loginHeader)"/>
-      <circle cx="218" cy="137" r="24" fill="#DCEBFF"/>
-      <rect x="209" y="136" width="18" height="16" rx="3" fill="none" stroke="#2563EB" stroke-width="3"/>
-      <path d="M213 136v-7c0-7 10-7 10 0v7" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <rect x="0" y="102" width="480" height="390" rx="22" fill="#FFFFFF" stroke="#BFD2EA" stroke-width="2"/>
+      <rect x="0" y="102" width="480" height="70" rx="22" fill="url(#loginHeader)"/>
+      <circle cx="240" cy="137" r="24" fill="#DCEBFF"/>
+      <rect x="231" y="136" width="18" height="16" rx="3" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <path d="M235 136v-7c0-7 10-7 10 0v7" fill="none" stroke="#2563EB" stroke-width="3"/>
       <text x="36" y="217" class="sans muted" font-size="23">Usuario</text>
-      <rect x="36" y="229" width="363" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
+      <rect x="36" y="229" width="408" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
       <text x="55" y="257" class="sans navy medium" font-size="24">Alejandro S.</text>
       <text x="36" y="306" class="sans muted" font-size="23">Contrase&#241;a</text>
-      <rect x="36" y="318" width="363" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
+      <rect x="36" y="318" width="408" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
       <text x="55" y="346" class="sans navy medium" font-size="24">&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</text>
-      <rect x="36" y="391" width="363" height="48" rx="24" fill="#2563EB"/>
-      <text x="169" y="422" class="sans white bold" font-size="25">Ingresar</text>
+      <rect x="36" y="391" width="408" height="48" rx="24" fill="#2563EB"/>
+      <text x="180" y="422" class="sans white bold" font-size="25">Ingresar</text>
       <rect x="72" y="459" width="291" height="52" rx="26" fill="#C8F2D5" stroke="#8CD9A3" stroke-width="2"/>
       <circle cx="104" cy="485" r="14" fill="#16A34A"/>
       <path d="M97 485l6 6 11-13" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
