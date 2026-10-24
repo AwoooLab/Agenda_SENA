@@ -16,3 +16,9 @@ ejemplo.
 
 Los SVG conservan el texto y las formas como elementos editables. Se pueden
 abrir en un editor de vectores o revisar directamente en el navegador.
+
+## Iconos compartidos
+
+La carpeta `icons/` contiene iconos SVG reutilizables para los stages. Cada
+archivo es independiente, editable y conserva el mismo estilo visual de
+Agenda SENA. La guía de uso está en `assets/icons/README.md`.

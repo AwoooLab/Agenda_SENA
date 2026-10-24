@@ -39,3 +39,11 @@ Cada files.txt debe explicar propósito, alcance, archivos, dependencias,
 entradas, salidas, funciones públicas, datos de prueba, validación visual y
 forma de integración futura. La referencia común está en
 docs/stage_contract.md.
+
+## Recursos visuales compartidos
+
+Los stages pueden reutilizar los iconos de `assets/icons/` desde su
+`preview.html`. Se debe conservar la referencia al archivo original y no
+copiar ni redibujar el icono dentro del stage. Estos recursos apoyan la
+representación visual, pero no reemplazan la lógica ni los archivos propios de
+cada módulo.
