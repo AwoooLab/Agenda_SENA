@@ -36,16 +36,16 @@
   <path d="M0 910 C360 820 620 1010 990 900 S1590 750 1920 850" fill="none" stroke="#7DD3FC" stroke-opacity="0.12" stroke-width="2"/>
 
   <g transform="translate(140 300)">
-    <text x="0" y="0" class="display white bold" font-size="96" letter-spacing="-1.5">Agenda SENA</text>
-    <rect x="0" y="48" width="600" height="4" rx="2" fill="url(#line)"/>
-    <text x="0" y="145" class="sans white medium" font-size="38">Una agenda local para PC</text>
-    <text x="0" y="198" class="sans white medium" font-size="38">construida paso a paso con Python</text>
-    <text x="0" y="310" class="sans sky bold" font-size="24" letter-spacing="1">Proyecto educativo de programación</text>
+    <text x="0" y="0" class="display white bold" font-size="124" letter-spacing="-2">Agenda SENA</text>
+    <rect x="0" y="64" width="700" height="5" rx="2.5" fill="url(#line)"/>
+    <text x="0" y="175" class="sans white medium" font-size="48">Una agenda local para PC</text>
+    <text x="0" y="240" class="sans white medium" font-size="48">construida paso a paso con Python</text>
+    <text x="0" y="365" class="sans sky bold" font-size="28" letter-spacing="0.4">Proyecto educativo de programación</text>
   </g>
 
   <g transform="translate(140 886)">
     <line x1="0" y1="0" x2="260" y2="0" stroke="#7DD3FC" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-    <text x="0" y="52" class="sans soft medium" font-size="24" letter-spacing="1">SENA · 2026</text>
+    <text x="0" y="52" class="sans soft medium" font-size="26" letter-spacing="1">SENA · 2026</text>
   </g>
 
   <image x="1000" y="158" width="790" height="650" preserveAspectRatio="xMidYMid slice" href="01_cover_illustration.png" xlink:href="01_cover_illustration.png"/>
