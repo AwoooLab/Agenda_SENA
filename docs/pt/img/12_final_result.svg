@@ -43,12 +43,14 @@
   <g transform="translate(120 105)">
     <text x="0" y="0" class="display white bold" font-size="68">Resultado final</text>
     <rect x="0" y="52" width="515" height="5" rx="2.5" fill="#7DD3FC" opacity="0.78"/>
-    <text x="0" y="130" class="sans white medium" font-size="35">Agenda SENA: de una idea a una aplicaci&#243;n funcional.</text>
-    <text x="0" y="188" class="sans sky bold" font-size="24" letter-spacing="3">UNA APLICACI&#211;N LOCAL, FUNCI&#211;N POR FUNCI&#211;N</text>
+    <text x="0" y="130" class="sans white medium" font-size="35">Agenda SENA: de una idea a</text>
+    <text x="0" y="172" class="sans white medium" font-size="35">una aplicaci&#243;n funcional.</text>
+    <text x="0" y="230" class="sans sky bold" font-size="24" letter-spacing="3">UNA APLICACI&#211;N LOCAL,</text>
+    <text x="0" y="266" class="sans sky bold" font-size="24" letter-spacing="3">FUNCI&#211;N POR FUNCI&#211;N</text>
   </g>
 
   <!-- Short result list: grouped so it does not compete with the product. -->
-  <g transform="translate(120 375)">
+  <g transform="translate(120 445)">
     <text x="0" y="0" class="sans soft bold" font-size="27">Al finalizar contamos con:</text>
     <g transform="translate(0 42)">
       <circle cx="16" cy="17" r="15" fill="#16A34A"/>
@@ -72,24 +74,20 @@
     </g>
   </g>
 
-  <g transform="translate(120 825)">
+  <g transform="translate(120 830)">
     <rect width="360" height="2" fill="url(#glow)"/>
-    <text x="0" y="55" class="sans soft medium" font-size="29">De una idea a una aplicaci&#243;n funcional,</text>
-    <text x="0" y="94" class="sans sky bold" font-size="31">paso a paso.</text>
+    <text x="0" y="55" class="sans soft medium" font-size="27">De una idea a una aplicaci&#243;n</text>
+    <text x="0" y="92" class="sans sky bold" font-size="30">funcional, paso a paso.</text>
   </g>
 
-  <!-- A soft route connects the two product states behind the final agenda. -->
-  <path d="M770 705 C800 680 820 660 850 640" fill="none" stroke="#7DD3FC" stroke-opacity="0.72" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 12"/>
-  <path d="M850 640l-18-12v24z" fill="#7DD3FC"/>
-
-  <!-- Login remains visible behind the finished agenda. -->
+  <!-- Login remains visible as a clean inset, without the source canvas around it. -->
   <g filter="url(#softShadow)">
-    <image href="../../../assets/login-window.svg" x="520" y="625" width="340" height="213" preserveAspectRatio="xMidYMid meet"/>
+    <image href="../../../assets/login-window-clean.png" x="600" y="700" width="270" height="169" preserveAspectRatio="xMidYMid meet"/>
   </g>
 
-  <!-- The agenda is the dominant final product. -->
+  <!-- The agenda is the dominant final product, cropped to the application window. -->
   <g filter="url(#shadow)">
-    <image href="../../../assets/agenda-window.svg" x="825" y="245" width="1010" height="631" preserveAspectRatio="xMidYMid meet"/>
+    <image href="../../../assets/agenda-window-clean.png" x="920" y="250" width="900" height="560" preserveAspectRatio="xMidYMid meet"/>
   </g>
 
   <g transform="translate(120 960)">

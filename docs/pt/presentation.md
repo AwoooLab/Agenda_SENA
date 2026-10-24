@@ -777,19 +777,16 @@ docs/pt/img/11_delivery.png
 
 **Resultado final**
 
-**Agenda SENA es una aplicación local de escritorio que se construye función
-por función.**
+**Agenda SENA: de una idea a una aplicación funcional.**
+
+**UNA APLICACIÓN LOCAL, FUNCIÓN POR FUNCIÓN**
 
 **Al finalizar contamos con:**
 
-- Una ventana de acceso.
-- Una agenda navegable.
-- Calendario mensual.
-- Usuarios y sesión activa.
-- Citas y actividades.
-- Categorías, colores y estados.
-- Datos locales y pruebas.
-- Un ejecutable para Windows.
+- Acceso y sesión activa.
+- Agenda navegable.
+- Calendario y actividades.
+- Datos locales y ejecutable.
 
 **De una idea a una aplicación funcional, paso a paso.**
 
@@ -798,11 +795,14 @@ por función.**
 ## Distribución
 
 - Usar una composición final tipo portada de producto.
-- Colocar el título y una lista breve de resultados en el tercio izquierdo.
+- Mantener el título, el subtítulo y la lista de resultados dentro de una
+  columna izquierda independiente, con margen amplio respecto a las capturas.
 - Hacer que la ventana terminada de Agenda SENA ocupe el tercio derecho y el
   centro de la diapositiva.
-- Colocar el login detrás de la agenda, más pequeño y parcialmente desplazado,
-  para mostrar el recorrido de entrada sin competir con el resultado final.
+- Colocar el login detrás de la agenda, más pequeño y separado de la frase de
+  cierre.
+- Usar recortes limpios de las ventanas, sin el lienzo blanco exterior de los
+  SVG de referencia.
 - Ubicar `Gracias` abajo, con mucho espacio alrededor.
 
 ## Imagen o representación visual
@@ -810,13 +810,11 @@ por función.**
 Crear una composición final con las dos referencias del producto conectadas:
 
 - Una ventana de login completa, pequeña y nítida, en la parte posterior
-  izquierda.
+  izquierda, usando `login-window-clean.png`.
 - Una ventana grande de agenda en primer plano, mostrando navegación,
-  calendario y agenda de hoy.
-- Una conexión visual sencilla entre ambas, como una flecha o un recorrido de
-  luz, sin texto adicional.
-- Como máximo tres elementos flotantes: calendario, usuario y check. Deben ser
-  grandes, separados y funcionales, no adornos diminutos.
+  calendario y agenda de hoy, usando `agenda-window-clean.png`.
+- No agregar un cuadro blanco contenedor ni una flecha que compita con el
+  resultado; las dos ventanas deben verse como capturas limpias del producto.
 
 La agenda debe ser el elemento visual dominante. La composición debe transmitir
 que todos los stages terminaron reunidos en una sola aplicación navegable.
