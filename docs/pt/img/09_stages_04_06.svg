@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title id="title">Stages 04 al 06 — Datos y usuarios</title>
+  <desc id="desc">SQLite guarda los datos, el registro crea una cuenta y el inicio de sesi&#243;n permite entrar a Agenda SENA.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091735"/>
+      <stop offset="0.56" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="loginHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#152B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="database" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF5D9"/>
+      <stop offset="1" stop-color="#FDE7A8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020617" flood-opacity="0.28"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#020617" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .navy { fill: #102456; }
+      .muted { fill: #587095; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .blue { fill: #2563EB; }
+      .purple { fill: #7C3AED; }
+      .orange { fill: #F59E0B; }
+      .green { fill: #16A34A; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+      text[font-size="13"], text[font-size="14"], text[font-size="15"], text[font-size="16"], text[font-size="17"], text[font-size="18"], text[font-size="19"], text[font-size="20"], text[font-size="21"] { font-size: 22px !important; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <circle cx="1710" cy="45" r="260" fill="#60A5FA" opacity="0.08"/>
+  <circle cx="1680" cy="1080" r="380" fill="#93C5FD" opacity="0.05"/>
+  <path d="M0 982 C350 875 670 1040 1040 950 S1610 850 1920 940" fill="none" stroke="#7DD3FC" stroke-opacity="0.13" stroke-width="2"/>
+
+  <g transform="translate(120 105)">
+    <text x="0" y="0" class="display white bold" font-size="61">Stages 04 al 06 &#8212; Datos y usuarios</text>
+    <rect x="0" y="48" width="690" height="5" rx="2.5" fill="#7DD3FC" opacity="0.78"/>
+    <text x="0" y="125" class="sans white medium" font-size="35">La informaci&#243;n local controla qui&#233;n puede entrar a la agenda.</text>
+    <text x="0" y="185" class="sans sky bold" font-size="24" letter-spacing="3">UN ACCESO CONSTRUIDO POR CAPAS</text>
+  </g>
+
+  <g transform="translate(100 265)" filter="url(#shadow)">
+    <rect width="1720" height="650" rx="30" fill="#F5F8FD"/>
+    <rect width="1720" height="72" rx="30" fill="#102456"/>
+    <rect y="44" width="1720" height="28" fill="#102456"/>
+    <circle cx="38" cy="36" r="9" fill="#FF5F57"/>
+    <circle cx="68" cy="36" r="9" fill="#FEBC2E"/>
+    <circle cx="98" cy="36" r="9" fill="#28C840"/>
+    <text x="140" y="46" class="sans white bold" font-size="28">Agenda SENA / acceso local</text>
+    <text x="1430" y="46" class="sans soft medium" font-size="24">SQLite &#183; Registro &#183; Login</text>
+
+    <!-- Stage 04: local database -->
+    <g transform="translate(45 110)" filter="url(#softShadow)">
+      <text x="0" y="30" class="sans orange bold" font-size="24" letter-spacing="2">04  DATOS LOCALES</text>
+      <text x="0" y="74" class="sans navy bold" font-size="32">SQLite guarda</text>
+      <g transform="translate(30 118)">
+        <path d="M0 42V242c0 27 118 48 260 48s260-21 260-48V42" fill="url(#database)" stroke="#E7A91B" stroke-width="3"/>
+        <ellipse cx="260" cy="42" rx="260" ry="48" fill="#FFF5D9" stroke="#E7A91B" stroke-width="3"/>
+        <path d="M0 42c0 27 118 48 260 48s260-21 260-48" fill="none" stroke="#E7A91B" stroke-width="3"/>
+        <ellipse cx="260" cy="242" rx="260" ry="48" fill="none" stroke="#E7A91B" stroke-width="3"/>
+        <text x="260" y="55" text-anchor="middle" class="sans navy bold" font-size="31">agenda.db</text>
+        <text x="260" y="142" text-anchor="middle" class="sans navy bold" font-size="28">Base local</text>
+        <rect x="82" y="170" width="356" height="50" rx="14" fill="#FFFFFF" fill-opacity="0.78" stroke="#E7A91B" stroke-width="2"/>
+        <circle cx="111" cy="195" r="10" fill="#F59E0B"/>
+        <text x="138" y="204" class="sans navy bold" font-size="25">users</text>
+        <rect x="82" y="232" width="356" height="50" rx="14" fill="#FFFFFF" fill-opacity="0.78" stroke="#E7A91B" stroke-width="2"/>
+        <circle cx="111" cy="257" r="10" fill="#F59E0B"/>
+        <text x="138" y="266" class="sans navy bold" font-size="25">events</text>
+      </g>
+    </g>
+
+    <!-- connector 04 to 05 -->
+    <g transform="translate(535 330)">
+      <path d="M0 0H70" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round"/>
+      <path d="M70 0l-19-14v28z" fill="#2563EB"/>
+    </g>
+
+    <!-- Stage 05: registration -->
+    <g transform="translate(605 110)" filter="url(#softShadow)">
+      <text x="0" y="30" class="sans purple bold" font-size="24" letter-spacing="2">05  REGISTRO</text>
+      <text x="0" y="74" class="sans navy bold" font-size="32">Crear una cuenta</text>
+      <rect x="0" y="102" width="540" height="390" rx="22" fill="#FFFFFF" stroke="#D8C9F7" stroke-width="2"/>
+      <rect x="0" y="102" width="540" height="70" rx="22" fill="#F3EDFF"/>
+      <circle cx="52" cy="137" r="24" fill="#E3D8FF"/>
+      <circle cx="52" cy="130" r="8" fill="none" stroke="#7C3AED" stroke-width="3"/>
+      <path d="M37 153c5-12 25-12 30 0" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+      <text x="92" y="147" class="sans navy bold" font-size="29">Nuevo usuario</text>
+      <text x="36" y="213" class="sans muted" font-size="23">Nombre</text>
+      <rect x="36" y="225" width="468" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
+      <text x="55" y="253" class="sans navy medium" font-size="24">Alejandro S.</text>
+      <text x="36" y="302" class="sans muted" font-size="23">Correo</text>
+      <rect x="36" y="314" width="468" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
+      <text x="55" y="342" class="sans navy medium" font-size="24">alejandro@agenda.local</text>
+      <text x="36" y="391" class="sans muted" font-size="23">Contrase&#241;a</text>
+      <rect x="36" y="403" width="280" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
+      <text x="55" y="431" class="sans navy medium" font-size="24">&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</text>
+      <rect x="320" y="403" width="184" height="42" rx="21" fill="#7C3AED"/>
+      <text x="345" y="431" class="sans white bold" font-size="23">Registrarme</text>
+    </g>
+
+    <!-- connector 05 to 06 -->
+    <g transform="translate(1170 330)">
+      <path d="M0 0H70" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round"/>
+      <path d="M70 0l-19-14v28z" fill="#2563EB"/>
+    </g>
+
+    <!-- Stage 06: login -->
+    <g transform="translate(1240 110)" filter="url(#softShadow)">
+      <text x="0" y="30" class="sans blue bold" font-size="24" letter-spacing="2">06  INICIO DE SESI&#211;N</text>
+      <text x="0" y="74" class="sans navy bold" font-size="32">Entrar a la agenda</text>
+      <rect x="0" y="102" width="435" height="390" rx="22" fill="#FFFFFF" stroke="#BFD2EA" stroke-width="2"/>
+      <rect x="0" y="102" width="435" height="70" rx="22" fill="url(#loginHeader)"/>
+      <circle cx="218" cy="137" r="24" fill="#DCEBFF"/>
+      <rect x="209" y="136" width="18" height="16" rx="3" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <path d="M213 136v-7c0-7 10-7 10 0v7" fill="none" stroke="#2563EB" stroke-width="3"/>
+      <text x="36" y="217" class="sans muted" font-size="23">Usuario</text>
+      <rect x="36" y="229" width="363" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
+      <text x="55" y="257" class="sans navy medium" font-size="24">Alejandro S.</text>
+      <text x="36" y="306" class="sans muted" font-size="23">Contrase&#241;a</text>
+      <rect x="36" y="318" width="363" height="42" rx="10" fill="#F7F8FC" stroke="#CBD8E8" stroke-width="2"/>
+      <text x="55" y="346" class="sans navy medium" font-size="24">&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</text>
+      <rect x="36" y="391" width="363" height="48" rx="24" fill="#2563EB"/>
+      <text x="169" y="422" class="sans white bold" font-size="25">Ingresar</text>
+      <rect x="72" y="459" width="291" height="52" rx="26" fill="#C8F2D5" stroke="#8CD9A3" stroke-width="2"/>
+      <circle cx="104" cy="485" r="14" fill="#16A34A"/>
+      <path d="M97 485l6 6 11-13" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="131" y="494" class="sans green bold" font-size="24">Sesi&#243;n activa</text>
+    </g>
+
+  </g>
+
+  <g transform="translate(120 960)">
+    <circle cx="12" cy="12" r="8" fill="#7DD3FC"/>
+    <text x="38" y="22" class="sans white bold" font-size="28">Resultado: usuarios registrados y acceso controlado a la agenda.</text>
+  </g>
+
+  <text x="1810" y="1045" text-anchor="end" class="sans soft" font-size="22" opacity="0.75">09</text>
+</svg>
