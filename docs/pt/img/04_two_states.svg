@@ -138,13 +138,5 @@
     <text x="60" y="82" text-anchor="middle" class="sans sky bold" font-size="22">Ingresar</text>
   </g>
 
-  <!-- Mensaje de cierre -->
-  <g transform="translate(140 895)">
-    <rect width="1640" height="76" rx="18" fill="#FFFFFF" fill-opacity="0.13" stroke="#7DD3FC" stroke-opacity="0.35" stroke-width="2"/>
-    <circle cx="38" cy="38" r="12" fill="#39C875"/>
-    <path d="M31 38 L36 43 L46 32" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="70" y="48" class="sans white bold" font-size="27">No son dos programas diferentes: son dos estados de la misma aplicación.</text>
-  </g>
-
   <text x="1810" y="1010" text-anchor="end" class="sans soft" font-size="18" opacity="0.75">04</text>
 </svg>
