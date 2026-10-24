@@ -13,6 +13,12 @@ ARCHIVOS DE LA ETAPA
 - test_calendar.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+La cuadrícula del calendario debe ocupar el ancho disponible. Las celdas deben
+reducirse proporcionalmente sin ocultar el número del día y el panel debe
+pasar a una distribución vertical si comparte espacio con otra sección.
+
 ======================================================================
 ARCHIVO: calendar_cell.py
 ======================================================================

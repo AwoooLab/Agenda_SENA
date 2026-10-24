@@ -11,6 +11,13 @@ ARCHIVO DE LA ETAPA
 - model.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+El preview debe conservar su tarjeta y formulario dentro del ancho disponible.
+Usar anchos relativos, `grid` con `minmax` y una media query para pasar de dos
+columnas a una cuando la ventana se reduzca. Validar en tamaño pequeño, normal
+y maximizado; ningún texto o control puede quedar cortado.
+
 ======================================================================
 ARCHIVO: model.py
 ======================================================================

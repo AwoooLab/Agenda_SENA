@@ -16,6 +16,12 @@ ARCHIVOS DE LA ETAPA
 - test_event_service.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+El formulario, la leyenda de colores y las listas de actividades deben crecer
+con el contenedor. Las categorías no deben depender solo del color, y los
+textos deben envolverse o pasar a una columna cuando la ventana se reduzca.
+
 ======================================================================
 ARCHIVO: event.py
 ======================================================================

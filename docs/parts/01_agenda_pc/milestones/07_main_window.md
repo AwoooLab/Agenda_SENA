@@ -41,7 +41,9 @@ on_logout: Callable[[], None]
 Diseño obligatorio:
 
 - Título: `Agenda SENA`.
-- Tamaño inicial: `900x600`.
+- Tamaño inicial: cercano a `1180x760`, con mínimo `980x640`.
+- La ventana es redimensionable y el contenido debe conservarse visible,
+  reorganizando paneles cuando el ancho disponible disminuya.
 - Barra superior con el texto `Agenda SENA`.
 - Mostrar el nombre del usuario activo en la barra superior.
 - Panel lateral izquierdo para la navegación.

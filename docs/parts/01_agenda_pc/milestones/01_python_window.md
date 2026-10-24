@@ -61,6 +61,10 @@ La ventana de Tkinter debe cumplir lo siguiente:
   directamente en `preview.html` y en `assets/agenda-window.svg`.
 - Mantener fondo claro, barra azul marino, tarjetas blancas, bordes suaves y
   jerarquía equivalente a las referencias.
+- Hacer que los contenedores se expandan y se reduzcan con la ventana. No usar
+  coordenadas absolutas para ubicar componentes.
+- En un espacio reducido, reorganizar las columnas o ajustar el texto sin
+  ocultar información ni producir recortes.
 
 El HTML debe imitar estos dos estados para compararlos en GitHub Pages. No
 ejecuta ni reemplaza la aplicación de PC.
@@ -113,6 +117,8 @@ representación visual publicada cumple los requisitos de la especificación.
   actividades.
 - Los iconos se ven en los espacios correspondientes y provienen de la
   biblioteca reutilizable de `assets/icons/`.
+- La vista se comprueba en `980x640`, `1180x760` y maximizada; en los tres casos
+  los textos, tarjetas y paneles permanecen dentro de la ventana.
 - No aparecen ventanas, páginas ni formularios adicionales.
 
 ## Comprobación visual en GitHub Pages

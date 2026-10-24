@@ -15,6 +15,12 @@ ARCHIVOS DE LA ETAPA
 - test_user_service.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+El formulario de registro debe ocupar el ancho disponible sin salirse de la
+tarjeta. Los campos deben usar ancho relativo, los textos deben envolver y las
+columnas deben pasar a una sola cuando la ventana se reduzca.
+
 ======================================================================
 ARCHIVO: user.py
 ======================================================================

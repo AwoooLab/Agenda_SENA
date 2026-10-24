@@ -13,6 +13,13 @@ ARCHIVOS DE LA ETAPA
 - test_database.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+El preview de la base de datos debe mostrar tablas y estados sin desbordarse.
+Las tablas deben ocupar el ancho disponible, envolver textos largos y usar una
+distribución vertical cuando no quepan varias columnas. Validar en tamaño
+pequeño, normal y maximizado.
+
 ======================================================================
 ARCHIVO: schema.sql
 ======================================================================

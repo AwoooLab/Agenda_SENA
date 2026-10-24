@@ -14,6 +14,12 @@ ARCHIVOS DE LA ETAPA
 - test_auth_service.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+La vista de acceso debe mantener sus campos, mensajes y botón dentro del área
+visible. Usar contenedores expansibles, textos con ajuste y una composición que
+pueda pasar de dos columnas a una sin perder información.
+
 ======================================================================
 ARCHIVO: password.py
 ======================================================================

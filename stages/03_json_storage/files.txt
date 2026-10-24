@@ -12,6 +12,12 @@ ARCHIVOS DE LA ETAPA
 - demo.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+La demostración visual de guardado y carga debe adaptarse al ancho disponible.
+Los mensajes, ejemplos JSON y botones deben usar contenedores flexibles,
+permitir saltos de línea y pasar a una columna si el espacio se reduce.
+
 ======================================================================
 ARCHIVO: storage.py
 ======================================================================

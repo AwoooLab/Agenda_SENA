@@ -46,6 +46,29 @@ Cada files.txt y cada especificación debe indicar:
 - Lugar donde se conectará en src/ o main.py.
 - Qué archivos no puede importar ni modificar.
 
+## Contrato de adaptación al tamaño de la ventana
+
+Toda etapa que tenga una vista debe conservar su composición cuando la ventana
+se agranda o se reduce dentro del tamaño mínimo definido. El contenido no debe
+quedar cortado ni depender de coordenadas absolutas.
+
+Cada `files.txt` debe explicar, cuando corresponda:
+
+- el tamaño inicial y el tamaño mínimo de la ventana;
+- qué contenedores usan `fill`, `expand`, `grid` con pesos o un mecanismo
+  equivalente;
+- cómo se reorganizan las columnas en un espacio reducido;
+- cómo se aprovecha el espacio disponible en una ventana grande;
+- cómo se ajustan textos, tablas, formularios e iconos sin salir del área
+  visible;
+- las comprobaciones en tamaño mínimo, tamaño de trabajo y ventana maximizada.
+
+El `preview.html` debe usar medidas relativas, `minmax`, `flex`, `grid` o
+media queries. La referencia SVG debe conservar la proporción completa con
+`preserveAspectRatio="xMidYMid meet"`. Si el espacio no alcanza para dos
+columnas, el componente debe pasar a una columna; no debe ocultar información
+ni producir un recorte horizontal.
+
 La integración se realiza después de la validación. El estudiante no necesita
 modificar main.py, src/, web/ ni config/ mientras desarrolla el stage.
 

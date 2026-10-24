@@ -33,6 +33,20 @@ REGLAS GENERALES
 - No importar archivos de otras etapas ni del orquestador principal.
 - No crear archivos adicionales.
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+La ventana inicia cerca de `1180x760` y admite redimensionamiento hasta un
+mínimo de `980x640`. El contenido debe ajustarse dentro del espacio disponible:
+
+- usar `pack(fill="both", expand=True)` o `grid` con `weight` y `sticky`;
+- permitir que el contenido central crezca cuando la ventana se agranda;
+- conservar textos e iconos dentro de sus tarjetas cuando se reduce;
+- mantener la barra lateral y reorganizar el contenido central sin recortes;
+- comprobar el resultado en `980x640`, `1180x760` y una ventana maximizada.
+
+En `preview.html`, el CSS debe usar anchos relativos y una media query que
+convierta las columnas en una columna cuando el espacio horizontal sea menor.
+
 ======================================================================
 ARCHIVO: app.py
 ======================================================================

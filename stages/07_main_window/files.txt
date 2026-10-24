@@ -13,6 +13,13 @@ ARCHIVOS DE LA ETAPA
 - navigation.py
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+La ventana principal inicia cerca de `1180x760`, con mínimo `980x640`, y debe
+ser redimensionable. La barra lateral conserva un ancho razonable; el área
+central crece con `grid` o `pack`. Si el espacio horizontal disminuye, las
+tarjetas y paneles pasan a una columna o se ajustan sin quedar cortados.
+
 ======================================================================
 ARCHIVO: navigation.py
 ======================================================================
@@ -63,7 +70,7 @@ LIBRERÍAS
 
 DISEÑO OBLIGATORIO
 ------------------
-- Tamaño inicial: 900x600.
+- Tamaño inicial: cercano a 1180x760; mínimo 980x640.
 - Título: Agenda SENA.
 - Barra superior con Agenda SENA y el usuario activo.
 - Panel lateral izquierdo.

@@ -15,6 +15,13 @@ ARCHIVOS DE LA ETAPA
 - release.md
 - preview.html
 
+ADAPTACIÓN AL TAMAÑO DE LA VENTANA
+----------------------------------
+La comprobación visual final debe realizarse en tamaño mínimo, tamaño de
+trabajo y ventana maximizada. El ejecutable no debe iniciar con componentes
+cortados; la interfaz debe conservar la misma composición adaptable validada
+en las etapas anteriores.
+
 ======================================================================
 ARCHIVO: test_database.py
 ======================================================================
