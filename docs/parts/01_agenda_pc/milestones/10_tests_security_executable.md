@@ -123,11 +123,13 @@ Si se dispone de Windows y Python, ejecutar las pruebas, generar el `.exe` y
 probar la aplicación. GitHub Pages no compila, ejecuta ni descarga el
 ejecutable; solo muestra la información visual de la entrega.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
 La entrega final usa el `main.py` de la raíz como punto de entrada. Los
 archivos de `stages/10_tests_security_executable/` permanecen como material de
 la etapa y sirven para preparar las pruebas, la seguridad y la compilación.
+La aplicación integrada conserva una sola ventana y el visor web solo muestra
+los módulos aprobados registrados en `config/integration.json`.
 
 ## Instrucción para ChatGPT
 

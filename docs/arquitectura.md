@@ -1,58 +1,65 @@
 # Arquitectura de Agenda SENA
 
-Agenda SENA es una aplicación de escritorio local para Windows. La versión
-funcional se construye con Python y Tkinter; GitHub Pages se utiliza como
-visor visual e interactivo del resultado acumulado.
+Agenda SENA tiene dos niveles relacionados, pero diferentes:
 
-## Componentes principales
+1. Los stages independientes que construye y prueba el estudiante.
+2. La aplicación integrada que reúne los módulos aprobados.
 
-- main.py: punto de entrada de la aplicación Python integrada.
-- stages/: archivos de cada etapa, organizados en orden de construcción.
-- stages/*/app.py y demás archivos Python: ejercicios y funciones de cada etapa.
-- stages/*/preview.html: fragmento visual que agrega la función de esa etapa.
-- index.html: único orquestador y único visor que debe abrir el estudiante.
-- assets/stage-preview.css: estilos compartidos de los fragmentos visuales.
+## Espacio del estudiante
 
-## Flujo acumulativo
+El estudiante trabaja únicamente en stages/. Cada carpeta contiene una función
+o módulo, sus archivos Python, files.txt y preview.html.
 
-El index.html mantiene una sola ventana de Agenda SENA. Su JavaScript carga
-los preview.html en el orden 01 a 10 y los inserta dentro del mismo
-contenedor. Por eso cada archivo nuevo se alinea con lo que ya existe:
+Un stage no importa otro stage y no necesita que otro stage exista. Por
+ejemplo, el login puede probarse con un usuario de demostración propio sin
+depender de una tabla o de un botón construido en otra carpeta.
 
-01: ventana inicial
-02: agrega el formulario de cita
-03: agrega la tabla de citas
-04: agrega la estructura de datos locales
-05: agrega el registro
-06: agrega el inicio de sesión
-07: agrega el panel principal
-08: agrega el calendario
-09: agrega actividades, categorías y colores
-10: agrega validaciones y entrega
+## Estructura de integración
 
-No se usan iframe, tarjetas independientes, medidores ni un indicador de etapa
-actual. Los stages son el origen de cada función; index.html es el orquestador
-que las reúne en una única vista.
+- main.py: inicia la aplicación local.
+- src/app_shell.py: crea una sola ventana de Tkinter.
+- src/router.py: cambia la vista dentro del área central sin abrir otra ventana.
+- src/state.py: contiene el estado compartido, como el usuario actual.
+- src/views/: recibe las vistas de los módulos aprobados.
+- config/integration.json: registra los módulos que ya están integrados.
+- web/app.js: carga en Pages únicamente los previews registrados.
+- index.html: muestra la única ventana web de la aplicación integrada.
 
-## Regla para un preview.html
+La estructura de integración es una base preparada. El estudiante no tiene que
+editarla durante la lección de un stage.
 
-Un preview debe contener solamente el fragmento visual que agrega su etapa:
+## Flujo de una función
 
-- No debe incluir doctype, html, head ni body.
-- No debe crear otra navegación o una ventana independiente.
-- Debe conservar los identificadores y funciones que necesiten las etapas
-  siguientes.
-- Debe mostrar una función real o una representación clara de su lógica.
-- Debe usar los estilos compartidos de assets/stage-preview.css.
+Stage independiente
+        ->
+Prueba local y validación de preview.html
+        ->
+Contrato de integración
+        ->
+Conexión en src/ o main.py
+        ->
+Registro del módulo en config/integration.json
+        ->
+Revisión en la única página de GitHub Pages
 
-## Relación con Python
+## Ventana y navegación
 
-GitHub Pages no ejecuta Python. Las interacciones del visor son una
-representación web para comprobar la composición y el flujo visual. La lógica
-real se integra progresivamente en main.py y se ejecuta localmente en el PC.
+La aplicación integrada utiliza una sola ventana. Las funciones futuras no se
+ponen en el menú antes de ser integradas. Solo aparecen las rutas registradas
+en la configuración de integración.
 
-## Actualización
+El router reemplaza el contenido del área central. No se crean ventanas
+separadas para login, calendario, tablas o actividades.
 
-El botón Actualizar vista agrega una versión nueva a la URL y cada preview se
-carga con una versión nueva para evitar que el navegador conserve contenido
-antiguo. GitHub Pages puede tardar unos segundos en publicar un commit nuevo.
+La misma regla se aplica al visor web: `web/app.js` crea la navegación a partir
+de los módulos aprobados y muestra una sola vista dentro del área central. La
+existencia de una carpeta en `stages/` no crea una ruta ni una pantalla nueva.
+
+## GitHub Pages
+
+GitHub Pages no ejecuta main.py. Su función es mostrar la representación web
+del estado integrado actual. La página no debe cargar todos los previews que
+existan en el repositorio; debe cargar únicamente los módulos aprobados en
+config/integration.json.
+
+La caché se reduce mediante versiones en la URL y el botón Actualizar vista.

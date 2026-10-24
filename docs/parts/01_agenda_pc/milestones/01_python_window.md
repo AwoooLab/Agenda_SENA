@@ -78,8 +78,9 @@ GitHub Pages. El trabajo se realiza en este orden:
 2. Crear únicamente los archivos dentro de `stages/01_python_window/`.
 3. Actualizar `preview.html` para representar la pantalla de PC y cualquier
    cambio visual realizado.
-4. Actualizar el fragmento visual de `preview.html`. El `index.html` de la raíz
-   carga automáticamente los previews en una sola ventana acumulada.
+4. Actualizar `preview.html` para representar esta etapa de forma independiente.
+   La página principal solo carga los módulos aprobados registrados en
+   `config/integration.json`.
 5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 6. Verificar allí que la ventana inicial aparece correctamente.
 
@@ -103,7 +104,7 @@ GitHub Pages:
 3. Abrir únicamente `https://awooolab.github.io/Agenda_SENA/`.
 4. Confirmar allí que se ven `Agenda SENA`, el subtítulo y el botón `Cerrar`.
 5. Si se agregó un icono o se cambió un texto en el diseño, comprobar el cambio
-   dentro de la ventana acumulada.
+   dentro de la única ventana integrada.
 
 GitHub Pages no ejecuta `app.py`. La página solo permite revisar la
 representación visual de la ventana de PC.
@@ -114,17 +115,16 @@ Si se dispone de Python instalado, se puede ejecutar `app.py` localmente para
 comprobar el comportamiento del botón. Esta prueba no se realiza en GitHub
 Pages ni reemplaza la revisión visual del preview.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Cuando la etapa esté terminada, incorporar la ventana inicial en:
+El archivo `stages/01_python_window/app.py` permanece aislado como ejercicio.
+Después de validar la etapa, la integración se realiza fuera de `stages/`:
 
-```text
-main.py
-```
+- `src/views/` recibe la vista integrada.
+- `main.py` inicia la aplicación de una sola ventana.
+- `config/integration.json` registra el módulo aprobado para el visor web.
 
-El archivo `stages/01_python_window/app.py` permanece aislado como ejercicio de
-la etapa. `main.py` es el orquestador que irá creciendo con cada hito y no debe
-importar automáticamente los archivos de `stages/`.
+La aplicación integrada no importa automáticamente los archivos de `stages/`.
 
 ## Instrucción para ChatGPT
 
@@ -143,6 +143,7 @@ Devuelve únicamente el código de ese archivo.
 
 La etapa se puede publicar cuando `stages/01_python_window/app.py` y
 `stages/01_python_window/preview.html` están en GitHub, la función aparece en
-la ventana acumulada del `index.html` de la raíz y la representación visual cumple la
-especificación. El comportamiento del botón pertenece al código Python y se
-comprobará cuando la aplicación se ejecute en un PC.
+la única ventana integrada de `index.html` y la representación visual cumple la
+especificación. El registro del módulo en `config/integration.json` se realiza
+después de aprobar la etapa. El comportamiento del botón pertenece al código
+Python y se comprobará cuando la aplicación se ejecute en un PC.

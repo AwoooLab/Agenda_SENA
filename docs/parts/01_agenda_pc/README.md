@@ -2,45 +2,40 @@
 
 ## Propósito
 
-Construir progresivamente una agenda de escritorio local para Windows usando
-Python y Tkinter. Cada etapa agrega una función a la misma aplicación y
-mantiene todo lo construido anteriormente.
+Construir una agenda de escritorio local para Windows usando Python y Tkinter.
+Cada stage se desarrolla como módulo independiente y, después de aprobarlo,
+se integra en una sola aplicación navegable.
 
-## Alcance
-
-La Parte 1 contiene diez stages:
+## Stages de la parte
 
 01 — Ventana inicial — 01_python_window
-02 — Modelo y formulario de cita — 02_data_model
-03 — Tabla y guardado JSON — 03_json_storage
+02 — Modelo de datos — 02_data_model
+03 — Guardado JSON — 03_json_storage
 04 — Base de datos SQLite — 04_sqlite_database
 05 — Registro de usuarios — 05_user_registration
 06 — Inicio de sesión — 06_login_session
 07 — Ventana principal — 07_main_window
 08 — Calendario mensual — 08_monthly_calendar
 09 — Actividades, categorías y colores — 09_events_categories_colors
-10 — Pruebas, seguridad y ejecutable — 10_tests_security_executable
+10 — Pruebas y ejecutable — 10_tests_security_executable
 
 Las especificaciones detalladas están en docs/parts/01_agenda_pc/milestones/.
 
-## Flujo de trabajo
+## Flujo de la parte
 
-1. Leer la especificación y el files.txt del stage.
-2. Trabajar en los archivos indicados dentro de su carpeta.
-3. Actualizar el preview.html para mostrar la función agregada.
-4. Subir los cambios a GitHub.
-5. Revisar únicamente la página principal de GitHub Pages.
-6. Confirmar que la nueva función aparece junto con las anteriores.
-7. Integrar la lógica aprobada progresivamente en main.py.
+1. El estudiante lee la especificación y el files.txt del stage.
+2. Trabaja únicamente dentro de la carpeta del stage.
+3. Ejecuta y valida el módulo de forma independiente.
+4. Actualiza su preview.html.
+5. La integración revisada se conecta posteriormente en src/ o main.py.
+6. Se registra el módulo aprobado en config/integration.json.
+7. La aplicación integrada se comprueba desde la única página de GitHub Pages.
 
-El index.html es el único visor. Carga los fragmentos de los diez previews en
-orden dentro de una sola ventana; no presenta tarjetas ni páginas separadas.
+## Resultado
 
-## Estado
+La aplicación integrada tendrá una sola ventana con navegación interna. El
+visor no muestra stages futuros ni usa la existencia de una carpeta como señal
+de que una función ya está terminada.
 
-- Hitos documentados.
-- Stages preparados.
-- Visor único acumulativo.
-- Implementación completa de los archivos Python pendiente.
-- Integración completa en main.py pendiente.
-- Preparación del ejecutable de Windows pendiente.
+La metodología de independencia, contrato y acumulación está definida en
+docs/stage_contract.md.

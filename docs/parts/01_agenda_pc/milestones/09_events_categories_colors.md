@@ -163,12 +163,12 @@ actividad del día, los botones y los iconos definidos para esta clase.
 Si se dispone de Python, ejecutar las operaciones de crear, editar, completar,
 filtrar y eliminar. Pages solo muestra el resultado visual; no modifica datos.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Después de terminar la etapa, incorporar progresivamente en `main.py` los
-modelos, las operaciones, el formulario y la leyenda de colores. Los archivos
-de `stages/09_events_categories_colors/` permanecen aislados y la conexión con
-el calendario se coordina desde `main.py`.
+Los archivos de `stages/09_events_categories_colors/` permanecen aislados.
+Después de validar la etapa, los modelos, las operaciones, el formulario y la
+leyenda de colores se conectan en `src/` y se coordinan desde `main.py`. El
+módulo visual se registra en `config/integration.json` solo después de aprobarlo.
 
 ## Instrucción para ChatGPT
 
@@ -185,5 +185,5 @@ Solicitar cada modelo, servicio, formulario, leyenda y prueba por separado.
 
 La etapa se puede publicar cuando los archivos de actividades están en GitHub,
 `preview.html` representa formulario, categorías y colores, y la Clase 09
-se integra en la ventana acumulada. Las operaciones funcionales quedan definidas en
+se integra en la única ventana integrada. Las operaciones funcionales quedan definidas en
 Python y se probarán al ejecutar el proyecto en un PC.

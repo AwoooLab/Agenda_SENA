@@ -1,0 +1,11 @@
+{
+  "application": "Agenda SENA",
+  "active_modules": [
+    {
+      "id": "01_python_window",
+      "label": "Inicio",
+      "target": "inicio",
+      "preview": "stages/01_python_window/preview.html"
+    }
+  ]
+}

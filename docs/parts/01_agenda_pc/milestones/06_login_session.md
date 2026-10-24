@@ -147,12 +147,13 @@ Si se dispone de Python, ejecutar las pruebas del servicio y abrir la ventana
 local. GitHub Pages no autentica usuarios, no ejecuta Tkinter y no guarda
 contraseñas.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Después de terminar la etapa, incorporar progresivamente en `main.py` la
-protección de contraseñas, el servicio de autenticación y la pantalla de login.
-Los archivos de `stages/06_login_session/` permanecen aislados y no se
-importan automáticamente.
+Los archivos de `stages/06_login_session/` permanecen aislados y no se importan
+automáticamente. Después de validar la etapa, la protección de contraseñas, el
+servicio de autenticación y la pantalla de login se conectan en `src/` y se
+coordinan desde `main.py`. El módulo visual se registra en
+`config/integration.json` solo después de aprobarlo.
 
 ## Instrucción para ChatGPT
 
@@ -171,5 +172,5 @@ mensajes definidos en esta especificación.
 
 La etapa se puede publicar cuando los archivos del login están en GitHub,
 `preview.html` muestra usuario, contraseña, mensajes e iconos, y la Clase 06
-se integra en la ventana acumulada. La autenticación y la seguridad quedan definidas en
+se integra en la única ventana integrada. La autenticación y la seguridad quedan definidas en
 Python y se probarán al ejecutar el proyecto en un PC.

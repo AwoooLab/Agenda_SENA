@@ -109,10 +109,12 @@ Ejecutar:
 Comprobar que el usuario aparece, los botones responden y Cerrar sesión ejecuta
 la salida.
 
-INTEGRACIÓN EN MAIN.PY
-----------------------
-Incorporar navigation.py y main_window.py progresivamente en el `main.py` de la
-raíz. El app.py de esta carpeta es solo el ejercicio aislado de la etapa.
+INTEGRACIÓN DESPUÉS DE APROBAR EL STAGE
+---------------------------------------
+`navigation.py` y `main_window.py` permanecen como ejercicios aislados. Después
+de validar la etapa, la navegación se conecta en `src/`, se inicia desde
+`main.py` y se registra en `config/integration.json` si su salida visual queda
+activa.
 
 ======================================================================
 ARCHIVO: preview.html
@@ -139,7 +141,7 @@ FRAGMENTO DE REFERENCIA
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Agregar la tarjeta de la Clase 07 en index.html y abrir únicamente la página
+Subir los archivos de esta etapa y abrir únicamente la página
 principal https://awooolab.github.io/Agenda_SENA/. Comprobar allí que se
 distinguen claramente la barra superior, la navegación y el área de trabajo.
 
@@ -147,8 +149,30 @@ FLUJO DE LA LECCIÓN
 -------------------
 1. Agregar o actualizar navigation.py, main_window.py y app.py en GitHub.
 2. Actualizar preview.html con la misma navegación, textos, áreas e iconos.
-3. Agregar la tarjeta de la Clase 07 en index.html.
-4. Subir los cambios y comparar la vista desde la página principal.
+3. Subir los cambios y abrir únicamente la página principal.
+4. Comprobar allí el módulo independiente de esta etapa dentro de la ventana integrada.
 
 El preview comunica la distribución de la ventana; no ejecuta la navegación de
 Tkinter.
+
+CONTRATO DE INDEPENDENCIA E INTEGRACIÓN
+----------------------------------------
+Este stage se construye como un módulo independiente. No debe importar archivos
+de otros stages ni depender de que otra etapa esté terminada. Sus datos de
+prueba, entradas, salidas y validaciones pertenecen únicamente a este módulo.
+
+preview.html representa este stage y se revisa desde la única página principal:
+https://awooolab.github.io/Agenda_SENA/
+La página principal no carga automáticamente todos los previews existentes.
+Solo muestra los módulos aprobados que estén registrados en
+config/integration.json.
+
+Después de aprobar el stage, la integración se realiza fuera de esta carpeta,
+en src/, main.py y config/integration.json. El estudiante no modifica esos
+archivos durante la lección. La acumulación ocurre únicamente en la aplicación
+integrada.
+
+Antes de integrar, comprobar la entrada independiente, la salida producida,
+las funciones públicas, los datos de prueba, las validaciones, los errores y
+el punto de conexión futuro. Este módulo no debe conservar funciones de otros
+stages dentro de su propio código.

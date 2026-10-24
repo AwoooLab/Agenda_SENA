@@ -111,16 +111,12 @@ Confirmar que se identifican `agenda.json`, los datos de ejemplo y los estados
 Si se dispone de Python, ejecutar `demo.py` y comprobar que los datos cargados
 son iguales a los guardados. GitHub Pages no ejecuta el almacenamiento real.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Después de terminar la etapa, incorporar las funciones de guardado y carga en:
-
-```text
-main.py
-```
-
-Los archivos de `stages/03_json_storage/` permanecen aislados. `main.py` irá
-reuniendo la lógica que la aplicación necesita en cada hito posterior.
+Los archivos de `stages/03_json_storage/` permanecen aislados. Después de
+validar la etapa, las funciones se conectan en `src/` y se coordinan desde
+`main.py`. Su salida visual se registra en `config/integration.json` únicamente
+cuando el módulo esté aprobado.
 
 ## Instrucción para ChatGPT
 
@@ -146,5 +142,5 @@ código.
 
 La etapa se puede publicar cuando los archivos de JSON están en GitHub,
 `preview.html` explica visualmente el flujo y la Clase 03 se integra en la
-ventana acumulada. Guardar y cargar los datos queda definido en Python y se probará al
+única ventana integrada. Guardar y cargar los datos queda definido en Python y se probará al
 ejecutar el proyecto en un PC.

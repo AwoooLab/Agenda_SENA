@@ -1,14 +1,16 @@
-"""Orquestador principal de Agenda SENA.
+"""Punto de entrada de la aplicación integrada Agenda SENA.
 
-Este archivo se completa progresivamente con la funcionalidad terminada en
-cada carpeta de stages. Las carpetas de stages permanecen aisladas: este
-archivo no importa automáticamente sus ejercicios.
+El estudiante trabaja en stages/. La integración aprobada se conecta en src/
+sin importar automáticamente los ejercicios de las etapas.
 """
+
+from src.app_shell import AppShell
 
 
 def main() -> None:
-    """Punto de entrada de la aplicación integrada para PC."""
-    pass
+    """Construye y ejecuta una única ventana de Agenda SENA."""
+
+    AppShell().run()
 
 
 if __name__ == "__main__":

@@ -9,34 +9,46 @@ Ejecutar: python main.py
 
 ## Estructura principal
 
-- main.py: orquestador de la aplicación Python para PC.
-- stages/: archivos de trabajo organizados por función y etapa.
-- docs/parts/: especificaciones, teoría y requisitos de cada etapa.
-- index.html: único visor de la aplicación acumulada en GitHub Pages.
-- assets/: estilos compartidos del visor.
-- plan.md: plan general del proyecto.
+- main.py: punto de entrada de la aplicación integrada para PC.
+- src/: carcasa de una sola ventana, estado, navegación y vistas integradas.
+- stages/: único espacio de trabajo del estudiante.
+- web/: comportamiento del visor de GitHub Pages.
+- config/: registro interno de módulos aprobados para la integración.
+- docs/parts/: especificaciones, teoría y requisitos de cada stage.
+- index.html: único visor web de la aplicación integrada actual.
+- assets/: estilos compartidos.
 
-## Metodología de integración
+## Metodología
 
-La aplicación se construye progresivamente. Cada stage conserva las funciones
-anteriores y agrega una nueva dentro de la misma aplicación.
+Cada stage es un módulo independiente. El estudiante lo desarrolla, lo prueba
+y revisa su preview.html sin importar archivos de otros stages.
 
-01: ventana
-02: ventana + formulario
-03: ventana + formulario + tabla
-04: todo lo anterior + datos locales
-05: todo lo anterior + usuarios
-06: todo lo anterior + inicio de sesión
+Después de aprobarlo, el módulo se conecta a la aplicación integrada. La
+aplicación final puede crecer de esta manera:
 
-Cada carpeta contiene el código Python de la etapa y un preview.html. El preview
-es un fragmento de la aplicación; el index.html de la raíz carga todos los
-fragmentos en orden dentro de una sola ventana visual. No hay tarjetas, iframe,
-selector ni indicador de etapa.
+Stage 01 aprobado  -> ventana inicial
+Stage 02 aprobado  -> se agrega una función
+Stage 03 aprobado  -> se agrega otra función
 
-GitHub Pages muestra la versión visual interactiva. No ejecuta main.py; la
-aplicación real de escritorio se ejecuta localmente con Python y Tkinter.
+La acumulación ocurre en main.py, src/ y en la salida publicada. No se cargan
+automáticamente todos los previews existentes. La página solo muestra los
+módulos registrados en config/integration.json.
 
-## Pruebas
+## Regla para el estudiante
 
-Las pruebas se incorporan en la carpeta de la etapa que las necesita. Cada
-files.txt explica cuándo ejecutarlas y qué resultado esperar.
+Durante una lección, el estudiante trabaja solamente en la carpeta del stage:
+
+stages/01_python_window/
+
+No necesita modificar main.py, src/, web/ ni config/. Esa integración se
+realiza después de revisar que el módulo cumple su especificación.
+
+GitHub Pages no ejecuta Python. preview.html permite comprobar visualmente el
+resultado del módulo e index.html muestra solamente la versión integrada.
+
+La vista integrada mantiene una sola ventana y una navegación interna. En el
+estado actual solo aparece `Inicio`, porque únicamente
+`01_python_window` está registrado. Las demás carpetas no se muestran hasta
+que sus módulos sean revisados e integrados.
+
+La metodología completa está en docs/stage_contract.md.

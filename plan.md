@@ -2,74 +2,67 @@
 
 ## Regla general
 
-Agenda SENA se construye como una única aplicación acumulativa. Cada stage
-agrega una función visible y conserva las anteriores. El estudiante revisa
-todo el resultado desde la única página principal de GitHub Pages.
+El estudiante construye módulos independientes dentro de stages/. Después de
+validar cada módulo, se integra en una aplicación de una sola ventana.
 
-index.html carga los preview.html de stages/ en orden dentro de una sola
-ventana. No hay tarjetas, iframe, indicador de etapa ni selector.
+La aplicación integrada utiliza main.py y src/. GitHub Pages muestra su
+representación web mediante index.html. Solo se muestran los módulos
+registrados en config/integration.json.
 
-## Stage 01 — Ventana de Python
+## Base de integración
 
-- Crear la primera ventana con Tkinter.
-- Mostrar el nombre de Agenda SENA.
-- Agregar el primer botón funcional.
-- Representar la ventana en preview.html.
+- src/app_shell.py: una sola ventana.
+- src/router.py: navegación entre vistas dentro de esa ventana.
+- src/state.py: estado compartido, como el usuario autenticado.
+- src/views/: vistas integradas.
+- web/app.js: visor web del estado integrado.
+- config/integration.json: módulos aprobados y visibles.
 
-## Stage 02 — Modelo y formulario de cita
+## Secuencia de construcción
 
-- Definir título, fecha, hora, descripción y estado.
-- Mostrar el formulario dentro de la misma aplicación.
-- Conservar la ventana y el botón del stage anterior.
+### Stage 01 — Ventana inicial
 
-## Stage 03 — Tabla y guardado JSON
+Construir y validar una ventana inicial independiente. Después se registra como
+la primera vista integrada.
 
-- Mostrar las citas en una tabla.
-- Agregar acciones para guardar y cargar información.
-- Conservar el formulario y la tabla al avanzar.
+### Stage 02 — Modelo de datos
 
-## Stage 04 — Base de datos SQLite
+Construir un modelo de cita independiente. No depende del Stage 01. Después se
+conecta a la vista o servicio que corresponda.
 
-- Crear las tablas principales.
-- Usar consultas parametrizadas.
-- Hacer visible la relación entre usuarios y actividades.
+### Stage 03 — Guardado JSON
 
-## Stage 05 — Registro de usuarios
+Construir funciones independientes para guardar y cargar datos. Después se
+conectan al modelo aprobado.
 
-- Crear usuarios locales.
-- Validar campos obligatorios y nombres duplicados.
-- Agregar el registro sin perder las funciones anteriores.
+### Stage 04 — Base de datos SQLite
 
-## Stage 06 — Inicio de sesión
+Construir la base y sus consultas como módulo independiente. Después se conecta
+al servicio de datos de la aplicación.
 
-- Proteger las contraseñas.
-- Crear inicio y cierre de sesión.
-- Mostrar el usuario activo en la misma aplicación.
+### Stage 05 — Registro de usuarios
 
-## Stage 07 — Ventana principal
+Construir registro, validaciones y pruebas con datos propios.
 
-- Organizar el panel principal.
-- Mostrar navegación y resúmenes.
-- Mantener formulario, tabla, usuarios y sesión.
+### Stage 06 — Inicio de sesión
 
-## Stage 08 — Calendario mensual
+Construir login y sesión como módulo independiente. Después se conecta al
+estado compartido y al router.
 
-- Mostrar días y semanas del mes.
-- Navegar entre meses.
-- Relacionar las actividades con una fecha.
+### Stage 07 — Ventana principal
 
-## Stage 09 — Actividades, categorías y colores
+Construir el panel principal y sus vistas navegables.
 
-- Crear, editar, completar y eliminar actividades.
-- Asignar categorías y colores.
-- Filtrar por fecha, categoría y estado.
+### Stage 08 — Calendario mensual
 
-## Stage 10 — Pruebas, seguridad y ejecutable
+Construir calendario, navegación de meses y selección de días.
 
-- Ejecutar las pruebas de las etapas.
-- Revisar datos y credenciales.
-- Preparar el ejecutable para Windows.
-- Mostrar el estado final de la aplicación acumulada.
+### Stage 09 — Actividades, categorías y colores
 
-La lógica real crece en main.py. La comprobación visual crece con los
-fragmentos preview.html y se revisa siempre en la única página principal.
+Construir actividades, categorías, colores y filtros.
+
+### Stage 10 — Pruebas, seguridad y ejecutable
+
+Validar la aplicación integrada y preparar el ejecutable de Windows.
+
+La documentación detallada del contrato está en docs/stage_contract.md.

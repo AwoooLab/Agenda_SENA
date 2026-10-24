@@ -37,8 +37,10 @@ permanecer aislado durante la lección y contener su propio `files.txt` y
 
 ## Integración de la parte
 
-Explicar qué se incorpora en `main.py` y qué fragmentos visuales se agregan a la
-ventana acumulada de `index.html` al terminar la parte.
+Explicar qué se incorpora en `src/` y `main.py`, y qué módulos aprobados se
+registran en `config/integration.json` al terminar la parte. `index.html` es el
+único visor de la aplicación integrada; no carga automáticamente todos los
+previews.
 
 ## Estado
 

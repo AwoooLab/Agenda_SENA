@@ -131,12 +131,12 @@ base de datos.
 Si se dispone de Python, ejecutar las pruebas de SQLite. GitHub Pages no crea
 ni consulta la base de datos; solo muestra su estructura.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Después de terminar la etapa, incorporar en `main.py` la conexión, el esquema y
-las operaciones que la aplicación integrada necesite. Los archivos de
-`stages/04_sqlite_database/` permanecen aislados y no se importan
-automáticamente.
+Los archivos de `stages/04_sqlite_database/` permanecen aislados y no se
+importan automáticamente. Después de validar la etapa, la conexión, el esquema
+y las operaciones se conectan en `src/` y se coordinan desde `main.py`. El
+módulo visual se registra en `config/integration.json` solo después de aprobarlo.
 
 ## Instrucción para ChatGPT
 
@@ -155,5 +155,5 @@ que deben usar una base de datos temporal y no modificar la base real.
 
 La etapa se puede publicar cuando el esquema, el código, las pruebas y
 `preview.html` están en GitHub, y la Clase 04 muestra claramente las tablas en
-la ventana acumulada. La creación y consulta de SQLite queda definida en Python y se
+la única ventana integrada. La creación y consulta de SQLite queda definida en Python y se
 probará al ejecutar el proyecto en un PC.

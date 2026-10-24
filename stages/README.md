@@ -1,60 +1,41 @@
 # Cómo trabajar las etapas
 
-Cada carpeta representa una etapa de la construcción de Agenda SENA. El alumno
-completa una etapa antes de continuar con la siguiente, pero el resultado
-visual siempre pertenece a la misma aplicación.
+Cada carpeta es un módulo educativo independiente. El alumno completa una
+carpeta sin importar código de otras etapas.
 
 ## Qué contiene cada etapa
 
-- Los archivos Python que corresponden a la función.
-- files.txt con la teoría, ejemplos, restricciones y validaciones.
-- preview.html con el fragmento visual que se agrega a la ventana principal.
-- Los nombres de carpetas y archivos están en inglés.
-- Las explicaciones y lecciones están en español.
+- Archivos Python propios del módulo.
+- files.txt con teoría, ejemplos, restricciones y validaciones.
+- preview.html con la salida visual independiente.
+- Datos de prueba propios cuando sean necesarios.
 
-## Flujo de trabajo
+## Flujo de trabajo del estudiante
 
-1. Abrir la especificación del stage en docs/parts/.
+1. Leer la especificación en docs/parts/.
 2. Leer el files.txt de la carpeta.
-3. Crear o actualizar únicamente los archivos solicitados.
-4. Probar la lógica local de Python cuando corresponda.
-5. Actualizar el preview.html con la función visible de la etapa.
-6. Subir los cambios a GitHub.
-7. Abrir únicamente la página principal de GitHub Pages.
-8. Comprobar que la función nueva aparece junto con las anteriores.
-9. Corregir cualquier regresión antes de continuar.
+3. Crear o modificar únicamente los archivos solicitados dentro de ese stage.
+4. Ejecutar la prueba local indicada.
+5. Actualizar el preview.html con la salida visual del módulo.
+6. Revisar el resultado desde el visor principal de GitHub Pages.
+7. Corregir la etapa hasta que cumpla sus requisitos.
 
-## Regla del visor único
+El estudiante no modifica main.py, src/, web/ ni config/. Esos archivos forman
+la estructura de integración y se actualizan después de aprobar el módulo.
 
-El index.html de la raíz carga los diez preview.html en orden dentro de una
-sola ventana. No se muestran tarjetas, iframe, selectores ni indicadores de
-etapa.
+## Independencia y acumulación
 
-Cada preview es un fragmento y no una página independiente. Debe contener
-solamente el HTML de la función que aporta su etapa, sin doctype, head, body,
-navegación propia ni encabezados repetidos.
+Un stage es independiente durante su construcción. La aplicación es acumulativa
+después de la integración. Esto significa que el login puede probarse solo,
+pero luego puede conectarse como una vista dentro de la ventana principal.
 
-## Integración de Python
+El preview.html del stage sirve para validar ese módulo. La página principal
+solo muestra los previews que aparecen en config/integration.json; la carpeta
+de un stage futuro no se muestra automáticamente.
 
-Los archivos de stages/ sirven para aprender y construir cada función. Cuando
-una función se aprueba, se incorpora progresivamente en main.py, que es el
-orquestador de la aplicación local para PC.
+## Contrato del módulo
 
-GitHub Pages no ejecuta Python. Su objetivo es permitir revisar la composición
-visual y las interacciones web equivalentes.
-
-## Trabajo con ChatGPT
-
-La solicitud debe indicar:
-
-- La ruta exacta del archivo.
-- La lección que se está estudiando.
-- El código que ya se escribió.
-- El error o comportamiento observado.
-- Que no se modifiquen otros archivos.
-
-Ejemplo:
-
-Estoy trabajando en stages/01_python_window/app.py. Explícame tkinter.Tk()
-y revisa únicamente el fragmento que escribí. No generes el proyecto completo
-ni modifiques otros archivos.
+Cada files.txt debe explicar propósito, alcance, archivos, dependencias,
+entradas, salidas, funciones públicas, datos de prueba, validación visual y
+forma de integración futura. La referencia común está en
+docs/stage_contract.md.

@@ -85,8 +85,9 @@ flujo:
 1. Revisar la estructura y los métodos obligatorios de `Cita`.
 2. Agregar en GitHub `model.py` y los archivos previstos para la etapa.
 3. Actualizar `preview.html` si cambian los campos o su presentación.
-4. Actualizar el fragmento de la cita en `preview.html`. El visor principal lo
-   cargará junto con la ventana y las funciones anteriores.
+4. Actualizar el fragmento de la cita en `preview.html`. El visor principal
+   solo lo mostrará cuando esta etapa sea aprobada y registrada en la
+   configuración de integración.
 5. Subir los cambios y abrir únicamente la página principal de GitHub Pages.
 6. Verificar allí título, fecha, hora, descripción y estado.
 
@@ -102,7 +103,8 @@ estructura que luego usará la interfaz.
 ## Comprobación visual en GitHub Pages
 
 Agregar o actualizar `model.py` y `preview.html` en GitHub. Después abrir únicamente
-la página principal, que cargará el fragmento acumulado:
+la página principal. Mientras la etapa esté en revisión, el visor integrado
+continúa mostrando solo los módulos aprobados:
 
 ```text
 https://awooolab.github.io/Agenda_SENA/
@@ -110,7 +112,8 @@ https://awooolab.github.io/Agenda_SENA/
 
 El fragmento de la Clase 02 debe mostrar título, fecha, hora, descripción y
 estado. Si se agrega o cambia un campo en el modelo, `preview.html` debe
-actualizarse y luego revisarse desde la ventana acumulada.
+actualizarse y luego revisarse como módulo independiente. Después de aprobarlo,
+se registra en la configuración para incorporarlo a la única ventana integrada.
 
 ### Prueba funcional opcional en el PC
 
@@ -126,16 +129,12 @@ otra_cita = Cita.desde_diccionario(datos)
 `cita` y `otra_cita` deben tener los mismos datos. Esta prueba valida Python;
 la evidencia visual de la clase se revisa en GitHub Pages.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Después de terminar la etapa, incorporar la clase `Cita` en:
-
-```text
-main.py
-```
-
-El archivo `stages/02_data_model/model.py` permanece aislado. La versión que
-usa la aplicación integrada se agrega progresivamente al orquestador `main.py`.
+El archivo `stages/02_data_model/model.py` permanece aislado. Después de
+validar la etapa, la versión integrada se conecta en `src/` y se coordina desde
+`main.py`. El módulo también se registra en `config/integration.json` cuando su
+preview deba aparecer en el único visor web.
 
 ## Instrucción para ChatGPT
 
@@ -153,5 +152,5 @@ ni otros módulos. Devuelve únicamente el código.
 
 La etapa se puede publicar cuando los archivos definidos están en GitHub,
 `preview.html` muestra claramente los datos de `Cita` y la Clase 02 se integra
-en la ventana acumulada. La conversión a diccionario queda definida en el código Python y
-se probará cuando pueda ejecutarse el proyecto en un PC.
+en la única ventana integrada. La conversión a diccionario queda definida en el
+código Python y se probará cuando pueda ejecutarse el proyecto en un PC.

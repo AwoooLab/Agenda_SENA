@@ -120,12 +120,12 @@ resaltado y la actividad visible.
 Si se dispone de Python, ejecutar las pruebas y comprobar navegación y
 selección. GitHub Pages no calcula fechas ni ejecuta Tkinter.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Después de terminar la etapa, incorporar progresivamente en `main.py` el
-calendario mensual y sus celdas. Los archivos de
-`stages/08_monthly_calendar/` permanecen aislados y la conexión se realiza en
-el orquestador principal.
+Los archivos de `stages/08_monthly_calendar/` permanecen aislados. Después de
+validar la etapa, el calendario mensual y sus celdas se conectan en `src/` y se
+coordinan desde `main.py`. El módulo visual se registra en
+`config/integration.json` solo después de aprobarlo.
 
 ## Instrucción para ChatGPT
 
@@ -143,6 +143,6 @@ Solicitar después las funciones de fechas, `monthly_calendar.py` y
 ## Criterio de terminado
 
 La etapa se puede publicar cuando los archivos del calendario están en GitHub,
-`preview.html` muestra la cuadrícula y la Clase 08 se integra en la ventana acumulada. El
+`preview.html` muestra la cuadrícula y la Clase 08 se integra en la única ventana integrada. El
 cálculo, la navegación y la selección quedan definidos en Python y se probarán
 al ejecutar el proyecto en un PC.

@@ -112,12 +112,12 @@ Si se dispone de Python, ejecutar la aplicación local para comprobar los
 cambios de sección y el cierre de sesión. Pages solo muestra la composición
 visual de la ventana principal.
 
-## Integración progresiva en `main.py`
+## Integración después de aprobar el stage
 
-Después de terminar la etapa, incorporar progresivamente en `main.py` la
-ventana principal y la navegación. Los archivos de
-`stages/07_main_window/` permanecen aislados; `main.py` será el orquestador del
-flujo integrado.
+Los archivos de `stages/07_main_window/` permanecen aislados. Después de
+validar la etapa, la ventana principal y la navegación se conectan en `src/` y
+se inician desde `main.py`. El módulo visual se registra en
+`config/integration.json` solo después de aprobarlo.
 
 ## Instrucción para ChatGPT
 
@@ -135,5 +135,5 @@ Solicitar después `main_window.py` y `app.py` por separado.
 
 La etapa se puede publicar cuando los archivos de la ventana principal están
 en GitHub, `preview.html` muestra la distribución completa y la Clase 07
-se integra en la ventana acumulada. La navegación funcional queda definida en Python y se
+se integra en la única ventana integrada. La navegación funcional queda definida en Python y se
 probará al ejecutar el proyecto en un PC.

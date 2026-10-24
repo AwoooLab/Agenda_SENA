@@ -202,10 +202,12 @@ Ejecutar:
 
     python -m unittest stages/06_login_session/test_auth_service.py -v
 
-INTEGRACIÓN EN MAIN.PY
-----------------------
-Incorporar progresivamente la seguridad, la autenticación y la ventana de login
-en el `main.py` de la raíz. Los archivos de esta etapa permanecen aislados.
+INTEGRACIÓN DESPUÉS DE APROBAR EL STAGE
+---------------------------------------
+La seguridad, la autenticación y la ventana de login permanecen aisladas en
+esta carpeta. Después de validar la etapa, se conectan en `src/`, se coordinan
+desde `main.py` y se registran en `config/integration.json` si su salida visual
+queda activa.
 
 ======================================================================
 ARCHIVO: preview.html
@@ -235,7 +237,7 @@ Para mostrar un error visual se puede usar:
 
 VALIDACIÓN VISUAL EN GITHUB PAGES
 ------------
-Agregar la tarjeta de la Clase 06 en index.html y abrir únicamente la página
+Subir los archivos de esta etapa y abrir únicamente la página
 principal https://awooolab.github.io/Agenda_SENA/. Confirmar allí que el
 formulario muestra usuario, contraseña, botón y mensaje de error sin exponer
 la contraseña.
@@ -246,8 +248,30 @@ FLUJO DE LA LECCIÓN
    pruebas en GitHub.
 2. Actualizar preview.html con los mismos campos, mensajes, botones e iconos
    del login de PC.
-3. Agregar la tarjeta de la Clase 06 en index.html.
-4. Subir los cambios y revisar el resultado desde la página principal.
+3. Subir los cambios y abrir únicamente la página principal.
+4. Comprobar allí el módulo independiente de esta etapa dentro de la ventana integrada.
 
 Cada cambio visual del login debe reflejarse en preview.html. La vista HTML no
 autentica ni conserva contraseñas; solo muestra la pantalla para revisión.
+
+CONTRATO DE INDEPENDENCIA E INTEGRACIÓN
+----------------------------------------
+Este stage se construye como un módulo independiente. No debe importar archivos
+de otros stages ni depender de que otra etapa esté terminada. Sus datos de
+prueba, entradas, salidas y validaciones pertenecen únicamente a este módulo.
+
+preview.html representa este stage y se revisa desde la única página principal:
+https://awooolab.github.io/Agenda_SENA/
+La página principal no carga automáticamente todos los previews existentes.
+Solo muestra los módulos aprobados que estén registrados en
+config/integration.json.
+
+Después de aprobar el stage, la integración se realiza fuera de esta carpeta,
+en src/, main.py y config/integration.json. El estudiante no modifica esos
+archivos durante la lección. La acumulación ocurre únicamente en la aplicación
+integrada.
+
+Antes de integrar, comprobar la entrada independiente, la salida producida,
+las funciones públicas, los datos de prueba, las validaciones, los errores y
+el punto de conexión futuro. Este módulo no debe conservar funciones de otros
+stages dentro de su propio código.
