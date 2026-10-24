@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <title id="title">Stages 01 al 03 — Fundamentos del proyecto</title>
+  <desc id="desc">Una cita de Agenda SENA se captura en una ventana, se organiza como objeto y se conserva en un archivo JSON.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091735"/>
+      <stop offset="0.56" stop-color="#142B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="windowHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#152B68"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="jsonEditor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#172554"/>
+      <stop offset="1" stop-color="#0B1535"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#020617" flood-opacity="0.28"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="9" stdDeviation="12" flood-color="#020617" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .sans { font-family: "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .display { font-family: "Aptos Display", "Segoe UI", "Aptos", "Helvetica Neue", Arial, sans-serif; }
+      .white { fill: #FFFFFF; }
+      .navy { fill: #102456; }
+      .muted { fill: #587095; }
+      .soft { fill: #D8E7FF; }
+      .sky { fill: #7DD3FC; }
+      .blue { fill: #2563EB; }
+      .purple { fill: #7C3AED; }
+      .green { fill: #16A34A; }
+      .orange { fill: #F59E0B; }
+      .bold { font-weight: 700; }
+      .medium { font-weight: 500; }
+      text[font-size="13"], text[font-size="14"], text[font-size="15"], text[font-size="16"], text[font-size="17"], text[font-size="18"], text[font-size="19"], text[font-size="20"], text[font-size="21"] { font-size: 22px !important; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <circle cx="1710" cy="45" r="260" fill="#60A5FA" opacity="0.08"/>
+  <circle cx="1690" cy="1080" r="370" fill="#93C5FD" opacity="0.05"/>
+  <path d="M0 982 C350 875 670 1040 1040 950 S1610 850 1920 940" fill="none" stroke="#7DD3FC" stroke-opacity="0.13" stroke-width="2"/>
+
+  <g transform="translate(120 105)">
+    <text x="0" y="0" class="display white bold" font-size="62">Stages 01 al 03 &#8212; Fundamentos</text>
+    <rect x="0" y="48" width="680" height="5" rx="2.5" fill="#7DD3FC" opacity="0.78"/>
+    <text x="0" y="125" class="sans white medium" font-size="35">Una misma cita pasa de la pantalla al dato y del dato al archivo.</text>
+    <text x="0" y="185" class="sans sky bold" font-size="24" letter-spacing="3">UNA CITA, TRES FORMAS DE REPRESENTARLA</text>
+  </g>
+
+  <g transform="translate(100 265)" filter="url(#shadow)">
+    <rect width="1720" height="650" rx="30" fill="#F5F8FD"/>
+    <rect width="1720" height="72" rx="30" fill="#102456"/>
+    <rect y="44" width="1720" height="28" fill="#102456"/>
+    <circle cx="38" cy="36" r="9" fill="#FF5F57"/>
+    <circle cx="68" cy="36" r="9" fill="#FEBC2E"/>
+    <circle cx="98" cy="36" r="9" fill="#28C840"/>
+    <text x="140" y="46" class="sans white bold" font-size="28">Agenda SENA / fundamentos de una cita</text>
+    <text x="1505" y="46" class="sans soft medium" font-size="24">01 &#183; 02 &#183; 03</text>
+
+    <!-- Stage 01: the user-facing window -->
+    <g transform="translate(45 110)" filter="url(#softShadow)">
+      <text x="0" y="30" class="sans blue bold" font-size="24" letter-spacing="2">01  VENTANA</text>
+      <text x="0" y="74" class="sans navy bold" font-size="32">La interfaz captura</text>
+      <rect x="0" y="102" width="500" height="360" rx="20" fill="#FFFFFF" stroke="#BFD2EA" stroke-width="2"/>
+      <rect x="0" y="102" width="500" height="54" rx="20" fill="url(#windowHeader)"/>
+      <rect y="132" width="500" height="24" fill="url(#windowHeader)"/>
+      <circle cx="28" cy="129" r="7" fill="#FF5F57"/>
+      <circle cx="50" cy="129" r="7" fill="#FEBC2E"/>
+      <circle cx="72" cy="129" r="7" fill="#28C840"/>
+      <text x="103" y="137" class="sans white bold" font-size="24">Nueva cita</text>
+      <text x="32" y="202" class="sans navy bold" font-size="27">Reuni&#243;n de proyecto</text>
+      <text x="32" y="244" class="sans muted" font-size="23">Fecha</text>
+      <rect x="32" y="255" width="195" height="38" rx="9" fill="#F2F6FC" stroke="#C8D8EA" stroke-width="2"/>
+      <text x="48" y="282" class="sans navy medium" font-size="23">23/10/2026</text>
+      <text x="250" y="244" class="sans muted" font-size="23">Hora</text>
+      <rect x="250" y="255" width="110" height="38" rx="9" fill="#F2F6FC" stroke="#C8D8EA" stroke-width="2"/>
+      <text x="271" y="282" class="sans navy medium" font-size="23">10:00</text>
+      <text x="32" y="326" class="sans muted" font-size="23">Categor&#237;a</text>
+      <rect x="32" y="337" width="195" height="38" rx="9" fill="#EAF2FF" stroke="#BCD4FA" stroke-width="2"/>
+      <circle cx="53" cy="356" r="6" fill="#2563EB"/>
+      <text x="70" y="364" class="sans navy medium" font-size="23">Trabajo</text>
+      <rect x="338" y="337" width="130" height="38" rx="19" fill="#2563EB"/>
+      <text x="363" y="364" class="sans white bold" font-size="22">Guardar</text>
+    </g>
+
+    <!-- Wide connector -->
+    <g transform="translate(555 325)">
+      <path d="M0 0H92" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round"/>
+      <path d="M92 0l-19-14v28z" fill="#2563EB"/>
+    </g>
+
+    <!-- Stage 02: the domain object -->
+    <g transform="translate(645 110)" filter="url(#softShadow)">
+      <text x="0" y="30" class="sans purple bold" font-size="24" letter-spacing="2">02  DATO</text>
+      <text x="0" y="74" class="sans navy bold" font-size="32">El modelo organiza</text>
+      <rect x="0" y="102" width="500" height="360" rx="20" fill="#FFFFFF" stroke="#D8C9F7" stroke-width="2"/>
+      <rect x="0" y="102" width="500" height="62" rx="20" fill="#F3EDFF"/>
+      <circle cx="48" cy="133" r="22" fill="#DDD0FA"/>
+      <path d="M39 132l9-9 9 9-9 9zM39 141l9 9 9-9" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round"/>
+      <text x="84" y="143" class="sans navy bold" font-size="29">Cita</text>
+      <text x="32" y="207" class="sans muted" font-size="23">Objeto reutilizable</text>
+      <line x1="32" y1="230" x2="468" y2="230" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="32" y="270" class="sans purple bold" font-size="24">title</text>
+      <text x="186" y="270" class="sans navy medium" font-size="24">Reuni&#243;n de proyecto</text>
+      <text x="32" y="309" class="sans purple bold" font-size="24">date</text>
+      <text x="186" y="309" class="sans navy medium" font-size="24">2026-10-23</text>
+      <text x="32" y="348" class="sans purple bold" font-size="24">time</text>
+      <text x="186" y="348" class="sans navy medium" font-size="24">10:00</text>
+      <text x="32" y="387" class="sans purple bold" font-size="24">category</text>
+      <text x="186" y="387" class="sans navy medium" font-size="24">Trabajo</text>
+      <rect x="32" y="413" width="150" height="30" rx="15" fill="#EDE5FF"/>
+      <text x="54" y="435" class="sans purple bold" font-size="22">datos claros</text>
+    </g>
+
+    <!-- Wide connector -->
+    <g transform="translate(1155 325)">
+      <path d="M0 0H92" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round"/>
+      <path d="M92 0l-19-14v28z" fill="#2563EB"/>
+    </g>
+
+    <!-- Stage 03: local JSON persistence -->
+    <g transform="translate(1245 110)" filter="url(#softShadow)">
+      <text x="0" y="30" class="sans green bold" font-size="24" letter-spacing="2">03  GUARDADO</text>
+      <text x="0" y="74" class="sans navy bold" font-size="32">JSON conserva</text>
+      <rect x="0" y="102" width="430" height="360" rx="20" fill="url(#jsonEditor)"/>
+      <circle cx="30" cy="132" r="7" fill="#FF5F57"/>
+      <circle cx="52" cy="132" r="7" fill="#FEBC2E"/>
+      <circle cx="74" cy="132" r="7" fill="#28C840"/>
+      <text x="108" y="140" class="sans soft bold" font-size="24">agenda.json</text>
+      <text x="28" y="192" class="sans" fill="#7DD3FC" font-size="24">[</text>
+      <rect x="48" y="211" width="346" height="98" rx="12" fill="#1E3A72" stroke="#31528E" stroke-width="2"/>
+      <text x="69" y="240" class="sans" fill="#FDE68A" font-size="22">"title": "Reuni&#243;n de proyecto",</text>
+      <text x="69" y="268" class="sans" fill="#86EFAC" font-size="22">"date": "2026-10-23",</text>
+      <text x="69" y="296" class="sans" fill="#C4B5FD" font-size="22">"time": "10:00"</text>
+      <rect x="48" y="323" width="346" height="76" rx="12" fill="#142B68" stroke="#31528E" stroke-width="2"/>
+      <text x="69" y="353" class="sans" fill="#FDE68A" font-size="22">"title": "Entrega SENA",</text>
+      <text x="69" y="381" class="sans" fill="#86EFAC" font-size="22">"date": "2026-10-19"</text>
+      <text x="28" y="434" class="sans" fill="#7DD3FC" font-size="24">]</text>
+    </g>
+
+    <text x="860" y="603" text-anchor="middle" class="sans muted medium" font-size="28">La interfaz captura; el modelo organiza; JSON conserva.</text>
+  </g>
+
+  <g transform="translate(120 960)">
+    <circle cx="12" cy="12" r="8" fill="#7DD3FC"/>
+    <text x="38" y="22" class="sans white bold" font-size="28">Resultado: una interfaz inicial y una estructura b&#225;sica para representar informaci&#243;n.</text>
+  </g>
+
+  <text x="1810" y="1045" text-anchor="end" class="sans soft" font-size="22" opacity="0.75">08</text>
+</svg>
