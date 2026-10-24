@@ -425,64 +425,70 @@ docs/pt/img/06_technologies.png
 
 ---
 
-# Diapositiva 07 — Metodología por stages
+# Diapositiva 07 — Cómo se construye cada stage
 
 ## Texto literal
 
-**Metodología por stages**
+**Cómo se construye cada stage**
 
-**Cada stage construye una parte concreta del proyecto y puede revisarse de
-forma independiente.**
+**Aislado durante la construcción; integrado al finalizar.**
 
-**El ciclo de trabajo**
+**Espacio de trabajo del estudiante**
 
-**1. Leer la especificación**
+**01 — Leer `files.md`**
 
-Identificar archivos, requisitos y resultado esperado.
+La especificación define el archivo, los requisitos y el resultado que debe verse.
 
-**2. Crear el módulo**
+**02 — Crear `app.py`**
 
-Trabajar únicamente dentro de la carpeta del stage.
+El módulo resuelve un solo objetivo dentro de la carpeta del stage.
 
-**3. Probar el resultado**
+**03 — Probar `preview.html`**
 
-Ejecutar Python y revisar el `preview.html`.
+La salida se revisa en la misma vista antes de integrarla.
 
-**4. Integrar la función**
+**04 — Integrar**
 
-Conectar el módulo aprobado a la aplicación principal.
+Cuando está aprobado: módulo → `main.py` → aplicación completa.
 
 ## Frase destacada
 
-**Independiente durante la construcción; acumulativo durante la integración.**
+**Cada archivo tiene una función clara y puede probarse antes de integrarse.**
 
 ## Distribución
 
-- Mostrar cuatro pasos en forma de ciclo o recorrido horizontal.
-- Usar un color diferente para cada paso, manteniendo la misma paleta.
-- Colocar la frase destacada en una banda inferior azul claro.
-- Mostrar `stages/` como la carpeta de trabajo del estudiante.
+- Presentar una sola ventana de trabajo, como un espacio de desarrollo.
+- En la barra superior mostrar `Agenda SENA / stages / 01_python_window`.
+- Organizar tres paneles grandes y consecutivos: `files.md`, `app.py` y
+  `preview.html`.
+- Conectar los paneles con flechas amplias y verbos directos: `orienta` y
+  `construye`.
+- Separar la integración en una banda inferior: `módulo aprobado` → `main.py`
+  → `aplicación completa`.
+- Mantener el texto principal grande; los paneles deben leerse como una
+  interfaz de trabajo, no como una lista de tareas.
 
 ## Imagen o representación visual
 
-Crear un diagrama circular o de flechas con cuatro bloques:
+Crear una representación de un espacio de trabajo con tres archivos:
 
 ```text
-Especificación → Código → Prueba visual → Integración
-       ↑                                      ↓
-       └──────────── Nueva función ──────────┘
+files.md  ──orienta──>  app.py  ──construye──>  preview.html
+                                              ↓
+                  módulo aprobado → main.py → aplicación completa
 ```
 
-Al lado del diagrama colocar una carpeta ilustrada con la etiqueta
-`stages/`. La carpeta debe contener pequeñas tarjetas que representen
-`app.py`, `files.md` y `preview.html`.
+Cada panel debe parecer una herramienta real: `files.md` como una ficha de
+requisitos, `app.py` como un editor de código y `preview.html` como una vista
+de navegador con un resultado visible. La barra superior identifica la ruta
+`stages/01_python_window`.
 
 ## Iconos
 
-- Documento para la especificación.
-- Terminal o código para el módulo.
-- Ojo para la comprobación visual.
-- Piezas conectadas para la integración.
+- Documento o ficha para `files.md`.
+- Editor de código para `app.py`.
+- Navegador para `preview.html`.
+- Flechas de integración para `main.py`.
 
 ## Archivo de imagen posterior
 
