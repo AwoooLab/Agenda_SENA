@@ -5,6 +5,20 @@
 Crear el objeto que representa una cita o actividad de la agenda. Este objeto se
 usará después para guardar información y mostrarla en el calendario.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/02_data_model/` y mantiene el
+modelo aislado de Tkinter, SQLite y de las demás etapas. `model.py` define el
+dato; `preview.html` muestra una cita de ejemplo dentro de `agenda.appointments`.
+La comprobación se hace desde la única página principal
+`https://awooolab.github.io/Agenda_SENA/`, no abriendo el preview como producto
+separado.
+
+Después de validar el hito, el modelo se conecta al almacenamiento y a la
+ventana integrada desde `src/` y `main.py`. `config/integration.json` registra
+que el módulo ocupa `agenda.appointments`; la ventana de agenda permanece como
+un único espacio navegable y no se crea una pantalla nueva.
+
 ## Archivo que debe crear el alumno
 
 Crear únicamente:

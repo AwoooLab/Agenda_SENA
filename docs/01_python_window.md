@@ -2,8 +2,6 @@
 
 > **Especificación vigente:** esta etapa construye dos estados dentro de una
 > sola ventana: bienvenida con `Siguiente` y agenda base con datos de ejemplo.
-> Las referencias anteriores a una ventana de `520x320` con `Cerrar` describen
-> un ejercicio introductorio y quedan reemplazadas por esta especificación.
 
 ## Propósito
 
@@ -14,6 +12,20 @@ presionarlo, reemplaza el contenido por la ventana principal de la agenda.
 Esta etapa crea estructura visual, espacios, datos de demostración e iconos.
 Todavía no crea usuarios reales, contraseñas, archivos, base de datos ni
 operaciones de citas.
+
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/01_python_window/`. `app.py` es
+la práctica funcional para PC y `preview.html` representa el mismo resultado
+en GitHub Pages. El preview no se abre como una página independiente: la única
+dirección de revisión es `https://awooolab.github.io/Agenda_SENA/`.
+
+La página principal conserva las dos ventanas de referencia:
+`assets/login-window.svg` representa el inicio y `assets/agenda-window.svg`
+representa la agenda. Al pulsar `Siguiente`, la vista pasa a la agenda dentro
+del mismo visor; no se crea una página ni una ventana adicional. Cuando este
+hito se aprueba, su salida se registra en `config/integration.json` y la
+aplicación local la incorpora mediante `main.py` y `src/`.
 
 ## Plataforma de esta etapa
 

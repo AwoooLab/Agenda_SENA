@@ -5,6 +5,19 @@
 Permitir que un usuario registrado establezca una contraseña, inicie sesión y
 cierre su sesión dentro de la aplicación local.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/06_login_session/`. La contraseña,
+el servicio de autenticación, la vista de login y las pruebas se validan como
+un módulo independiente. `preview.html` representa los campos, mensajes y
+estados de acceso dentro de `login.form` y `login.feedback`; la comprobación
+visual se hace únicamente en la página principal de GitHub Pages.
+
+Cuando el hito se aprueba, `src/` y `main.py` conectan el login con la agenda
+en la misma ventana. `config/integration.json` registra la transición
+`login -> agenda`; no se crea una segunda ventana ni se muestran contraseñas
+reales en el visor público.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente:

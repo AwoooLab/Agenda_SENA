@@ -5,6 +5,20 @@
 Aprender a guardar y cargar datos de la agenda en un archivo local antes de
 utilizar una base de datos.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/03_json_storage/`. `storage.py`
+realiza el guardado y la lectura, `demo.py` comprueba el ciclo local y
+`preview.html` representa sus estados con datos de ejemplo. El preview es una
+comprobación visual del módulo; la revisión pública se hace solo en
+`https://awooolab.github.io/Agenda_SENA/`, dentro de la ventana de agenda.
+
+El JSON es un paso educativo y aislado. Al aprobarse, su contrato puede
+conectarse en `src/` y `main.py`, pero no se convierte en una dependencia
+obligatoria de las etapas posteriores: SQLite será el almacenamiento principal
+desde el Hito 04. La salida visual se registra en `config/integration.json`
+cuando corresponda.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente estos dos archivos:

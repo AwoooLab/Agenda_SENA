@@ -6,6 +6,18 @@ Crear la estructura visual que verá el usuario después de iniciar sesión. En
 esta etapa se construye la navegación, pero todavía no se implementa el
 calendario completo ni el formulario final de actividades.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/07_main_window/`. Esta etapa
+construye el chasis navegable de la agenda y prueba sus cambios con
+`preview.html` dentro de la única página pública. El resultado debe conservar
+la barra superior, el menú lateral y el área central de la ventana de
+`assets/agenda-window.svg`.
+
+Después de aprobarla, la navegación se conecta en `src/` y se inicia desde
+`main.py`. Los módulos posteriores agregan contenido a esta misma área central;
+no reemplazan la aplicación por páginas o ventanas separadas.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente:

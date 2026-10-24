@@ -5,6 +5,18 @@
 Crear la lógica para registrar usuarios locales antes de construir la pantalla
 de inicio de sesión.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/05_user_registration/`. El modelo,
+el repositorio, el servicio y las pruebas forman un módulo independiente;
+`preview.html` muestra el formulario de registro y sus estados dentro de
+`login.form`. La validación visual se realiza solo en
+`https://awooolab.github.io/Agenda_SENA/`.
+
+El registro no abre una pantalla nueva ni modifica directamente el login final.
+Después de aprobar las reglas, el módulo se conecta desde `src/`, `main.py` y
+`config/integration.json`, conservando la navegación de una sola ventana.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente:

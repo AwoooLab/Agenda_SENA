@@ -12,7 +12,7 @@ carpeta sin importar código de otras etapas.
 
 ## Flujo de trabajo del estudiante
 
-1. Leer la especificación en docs/parts/.
+1. Leer el milestone correspondiente en `docs/`.
 2. Leer el files.txt de la carpeta.
 3. Crear o modificar únicamente los archivos solicitados dentro de ese stage.
 4. Ejecutar la prueba local indicada.
@@ -37,8 +37,8 @@ agenda. La carpeta de un stage futuro no se muestra automáticamente.
 
 Cada files.txt debe explicar propósito, alcance, archivos, dependencias,
 entradas, salidas, funciones públicas, datos de prueba, validación visual y
-forma de integración futura. La referencia común está en
-docs/stage_contract.md.
+forma de integración futura. Las diez especificaciones están directamente en
+`docs/`.
 
 ## Relación con las dos ventanas
 

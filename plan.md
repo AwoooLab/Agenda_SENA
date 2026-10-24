@@ -97,7 +97,10 @@ iconos reutilizables.
 
 Validar la aplicación integrada y preparar el ejecutable de Windows.
 
-La documentación detallada del contrato está en docs/stage_contract.md.
+La documentación detallada de cada etapa está directamente en `docs/`. La
+teoría de cada archivo y sus
+fragmentos de referencia está en el `files.txt` correspondiente dentro de
+`stages/`.
 
 ## Orden de validación
 

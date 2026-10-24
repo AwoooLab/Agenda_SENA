@@ -5,6 +5,18 @@
 Reemplazar el almacenamiento temporal en JSON por una base de datos SQLite local
 que pueda guardar usuarios y actividades de la agenda.
 
+## Metodología de integración vigente
+
+El trabajo se realiza únicamente en `stages/04_sqlite_database/`. El esquema,
+la conexión y las pruebas deben poder ejecutarse como módulo aislado. Su
+`preview.html` representa visualmente las tablas, relaciones y registros de
+ejemplo dentro de los espacios de la agenda; la comprobación se hace desde la
+única página principal de GitHub Pages.
+
+Al aprobar el hito, la base local se conecta a los servicios de la aplicación
+integrada en `src/` y se coordina desde `main.py`. `config/integration.json`
+registra los espacios que reciben datos, sin crear otra ventana ni otra página.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente:

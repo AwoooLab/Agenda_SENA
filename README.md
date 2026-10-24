@@ -14,7 +14,8 @@ Ejecutar: python main.py
 - stages/: único espacio de trabajo del estudiante.
 - web/: comportamiento de la secuencia visual de GitHub Pages.
 - config/: registro interno de módulos aprobados para la integración.
-- docs/parts/: especificaciones, teoría y requisitos de cada stage.
+- docs/: diez especificaciones milestone, una por cada stage de la primera
+  parte.
 - index.html: único visor web de las dos ventanas visuales.
 - assets/: estilos compartidos.
 
@@ -72,4 +73,5 @@ conserva los componentes aprobados y reemplaza solamente el espacio de la
 etapa actual. El estudiante no necesita editar el orquestador mientras
 desarrolla un stage.
 
-La metodología completa está en docs/stage_contract.md.
+La metodología y los requisitos están distribuidos en los diez archivos
+`docs/*_*.md` y en el `files.txt` de cada stage.

@@ -5,6 +5,19 @@
 Permitir crear y administrar las actividades que aparecen en el calendario.
 Cada actividad tendrá una categoría, un color y un estado de cumplimiento.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/09_events_categories_colors/`.
+Modelos, servicio, formulario, leyenda y pruebas forman un módulo aislado.
+`preview.html` representa la creación, edición, filtrado y finalización de
+actividades dentro de `agenda.today`, `agenda.appointments` y
+`agenda.activities`. La revisión ocurre solo en la página principal de GitHub
+Pages, no en una página de preview separada.
+
+Después de aprobar el hito, las operaciones se conectan a la agenda mediante
+`src/`, `main.py` y `config/integration.json`. El calendario, las tarjetas y
+las listas reciben los mismos datos; la aplicación conserva una única ventana.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente:

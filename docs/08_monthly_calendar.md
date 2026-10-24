@@ -6,6 +6,18 @@ Mostrar un calendario mensual navegable dentro del área principal de la agenda.
 En esta etapa se trabaja la vista y el cálculo de fechas; las actividades se
 agregarán en el Hito 09.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/08_monthly_calendar/`. El
+calendario, sus celdas y sus pruebas se desarrollan de forma independiente;
+`preview.html` muestra la cuadrícula y sus controles en el espacio
+`agenda.calendar`. La revisión se realiza desde
+`https://awooolab.github.io/Agenda_SENA/`, que es el único visor del proyecto.
+
+Al aprobar el hito, el calendario se conecta al área central de la aplicación
+desde `src/` y `main.py`. Las actividades del Hito 09 se incorporarán después
+en las mismas celdas, sin crear una nueva ventana.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente:

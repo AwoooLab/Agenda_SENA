@@ -5,6 +5,21 @@
 Revisar la aplicación completa, confirmar que sus partes principales funcionan
 y preparar una versión ejecutable para Windows.
 
+## Metodología de integración vigente
+
+El estudiante trabaja únicamente en `stages/10_tests_security_executable/`.
+Las pruebas, el script de construcción, la guía de entrega y `preview.html`
+cierran la primera parte del proyecto. El preview comunica el resultado final
+en las dos ventanas de referencia, pero la aceptación real combina las pruebas
+locales en Windows con la revisión visual en
+`https://awooolab.github.io/Agenda_SENA/`.
+
+Al aprobar el hito, `main.py` queda como punto de entrada de la aplicación
+local, `src/` conserva la navegación de una sola ventana y
+`config/integration.json` registra los módulos aprobados. GitHub Pages no
+ejecuta Python ni genera el `.exe`; solo muestra la evidencia visual de la
+entrega.
+
 ## Archivos que debe crear el alumno
 
 Crear únicamente:
